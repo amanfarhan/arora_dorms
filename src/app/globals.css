@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  body {
+    background-color: #05070B;
+    color: #E2E8F0;
+    font-family: var(--font-plus-jakarta), system-ui, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: #7c3aed;
+    color: #ffffff;
+  }
+}
+
+/* Typography tokens */
+.font-editorial {
+  font-family: var(--font-cormorant), Georgia, serif;
+  letter-spacing: -0.015em;
+}
+
+.headline-font {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+/* Gradients and Text Gradients */
+.aurora-gradient-text {
+  background: linear-gradient(135deg, #A5B4FC 0%, #C084FC 50%, #818CF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-periwinkle {
+  background: linear-gradient(135deg, #a3b8ff 20%, #c4d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism & Atmospheric glow effects */
+.card-glass {
+  background: rgba(13, 19, 31, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-glass:hover {
+  border-color: rgba(165, 180, 252, 0.3);
+}
+
+.glass-nav {
+  background: rgba(5, 7, 11, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(12, 19, 31, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-sphere {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-dark-radial {
+  background: radial-gradient(circle at 50% 0%, #0c1524 0%, #03070d 85%);
+}
+
+.bg-aurora-radial {
+  background: radial-gradient(circle at 50% 0%, rgba(59, 107, 230, 0.12) 0%, rgba(3, 5, 8, 0) 65%);
+}
+
+.hero-radial-vignette {
+  background: radial-gradient(circle at 75% 40%, rgba(3, 5, 8, 0) 0%, rgba(3, 5, 8, 0.6) 60%, rgba(3, 5, 8, 1) 95%);
+}
+
+.radial-top-glow {
+  background: radial-gradient(circle at 75% 25%, rgba(45, 90, 180, 0.22) 0%, rgba(6, 8, 13, 0) 70%);
+}
+
+.glow-radial {
+  background: radial-gradient(circle at 50% 30%, rgba(138, 155, 232, 0.15) 0%, rgba(7, 9, 14, 0) 70%);
+}
+
+/* Cards & Interactions */
+.industry-card {
+  background: linear-gradient(180deg, rgba(16, 22, 34, 0.7) 0%, rgba(9, 13, 21, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.industry-card:hover {
+  border-color: rgba(130, 149, 232, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 20px 0 rgba(130, 149, 232, 0.1);
+}
+
+.card-arrow-btn {
+  transition: all 0.3s ease;
+}
+
+.industry-card:hover .card-arrow-btn {
+  background-color: #8295E8;
+  color: #05070B;
+  border-color: #8295E8;
+  transform: scale(1.05);
+}
+
+.solution-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+.solution-card:hover {
+  border-color: rgba(142, 165, 248, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -15px rgba(26, 43, 85, 0.35);
+}
+
+.card-glow:hover {
+  box-shadow: 0 10px 30px -10px rgba(110, 140, 255, 0.15);
+  border-color: rgba(155, 170, 255, 0.35);
+}
+
+/* Custom architectural masks */
+.hero-dome-mask {
+  clip-path: ellipse(98% 88% at 75% 20%);
+}
+
+@media (max-width: 1024px) {
+  .hero-dome-mask {
+    clip-path: none;
+  }
+}
+
+.dome-arch-mask {
+  border-radius: 500px 500px 20px 20px;
+}
+
+.dome-circle-shadow {
+  box-shadow: 0 10px 40px -10px rgba(138, 155, 232, 0.35);
+}
+
+/* Scrollbar utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

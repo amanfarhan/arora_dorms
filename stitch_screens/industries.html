@@ -1,0 +1,516 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Industries We Serve | Arora Dorm Solutions</title>
+<!-- Google Fonts for refined editorial display and crisp body typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#05070B',
+              surface: '#0B0F17',
+              card: '#0D131F',
+              accent: '#8295E8',
+              accentHover: '#98a8f0',
+              accentLight: '#9FB1FD',
+              muted: '#94A3B8',
+              border: 'rgba(255, 255, 255, 0.08)',
+              glow: 'rgba(130, 149, 232, 0.15)'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom CSS for specialized visuals and dome effects -->
+<style data-purpose="base-styling">
+    body {
+      background-color: #05070B;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Subdued custom backdrop glass styling */
+    .glass-nav {
+      background: rgba(5, 7, 11, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .industry-card {
+      background: linear-gradient(180deg, rgba(16, 22, 34, 0.7) 0%, rgba(9, 13, 21, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .industry-card:hover {
+      border-color: rgba(130, 149, 232, 0.35);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 20px 0 rgba(130, 149, 232, 0.1);
+    }
+
+    .card-arrow-btn {
+      transition: all 0.3s ease;
+    }
+
+    .industry-card:hover .card-arrow-btn {
+      background-color: #8295E8;
+      color: #05070B;
+      border-color: #8295E8;
+      transform: scale(1.05);
+    }
+
+    /* Custom arch mask for the hero dome window matching the original image layout */
+    .hero-dome-mask {
+      clip-path: ellipse(98% 88% at 75% 20%);
+    }
+
+    @media (max-width: 1024px) {
+      .hero-dome-mask {
+        clip-path: none;
+      }
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-accent selection:text-brand-black">
+<!-- BEGIN: SiteNavigation -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300" data-purpose="site-header">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center space-x-3.5 group" data-purpose="brand-logo" href="#"><div class="relative w-8 h-8 flex items-center justify-center">
+  <div class="w-8 h-8 rounded-full border border-slate-600/60 bg-gradient-to-b from-[#19243b] to-[#0a1120] flex items-center justify-center shadow-[0_0_12px_rgba(130,149,232,0.35)] relative overflow-hidden">
+    <div class="w-4 h-4 rounded-full bg-gradient-to-tr from-[#3cdbd8] to-[#8295E8] shadow-[0_0_8px_rgba(68,225,222,0.8)]"></div>
+    <div class="absolute -top-1 w-6 h-2 border-t border-cyan-300/60 rounded-t-full filter blur-[0.5px]"></div>
+  </div>
+</div>
+<div class="flex flex-col">
+  <span class="text-[13px] font-bold tracking-[0.22em] text-white leading-none uppercase font-sans">ARORA DORM</span>
+  <span class="text-[8.5px] tracking-[0.32em] text-slate-400 uppercase font-medium mt-1">SOLUTIONS</span>
+</div></a>
+<!-- Center Desktop Navigation Links -->
+<nav class="hidden md:flex items-center space-x-9 text-[13px] font-medium tracking-wide" data-purpose="main-nav"><a class="text-slate-300 hover:text-white transition-colors duration-200" href="#">About</a>
+<a class="text-slate-300 hover:text-white transition-colors duration-200" href="#">Solutions</a>
+<a class="text-slate-300 hover:text-white transition-colors duration-200" href="#">Content</a>
+<a class="text-white relative py-1 flex flex-col items-center" href="#">
+  <span class="">Industries</span>
+  <span class="absolute bottom-0 w-full h-[2px] bg-white rounded-full"></span>
+</a>
+<a class="text-slate-300 hover:text-white transition-colors duration-200" href="#">Technology</a>
+<a class="text-slate-300 hover:text-white transition-colors duration-200" href="#contact">Contact</a></nav>
+<!-- Right Action Button -->
+<div class="flex items-center">
+<a class="inline-flex items-center justify-center space-x-2 bg-brand-accent hover:bg-brand-accentHover text-brand-black text-xs font-semibold px-5 py-2.5 rounded-full transition-all duration-200 shadow-[0_2px_12px_rgba(130,149,232,0.25)] hover:shadow-[0_4px_18px_rgba(130,149,232,0.4)]" data-purpose="nav-cta" href="#contact"><span class="">Start a Project</span>
+<svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 16 16">
+  <line x1="3" x2="13" y1="8" y2="8"></line>
+  <polyline points="9 4 13 8 9 12"></polyline>
+</svg></a>
+</div>
+</div>
+</header>
+<!-- END: SiteNavigation -->
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-[720px] lg:min-h-[820px] pt-32 lg:pt-36 flex items-center overflow-hidden" data-purpose="hero-section">
+<!-- Background Curved Immersive Projection Canvas Visual -->
+<div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+<!-- Right/Center Huge Whale Projection Dome Theater -->
+<div class="absolute top-0 right-0 w-full lg:w-[68%] h-full">
+<div class="relative w-full h-full">
+<img alt="Audience inside an immersive fulldome planetarium theater gazing at projected celestial sphere" class="w-full h-full object-cover object-center scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WjpIKW0r_ibaS1tmQdltCJQ8iCHQC2HB99FryhXdPSaQSLKYna47yKYGaf8iwAPFPxcwexsZ-kPwlbEePLDC5mEVSPvKktX5LSQ55j4zwxo26VIXGLcBskzOj19Ojoga2sDKXofFa2AbEq0PrlTb238A1tOot7oPuY8MKQg2hNBles1rgYIfjDmUtw5VwQmmE5GwZbyx81tnx__UpRS8SvqiPqz00daMrCWQo0e6ZAP9ikMq54UKA_5GQ">
+<!-- Radial & Linear Gradient Overlays to seamlessly blend into deep obsidian black -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#05070B] via-[#05070B]/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#05070B] via-transparent to-[#05070B]/40"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-[#05070B]/70 via-transparent to-transparent"></div>
+</div>
+</div>
+<!-- Subtle ambient cyan/blue aurora glow -->
+<div class="absolute -top-32 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[140px]"></div>
+</div>
+<!-- Hero Content Container -->
+<div class="max-w-7xl mx-auto px-6 relative z-10 w-full py-12 lg:py-20">
+<div class="max-w-xl xl:max-w-2xl">
+<!-- Eyebrow Tag -->
+<span class="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-slate-400 mb-4 font-sans" data-purpose="hero-eyebrow">
+          Industries We Serve
+        </span>
+<!-- Main Headline -->
+<h1 class="text-4xl sm:text-5xl lg:text-[62px] leading-[1.08] font-normal tracking-tight text-white mb-6 font-sans" data-purpose="hero-heading">
+          Immersive<br>
+          Experiences for<br>
+          Every Industry.
+        </h1>
+<!-- Subtitle Description -->
+<p class="text-sm sm:text-base text-slate-300 font-light leading-relaxed max-w-lg mb-9" data-purpose="hero-description">
+          From theme parks to fine dining, wellness to global events — our dome solutions are customized for the unique needs of each industry, creating unforgettable experiences that inspire, engage and bring people back.
+        </p>
+<!-- CTA Button -->
+<div>
+<a class="inline-flex items-center space-x-2 bg-brand-accent hover:bg-brand-accentHover text-brand-black text-xs font-semibold px-6 py-3.5 rounded-full transition-all duration-200 shadow-[0_4px_16px_rgba(130,149,232,0.3)] hover:shadow-[0_6px_22px_rgba(130,149,232,0.45)]" data-purpose="hero-cta-button" href="#industries">
+<span class="">Explore Our Solutions</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: IndustriesGridSection -->
+<section class="relative py-20 lg:py-28" data-purpose="industries-card-grid" id="industries">
+<div class="max-w-7xl mx-auto px-6">
+<!-- 3x3 Grid Layout matching image.png -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+<!-- CARD 01: Entertainment & Tourism -->
+<article class="industry-card rounded-2xl p-5 flex flex-col justify-between" data-purpose="industry-card-01">
+<!-- Card Image with Dome Curved Aspect Ratio -->
+<div class="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-5 bg-slate-900 border border-white/5">
+<img alt="Entertainment &amp; Tourism fulldome immersive ride" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Uwo1heV7ZzCThBQCTdvIOla6w5HkEQ4y0fVVHvhVdHDNGovU3j_rhR9FUl5oAPiT1AGpbPsSn21NavHEFNns6MlDqUIActMNgYEgddNZ2PYzSjhS-dDc2g0pIhcbEDE7ENtAzu7nArnXex8fLTD5Ue75pxNq3uvB5IMAZ6z528FnrO7ILAuLE3ymt1yuMTu_T4Tk8Bi9fBL2-QBio-0c9NgVWFiUTehIIOB_kBjbSKwRY36mrjUW5wphmk">
+<div class="absolute inset-0 bg-gradient-to-t from-[#090D15]/80 via-transparent to-transparent"></div>
+</div>
+<!-- Card Body Content -->
+<div class="flex-1 flex flex-col justify-between">
+<div class="mb-5">
+<div class="flex items-baseline space-x-3 mb-2.5">
+<span class="text-2xl font-light text-slate-400 font-sans tracking-tight">01</span>
+<h3 class="text-lg font-semibold text-white tracking-tight leading-snug">Entertainment<br>&amp; Tourism</h3>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed font-light pl-9">
+                Create signature attractions for theme parks, amusement parks, water parks and leisure destinations that keep guests coming back.
+              </p>
+</div>
+<!-- Bottom Circular Arrow Button -->
+<div class="flex justify-end pt-2">
+<a aria-label="Learn more about Entertainment and Tourism" class="card-arrow-btn w-9 h-9 rounded-full border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<!-- CARD 02: Events & Festivals -->
+<article class="industry-card rounded-2xl p-5 flex flex-col justify-between" data-purpose="industry-card-02">
+<div class="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-5 bg-slate-900 border border-white/5">
+<img alt="Massive music festival inside a geodesic projection dome" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VV6K7xlN2AVL7lyEtnaGHSpymuKK4k3lT-R33COZ1E1NinhMX6-8KUjDMMoeWh5dMq8rYXlqjbTRTMBn4J1kHCGr2KX3Epviz6KcHHOjVyCO5LHhAS60_G1UKFeW9hZ-2VWA2UFQK8KFY-7KkmSWvZaik5SYYpYh4ByVT8SnTE2N2EaLsCDDDAjUDvYBJCpUAEsP2XmmnTioLJSFa_A1TGpovam3zPRot-9chtJFUtqulbGidoKhmt063j">
+<div class="absolute inset-0 bg-gradient-to-t from-[#090D15]/80 via-transparent to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="mb-5">
+<div class="flex items-baseline space-x-3 mb-2.5">
+<span class="text-2xl font-light text-slate-400 font-sans tracking-tight">02</span>
+<h3 class="text-lg font-semibold text-white tracking-tight leading-snug">Events &amp; Festivals</h3>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed font-light pl-9">
+                Portable, high-impact experience zones for festivals, cultural celebrations and special events, with custom content to match the occasion.
+              </p>
+</div>
+<div class="flex justify-end pt-2">
+<a aria-label="Learn more about Events and Festivals" class="card-arrow-btn w-9 h-9 rounded-full border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<!-- CARD 03: Hospitality & Immersive Dining -->
+<article class="industry-card rounded-2xl p-5 flex flex-col justify-between" data-purpose="industry-card-03">
+<div class="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-5 bg-slate-900 border border-white/5">
+<img alt="Hospitality and 360 degree immersive banquet dining dome" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk5udFROpxl7oOXucTP-IEGwVlkb9hUyibalNshUh-rQBcZWVv1E1YNJF53nEbF0Zbe1bVgZeBVJJ8F7PMlpp8bRoZpeEtLNtUDcLSQcri-0X3MNSTXG8IxfHJKp5yNiwrHdUZ0cyUPoYs790ktA3Ix-9SB8RT_a0UHFMJNuPfxq4PSxpzFjEklFAYn1Wk6Hujsq1NVmcu_vTIRfAgXy-mhN0L6wZVviUB7Mj75iPaL4Tmy3zvnRDAFVdT">
+<div class="absolute inset-0 bg-gradient-to-t from-[#090D15]/80 via-transparent to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="mb-5">
+<div class="flex items-baseline space-x-3 mb-2.5">
+<span class="text-2xl font-light text-slate-400 font-sans tracking-tight">03</span>
+<h3 class="text-lg font-semibold text-white tracking-tight leading-snug">Hospitality &amp;<br>Immersive Dining</h3>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed font-light pl-9">
+                Turn a meal into a destination. 360° dining environments for hotels, resorts and restaurants, designed to match your concept and cuisine.
+              </p>
+</div>
+<div class="flex justify-end pt-2">
+<a aria-label="Learn more about Hospitality and Dining" class="card-arrow-btn w-9 h-9 rounded-full border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<!-- CARD 04: Health & Wellness -->
+<article class="industry-card rounded-2xl p-5 flex flex-col justify-between" data-purpose="industry-card-04">
+<div class="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-5 bg-slate-900 border border-white/5">
+<!-- Wellness meditation dome image -->
+<img alt="Health and wellness meditation dome under tranquil aurora projection" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VHKgLgioRnw5WBuxQy7NUEK5ClSoIrULIuJ8Gbx21HIzxMhgkWtn2rmtB4kQEgK_zQDQoE3POie2pXzPzEwV15rgEmC6_kACma1UVBNym4_JIP5-wCWuTNU9JxYXZIEaGuwECGA9VpY_aTHTIHEO09wG_Gfs-e9TKuzJev3RuTUITehEcSs1muvS44x3NWcSrGxY32OaYv1G9Dd_rYQfDNm-JDfQxpyUMctWXER5iPYOg2bvo5botFvfDW">
+<div class="absolute inset-0 bg-gradient-to-t from-[#090D15]/80 via-transparent to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="mb-5">
+<div class="flex items-baseline space-x-3 mb-2.5">
+<span class="text-2xl font-light text-slate-400 font-sans tracking-tight">04</span>
+<h3 class="text-lg font-semibold text-white tracking-tight leading-snug">Health &amp; Wellness</h3>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed font-light pl-9">
+                Meditation, sound healing and yoga in fully immersive environments that enhance relaxation, focus and well-being.
+              </p>
+</div>
+<div class="flex justify-end pt-2">
+<a aria-label="Learn more about Health and Wellness" class="card-arrow-btn w-9 h-9 rounded-full border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<!-- CARD 05: Music, Nightlife & Concerts -->
+<article class="industry-card rounded-2xl p-5 flex flex-col justify-between" data-purpose="industry-card-05">
+<div class="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-5 bg-slate-900 border border-white/5">
+<img alt="Music nightlife dome concert and laser performance" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xcf3g5EPN1bsC6ZmDSdv7KrDcA5aDMoF1WOGPP1lVIpv9t2hpm_0I6uclkXcGCYf9niasy-93HxbRAgJSTE12QM7pUD__c-GaccV1_SWSupOA6oSJ2_NmqnHuByieFsJgxxU_7RCGn68ox9JeA3KB68fzEYyJuaVseJV3dLcsox2fVzoxB1UnyFxO_ICdSiqZlcU_ClBHZ2m3LdlRQWhXucL9X6wGotj6Ll0bqpdCz3A3H6-VxM5bUX9Fe">
+<div class="absolute inset-0 bg-gradient-to-t from-[#090D15]/80 via-transparent to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="mb-5">
+<div class="flex items-baseline space-x-3 mb-2.5">
+<span class="text-2xl font-light text-slate-400 font-sans tracking-tight">05</span>
+<h3 class="text-lg font-semibold text-white tracking-tight leading-snug">Music, Nightlife<br>&amp; Concerts</h3>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed font-light pl-9">
+                Surround the audience with synchronized visuals and sound for unforgettable parties, concerts and live performances.
+              </p>
+</div>
+<div class="flex justify-end pt-2">
+<a aria-label="Learn more about Music and Nightlife" class="card-arrow-btn w-9 h-9 rounded-full border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<!-- CARD 06: Museums & Cultural Institutions -->
+<article class="industry-card rounded-2xl p-5 flex flex-col justify-between" data-purpose="industry-card-06">
+<div class="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-5 bg-slate-900 border border-white/5">
+<img alt="Museums and Cultural Institutions immersive natural history exhibition" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XhdbPAUwQDA_XF_CY2gJ47rul8d8dM0C1hqXzCvsggvRQ6_yfNjM63ZZiHq--VV6B7vYsjSYWgFdX4e0hqFwgRbx7wq4-wE91k3lxqZiMgGdHRVwRUMfUyBC7jwHx2d325iG8bRit2eb4J6p2-FA547-DW4pCp1obaebUmSUKeumkiPvfSCNIhTLTMrrJgwIpbaefSnAwQWqNjFd78-TUsWl_6OHhyuuXi1sgTI-AzJ3Q-uChrAZ_pVg0">
+<div class="absolute inset-0 bg-gradient-to-t from-[#090D15]/80 via-transparent to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="mb-5">
+<div class="flex items-baseline space-x-3 mb-2.5">
+<span class="text-2xl font-light text-slate-400 font-sans tracking-tight">06</span>
+<h3 class="text-lg font-semibold text-white tracking-tight leading-snug">Museums &amp;<br>Cultural Institutions</h3>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed font-light pl-9">
+                Transform learning into an experience for museums, science centres, planetariums and galleries with immersive storytelling.
+              </p>
+</div>
+<div class="flex justify-end pt-2">
+<a aria-label="Learn more about Museums and Cultural Institutions" class="card-arrow-btn w-9 h-9 rounded-full border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<!-- CARD 07: Corporate, Retail & Brand Experiences -->
+<article class="industry-card rounded-2xl p-5 flex flex-col justify-between" data-purpose="industry-card-07">
+<div class="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-5 bg-slate-900 border border-white/5">
+<img alt="Automotive luxury brand activation inside immersive projection dome" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Umi59n17dfbWtgiyW1jt44jrDv6hBr11QO3q12Sh_JGVARKiaBtfm-wYkdSDeSuAqy63057HCMDv254ljlfut4RvbjoJapfQnQedYrYswFO3WpuUkWGtTugMIg6-2PfIS2pnPZ9DFkSbVgpA1eiiPhGdckB4fKrt2WK1dgKLKQyCkgiY3Hzn9osM9Z5aWq6KBeX9-dh8bXNf2LSL2NDGjQSRxte54cJU7vQ51JmnJ8VK5ACrvZ2-FXCX4">
+<div class="absolute inset-0 bg-gradient-to-t from-[#090D15]/80 via-transparent to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="mb-5">
+<div class="flex items-baseline space-x-3 mb-2.5">
+<span class="text-2xl font-light text-slate-400 font-sans tracking-tight">07</span>
+<h3 class="text-lg font-semibold text-white tracking-tight leading-snug">Corporate, Retail<br>&amp; Brand Experiences</h3>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed font-light pl-9">
+                Make your brand the environment. Product launches, trade shows and retail activations that put your audience inside your story.
+              </p>
+</div>
+<div class="flex justify-end pt-2">
+<a aria-label="Learn more about Corporate and Brand Experiences" class="card-arrow-btn w-9 h-9 rounded-full border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<!-- CARD 08: Education & Planetariums -->
+<article class="industry-card rounded-2xl p-5 flex flex-col justify-between" data-purpose="industry-card-08">
+<div class="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-5 bg-slate-900 border border-white/5">
+<img alt="Educational planetarium dome with student audience observing solar system" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UdoJqoYH4jTKdjAYge-7y1UFDf8y1N2Bl0Udzqh-tlFaV_vBCkIM3xMMSpLvzdjbJXbfauz5TtJ6lA1nwG16mdDkYpV1y0VHfUB4o8DkT7QRKMDQYM_6iGc325-gHnJm7VWan9dtQ3qQGnm3wbvkmJiQHsj8pkAp0lwQTqqhruwNs_2fwwXpWKYCR9-V7Kbb4UVB_jQxbm_RjfhTIsjvNX1r5lySsuQ3mMEu13Z4Vg6LGtjgINpIGNq6_E">
+<div class="absolute inset-0 bg-gradient-to-t from-[#090D15]/80 via-transparent to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="mb-5">
+<div class="flex items-baseline space-x-3 mb-2.5">
+<span class="text-2xl font-light text-slate-400 font-sans tracking-tight">08</span>
+<h3 class="text-lg font-semibold text-white tracking-tight leading-snug">Education &amp;<br>Planetariums</h3>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed font-light pl-9">
+                Bring complex ideas to life for schools, universities and science centres with immersive, curriculum-aligned experiences.
+              </p>
+</div>
+<div class="flex justify-end pt-2">
+<a aria-label="Learn more about Education and Planetariums" class="card-arrow-btn w-9 h-9 rounded-full border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</article>
+<!-- CARD 09: Private Events & Weddings -->
+<article class="industry-card rounded-2xl p-5 flex flex-col justify-between" data-purpose="industry-card-09">
+<div class="relative w-full h-52 sm:h-56 rounded-xl overflow-hidden mb-5 bg-slate-900 border border-white/5">
+<img alt="Luxury private events and weddings in glass geodesic dome under starlight" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Vk2HZUxBMx15-xGt62D3NWfkUTIto2VsNtKonebGlGRuzwRDM7akck4Idi1e_lpdz5nqI442_hOLb-0_RmWVi-66MO5kbgwMPL-EhZcdgAmpiYtBCJ267n10LBUB5KfE8-44dRcAunpcq5qH6_7dK3fDxsZDECY6VEhB_YDXuaipl87HJzJHW6IaCRD75VtvND-XI4DLCh6ydf6UwA1luI0kAW1bVOCqhdIHjeWInf0JkCIm-miM2-MC2_">
+<div class="absolute inset-0 bg-gradient-to-t from-[#090D15]/80 via-transparent to-transparent"></div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="mb-5">
+<div class="flex items-baseline space-x-3 mb-2.5">
+<span class="text-2xl font-light text-slate-400 font-sans tracking-tight">09</span>
+<h3 class="text-lg font-semibold text-white tracking-tight leading-snug">Private Events<br>&amp; Weddings</h3>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed font-light pl-9">
+                Create one-of-a-kind celebrations with fully customized dome experiences tailored to your story, theme and venue.
+              </p>
+</div>
+<div class="flex justify-end pt-2">
+<a aria-label="Learn more about Private Events and Weddings" class="card-arrow-btn w-9 h-9 rounded-full border border-slate-700/80 flex items-center justify-center text-slate-300 hover:text-white" href="#">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: IndustriesGridSection -->
+<!-- BEGIN: BottomCTASection -->
+<section class="relative py-24 sm:py-32 overflow-hidden border-t border-white/5" data-purpose="bottom-cta-banner" id="contact">
+<!-- Background Panoramic Aurora & Geodesic Dome Pavilion Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Illuminated geodesic dome by the lake under mountain aurora borealis" class="w-full h-full object-cover object-bottom" src="https://lh3.googleusercontent.com/aida/AEtjO1UeHpo0W7cDRSs5MNhF1nijZHvrsiqJ3xFrnwUCgZql339nUGEj_3-HenuQQL4WxNn2jothrV1LSA4FJpSWMZFlUXrnoU1QE7iuS1mNyUfavqkE6ru5KENuiKbhsrI44nqkM24ut43j3fEHjG7Xzto4_lwlnsaE1zfdfs4HOwWIYNhH9UrpwvSu-Wi9Z5P6kjYUqg3zIeDxCyixhVd0e0d_WqrpvBZKpEaMcspkrHDIC59uxb5MaO2CY84">
+<!-- Midnight gradient shading overlay for pristine text contrast -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#05070B] via-[#05070B]/85 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#05070B] via-transparent to-[#05070B]/70"></div>
+</div>
+<!-- CTA Content Container -->
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="max-w-2xl">
+<!-- Eyebrow -->
+<span class="inline-block text-[11px] font-bold tracking-[0.22em] uppercase text-slate-400 mb-4 font-sans" data-purpose="cta-eyebrow">
+          Ready to Create Your Industry Experience?
+        </span>
+<!-- Headline -->
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-normal text-white tracking-tight leading-[1.15] mb-5 font-sans" data-purpose="cta-heading">
+          Let’s Build Something<br>Extraordinary.
+        </h2>
+<!-- Description text -->
+<p class="text-sm sm:text-base text-slate-300 font-light leading-relaxed max-w-lg mb-8" data-purpose="cta-description">
+          Tell us about your space and your audience, and our team will design the right dome, content and support package.
+        </p>
+<!-- CTA Button -->
+<div>
+<a class="inline-flex items-center space-x-2 bg-brand-accent hover:bg-brand-accentHover text-brand-black text-xs font-semibold px-6 py-3.5 rounded-full transition-all duration-200 shadow-[0_4px_16px_rgba(130,149,232,0.3)] hover:shadow-[0_6px_22px_rgba(130,149,232,0.45)]" data-purpose="cta-submit-btn" href="#">
+<span class="">Start a Project</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 16 16">
+<line x1="3" x2="13" y1="8" y2="8"></line>
+<polyline points="9 4 13 8 9 12"></polyline>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: BottomCTASection -->
+<!-- BEGIN: SiteFooter -->
+<footer class="bg-[#030508] border-t border-white/5 py-14" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-white/5">
+<!-- Left: Brand Mark -->
+<div class="flex items-center space-x-3.5">
+<div class="w-7 h-7 rounded-full border border-slate-500/40 relative overflow-hidden flex items-center justify-center">
+<div class="w-6 h-3 border-t border-white rounded-t-full absolute top-1"></div>
+<div class="w-2.5 h-1 bg-brand-accent/60 rounded-t-full filter blur-[1px]"></div>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold tracking-[0.2em] text-white uppercase font-sans">Arora Dorm</span>
+<span class="text-[8px] tracking-[0.28em] text-slate-500 uppercase font-medium">Solutions</span>
+</div>
+</div>
+<!-- Center: Quick Links -->
+<nav class="flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-slate-400 font-medium" data-purpose="footer-links">
+<a class="hover:text-white transition-colors" href="#">Home</a>
+<a class="hover:text-white transition-colors" href="#">Solutions</a>
+<a class="hover:text-white transition-colors" href="#">Technology</a>
+<a class="hover:text-white transition-colors" href="#">Content</a>
+<a class="text-white" href="#">Industries</a>
+<a class="hover:text-white transition-colors" href="#">About</a>
+</nav>
+<!-- Right: Social Channels -->
+<div class="flex items-center space-x-4 text-slate-400" data-purpose="social-links">
+<a aria-label="LinkedIn" class="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center hover:border-slate-500 hover:text-white transition-colors" href="#">
+<svg class="w-3.5 h-3.5 fill-currentColor" viewBox="0 0 24 24">
+<path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path>
+</svg>
+</a>
+<a aria-label="Instagram" class="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center hover:border-slate-500 hover:text-white transition-colors" href="#">
+<svg class="w-3.5 h-3.5 fill-currentColor" viewBox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Bottom Legal Notice -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 font-light gap-4">
+<p class="">© 2024 Arora Dorm Solutions. All rights reserved.</p>
+<div class="flex items-center space-x-6">
+<a class="hover:text-slate-400 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-slate-400 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-slate-400 transition-colors" href="#">Cookie Preferences</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+
+
+
+
+
+
+</body></html>

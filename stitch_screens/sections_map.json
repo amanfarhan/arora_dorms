@@ -1,0 +1,965 @@
+{
+  "home.html": {
+    "sectionCount": 7,
+    "sections": [
+      {
+        "id": null,
+        "purpose": "hero-section",
+        "h1": "We Build\n          Immersive\nDestinations.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": "experiences",
+        "purpose": "experiences-carousel",
+        "h1": null,
+        "h2": "One Dome.\nEndless Possibilities.",
+        "h3": "Entertainment &amp; Tourism"
+      },
+      {
+        "id": "about",
+        "purpose": "about-partner-section",
+        "h1": null,
+        "h2": "A DifferentApproach.",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": "seamless-journey-process",
+        "h1": null,
+        "h2": "A Seamless Journey.",
+        "h3": "Plan"
+      },
+      {
+        "id": "technology",
+        "purpose": "technology-architecture",
+        "h1": null,
+        "h2": "One Partner.\n        Every Layer.",
+        "h3": null
+      },
+      {
+        "id": "content",
+        "purpose": "immersive-content-canvas",
+        "h1": null,
+        "h2": "World-Class Stories\n                for a 360° Canvas.",
+        "h3": null
+      },
+      {
+        "id": "contact",
+        "purpose": "final-call-to-action",
+        "h1": null,
+        "h2": "Let’s Turn Your Space\n            Into an Experience.",
+        "h3": null
+      }
+    ]
+  },
+  "about.html": {
+    "sectionCount": 6,
+    "sections": [
+      {
+        "id": null,
+        "purpose": "hero-banner",
+        "h1": "We Build\n          Immersive\nDestinations.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": "concept-overview",
+        "h1": null,
+        "h2": "One Partner.\n          A Bigger Possibility.",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": "our-approach",
+        "h1": null,
+        "h2": "From Vision\n          to Reality.",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": "capabilities-overview",
+        "h1": null,
+        "h2": "Everything You Need. Seamlessly Integrated.",
+        "h3": "Dome Engineering"
+      },
+      {
+        "id": null,
+        "purpose": "our-mission",
+        "h1": null,
+        "h2": "To Create Spaces\n          Where People Become\n          Part of the Story.",
+        "h3": null
+      },
+      {
+        "id": "cta",
+        "purpose": "final-cta",
+        "h1": null,
+        "h2": "Let’s Build\n          Your World Together.",
+        "h3": null
+      }
+    ]
+  },
+  "solutions.html": {
+    "sectionCount": 1,
+    "sections": [
+      {
+        "id": null,
+        "purpose": "hero-overview",
+        "h1": "Our Solutions",
+        "h2": null,
+        "h3": null
+      }
+    ]
+  },
+  "solutions-dome-infrastructure.html": {
+    "sectionCount": 5,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "Built Around Your Vision. Engineered for Immersion.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": "scale-matrix",
+        "purpose": null,
+        "h1": null,
+        "h2": "Dome Solutions for Every Scale.",
+        "h3": "Compact &amp; Pop-Up Domes"
+      },
+      {
+        "id": "viewSpecsBtn",
+        "purpose": null,
+        "h1": null,
+        "h2": "Infrastructure Components.",
+        "h3": "Dome Structure &amp; Engineering"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Designed for Your Venue.",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Let’s Build Your Immersive Space.",
+        "h3": null
+      }
+    ]
+  },
+  "solutions-immersive-content.html": {
+    "sectionCount": 6,
+    "sections": [
+      {
+        "id": null,
+        "purpose": "hero-section",
+        "h1": "A 360° Canvas Deserves a World-Class Story.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": "library",
+        "purpose": "content-library-showcase",
+        "h1": null,
+        "h2": "A Growing Library of Extraordinary Worlds.",
+        "h3": "COSMIC"
+      },
+      {
+        "id": null,
+        "purpose": "bespoke-cgi-showcase",
+        "h1": null,
+        "h2": "Your Brand.Your Story.Your World.",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": "industry-experiences",
+        "h1": null,
+        "h2": "Content for Every Experience.",
+        "h3": null
+      },
+      {
+        "id": "processInteractiveContainer",
+        "purpose": "creation-process",
+        "h1": null,
+        "h2": "Our Content Creation Process.",
+        "h3": "Concept"
+      },
+      {
+        "id": "contact",
+        "purpose": "closing-call-to-action",
+        "h1": null,
+        "h2": "Bring Your World to the Dome.",
+        "h3": null
+      }
+    ]
+  },
+  "solutions-end-to-end-delivery.html": {
+    "sectionCount": 5,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "One Partner. \nFrom Concept to Opening Night.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": "process",
+        "purpose": null,
+        "h1": null,
+        "h2": "The Complete Journey",
+        "h3": "Site Assessment"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Everything Working as One",
+        "h3": "Infrastructure"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Designed Around Your Project",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Ready to Bring Your Dome to Life?",
+        "h3": null
+      }
+    ]
+  },
+  "solutions-technical-support.html": {
+    "sectionCount": 5,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "Reliable Performance. \nSeamless Experiences.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Support Beyond Installation",
+        "h3": "Installation &amp; Setup"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Keep Every Layer Working Together",
+        "h3": "Dome Infrastructure"
+      },
+      {
+        "id": "support-process",
+        "purpose": null,
+        "h1": null,
+        "h2": "A Clear Support Process",
+        "h3": "Assess"
+      },
+      {
+        "id": "contact-support",
+        "purpose": null,
+        "h1": null,
+        "h2": "Let's Keep Your Experience Running.",
+        "h3": null
+      }
+    ]
+  },
+  "industries.html": {
+    "sectionCount": 3,
+    "sections": [
+      {
+        "id": null,
+        "purpose": "hero-section",
+        "h1": "Immersive\n          Experiences for\n          Every Industry.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": "industries",
+        "purpose": "industries-card-grid",
+        "h1": null,
+        "h2": null,
+        "h3": "Entertainment&amp; Tourism"
+      },
+      {
+        "id": "contact",
+        "purpose": "bottom-cta-banner",
+        "h1": null,
+        "h2": "Let’s Build SomethingExtraordinary.",
+        "h3": null
+      }
+    ]
+  },
+  "industries-entertainment-tourism.html": {
+    "sectionCount": 7,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "Create attractions people come back for.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Engineered for High-Throughput Destinations",
+        "h3": "Immersive Attractions"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Why Tourism Operators Rely On Aurora",
+        "h3": "Dome Infrastructure"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“Don’t just show the attraction. Surround the audience with it.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "The Project Flow",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Ready to create the experience?",
+        "h3": null
+      }
+    ]
+  },
+  "industries-events-festivals.html": {
+    "sectionCount": 9,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "Make the event \nimpossible to ignore.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Engineered for every temporary spectacle.",
+        "h3": "FESTIVALS &amp; HEADLINE ARENAS"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Purpose-built for zero failure under festival pressure.",
+        "h3": "PORTABLE INFRASTRUCTURE"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“Surround audiences with sound, light, and architecture.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "The Rapid Festival Deployment Cycle",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Ready to create the experience?",
+        "h3": null
+      }
+    ]
+  },
+  "industries-music-nightlife.html": {
+    "sectionCount": 9,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "Don't put the show behind them. Put it around them.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Engineered for Every Arena of Sound",
+        "h3": "Live Music"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“SURROUND AUDIENCES WITH SOUND, LIGHT, AND ARCHITECTURE.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Why Arora Dorm for Music &amp; Nightlife",
+        "h3": "Massive Format Projection"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "The Live Show Project Flow Pipeline",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Ready to Create the Experience?",
+        "h3": null
+      }
+    ]
+  },
+  "industries-corporate-brand.html": {
+    "sectionCount": 9,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "DON'T JUST SHOW YOUR BRAND. \n\n              SURROUND THEM WITH IT.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "YOUR BRAND. \nAN ENTIRE WORLD AROUND IT.",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Application Matrix",
+        "h3": "PRODUCT LAUNCHES"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Why Arora Dorm for Brand Experiences",
+        "h3": "BESPOKE CGI &amp; REAL-TIME"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“DON'T JUST EXHIBIT. \nIMMERSE.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Project Flow Pipeline",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Ready to Create the Experience?",
+        "h3": null
+      }
+    ]
+  },
+  "industries-hospitality-dining.html": {
+    "sectionCount": 8,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "TURN DINNER INTO A DESTINATION.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“THE MENU TELLS ONE STORY.\nTHE DOME SURROUNDS IT.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": "Precision Architectural Applications"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": "Why Arora Dorm for Hospitality Environments"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": "“AN INTIMATE ATMOSPHERE WRAPPED IN A LIMITLESS WORLD.”"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": "From Culinary Vision to Operational Reality"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "READY TO CREATE THE EXPERIENCE?",
+        "h3": null
+      }
+    ]
+  },
+  "industries-museums-cultural.html": {
+    "sectionCount": 8,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "TURN LEARNING INTO AN EXPERIENCE.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Institutional Exhibition Spheres",
+        "h3": "MUSEUMS &amp; ARCHIVES"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“MAKING THE UNSEEN VISIBLE, MEMORABLE, AND IMMENSE.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Why Arora Dorm for Museums &amp; Institutions",
+        "h3": "SCIENTIFIC PRECISION"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Institutional Execution Pipeline",
+        "h3": "Curatorial Review"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Ready to Create the Experience?",
+        "h3": null
+      }
+    ]
+  },
+  "industries-education-planetariums.html": {
+    "sectionCount": 8,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "MAKE COMPLEX WORLDS FEEL TANGIBLE.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Specialized Educational Envelopes",
+        "h3": "K-12 &amp; STEM Academies"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Engineered for Academic Rigor",
+        "h3": "Fulldome Educational Licensing"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“INSPIRING THE NEXT GENERATION OF EXPLORERS.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Project Execution Pipeline",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Ready to Create the Experience?",
+        "h3": null
+      }
+    ]
+  },
+  "industries-health-wellness.html": {
+    "sectionCount": 9,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "Create space to slow down.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“Wellness, without walls.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": "Applications &amp; Experiences"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": "Why Arora Dorm for Health &amp; Wellness"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“Don’t just show serenity. Surround the body with it.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": "The Wellness Pipeline"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Ready to Create the Experience?",
+        "h3": null
+      }
+    ]
+  },
+  "industries-private-events-weddings.html": {
+    "sectionCount": 9,
+    "sections": [
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": "YOUR STORY.\nYOUR WORLD.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“MAKE THE MOMENT FEEL LIKE ANOTHER WORLD.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Curated Spatial Experiences",
+        "h3": "LUXURY WEDDINGS"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Why Arora Dorm for Private Events",
+        "h3": "BESPOKE WORLD-BUILDING"
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "“AN UNFORGETTABLE SETTING FOR YOUR MOST CHERISHED MEMORIES.”",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Event Commissioning Pipeline",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": null,
+        "h1": null,
+        "h2": "Ready to Create the Experience?",
+        "h3": null
+      }
+    ]
+  },
+  "technology-dome-systems.html": {
+    "sectionCount": 6,
+    "sections": [
+      {
+        "id": null,
+        "purpose": "hero-section",
+        "h1": "Precision Engineering for Immersive Worlds.",
+        "h2": null,
+        "h3": "Content"
+      },
+      {
+        "id": "size-options",
+        "purpose": "dome-sizes",
+        "h1": null,
+        "h2": "Dome Sizes from 3M to 25M+",
+        "h3": "3M"
+      },
+      {
+        "id": null,
+        "purpose": "projection-systems",
+        "h1": null,
+        "h2": "Cinema-GradeProjection Mapping",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": "structural-engineering",
+        "h1": null,
+        "h2": "Built for Any Space.Engineered for Performance.",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": "integrated-dome-system",
+        "h1": null,
+        "h2": "A Complete, Integrated System.",
+        "h3": "Content Layer"
+      },
+      {
+        "id": null,
+        "purpose": "installation-and-support",
+        "h1": null,
+        "h2": "With You fromSetup to Every Show.",
+        "h3": "Installation &amp; Setup"
+      }
+    ]
+  },
+  "start-a-project.html": {
+    "sectionCount": 4,
+    "sections": [
+      {
+        "id": null,
+        "purpose": "hero-section",
+        "h1": "Let’s Build \n          Your Immersive \nExperience.",
+        "h2": null,
+        "h3": null
+      },
+      {
+        "id": "quote-form",
+        "purpose": "project-intake-form",
+        "h1": null,
+        "h2": "Tell Us About Your Project",
+        "h3": "Basic Information"
+      },
+      {
+        "id": null,
+        "purpose": "process-timeline",
+        "h1": null,
+        "h2": "From Your Idea to an Immersive Reality",
+        "h3": null
+      },
+      {
+        "id": null,
+        "purpose": "bottom-cta-banner",
+        "h1": null,
+        "h2": "We’d Love to Hear It.",
+        "h3": null
+      }
+    ]
+  }
+}

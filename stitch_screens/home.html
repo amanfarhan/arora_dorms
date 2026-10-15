@@ -1,0 +1,672 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arora Dorm | Immersive Solutions</title>
+<!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#05070B',
+              surface: '#090D14',
+              accent: '#8B80F9',
+              lavender: '#A5B4FC',
+              lilac: '#C084FC',
+              card: '#0D131F',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- CSS: Typography and Global Overrides -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #05070B;
+      color: #E2E8F0;
+      overflow-x: hidden;
+    }
+    .font-editorial {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+  </style>
+<!-- CSS: Aurora Glows and Effects -->
+<style data-purpose="visual-effects">
+    .aurora-gradient-text {
+      background: linear-gradient(135deg, #A5B4FC 0%, #C084FC 50%, #818CF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glow-sphere {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .card-glass {
+      background: rgba(13, 19, 31, 0.65);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .card-glass:hover {
+      border-color: rgba(165, 180, 252, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-[#05070B] text-slate-100 antialiased selection:bg-purple-600 selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-[#05070B]/70 border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3 group" data-purpose="brand-logo" href="#">
+<div class="relative w-8 h-8 flex items-center justify-center">
+<!-- Sleek Geometric Dome Logo Icon -->
+<svg class="w-8 h-8 text-white transition-transform group-hover:scale-105" fill="none" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 4C10.268 4 4 10.268 4 18C4 25.732 10.268 32 18 32C25.732 32 32 25.732 32 18" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path>
+<path d="M7 18C7 11.925 11.925 7 18 7C24.075 7 29 11.925 29 18" stroke="currentColor" stroke-dasharray="2 3" stroke-width="1.25"></path>
+<path d="M18 2C9.163 2 2 9.163 2 18" stroke="#A5B4FC" stroke-linecap="round" stroke-width="2"></path>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1.5" x1="2" x2="34" y1="28" y2="28"></line>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-xs tracking-[0.28em] font-semibold text-white uppercase leading-none">arora dorm</span>
+<span class="text-[9px] tracking-[0.24em] text-slate-400 uppercase mt-1">IMMERSIVE SOLUTIONS</span>
+</div>
+</a>
+<!-- Center Navigation -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-normal text-slate-300" data-purpose="desktop-navigation"><a class="hover:text-white transition-colors duration-200" href="#about">About</a>
+<a class="hover:text-white transition-colors duration-200" href="#experiences">Solutions</a>
+<a class="hover:text-white transition-colors duration-200" href="#content">Content</a>
+<a class="hover:text-white transition-colors duration-200" href="#industries">Industries</a>
+<a class="hover:text-white transition-colors duration-200" href="#technology">Technology</a>
+<a class="hover:text-white transition-colors duration-200" href="#contact">Contact</a></nav>
+<!-- Right Action CTA -->
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-medium tracking-wide text-slate-900 bg-[#A5B4FC] hover:bg-[#b8c4fc] transition-all duration-300 hover:shadow-[0_0_20px_rgba(165,180,252,0.4)]" href="#contact">
+<span class="">Start a Project</span>
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M3.33334 8H12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M8 3.33334L12.6667 8L8 12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-screen pt-32 pb-20 flex flex-col justify-between overflow-hidden" data-purpose="hero-section">
+<!-- Background Scenic Dome Environment -->
+<div class="absolute inset-0 z-0"><img alt="Arora Dorm Observation Experience" class="w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBshKTZOtqLx9Hmu4q5mM3x2cmAfomcj5IvjKwgfWsg2Mv70_ah3IEPgfvoy1S82P67tW0pHYO1zfIz0Tn1Bh1HCcSS08hP7AMIEUcvTPVz1hyc7bMd3iGMWOgcy706Ba4JpoX7OtrDxOmkiB2Cl2UwjwdX6GPQqi5cV_N2-X3wpfl6SADg2rOhy5ydxRRnSN6-dIHHUoQvehiQ0t--BHzEcHOd4WoZ0HDdD5P24L2icX88NbEpe4XV54YIGaL5e5Z-MvA"><div class="absolute inset-0 bg-gradient-to-r from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div><div class="absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div></div>
+<!-- Top & Center Hero Content -->
+<div class="relative z-20 max-w-7xl mx-auto px-6 w-full pt-8 md:pt-16">
+<!-- Eyebrow Tagline -->
+<div class="flex items-center gap-3 mb-6">
+<span class="text-xs uppercase font-medium tracking-[0.25em] text-slate-400">A SINGLE PARTNER</span>
+</div>
+<!-- Headline -->
+<h1 class="font-editorial text-6xl sm:text-7xl lg:text-[88px] font-normal tracking-tight text-white leading-[0.98] max-w-3xl mb-8">
+          We Build<br>
+          Immersive<br>
+<span class="aurora-gradient-text">Destinations.</span>
+</h1>
+<!-- Subtitle -->
+<p class="text-base sm:text-lg text-slate-300 font-light tracking-wide max-w-md mb-10 leading-relaxed">
+          Dome environments. World-class content.<br>End-to-end support.
+        </p>
+<!-- CTA Action Buttons -->
+<div class="flex flex-wrap items-center gap-5">
+<a class="inline-flex items-center gap-2 px-7 py-3 rounded-full text-sm font-medium tracking-wide text-slate-900 bg-[#A5B4FC] hover:bg-[#b8c4fc] transition-all duration-300 hover:shadow-[0_0_24px_rgba(165,180,252,0.45)]" href="#about">
+<span class="">Our Story</span>
+<svg class="w-4 h-4" fill="none" viewBox="0 0 16 16">
+<path d="M3.33334 8H12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M8 3.33334L12.6667 8L8 12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+<button class="inline-flex items-center gap-3 px-4 py-3 rounded-full text-sm font-normal text-slate-300 hover:text-white transition-colors duration-200 group" type="button">
+<span class="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-white/20 transition-all duration-200">
+<svg class="w-3.5 h-3.5 text-white fill-current ml-0.5" viewBox="0 0 16 16">
+<path d="M4 3.5v9l8-4.5-8-4.5z"></path>
+</svg>
+</span>
+<span class="">Watch Video</span>
+</button>
+</div>
+</div>
+<!-- Bottom Hero Metrics Bar & Scroll Indicator -->
+<div class="relative z-20 max-w-7xl mx-auto px-6 w-full mt-16 pt-8 border-t border-white/10 flex flex-wrap items-end justify-between gap-8">
+<!-- Metrics -->
+<div class="flex flex-wrap items-baseline gap-12 sm:gap-20">
+<div>
+<div class="text-2xl sm:text-3xl font-light text-white tracking-tight">3M – 25M+</div>
+<div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Dome Sizes</div>
+</div>
+<div>
+<div class="text-2xl sm:text-3xl font-light text-white tracking-tight">9+</div>
+<div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Industries</div>
+</div>
+<div>
+<div class="text-2xl sm:text-3xl font-light text-white tracking-tight">1</div>
+<div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Single Partner</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="hidden md:flex flex-col items-center gap-3 pb-2 text-[10px] tracking-[0.25em] text-slate-400 uppercase">
+<span class="">SCROLL</span>
+<div class="w-[1px] h-10 bg-gradient-to-b from-white/60 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: ExperiencesSection -->
+<section class="py-24 relative bg-[#05070B] overflow-hidden" data-purpose="experiences-carousel" id="experiences">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Header Row -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+<div>
+<span class="text-xs uppercase font-medium tracking-[0.25em] text-slate-400 block mb-3">EXPERIENCES FOR EVERY WORLD</span>
+<h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight">
+              One Dome.<br>
+<span class="italic font-light">Endless Possibilities.</span>
+</h2>
+</div>
+<div class="flex items-center gap-6 md:max-w-sm">
+<p class="text-sm text-slate-400 leading-relaxed">
+              From entertainment to wellness, we create immersive environments for visionary brands and spaces.
+            </p>
+<div class="flex items-center gap-2 shrink-0">
+<button aria-label="Previous card" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-slate-300 hover:text-white hover:border-white/50 transition-colors" onclick="document.getElementById('industries-carousel').scrollBy({left: -300, behavior: 'smooth'})">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</button>
+<button aria-label="Next card" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-slate-300 hover:text-white hover:border-white/50 transition-colors" onclick="document.getElementById('industries-carousel').scrollBy({left: 300, behavior: 'smooth'})">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Horizontal 5 Experience Cards -->
+<div class="flex gap-4 overflow-x-auto pb-4 scroll-smooth select-none" id="industries-carousel" style="scrollbar-width: none; -ms-overflow-style: none;">
+<!-- Card 01: Entertainment & Tourism -->
+<article class="shrink-0 w-[280px] sm:w-[300px] lg:w-[calc(20%-13px)] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.3)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between" data-purpose="experience-card">
+<div class="h-80 w-full overflow-hidden relative">
+<img alt="Entertainment &amp; Tourism dome marine prehistoric projection" class="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1Uwo1heV7ZzCThBQCTdvIOla6w5HkEQ4y0fVVHvhVdHDNGovU3j_rhR9FUl5oAPiT1AGpbPsSn21NavHEFNns6MlDqUIActMNgYEgddNZ2PYzSjhS-dDc2g0pIhcbEDE7ENtAzu7nArnXex8fLTD5Ue75pxNq3uvB5IMAZ6z528FnrO7ILAuLE3ymt1yuMTu_T4Tk8Bi9fBL2-QBio-0c9NgVWFiUTehIIOB_kBjbSKwRY36mrjUW5wphmk">
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+<span class="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">01</span>
+<div class="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+<h3 class="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">Entertainment &amp; Tourism</h3>
+<span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 02: Events & Festivals -->
+<article class="shrink-0 w-[280px] sm:w-[300px] lg:w-[calc(20%-13px)] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.3)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between" data-purpose="experience-card">
+<div class="h-80 w-full overflow-hidden relative">
+<img alt="Events &amp; Festivals immersive geodesic dome light show" class="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1VV6K7xlN2AVL7lyEtnaGHSpymuKK4k3lT-R33COZ1E1NinhMX6-8KUjDMMoeWh5dMq8rYXlqjbTRTMBn4J1kHCGr2KX3Epviz6KcHHOjVyCO5LHhAS60_G1UKFeW9hZ-2VWA2UFQK8KFY-7KkmSWvZaik5SYYpYh4ByVT8SnTE2N2EaLsCDDDAjUDvYBJCpUAEsP2XmmnTioLJSFa_A1TGpovam3zPRot-9chtJFUtqulbGidoKhmt063j">
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+<span class="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">02</span>
+<div class="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+<h3 class="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">Events &amp; Festivals</h3>
+<span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 03: Hospitality & Immersive Dining -->
+<article class="shrink-0 w-[280px] sm:w-[300px] lg:w-[calc(20%-13px)] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.3)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between" data-purpose="experience-card">
+<div class="h-80 w-full overflow-hidden relative">
+<img alt="Hospitality &amp; Immersive Dining luxury banquet underwater dome" class="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk5udFROpxl7oOXucTP-IEGwVlkb9hUyibalNshUh-rQBcZWVv1E1YNJF53nEbF0Zbe1bVgZeBVJJ8F7PMlpp8bRoZpeEtLNtUDcLSQcri-0X3MNSTXG8IxfHJKp5yNiwrHdUZ0cyUPoYs790ktA3Ix-9SB8RT_a0UHFMJNuPfxq4PSxpzFjEklFAYn1Wk6Hujsq1NVmcu_vTIRfAgXy-mhN0L6wZVviUB7Mj75iPaL4Tmy3zvnRDAFVdT">
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+<span class="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">03</span>
+<div class="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+<h3 class="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">Hospitality &amp; Immersive Dining</h3>
+<span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 04: Health & Wellness -->
+<article class="shrink-0 w-[280px] sm:w-[300px] lg:w-[calc(20%-13px)] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.3)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between" data-purpose="experience-card">
+<div class="h-80 w-full overflow-hidden relative">
+<img alt="Health &amp; Wellness dome meditation under pastel aurora" class="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1VHKgLgioRnw5WBuxQy7NUEK5ClSoIrULIuJ8Gbx21HIzxMhgkWtn2rmtB4kQEgK_zQDQoE3POie2pXzPzEwV15rgEmC6_kACma1UVBNym4_JIP5-wCWuTNU9JxYXZIEaGuwECGA9VpY_aTHTIHEO09wG_Gfs-e9TKuzJev3RuTUITehEcSs1muvS44x3NWcSrGxY32OaYv1G9Dd_rYQfDNm-JDfQxpyUMctWXER5iPYOg2bvo5botFvfDW">
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+<span class="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">04</span>
+<div class="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+<h3 class="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">Health &amp; Wellness</h3>
+<span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 05: Music, Nightlife & Concerts -->
+<article class="shrink-0 w-[280px] sm:w-[300px] lg:w-[calc(20%-13px)] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.3)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between" data-purpose="experience-card">
+<div class="h-80 w-full overflow-hidden relative">
+<img alt="Music, Nightlife &amp; Concerts crowd under laser geodesic dome" class="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1Xcf3g5EPN1bsC6ZmDSdv7KrDcA5aDMoF1WOGPP1lVIpv9t2hpm_0I6uclkXcGCYf9niasy-93HxbRAgJSTE12QM7pUD__c-GaccV1_SWSupOA6oSJ2_NmqnHuByieFsJgxxU_7RCGn68ox9JeA3KB68fzEYyJuaVseJV3dLcsox2fVzoxB1UnyFxO_ICdSiqZlcU_ClBHZ2m3LdlRQWhXucL9X6wGotj6Ll0bqpdCz3A3H6-VxM5bUX9Fe">
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+<span class="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">05</span>
+<div class="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+<h3 class="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">Music, Nightlife &amp; Concerts</h3>
+<span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 06: Museums & Cultural Institutions -->
+<article class="shrink-0 w-[280px] sm:w-[300px] lg:w-[calc(20%-13px)] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.3)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between" data-purpose="experience-card">
+<div class="h-80 w-full overflow-hidden relative">
+<img alt="Museums &amp; Cultural Institutions visitor gazing at Earth projection" class="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1VaGJV8cEk0QxWMib74IF92UmLxce4zya-PZNpwIBl4EtRRvzejIpEwNCtaakSi0x7t6aRYHXlx1pr63_wj9zKPM3O9IFuWUyWr01-hO_uII7F9CqZPX9KesZlYxtoVW1mjErxIysWo1nS2BkusFwNw-yJNzjpEeP0F5UELq90skrsgM2RHjehxn2ADgW-X1yIvbLcmuTSTGf7-jarubmrQ7gDJROVKIzeOps-QCULwffyPsYC8qpk_r-M">
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+<span class="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">06</span>
+<div class="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+<h3 class="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">Museums &amp; Cultural Institutions</h3>
+<span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 07: Corporate, Retail & Brand -->
+<article class="shrink-0 w-[280px] sm:w-[300px] lg:w-[calc(20%-13px)] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.3)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between" data-purpose="experience-card">
+<div class="h-80 w-full overflow-hidden relative">
+<img alt="Corporate, Retail &amp; Brand launch luxury vehicle presentation" class="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBeBvjrbCGgSmY7bC5AjLoSGe3aZ-LNivTM21K_npAnRldui4W8tIcwJf04gJMAahEAPQXonlO3YHjIrx6vqIrRZXnz07IogR-uZHgE-qP4hqKPa1wnCo8pt-ngl_z5Xc_ctIMIUNWInKhyZHKhIbhQgRh0DtGxYrDK53a1VticgrS_TVqvv7crdNAsZWQzgRqC_-oNBMAxqpoMEJ37m1yxdGPb54VekIEcupfP7S1k18ou3CX6B9XYA">
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+<span class="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">07</span>
+<div class="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+<h3 class="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">Corporate, Retail &amp; Brand</h3>
+<span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 08: Education & Planetariums -->
+<article class="shrink-0 w-[280px] sm:w-[300px] lg:w-[calc(20%-13px)] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.3)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between" data-purpose="experience-card">
+<div class="h-80 w-full overflow-hidden relative">
+<img alt="Education &amp; Planetariums planetary orbit cosmic nebulae projection" class="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIn8DipOx9mlyFZpzprCBVXMLw0h3NoP_uUg9RUcIgSPHt-SgDRAsX6AK5XGwdOYmZcvM652BiDJWd2w2zOTGSHhdM1t0r-FM0QBF0DtVzYvMuOpN1YTsVS1sN-j7e72765a2zzuCpr-U1LdDuj2_dX2fhv_TEaD8ngv3r0kPPv-D_ynmPP5bpvyiMCAxeaiYWLOJSnuSFNToOzz7X71p3B6ojBxH9IW3zVsUvoAZdcZjxgmE1puatbg">
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+<span class="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">08</span>
+<div class="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+<h3 class="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">Education &amp; Planetariums</h3>
+<span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 09: Private Events & Weddings -->
+<article class="shrink-0 w-[280px] sm:w-[300px] lg:w-[calc(20%-13px)] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.3)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between" data-purpose="experience-card">
+<div class="h-80 w-full overflow-hidden relative">
+<img alt="Private Events &amp; Weddings reception under starry geodesic dome" class="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD9tmKUHmhSsn6yCR2Pi6WX83EzqkBDTr8eD-XCzKFP4yX69NW0yMMMiWAqQKBskdh-Hy4O4Q04knt6fUP_NtEpbehLGvTRx4-3vemg1GxZB6ZpIESVjZpt_m2IeoIprz3lXPWmrMvPcJMB9kp07CSg1GbOt_5w1C7DTxW9VKLK3RKcH6QYJQKm-dZSQLHeCTv2CPv7NgZ6-FwxmlViFyZpKDaLyVs6MNJBxISI6G_T-nUJwARc8NaIA">
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+<span class="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">09</span>
+<div class="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+<h3 class="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">Private Events &amp; Weddings</h3>
+<span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: ExperiencesSection -->
+<!-- BEGIN: AboutSection -->
+<section class="relative bg-[#05070B] overflow-hidden" data-purpose="about-partner-section" id="about"><div class="relative w-full min-h-[440px] md:min-h-[500px] lg:min-h-[540px] flex items-center overflow-hidden"><div class="absolute inset-0 z-0"><img alt="Arora Dorm illuminated geodesic pavilion by lake under night sky" class="w-full h-full object-cover object-left md:object-center" src="https://lh3.googleusercontent.com/aida/AEtjO1UeHpo0W7cDRSs5MNhF1nijZHvrsiqJ3xFrnwUCgZql339nUGEj_3-HenuQQL4WxNn2jothrV1LSA4FJpSWMZFlUXrnoU1QE7iuS1mNyUfavqkE6ru5KENuiKbhsrI44nqkM24ut43j3fEHjG7Xzto4_lwlnsaE1zfdfs4HOwWIYNhH9UrpwvSu-Wi9Z5P6kjYUqg3zIeDxCyixhVd0e0d_WqrpvBZKpEaMcspkrHDIC59uxb5MaO2CY84" style="transform: scaleX(-1);"><div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#05070B]/50 to-[#05070B] pointer-events-none hidden md:block"></div><div class="absolute inset-0 bg-gradient-to-t from-[#05070B] via-transparent to-[#05070B]/40 pointer-events-none"></div><div class="absolute inset-0 bg-gradient-to-b from-[#05070B] via-transparent to-[#05070B] pointer-events-none"></div></div><div class="relative z-10 max-w-7xl mx-auto px-6 w-full flex justify-end py-16 md:py-24"><div class="w-full md:w-1/2 lg:w-[45%] flex flex-col items-start"><span class="text-xs uppercase font-medium tracking-[0.25em] text-[#A5B4FC]/80 block mb-4">ABOUT ARORA DORM</span><h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.05] mb-6">A Different<br>Approach.</h2><p class="text-base text-slate-300 font-light leading-relaxed mb-8 max-w-md">We bring engineering, content and support together — so you only deal with one partner.</p><div><a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-medium tracking-wide text-slate-900 bg-[#A5B4FC] hover:bg-[#b8c4fc] transition-all duration-300 hover:shadow-[0_0_20px_rgba(165,180,252,0.4)]" href="#technology"><span class="">Learn More</span><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16"><path d="M3.33334 8H12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M8 3.33334L12.6667 8L8 12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></a></div></div></div></div></section>
+<!-- END: AboutSection -->
+<!-- BEGIN: ProcessSection -->
+<section class="py-32 px-6 md:px-16 lg:px-24 relative bg-[#05070B] border-t border-b border-white/5 overflow-hidden" data-purpose="seamless-journey-process">
+<!-- Subtle Radial Glow Background & Blueprint Gridlines -->
+<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(99,102,241,0.08),rgba(5,7,11,0))] z-0"></div>
+<div class="absolute inset-0 pointer-events-none opacity-[0.07] z-0 flex items-center justify-center">
+<svg class="w-full h-full max-w-7xl" fill="none" stroke="currentColor" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+<circle cx="600" cy="400" r="520" stroke="#A5B4FC" stroke-dasharray="3 6" stroke-width="1"></circle>
+<circle cx="600" cy="400" r="380" stroke="#A5B4FC" stroke-width="1"></circle>
+<circle cx="600" cy="400" r="240" stroke="#A5B4FC" stroke-dasharray="2 4" stroke-width="1"></circle>
+<path d="M150 400 L600 20 L1050 400" stroke="#A5B4FC" stroke-width="0.8"></path>
+<path d="M320 400 L600 20 L880 400" stroke="#A5B4FC" stroke-width="0.8"></path>
+<line stroke="#A5B4FC" stroke-width="1" x1="0" x2="1200" y1="400" y2="400"></line>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-20 md:mb-28 gap-6">
+<div>
+<span class="text-xs md:text-sm font-light tracking-[0.25em] text-slate-400 mb-4 block uppercase">FROM VISION TO REALITY</span>
+<h2 class="font-editorial text-4xl sm:text-5xl md:text-6xl font-normal text-white tracking-tight leading-[1.05]">
+          A Seamless Journey.
+        </h2>
+</div>
+<p class="text-slate-400 font-light text-base md:text-lg max-w-xl leading-relaxed">
+        We handle every step, from concept to ongoing support.
+      </p>
+</div>
+<!-- Continuous Cinematic Architectural Timeline (Desktop Track) -->
+<div class="relative mt-8 md:mt-24">
+<!-- Horizontal Connecting Track Line with Glow -->
+<div class="absolute top-2 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent hidden md:block z-0"></div>
+<div class="absolute top-[7px] left-[12%] right-[12%] h-[1px] bg-gradient-to-r from-transparent via-[#A5B4FC]/50 to-transparent hidden md:block z-0 shadow-[0_0_12px_rgba(129,140,248,0.3)]"></div>
+<!-- Desktop 4-Column Timeline Nodes -->
+<div class="hidden md:grid md:grid-cols-4 gap-8 relative z-10">
+<!-- Node 01 -->
+<div class="group cursor-default relative flex flex-col items-start">
+<!-- Track Pin / Luminous Node -->
+<div class="relative flex items-center justify-center w-5 h-5 -mt-0.5 mb-8">
+<span class="absolute w-5 h-5 rounded-full ring-1 ring-indigo-400/40 bg-indigo-500/20 group-hover:scale-125 transition-transform duration-500"></span>
+<span class="relative w-2 h-2 rounded-full bg-[#A5B4FC] shadow-[0_0_8px_rgba(165,180,252,0.8)]"></span>
+</div>
+<!-- Step Number -->
+<span class="text-4xl md:text-5xl font-editorial text-white/30 font-light group-hover:text-indigo-300 transition-colors duration-300 leading-none mb-3">01</span>
+<!-- Stage Name -->
+<h3 class="text-xl md:text-2xl font-editorial text-white mb-2 tracking-wide font-normal">Plan</h3>
+<!-- Description -->
+<p class="text-sm font-light text-slate-400 leading-relaxed max-w-[220px]">
+            Understanding the space, audience and vision.
+          </p>
+<!-- Micro Architectural Tag -->
+<span class="text-[10px] tracking-widest text-indigo-400/60 uppercase mt-5 block font-mono">[ STAGE 01 · CONCEPT ]</span>
+</div>
+<!-- Node 02 -->
+<div class="group cursor-default relative flex flex-col items-start">
+<div class="relative flex items-center justify-center w-5 h-5 -mt-0.5 mb-8">
+<span class="absolute w-5 h-5 rounded-full ring-1 ring-indigo-400/40 bg-indigo-500/20 group-hover:scale-125 transition-transform duration-500"></span>
+<span class="relative w-2 h-2 rounded-full bg-[#A5B4FC] shadow-[0_0_8px_rgba(165,180,252,0.8)]"></span>
+</div>
+<span class="text-4xl md:text-5xl font-editorial text-white/30 font-light group-hover:text-indigo-300 transition-colors duration-300 leading-none mb-3">02</span>
+<h3 class="text-xl md:text-2xl font-editorial text-white mb-2 tracking-wide font-normal">Design</h3>
+<p class="text-sm font-light text-slate-400 leading-relaxed max-w-[220px]">
+            Engineering the structure, projection and experience.
+          </p>
+<span class="text-[10px] tracking-widest text-indigo-400/60 uppercase mt-5 block font-mono">[ STAGE 02 · ARCHITECTURE ]</span>
+</div>
+<!-- Node 03 -->
+<div class="group cursor-default relative flex flex-col items-start">
+<div class="relative flex items-center justify-center w-5 h-5 -mt-0.5 mb-8">
+<span class="absolute w-5 h-5 rounded-full ring-1 ring-indigo-400/40 bg-indigo-500/20 group-hover:scale-125 transition-transform duration-500"></span>
+<span class="relative w-2 h-2 rounded-full bg-[#A5B4FC] shadow-[0_0_8px_rgba(165,180,252,0.8)]"></span>
+</div>
+<span class="text-4xl md:text-5xl font-editorial text-white/30 font-light group-hover:text-indigo-300 transition-colors duration-300 leading-none mb-3">03</span>
+<h3 class="text-xl md:text-2xl font-editorial text-white mb-2 tracking-wide font-normal">Deliver</h3>
+<p class="text-sm font-light text-slate-400 leading-relaxed max-w-[220px]">
+            Bringing the complete experience to life.
+          </p>
+<span class="text-[10px] tracking-widest text-indigo-400/60 uppercase mt-5 block font-mono">[ STAGE 03 · INTEGRATION ]</span>
+</div>
+<!-- Node 04 -->
+<div class="group cursor-default relative flex flex-col items-start">
+<div class="relative flex items-center justify-center w-5 h-5 -mt-0.5 mb-8">
+<span class="absolute w-5 h-5 rounded-full ring-1 ring-indigo-400/40 bg-indigo-500/20 group-hover:scale-125 transition-transform duration-500"></span>
+<span class="relative w-2 h-2 rounded-full bg-[#A5B4FC] shadow-[0_0_8px_rgba(165,180,252,0.8)]"></span>
+</div>
+<span class="text-4xl md:text-5xl font-editorial text-white/30 font-light group-hover:text-indigo-300 transition-colors duration-300 leading-none mb-3">04</span>
+<h3 class="text-xl md:text-2xl font-editorial text-white mb-2 tracking-wide font-normal">Support</h3>
+<p class="text-sm font-light text-slate-400 leading-relaxed max-w-[220px]">
+            Ongoing technical support beyond opening day.
+          </p>
+<span class="text-[10px] tracking-widest text-indigo-400/60 uppercase mt-5 block font-mono">[ STAGE 04 · CONTINUITY ]</span>
+</div>
+</div>
+<!-- Mobile Vertical Timeline -->
+<div class="flex flex-col space-y-12 md:hidden relative border-l border-indigo-500/20 ml-2 pl-8">
+<!-- Mobile Node 01 -->
+<div class="relative flex flex-col items-start">
+<span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full ring-1 ring-indigo-400/40 bg-indigo-500/20 flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-[#A5B4FC]"></span>
+</span>
+<span class="text-3xl font-editorial text-white/30 font-light leading-none mb-2">01</span>
+<h3 class="text-xl font-editorial text-white mb-1 tracking-wide font-normal">Plan</h3>
+<p class="text-sm font-light text-slate-400 leading-relaxed">
+            Understanding the space, audience and vision.
+          </p>
+<span class="text-[10px] tracking-widest text-indigo-400/60 uppercase mt-3 block font-mono">[ STAGE 01 · CONCEPT ]</span>
+</div>
+<!-- Mobile Node 02 -->
+<div class="relative flex flex-col items-start">
+<span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full ring-1 ring-indigo-400/40 bg-indigo-500/20 flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-[#A5B4FC]"></span>
+</span>
+<span class="text-3xl font-editorial text-white/30 font-light leading-none mb-2">02</span>
+<h3 class="text-xl font-editorial text-white mb-1 tracking-wide font-normal">Design</h3>
+<p class="text-sm font-light text-slate-400 leading-relaxed">
+            Engineering the structure, projection and experience.
+          </p>
+<span class="text-[10px] tracking-widest text-indigo-400/60 uppercase mt-3 block font-mono">[ STAGE 02 · ARCHITECTURE ]</span>
+</div>
+<!-- Mobile Node 03 -->
+<div class="relative flex flex-col items-start">
+<span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full ring-1 ring-indigo-400/40 bg-indigo-500/20 flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-[#A5B4FC]"></span>
+</span>
+<span class="text-3xl font-editorial text-white/30 font-light leading-none mb-2">03</span>
+<h3 class="text-xl font-editorial text-white mb-1 tracking-wide font-normal">Deliver</h3>
+<p class="text-sm font-light text-slate-400 leading-relaxed">
+            Bringing the complete experience to life.
+          </p>
+<span class="text-[10px] tracking-widest text-indigo-400/60 uppercase mt-3 block font-mono">[ STAGE 03 · INTEGRATION ]</span>
+</div>
+<!-- Mobile Node 04 -->
+<div class="relative flex flex-col items-start">
+<span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full ring-1 ring-indigo-400/40 bg-indigo-500/20 flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-[#A5B4FC]"></span>
+</span>
+<span class="text-3xl font-editorial text-white/30 font-light leading-none mb-2">04</span>
+<h3 class="text-xl font-editorial text-white mb-1 tracking-wide font-normal">Support</h3>
+<p class="text-sm font-light text-slate-400 leading-relaxed">
+            Ongoing technical support beyond opening day.
+          </p>
+<span class="text-[10px] tracking-widest text-indigo-400/60 uppercase mt-3 block font-mono">[ STAGE 04 · CONTINUITY ]</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ProcessSection -->
+<!-- BEGIN: TechnologySection -->
+<section class="py-24 relative bg-[#05070B] overflow-hidden" data-purpose="technology-architecture" id="technology"><div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Column: Copy & Action -->
+<div class="lg:col-span-5 flex flex-col justify-center z-10">
+<div class="text-[11px] font-semibold tracking-[0.25em] text-[#909cb8] uppercase mb-4">A COMPLETE IMMERSIVE ECOSYSTEM</div>
+<h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.05] mb-6">
+        One Partner.<br>
+        Every Layer.
+      </h2>
+<p class="text-sm md:text-base text-slate-400 font-light leading-relaxed max-w-md mb-8">
+        We bring together dome engineering, projection systems, immersive content and long-term technical support — as one fully integrated solution.
+      </p>
+<div>
+<a class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#A5B4FC] hover:bg-[#b8c4fc] text-[#05070B] font-medium text-sm transition-all duration-300 hover:shadow-[0_0_24px_rgba(165,180,252,0.45)]" href="#technology">
+<span class="">Learn About Our Approach</span>
+<span class="text-base leading-none">→</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Interactive Dome Cutaway Architecture Diagram -->
+<div class="lg:col-span-7 relative flex items-center justify-center min-h-[380px] sm:min-h-[460px] md:min-h-[500px]">
+<div class="relative w-full max-w-[680px]">
+<!-- Dome Rendering -->
+<img alt="3D architectural cutaway diagram of dome structure with inner landscape projection" class="w-full h-auto object-contain block mx-auto select-none pointer-events-none" src="https://lh3.googleusercontent.com/aida/AEtjO1XsgYvvGIICe2qN0ZIehlxYcZ1PQfFmBw_FrriUsz_Fzw_9lY5OcrGWG67hplyTWoIL55-pQrYH-07l4kg8J-HG8AlwGZWunLYYk7u2wi6pqNkKOGRbu2Ew2u96_31SvbIBtr_OIvR9lI5U2y-GZ_qdEFSwLdVsyByIiJmasock4P4Cx9sKwBIPkZPl82I17AJTXTMeQ-BZULK-L7tnoL5jeBXj2sEDfF-lcCPPXXWTRAHrXwX5PP-k7c_Q">
+<!-- Callout 1: Dome Structure (Top Left) -->
+<div class="absolute top-[4%] left-0 sm:left-[2%] flex items-start gap-2.5 z-20">
+<span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-[#8297e6]/50 bg-[#0d1322]/80 backdrop-blur-sm flex items-center justify-center text-[#A5B4FC] text-xs font-semibold shrink-0 shadow-sm">+</span>
+<div class="flex flex-col">
+<span class="text-xs sm:text-sm font-medium text-white tracking-wide leading-tight">Dome Structure</span>
+<span class="text-[10px] sm:text-[11px] text-slate-400 font-light mt-0.5">3m – 25m+</span>
+</div>
+</div>
+<!-- Leader Line 1 -->
+<svg class="hidden sm:block absolute top-[11%] left-[8%] w-[26%] h-[20%] pointer-events-none z-10" fill="none" preserveAspectRatio="none" stroke="currentColor" viewBox="0 0 100 60">
+<path d="M10,0 L10,32 L95,45" fill="none" stroke="rgba(130, 151, 230, 0.4)" stroke-width="1"></path>
+<circle cx="95" cy="45" fill="#A5B4FC" r="2"></circle>
+</svg>
+<!-- Callout 2: Projection Systems (Top Right) -->
+<div class="absolute top-[4%] right-0 sm:right-[4%] flex items-start gap-2.5 z-20">
+<span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-[#8297e6]/50 bg-[#0d1322]/80 backdrop-blur-sm flex items-center justify-center text-[#A5B4FC] text-xs font-semibold shrink-0 shadow-sm">+</span>
+<div class="flex flex-col">
+<span class="text-xs sm:text-sm font-medium text-white tracking-wide leading-tight">Projection Systems</span>
+<span class="text-[10px] sm:text-[11px] text-slate-400 font-light mt-0.5">High-Resolution 360°</span>
+</div>
+</div>
+<!-- Leader Line 2 -->
+<svg class="hidden sm:block absolute top-[11%] right-[14%] w-[22%] h-[18%] pointer-events-none z-10" fill="none" preserveAspectRatio="none" stroke="currentColor" viewBox="0 0 100 60">
+<path d="M85,0 L85,25 L10,40" fill="none" stroke="rgba(130, 151, 230, 0.4)" stroke-width="1"></path>
+<circle cx="10" cy="40" fill="#A5B4FC" r="2"></circle>
+</svg>
+<!-- Callout 3: Immersive Content (Bottom Left) -->
+<div class="absolute bottom-[4%] left-0 sm:left-[4%] flex items-start gap-2.5 z-20">
+<span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-[#8297e6]/50 bg-[#0d1322]/80 backdrop-blur-sm flex items-center justify-center text-[#A5B4FC] text-xs font-semibold shrink-0 shadow-sm">+</span>
+<div class="flex flex-col">
+<span class="text-xs sm:text-sm font-medium text-white tracking-wide leading-tight">Immersive Content</span>
+<span class="text-[10px] sm:text-[11px] text-slate-400 font-light mt-0.5">Fulldome &amp; Bespoke CGI</span>
+</div>
+</div>
+<!-- Leader Line 3 -->
+<svg class="hidden sm:block absolute bottom-[10%] left-[10%] w-[28%] h-[20%] pointer-events-none z-10" fill="none" preserveAspectRatio="none" stroke="currentColor" viewBox="0 0 100 60">
+<path d="M10,60 L10,25 L92,15" fill="none" stroke="rgba(130, 151, 230, 0.4)" stroke-width="1"></path>
+<circle cx="92" cy="15" fill="#A5B4FC" r="2"></circle>
+</svg>
+<!-- Callout 4: Ongoing Support (Bottom Right) -->
+<div class="absolute bottom-[4%] right-0 sm:right-[6%] flex items-start gap-2.5 z-20">
+<span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-[#8297e6]/50 bg-[#0d1322]/80 backdrop-blur-sm flex items-center justify-center text-[#A5B4FC] text-xs font-semibold shrink-0 shadow-sm">+</span>
+<div class="flex flex-col">
+<span class="text-xs sm:text-sm font-medium text-white tracking-wide leading-tight">Ongoing Support</span>
+<span class="text-[10px] sm:text-[11px] text-slate-400 font-light mt-0.5">Technical Continuity</span>
+</div>
+</div>
+<!-- Leader Line 4 -->
+<svg class="hidden sm:block absolute bottom-[10%] right-[10%] w-[24%] h-[18%] pointer-events-none z-10" fill="none" preserveAspectRatio="none" stroke="currentColor" viewBox="0 0 100 60">
+<path d="M85,60 L85,25 L15,10" fill="none" stroke="rgba(130, 151, 230, 0.4)" stroke-width="1"></path>
+<circle cx="15" cy="10" fill="#A5B4FC" r="2"></circle>
+</svg>
+</div>
+</div>
+</div>
+</div></section>
+<!-- END: TechnologySection -->
+<!-- BEGIN: ContentShowcaseSection -->
+<section class="relative bg-[#05070B] overflow-hidden min-h-[540px] lg:min-h-[620px] flex items-center" data-purpose="immersive-content-canvas" id="content">
+<!-- Full Bleed Panoramic Background Image -->
+<div class="absolute inset-0 z-0"><img alt="Cinematic 360-degree immersive fulldome projection of a colossal luminescent nebula and celestial whale gliding through starry space" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuU-gB7dKCDh-ImX2LU4NRcActZ7UhLs6n4xfu-I3B04grJsrqwBMdCmoO6W7nHk1RfbECjiYB7y6XkztU-EgzWZzDlAYaoAeu_sUlrHxDKmJVH0AslUWP1rre0wZFRHGa-nCt3bKYvqvcAFn6YhTDg48hqkQfAHVz9T1RkOkhTEy-GD9XZvTy1m_PjuMIOLweI-Aw49IiWymcOTU7Dt_6Ir8zKqrbustao6HpZsafKaW_Ou847Rr98A"><div class="absolute inset-0 bg-gradient-to-r from-[#05070B]/40 via-[#05070B]/80 to-[#05070B]"></div><div class="absolute inset-0 bg-gradient-to-t from-[#05070B] via-transparent to-[#05070B]/50"></div><div class="absolute inset-0 bg-gradient-to-b from-[#05070B] via-transparent to-[#05070B]/50"></div></div>
+<!-- Content Overlay Container -->
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full py-24 md:py-32">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<div class="lg:col-start-7 lg:col-span-6 flex flex-col justify-center">
+<span class="text-xs uppercase font-medium tracking-[0.25em] text-slate-400 block mb-3">IMMERSIVE CONTENT</span>
+<h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.05] mb-6">
+                World-Class Stories<br>
+                for a 360° Canvas.
+              </h2>
+<p class="text-base text-slate-300 font-light leading-relaxed mb-8 max-w-lg">
+                From our curated library to fully custom CGI, we create worlds tailored to your audience.
+              </p>
+<div>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-medium tracking-wide text-slate-900 bg-[#A5B4FC] hover:bg-[#b8c4fc] transition-all duration-300 hover:shadow-[0_0_20px_rgba(165,180,252,0.4)]" href="#experiences">
+<span class="">Explore Content</span>
+<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
+<path d="M3.33334 8H12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M8 3.33334L12.6667 8L8 12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ContentShowcaseSection -->
+<!-- BEGIN: FinalCTASection -->
+<section class="relative py-28 overflow-hidden" data-purpose="final-call-to-action" id="contact">
+<!-- Panoramic Aurora Mountain Background -->
+<div class="absolute inset-0 z-0"><img alt="Cinematic wide panoramic landscape of an illuminated geodesic dome pavilion beside a reflective alpine lake with aurora borealis" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEd4qqGJcSx92g0CcWd2P75PLxZ6gqW4W0g5nOXRPzGU68FX5dxGkDX-ShEe2gSXgbBdnIkQRrTlYzV7hUnDZFO5rsCT1f45NnTZCZbPGR7NC4nlfTafXGRnvXMYBOsdFQbtmOxhYIlIU77v3mxEy1Z6G3TSUjAxl-aQ_BDRRNkTdUmoO9QMnI9dnFm06cOZvf0Scic7viYxsJEek5UkWWTfNn0gbleIV-C0oSOv6CLpdNEDQs8MzQlg"><div class="absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/80 to-[#05070B]/60"></div><div class="absolute inset-0 bg-[#05070B]/40"></div></div>
+<!-- Foreground CTA Box -->
+<div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-10">
+<div>
+<span class="text-xs uppercase font-medium tracking-[0.25em] text-slate-300 block mb-4">READY TO CREATE?</span>
+<h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.05] max-w-xl">
+            Let’s Turn Your Space<br>
+            Into an Experience.
+          </h2>
+</div>
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-medium tracking-wide text-slate-900 bg-[#A5B4FC] hover:bg-[#b8c4fc] transition-all duration-300 hover:shadow-[0_0_25px_rgba(165,180,252,0.5)]" href="#">
+<span class="">Start a Project</span>
+<svg class="w-4 h-4" fill="none" viewBox="0 0 16 16">
+<path d="M3.33334 8H12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M8 3.33334L12.6667 8L8 12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+<button aria-label="Quick contact" class="w-12 h-12 rounded-full border border-white/20 bg-black/30 backdrop-blur-md flex items-center justify-center text-white hover:border-white transition-colors">
+<svg class="w-4 h-4" fill="none" viewBox="0 0 16 16">
+<path d="M3.33334 8H12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M8 3.33334L12.6667 8L8 12.6667" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</button>
+</div>
+</div>
+</section>
+<!-- END: FinalCTASection -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-[#05070B] border-t border-white/10 relative overflow-hidden text-slate-100" data-purpose="site-footer"><div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(99,102,241,0.08),rgba(5,7,11,0))] z-0"></div><div class="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none opacity-[0.07] z-0 flex items-center justify-center w-full max-w-7xl h-96"><svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 1200 480" xmlns="http://www.w3.org/2000/svg"><circle cx="600" cy="480" r="460" stroke="#A5B4FC" stroke-dasharray="3 6" stroke-width="1"></circle><circle cx="600" cy="480" r="340" stroke="#A5B4FC" stroke-width="1"></circle><circle cx="600" cy="480" r="200" stroke="#A5B4FC" stroke-dasharray="2 4" stroke-width="1"></circle><path d="M140 480 L600 20 L1060 480" stroke="#A5B4FC" stroke-width="0.8"></path><path d="M280 480 L600 20 L920 480" stroke="#A5B4FC" stroke-width="0.8"></path><path d="M420 480 L600 20 L780 480" stroke="#A5B4FC" stroke-width="0.8"></path><line stroke="#A5B4FC" stroke-width="1.2" x1="50" x2="1150" y1="480" y2="480"></line></svg></div><div class="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-20"><div class="border-t border-white/10 pt-16 pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8"><div class="lg:col-span-4 flex flex-col items-start pr-0 lg:pr-6"><a class="flex items-center gap-3 mb-6 group" href="#"><div class="relative w-8 h-8 flex items-center justify-center"><svg class="w-8 h-8 text-white transition-transform group-hover:scale-105" fill="none" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path d="M18 4C10.268 4 4 10.268 4 18C4 25.732 10.268 32 18 32C25.732 32 32 25.732 32 18" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path><path d="M7 18C7 11.925 11.925 7 18 7C24.075 7 29 11.925 29 18" stroke="currentColor" stroke-dasharray="2 3" stroke-width="1.25"></path><path d="M18 2C9.163 2 2 9.163 2 18" stroke="#A5B4FC" stroke-linecap="round" stroke-width="2"></path><line stroke="currentColor" stroke-linecap="round" stroke-width="1.5" x1="2" x2="34" y1="28" y2="28"></line></svg></div><div class="flex flex-col"><span class="text-xs tracking-[0.28em] font-semibold text-white uppercase leading-none">ARORA DORM</span><span class="text-[9px] tracking-[0.24em] text-slate-400 uppercase mt-1">IMMERSIVE SOLUTIONS</span></div></a><p class="text-xs text-slate-400 font-light leading-relaxed mb-4 max-w-sm">A business vertical of Arora Dorm Entertainments Inc.</p><p class="text-xs text-slate-400 font-light leading-relaxed mb-8 max-w-sm">Engineering, projection, immersive content and technical support — brought together under one partner.</p><div class="flex flex-col gap-1.5"><span class="text-[10px] tracking-[0.24em] uppercase font-semibold text-slate-400">LET'S BUILD SOMETHING IMMERSIVE.</span><a class="text-xs text-[#A5B4FC] hover:text-white transition-colors duration-200 inline-flex items-center gap-1 font-medium" href="#contact">Start a Project →</a></div></div><div class="lg:col-span-2 flex flex-col gap-4"><span class="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">EXPLORE</span><nav class="flex flex-col gap-2.5 text-xs text-slate-400 font-light"><a class="hover:text-white transition-colors duration-200" href="#about">About</a><a class="hover:text-white transition-colors duration-200" href="#experiences">Solutions</a><a class="hover:text-white transition-colors duration-200" href="#content">Content</a><a class="hover:text-white transition-colors duration-200" href="#industries">Industries</a><a class="hover:text-white transition-colors duration-200" href="#technology">Technology</a></nav></div><div class="lg:col-span-2 flex flex-col gap-4"><span class="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">SOLUTIONS</span><nav class="flex flex-col gap-2.5 text-xs text-slate-400 font-light"><a class="hover:text-white transition-colors duration-200" href="#technology">Dome Engineering</a><a class="hover:text-white transition-colors duration-200" href="#technology">Projection Systems</a><a class="hover:text-white transition-colors duration-200" href="#content">Immersive Content</a><a class="hover:text-white transition-colors duration-200" href="#technology">Technical Support</a></nav></div><div class="lg:col-span-2 flex flex-col gap-4"><span class="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">INDUSTRIES</span><nav class="flex flex-col gap-2.5 text-xs text-slate-400 font-light"><a class="hover:text-white transition-colors duration-200" href="#experiences">Entertainment &amp; Tourism</a><a class="hover:text-white transition-colors duration-200" href="#experiences">Hospitality</a><a class="hover:text-white transition-colors duration-200" href="#experiences">Events &amp; Festivals</a><a class="hover:text-white transition-colors duration-200" href="#experiences">Wellness</a><a class="hover:text-white transition-colors duration-200" href="#experiences">Museums &amp; Culture</a></nav></div><div class="lg:col-span-2 flex flex-col gap-4"><span class="text-[11px] font-semibold tracking-[0.25em] text-slate-400 uppercase">CONNECT</span><nav class="flex flex-col gap-2.5 text-xs text-slate-400 font-light"><a class="hover:text-white transition-colors duration-200" href="#contact">Start a Project</a><a class="hover:text-white transition-colors duration-200" href="#contact">Contact Us</a><a class="hover:text-white transition-colors duration-200" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a><a class="hover:text-white transition-colors duration-200" href="https://instagram.com" rel="noopener noreferrer" target="_blank">Instagram</a></nav></div></div><div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500 font-light"><div class="">© 2026 Arora Dorm Solutions. All rights reserved.</div><div class="flex items-center gap-6"><a class="hover:text-slate-300 transition-colors" href="#">Privacy Policy</a><a class="hover:text-slate-300 transition-colors" href="#">Terms</a><a class="hover:text-slate-300 transition-colors" href="#contact">Contact</a></div></div></div></footer>
+<!-- END: MainFooter -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

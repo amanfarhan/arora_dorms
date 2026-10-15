@@ -1,0 +1,447 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Aurora Dome Solutions — Immersive Destinations</title>
+<!-- Tailwind CSS CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              periwinkle: '#a3b8ff',
+              lavender: '#8da2fb',
+              dark: '#03070d',
+              cardDark: '#070d17',
+              borderDark: 'rgba(255, 255, 255, 0.08)',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Typography & Micro-adjustments -->
+<style data-purpose="typography">
+    .font-editorial {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.015em;
+    }
+    .text-gradient-periwinkle {
+      background: linear-gradient(135deg, #a3b8ff 20%, #c4d4ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+<!-- Global Component Styles -->
+<style data-purpose="components">
+    /* Subtle radial glow effects */
+    .bg-dark-radial {
+      background: radial-gradient(circle at 50% 0%, #0c1524 0%, #03070d 85%);
+    }
+    .glass-border {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glass-card {
+      background: rgba(12, 19, 31, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-[#03070d] text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-brand-periwinkle selection:text-slate-900">
+<!-- BEGIN: MainHeader -->
+<header class="absolute top-0 left-0 w-full z-50 py-6 px-6 sm:px-10 lg:px-14 flex items-center justify-between border-b border-white/[0.05]" data-purpose="site-navigation-header">
+<!-- Brand Logo -->
+<a aria-label="Arora Dorm Homepage" class="flex items-center gap-3.5 group" href="#">
+<div class="relative w-8 h-8 flex items-center justify-center">
+<!-- Dome Arc Icon -->
+<svg class="w-8 h-8 text-white transition-transform group-hover:scale-105 duration-300" fill="none" stroke="currentColor" viewBox="0 0 36 36">
+<path d="M4 27C4 14.2975 14.2975 4 27 4" stroke-linecap="round" stroke-width="2.2"></path>
+<path d="M4 27H32" stroke-linecap="round" stroke-width="2.2"></path>
+<path d="M4 21H30" stroke-opacity="0.6" stroke-width="1.2"></path>
+<path d="M7 15H27" stroke-opacity="0.5" stroke-width="1.2"></path>
+<path d="M12 9H22" stroke-opacity="0.4" stroke-width="1.2"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold tracking-[0.22em] text-white uppercase leading-tight">Arora Dorm</span>
+<span class="text-[9px] font-normal tracking-[0.28em] text-slate-400 uppercase leading-none mt-1">Immersive Solutions</span>
+</div>
+</a>
+<!-- Center Navigation Links -->
+<nav aria-label="Primary Navigation" class="hidden md:flex items-center space-x-9 text-xs font-normal tracking-wide text-slate-300"><a href="#about" class="text-xs font-normal tracking-wide text-white relative py-1">
+  About
+  <span class="absolute bottom-0 left-0 w-full h-[1.5px] bg-white rounded-full"></span>
+</a>
+<a href="#solutions" class="text-xs font-normal tracking-wide text-white/70 hover:text-white transition-colors duration-200">Solutions</a>
+<a href="#content" class="text-xs font-normal tracking-wide text-white/70 hover:text-white transition-colors duration-200">Content</a>
+<a href="#industries" class="text-xs font-normal tracking-wide text-white/70 hover:text-white transition-colors duration-200">Industries</a>
+<a href="#technology" class="text-xs font-normal tracking-wide text-white/70 hover:text-white transition-colors duration-200">Technology</a>
+<a href="#contact" class="text-xs font-normal tracking-wide text-white/70 hover:text-white transition-colors duration-200">Contact</a></nav>
+<!-- Header Action Button -->
+<div class="flex items-center">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#a3b8ff] hover:bg-[#b8c9ff] text-slate-950 font-medium text-xs tracking-tight transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-indigo-950/40" href="#cta">
+<span class="">Start a Project</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 16 16">
+<path d="M3 8H13M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-[92vh] lg:min-h-screen flex items-center justify-between pt-24 pb-16 overflow-hidden" data-purpose="hero-banner">
+<!-- Cinematic Full Cover Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Interior of an Aurora Dome luxury lounge showing silhouette of an observer looking out toward planet Earth and cosmic aurora lights" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGDquS7hmRpZGxdAeVZJhlWtZTDfj9dC6YRElJHbUa9KBJv5oQ0Cnbl0d0Fp7XOC_b429lQvSymAL23sHkfWmDji36wizReu8HShXZIOhYfyjn_dQP1N8j0cdcJor89DYg0LDDIK7giYAPYC4AB3OfbEdPUU2x8J2-CM4RL7UjSoLAiaO4RYJ5uajfk_GkXqr3iXUoricIxgGTHLwAjL0jPPydVxMf3uDvzw46ObmLKa17faZuO35HEA">
+<!-- Gradient Overlays for Typographic Contrast -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#03070d] via-[#03070d]/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#03070d] via-transparent to-[#03070d]/60"></div>
+</div>
+<!-- Hero Content Container -->
+<div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex flex-col justify-between h-full pt-16">
+<div class="max-w-xl">
+<!-- Eyebrow -->
+<span class="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-5">About Arora Dorm Solutions</span>
+<!-- Primary Editorial Serif Headline -->
+<h1 class="text-5xl sm:text-6xl lg:text-7xl font-light font-editorial text-white leading-[1.04] mb-6">
+          We Build<br>
+          Immersive<br>
+<span class="text-gradient-periwinkle font-normal">Destinations.</span>
+</h1>
+<!-- Supporting Subline -->
+<p class="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-md mb-10 leading-relaxed">
+          A single partner for extraordinary dome experiences.
+        </p>
+<!-- Video Trigger Link -->
+<button aria-label="Watch our brand story" class="group inline-flex items-center gap-3.5 text-xs tracking-wider uppercase font-medium text-white/90 hover:text-white transition-colors duration-200" type="button">
+<span class="w-10 h-10 rounded-full border border-white/20 bg-white/5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:border-white/40">
+<svg class="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+<polygon points="5 3 19 12 5 21 5 3"></polygon>
+</svg>
+</span>
+<span class="tracking-wide">Watch Our Story</span>
+</button>
+</div>
+<!-- Bottom Hero Metadata / Affiliation Note -->
+<div class="self-end mt-16 lg:mt-24 border-l border-white/25 pl-4 py-0.5">
+<p class="text-[9px] tracking-[0.24em] font-medium text-white/50 uppercase leading-relaxed">A business vertical of<br>
+<span class="text-white/80">Arora Dorm Entertainments Inc.</span></p>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: TheIdeaSection -->
+<section class="relative bg-[#03070d] py-24 sm:py-32 px-6 sm:px-10 lg:px-14 border-t border-white/[0.04]" data-purpose="concept-overview">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Column: Story Copy -->
+<div class="lg:col-span-5">
+<span class="block text-[11px] font-medium tracking-[0.28em] uppercase text-white/50 mb-3">
+          The Idea
+        </span>
+<h2 class="text-4xl sm:text-5xl font-editorial font-light text-white leading-tight mb-6">
+          One Partner.<br>
+          A Bigger Possibility.
+        </h2>
+<p class="text-sm sm:text-base text-slate-400 font-light leading-relaxed mb-8 max-w-lg">
+          Immersive dome experiences are powerful — but too often require multiple vendors. We bring everything together, so you deal with a single, accountable partner from start to finish.
+        </p>
+<a class="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-[#a3b8ff] hover:bg-[#b8c9ff] text-slate-950 font-medium text-xs tracking-tight transition-all duration-300" href="#about">
+<span class="">Our Story</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 16 16">
+<path d="M3 8H13M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+</div>
+<!-- Right Column: 4 Feature Pillars Grid Cards -->
+<div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4" data-purpose="pillars-cards">
+<!-- Card 01: Structure -->
+<div class="group relative rounded-xl overflow-hidden glass-border bg-slate-900/50 aspect-[3/5] flex flex-col justify-end p-4 transition-all duration-300 hover:border-white/30">
+<img alt="Geodesic dome metal frame truss structure against night sky" class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY6pj848WA4Bt6RDEZvz1BEGi5n6AzM0fQ4j5kDTKxB9MPF5uD_kmx1RDQeZ26NfZ0YSNPKmfOhjgaymW_pAbW_8D2EMKAGO01JyjkLKmuHvVWBrwNfHZIYAai2clmmUnMDfAcUFPn9oBaljmbDdkHDSv5RaNko1OQTLRe1GjYunHvpfZ9uoHQhpEv4F2-0du-oG0RrOviGWM6BLIjHUnrFXl51MdcrPdE7kdO8CwVUiuS97vFjWhyUQ">
+<div class="absolute inset-0 bg-gradient-to-t from-[#03070d] via-[#03070d]/30 to-transparent"></div>
+<div class="relative z-10">
+<span class="block text-xs font-semibold text-white/60 tracking-wider mb-0.5">01</span>
+<span class="block text-sm font-medium text-white tracking-wide">Structure</span>
+</div>
+</div>
+<!-- Card 02: Projection -->
+<div class="group relative rounded-xl overflow-hidden glass-border bg-slate-900/50 aspect-[3/5] flex flex-col justify-end p-4 transition-all duration-300 hover:border-white/30">
+<img alt="High-end cinema dome laser projection lens" class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeEcpocpRqOuNj983ldt4V61zd-HSYR7EQJ1SHz-i75ARZgJskoXYlr6y0FHTcEBaaWI0AsiWqmTjMzitSp2u00b14_994bjOrP1ongy5RN2JDLgcskNv5I48A2hDv2tE8ZhCz46MXOHMQExUZRmjGg8pGNhcO-C7AyuXT-niaBTmjeHTmeYMtGJr8Q2tM_vEHb4hIvt05jk5xvWYFg37gq9xD3C9UEi47XUV9K-Aa_KaPHKZmHU8YrA">
+<div class="absolute inset-0 bg-gradient-to-t from-[#03070d] via-[#03070d]/30 to-transparent"></div>
+<div class="relative z-10">
+<span class="block text-xs font-semibold text-white/60 tracking-wider mb-0.5">02</span>
+<span class="block text-sm font-medium text-white tracking-wide">Projection</span>
+</div>
+</div>
+<!-- Card 03: Content -->
+<div class="group relative rounded-xl overflow-hidden glass-border bg-slate-900/50 aspect-[3/5] flex flex-col justify-end p-4 transition-all duration-300 hover:border-white/30">
+<img alt="Bioluminescent fulldome cosmic jellyfish content render" class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3NWOKhYcujFnBYhIXvHnu0DTewRnkVcDXkmrC2XyjMd2H5JU--KVyvBsVwe4EdxeTZXilKXaqc-dpI_Whh8YiOtLmXJ_fXbPRhKuvuXUk5xL8W_wYG678X7BjCj12K9OKMDZnVdpMafg4_Qhh3FWfh6gG3hrezhxugDewZgwHOg0JEd0FGNR3O6ny5W0h6a0--GNOx2GHT1MezXHLTh5XEb8FK3jpnjWnqDbB5EcIz7qiMMS1LRRq-A">
+<div class="absolute inset-0 bg-gradient-to-t from-[#03070d] via-[#03070d]/30 to-transparent"></div>
+<div class="relative z-10">
+<span class="block text-xs font-semibold text-white/60 tracking-wider mb-0.5">03</span>
+<span class="block text-sm font-medium text-white tracking-wide">Content</span>
+</div>
+</div>
+<!-- Card 04: Support -->
+<div class="group relative rounded-xl overflow-hidden glass-border bg-slate-900/50 aspect-[3/5] flex flex-col justify-end p-4 transition-all duration-300 hover:border-white/30">
+<img alt="Technical engineer sitting at console in dome theater control room" class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjl8voqlN43xVVQGPxSFGBc_5XdejSkEtLUDdQ_umLMV8k5nUJ7jrH3cko0tYkrZaEzjnB71RRkTL3GbiT_dDWyLRsx1U7hVwV0nnppIlYpin5IdHu5kqaOMXNN2yptaOI-bRgbs9QT-mLkyeD5uEELOREzDg3x9AB-LoIlHWGGCluoOw2dwxTdZLDdHsYZYp0l0AgS-Ijkm9nwe7GD4MFI6lgbFySkusTgyLjwHuumPRTHt3_Y0mb_g">
+<div class="absolute inset-0 bg-gradient-to-t from-[#03070d] via-[#03070d]/30 to-transparent"></div>
+<div class="relative z-10">
+<span class="block text-xs font-semibold text-white/60 tracking-wider mb-0.5">04</span>
+<span class="block text-sm font-medium text-white tracking-wide">Support</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TheIdeaSection -->
+<!-- BEGIN: OurApproachSection -->
+<section class="relative min-h-[520px] lg:min-h-[640px] flex items-center justify-end overflow-hidden" data-purpose="our-approach">
+<!-- Panoramic Illuminated Geodesic Dome Pavilion Image -->
+<div class="absolute inset-0 z-0"><img alt="Illuminated geodesic dome pavilion by calm mountain lake reflecting vibrant northern lights" class="w-full h-full object-cover object-left lg:object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0qn7crdZK-_dqWxZusgZeUO-W223IuNHgVuskLg79MWCmPvjvyiiMmHMj6nrLjrBaZJIvDlzOpLdvBbm7burrBfgNLtBNAcJB0xugFMHb9zJmUQVrMeYoB78eNYlFaE9vPuJuOTGFnfJ9UMEQumcDmT6VmeACa1bu3dOuRS1E-J_BYj6opa9iF0xM1PY1W54AA7xYyGY-5O2AxxTpF_73kNf-7wGfXM-jKun78C4i3w3E17dkZ8hlGA"><div class="absolute inset-0 bg-gradient-to-l from-[#03070d] via-[#03070d]/60 to-transparent"></div></div>
+<!-- Editorial Overlay Content -->
+<div class="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-10 lg:px-14 flex justify-end">
+<div class="w-full lg:max-w-lg xl:max-w-xl py-16">
+<span class="block text-[11px] font-medium tracking-[0.28em] uppercase text-white/60 mb-3">
+          Our Approach
+        </span>
+<h2 class="text-4xl sm:text-5xl font-editorial font-light text-white leading-tight mb-5">
+          From Vision<br>
+          to Reality.
+        </h2>
+<p class="text-sm sm:text-base text-slate-300 font-light leading-relaxed mb-8 max-w-md">
+          We handle the entire journey — from site assessment and design to content, installation and ongoing support — to create experiences tailored to your audience, space and brand.
+        </p>
+<a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#a3b8ff] hover:bg-[#b8c9ff] text-slate-950 font-medium text-xs tracking-tight transition-all duration-300" href="#approach">
+<span class="">Learn About Our Approach</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 16 16">
+<path d="M3 8H13M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+</div>
+</div>
+</section>
+<!-- END: OurApproachSection -->
+<!-- BEGIN: CapabilitiesSection -->
+<section class="relative bg-[#03070d] py-24 sm:py-32 px-6 sm:px-10 lg:px-14 border-t border-b border-white/[0.04]" data-purpose="capabilities-overview">
+<div class="max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="mb-16">
+<span class="block text-[11px] font-medium tracking-[0.28em] uppercase text-white/50 mb-3">
+          Our Capabilities
+        </span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-editorial font-light text-white">
+          Everything You Need. Seamlessly Integrated.
+        </h2>
+</div>
+<!-- 4 Horizontally Aligned Capabilities Columns -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-white/10">
+<!-- Capability 1 -->
+<div class="lg:pr-8 flex flex-col items-start">
+<div class="w-12 h-12 rounded-full border border-brand-periwinkle/30 bg-brand-periwinkle/10 flex items-center justify-center mb-6 text-brand-periwinkle">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+</svg>
+</div>
+<h3 class="text-base font-medium text-white mb-2 tracking-wide">Dome Engineering</h3>
+<p class="text-xs sm:text-sm text-slate-400 font-light leading-relaxed">
+            Custom structures from 3m to 25m+.
+          </p>
+</div>
+<!-- Capability 2 -->
+<div class="lg:px-8 flex flex-col items-start">
+<div class="w-12 h-12 rounded-full border border-brand-periwinkle/30 bg-brand-periwinkle/10 flex items-center justify-center mb-6 text-brand-periwinkle">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+</svg>
+</div>
+<h3 class="text-base font-medium text-white mb-2 tracking-wide">Immersive Content</h3>
+<p class="text-xs sm:text-sm text-slate-400 font-light leading-relaxed">
+            World-class fulldome library and bespoke CGI.
+          </p>
+</div>
+<!-- Capability 3 -->
+<div class="lg:px-8 flex flex-col items-start">
+<div class="w-12 h-12 rounded-full border border-brand-periwinkle/30 bg-brand-periwinkle/10 flex items-center justify-center mb-6 text-brand-periwinkle">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+</svg>
+</div>
+<h3 class="text-base font-medium text-white mb-2 tracking-wide">End-to-End Delivery</h3>
+<p class="text-xs sm:text-sm text-slate-400 font-light leading-relaxed">
+            Project management from concept to launch.
+          </p>
+</div>
+<!-- Capability 4 -->
+<div class="lg:pl-8 flex flex-col items-start">
+<div class="w-12 h-12 rounded-full border border-brand-periwinkle/30 bg-brand-periwinkle/10 flex items-center justify-center mb-6 text-brand-periwinkle">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+</svg>
+</div>
+<h3 class="text-base font-medium text-white mb-2 tracking-wide">Ongoing Support</h3>
+<p class="text-xs sm:text-sm text-slate-400 font-light leading-relaxed">
+            Onsite technical support to keep your dome performing at its best.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CapabilitiesSection -->
+<!-- BEGIN: MissionSection -->
+<section class="relative min-h-[580px] lg:min-h-[700px] flex items-center overflow-hidden" data-purpose="our-mission">
+<!-- Background Planetarium Dome Audience Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Audience looking up at cosmic Earth and starry nebula fulldome projection inside planetarium theater" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkW2W8Tc4GN_mUeRB6y-D-nwz-hIex4U-5IJRwrIoSTBeLps-4nONxns-T-FFnqtxJu4e-4NKeXTkYG3dylqvuyevNNjaxd8fNETYU5GdcV8Sre4lxGpWwZhPzJbtLUigMnm6pX6LDgDMNbHLqnxaaPGxJGkoM1We38Hh0mfoZGaKxA430MVZkDWBJxY8adDJAI8qZW0D7cO6lS7IS3rkdLymU-5qPcW_zUGi27Q8DaFjDvnMQWtkvGA">
+<!-- Left dark gradient to guarantee contrast for text overlay -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#03070d] via-[#03070d]/85 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#03070d] via-transparent to-[#03070d]/40"></div>
+</div>
+<!-- Content Block -->
+<div class="relative z-10 max-w-7xl w-full mx-auto px-6 sm:px-10 lg:px-14 py-20">
+<div class="max-w-xl">
+<span class="block text-[11px] font-medium tracking-[0.28em] uppercase text-white/60 mb-3">
+          Our Mission
+        </span>
+<h2 class="text-4xl sm:text-5xl lg:text-6xl font-editorial font-light text-white leading-tight mb-5">
+          To Create Spaces<br>
+          Where People Become<br>
+          Part of the Story.
+        </h2>
+<p class="text-sm sm:text-base text-slate-300 font-light leading-relaxed mb-8 max-w-md">
+          We design immersive environments that inspire, educate, entertain and connect.
+        </p>
+<a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#a3b8ff] hover:bg-[#b8c9ff] text-slate-950 font-medium text-xs tracking-tight transition-all duration-300" href="#values">
+<span class="">Our Values</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 16 16">
+<path d="M3 8H13M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+</div>
+</div>
+</section>
+<!-- END: MissionSection -->
+<!-- BEGIN: CallToActionSection -->
+<section class="relative py-28 sm:py-36 px-6 sm:px-10 lg:px-14 overflow-hidden" data-purpose="final-cta" id="cta">
+<!-- Aurora Mountain Panoramic Lake Backdrop -->
+<div class="absolute inset-0 z-0">
+<img alt="Aurora borealis swirling above mountain peaks reflected in tranquil alpine lake" class="w-full h-full object-cover object-bottom" src="https://lh3.googleusercontent.com/aida/AEtjO1VPNkQMw8Ua_uuzoQRTjvvv844eETpFuYfRspQQDzA7FlkKPBBqCwwNvYs7PBfakMd7hAz-1IY7xibFMZm-TIIbNPbaMA9zuVdqFZie_or-6mlyvZSmbgD-Aogdi2gELYL6ivdzyKBkFGmh5Q5nIZHub5HJQgvsB_1yQE4QnTqymCz-tKyZD7cHC5LC8XiwWyXviC9YI_Y4XJOC0J8cuhZCgP_Hi_Xzx1tr2qI_JTmKc-7ngLD1_r2MtAM">
+<!-- Dramatic Atmospheric Tint -->
+<div class="absolute inset-0 bg-[#03070d]/75 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#03070d] via-[#03070d]/60 to-[#03070d]/80"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#020509] via-transparent to-[#03070d]"></div>
+</div>
+<!-- Call To Action Grid -->
+<div class="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-10">
+<!-- Headline & Eyebrow -->
+<div>
+<span class="block text-[11px] font-medium tracking-[0.28em] uppercase text-white/60 mb-3">
+          Ready to Create?
+        </span>
+<h2 class="text-4xl sm:text-5xl lg:text-6xl font-editorial font-light text-white leading-tight">
+          Let’s Build<br>
+          Your World Together.
+        </h2>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-6">
+<a class="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#a3b8ff] hover:bg-[#b8c9ff] text-slate-950 font-medium text-xs tracking-tight transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl shadow-indigo-950/60" href="#contact">
+<span class="">Start a Project</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 16 16">
+<path d="M3 8H13M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+<a class="text-xs sm:text-sm font-normal text-slate-300 hover:text-white underline underline-offset-8 transition-colors duration-200" href="#contact">
+          Talk to Our Team
+        </a>
+</div>
+</div>
+</section>
+<!-- END: CallToActionSection -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-[#020407] border-t border-white/[0.06] pt-16 pb-12 relative z-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-white/[0.06]">
+      <div class="lg:col-span-2 space-y-5">
+        <div class="flex items-center gap-3">
+          <svg class="w-8 h-8 text-white" viewBox="0 0 40 40" fill="none">
+            <path d="M20 6C11.163 6 4 13.163 4 22V32H36V22C36 13.163 28.837 6 20 6Z" stroke="currentColor" stroke-width="2"></path>
+            <path d="M10 22C10 16.477 14.477 12 20 12C25.523 12 30 16.477 30 22V32H10V22Z" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"></path>
+            <path d="M20 6V32" stroke="currentColor" stroke-width="1.5"></path>
+          </svg>
+          <div>
+            <div class="text-sm font-semibold tracking-[0.2em] text-white uppercase">Arora Dorm</div>
+            <div class="text-[9px] tracking-[0.25em] text-white/50 uppercase">Immersive Solutions</div>
+          </div>
+        </div>
+        <p class="text-xs text-white/40 leading-relaxed max-w-sm">A business vertical of Arora Dorm Entertainments Inc.<br><br>
+          Engineering, projection, immersive content and technical support — brought together under one partner.</p>
+        <div class="pt-2">
+          <div class="text-[10px] tracking-[0.2em] text-white/30 uppercase mb-1">Let's Build Something Immersive.</div>
+          <a href="#" class="text-xs text-[#99A6FE] hover:underline flex items-center gap-1.5 font-medium">Start a Project →</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-[11px] font-semibold tracking-[0.2em] text-white/70 uppercase mb-4">Explore</h4>
+        <ul class="space-y-2.5 text-xs text-white/50">
+          <li class=""><a href="#" class="hover:text-white transition">About</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Solutions</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Content</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Industries</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Technology</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[11px] font-semibold tracking-[0.2em] text-white/70 uppercase mb-4">Solutions</h4>
+        <ul class="space-y-2.5 text-xs text-white/50">
+          <li class=""><a href="#" class="hover:text-white transition">Dome Engineering</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Projection Systems</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Immersive Content</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Technical Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[11px] font-semibold tracking-[0.2em] text-white/70 uppercase mb-4">Industries</h4>
+        <ul class="space-y-2.5 text-xs text-white/50">
+          <li class=""><a href="#" class="hover:text-white transition">Entertainment &amp; Tourism</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Hospitality</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Events &amp; Festivals</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Wellness</a></li>
+          <li class=""><a href="#" class="hover:text-white transition">Museums &amp; Culture</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
+      <div class="">© 2024 Arora Dorm Solutions. All rights reserved.</div>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-white/70 transition">Privacy Policy</a>
+        <a href="#" class="hover:text-white/70 transition">Terms</a>
+        <a href="#" class="hover:text-white/70 transition">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END: MainFooter -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

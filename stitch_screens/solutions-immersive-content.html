@@ -1,0 +1,876 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head></head><body class="bg-[#030508] text-slate-200 antialiased selection:bg-[#9BAAFF] selection:text-black"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Immersive Content | Aurora Dome Solutions</title>
+<!-- Google Fonts: Cormorant Garamond for luxury serif editorial headlines, Inter for clean UI -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with forms & container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#030508',
+              surface: '#080c14',
+              card: '#0c121d',
+              lavender: '#9BAAFF',
+              lavenderHover: '#8797f5',
+              lavenderLight: '#BDC7FF',
+              accent: '#6478E6',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderSubtle: 'rgba(255, 255, 255, 0.14)',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Core Styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: #030508;
+      color: #E2E8F0;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .headline-font {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+  </style>
+<style data-purpose="layout-effects">
+    /* Subtle radial atmospheric glow */
+    .bg-aurora-radial {
+      background: radial-gradient(circle at 50% 0%, rgba(59, 107, 230, 0.12) 0%, rgba(3, 5, 8, 0) 65%);
+    }
+    .card-glow:hover {
+      box-shadow: 0 10px 30px -10px rgba(110, 140, 255, 0.15);
+      border-color: rgba(155, 170, 255, 0.35);
+    }
+    /* Hide scrollbars for crisp horizontal slider preview */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#030508]/85 backdrop-blur-md border-b border-white/5 transition-all">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Logo / Wordmark -->
+<a class="flex items-center gap-3 group" data-purpose="brand-logo" href="#">
+<div class="relative w-8 h-8 flex items-center justify-center">
+<span class="absolute inset-0 rounded-full border border-white/40 group-hover:border-[#9BAAFF] transition-colors"></span>
+<span class="w-4 h-4 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-400 to-[#9BAAFF] opacity-80 group-hover:scale-110 transition-transform"></span>
+<div class="absolute -top-1 w-6 h-3 border-t-2 border-cyan-400/80 rounded-t-full"></div>
+</div>
+<div class="flex flex-col"><span class="text-sm font-semibold tracking-[0.22em] text-white uppercase leading-none">ARORA DORM</span><span class="text-[9px] tracking-[0.35em] text-slate-400 uppercase mt-0.5">SOLUTIONS</span></div>
+</a>
+<!-- Desktop Navigation Menu -->
+<nav class="hidden md:flex items-center gap-8 text-[13px] tracking-wide text-slate-300 font-medium" data-purpose="main-navigation"><a class="hover:text-white transition-colors" href="#">About</a>
+<a class="hover:text-white transition-colors" href="#">Solutions</a>
+<a class="text-white relative py-1 transition-colors" href="#">
+          Content
+          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-[#9BAAFF] rounded-full"></span>
+</a>
+<a class="hover:text-white transition-colors" href="#">Industries</a>
+<a class="hover:text-white transition-colors" href="#">Technology</a>
+<a class="hover:text-white transition-colors" href="#contact">Contact</a></nav>
+<!-- Action Button -->
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-[#9BAAFF] hover:bg-[#8797f5] text-[#030508] font-medium text-xs sm:text-[13px] px-5 py-2.5 rounded-full transition-all duration-200 transform hover:scale-[1.02] shadow-sm" href="#contact">
+<span class="">Start a Project</span>
+<svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative overflow-hidden bg-aurora-radial py-24" data-purpose="hero-section">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[580px] lg:min-h-[660px]">
+<!-- Left Column: Copy & CTAs -->
+<div class="lg:col-span-5">
+<p class="text-xs font-semibold tracking-[0.25em] text-[#93c5fd] uppercase mb-4">
+      IMMERSIVE CONTENT
+    </p>
+<h1 class="headline-font text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-tight text-white mb-6">
+      A 360° Canvas Deserves a World-Class Story.
+    </h1>
+<p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light mb-8 max-w-xl">
+      From breathtaking fulldome films to bespoke CGI content, we create immersive worlds that bring your vision to life inside the dome.
+    </p>
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-medium text-sm transition-all duration-300 shadow-[0_0_25px_rgba(147,197,253,0.3)]" href="#library">
+<span class="">Explore Our Content</span>
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+<button class="group inline-flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium py-3.5 px-4" type="button">
+<span class="w-10 h-10 rounded-full border border-white/20 group-hover:border-[#93c5fd] flex items-center justify-center transition-all bg-white/5 backdrop-blur-sm">
+<svg class="w-4 h-4 ml-0.5 fill-current text-white group-hover:text-[#93c5fd]" viewBox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</span>
+<span class="">Watch Showreel</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Visual Container -->
+<div class="lg:col-span-7">
+<div class="rounded-2xl lg:rounded-3xl overflow-hidden relative shadow-2xl border border-white/10 group bg-black">
+<div class="relative w-full h-[400px] sm:h-[480px] lg:h-[560px] overflow-hidden">
+<img alt="Audience seated inside a majestic fulldome theater looking at a prehistoric marine giant underwater projection" class="w-full h-full object-cover object-center filter brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1Uwo1heV7ZzCThBQCTdvIOla6w5HkEQ4y0fVVHvhVdHDNGovU3j_rhR9FUl5oAPiT1AGpbPsSn21NavHEFNns6MlDqUIActMNgYEgddNZ2PYzSjhS-dDc2g0pIhcbEDE7ENtAzu7nArnXex8fLTD5Ue75pxNq3uvB5IMAZ6z528FnrO7ILAuLE3ymt1yuMTu_T4Tk8Bi9fBL2-QBio-0c9NgVWFiUTehIIOB_kBjbSKwRY36mrjUW5wphmk">
+<!-- Left soft blend gradient into dark background -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#03070d] via-transparent to-transparent pointer-events-none w-1/3 lg:w-2/5"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#030508]/80 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<!-- Ambient Glow Behind Arc -->
+<div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-blue-500/20 blur-2xl rounded-full pointer-events-none"></div>
+</div>
+</div>
+</div></div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: ContentLibrarySection -->
+<section class="py-20 lg:py-24 border-t border-white/5 relative" data-purpose="content-library-showcase" id="library">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="max-w-2xl">
+<p class="text-xs font-semibold tracking-[0.28em] uppercase text-[#9BAAFF] mb-3">
+            CONTENT LIBRARY
+          </p>
+<h2 class="headline-font text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight">
+            A Growing Library of Extraordinary Worlds.
+          </h2>
+<p class="text-slate-400 text-sm sm:text-base mt-3 font-light leading-relaxed">
+            Access a curated collection of world-class fulldome films and visual experiences, or let us create something unique for your space, your audience and your brand.
+          </p>
+</div>
+<div class="shrink-0">
+<a class="inline-flex items-center gap-2 bg-[#9BAAFF] hover:bg-[#8797f5] text-[#030508] font-medium text-xs sm:text-sm px-5 py-2.5 rounded-full transition-all" href="#">
+<span class="">Browse Full Library</span>
+<svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- 5-Column Content Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5" data-purpose="category-card-grid">
+<!-- Card 1: COSMIC -->
+<article class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#080d16] flex flex-col justify-between transition-all duration-300 card-glow">
+<div class="relative aspect-[4/5] w-full overflow-hidden">
+<img alt="Cosmic sphere of Earth and galaxy fulldome projection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1WjpIKW0r_ibaS1tmQdltCJQ8iCHQC2HB99FryhXdPSaQSLKYna47yKYGaf8iwAPFPxcwexsZ-kPwlbEePLDC5mEVSPvKktX5LSQ55j4zwxo26VIXGLcBskzOj19Ojoga2sDKXofFa2AbEq0PrlTb238A1tOot7oPuY8MKQg2hNBles1rgYIfjDmUtw5VwQmmE5GwZbyx81tnx__UpRS8SvqiPqz00daMrCWQo0e6ZAP9ikMq54UKA_5GQ">
+<div class="absolute inset-0 bg-gradient-to-t from-[#080d16] via-[#080d16]/30 to-transparent"></div>
+</div>
+<div class="p-5 relative -mt-10 flex flex-col justify-between flex-1">
+<div>
+<h3 class="text-sm font-semibold tracking-wider text-white uppercase mb-1.5">COSMIC</h3>
+<p class="text-xs text-slate-400 font-light leading-relaxed">Travel through galaxies, planets and the universe.</p>
+</div>
+<div class="mt-5">
+<span class="w-7 h-7 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:bg-[#9BAAFF]/10 flex items-center justify-center text-white group-hover:text-[#9BAAFF] transition-all">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 2: NATURE -->
+<article class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#080d16] flex flex-col justify-between transition-all duration-300 card-glow">
+<div class="relative aspect-[4/5] w-full overflow-hidden">
+<img alt="Deep ocean coral reef and whale under geodesic projection dome" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1XUni7dk98yXPZftEH9zTThDUxbRtmabDIhHJw0adK1TCRxWcmtFPOuU0KvncA6hXb_P_XhaOXKKg8iNvAdXIQRiEjGSBUpFd20lFuIvCXFUog1I-bmYSV4oZeYkjsio4B98P9C-JmyUkAl9hTt8ldqpCuyZEjoZyxwdWCgb3kBA0Xp_V05ddT5XSoVRzxM28d9AmQM1cr7S0irikNVjUclRWkIZl6s5lLF5vIQsqySUsKp_Dno9LD3kdAD">
+<div class="absolute inset-0 bg-gradient-to-t from-[#080d16] via-[#080d16]/30 to-transparent"></div>
+</div>
+<div class="p-5 relative -mt-10 flex flex-col justify-between flex-1">
+<div>
+<h3 class="text-sm font-semibold tracking-wider text-white uppercase mb-1.5">NATURE</h3>
+<p class="text-xs text-slate-400 font-light leading-relaxed">Oceans, forests and the vibrant natural world.</p>
+</div>
+<div class="mt-5">
+<span class="w-7 h-7 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:bg-[#9BAAFF]/10 flex items-center justify-center text-white group-hover:text-[#9BAAFF] transition-all">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 3: LANDSCAPES -->
+<article class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#080d16] flex flex-col justify-between transition-all duration-300 card-glow">
+<div class="relative aspect-[4/5] w-full overflow-hidden">
+<img alt="Pristine alpine lake and snowy peaks inside curved dome structure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1VCIknVQH0Mur2xWV36Zj52J-uaYyr9RepGqsLGDTNNeC1_7OPcrwS7hTtAV5oGYaneI8_VWS5XdD6qztqO6Tyoh3KPooDWfJ1JIWNiwnaeMvbU71pNGSS81GAuAssLzXe6zqOM2kZgPLzaAT795HKPPrLFbQmkhch7m7pPqsi6kxm-cafQt6REeoEVAW9T-qHi9nnwSx1UIsD7R7Sd1esLuaHGcF6dxc_QzqZRNJGj2b5WpQEpAzKN6UT9">
+<div class="absolute inset-0 bg-gradient-to-t from-[#080d16] via-[#080d16]/30 to-transparent"></div>
+</div>
+<div class="p-5 relative -mt-10 flex flex-col justify-between flex-1">
+<div>
+<h3 class="text-sm font-semibold tracking-wider text-white uppercase mb-1.5">LANDSCAPES</h3>
+<p class="text-xs text-slate-400 font-light leading-relaxed">Iconic destinations and breathtaking environments.</p>
+</div>
+<div class="mt-5">
+<span class="w-7 h-7 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:bg-[#9BAAFF]/10 flex items-center justify-center text-white group-hover:text-[#9BAAFF] transition-all">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 4: ART & CULTURE -->
+<article class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#080d16] flex flex-col justify-between transition-all duration-300 card-glow">
+<div class="relative aspect-[4/5] w-full overflow-hidden">
+<img alt="Bioluminescent artistic jellyfish nebula rendering in deep space" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1V8LJvoPXe5Vb0POpknzPrlx9wz39Y7-yf04wguY6pLBn4EYEXUxmO_m7uEtuLhxImyC4PTQ7aRVGyZ9DO4iOYXKphsP-C8skDmpWsntru7pqs5g5dtO8HQ7rEsehr6CDdUZvcLLVKHFBJFLExlGOKb_QQP_zTlHtZhCdD2NM_dtCPMoZtr6wbPqVBKmlMnAaww1bbJKbhIhWYbc3d8BXz7scgEw_lWsP4Q4NXa61sJYtW8SBcQIuSpMzI">
+<div class="absolute inset-0 bg-gradient-to-t from-[#080d16] via-[#080d16]/30 to-transparent"></div>
+</div>
+<div class="p-5 relative -mt-10 flex flex-col justify-between flex-1">
+<div>
+<h3 class="text-sm font-semibold tracking-wider text-white uppercase mb-1.5">ART &amp; CULTURE</h3>
+<p class="text-xs text-slate-400 font-light leading-relaxed">Immersive art, history and cultural storytelling.</p>
+</div>
+<div class="mt-5">
+<span class="w-7 h-7 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:bg-[#9BAAFF]/10 flex items-center justify-center text-white group-hover:text-[#9BAAFF] transition-all">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+<!-- Card 5: RELAXATION -->
+<article class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#080d16] flex flex-col justify-between transition-all duration-300 card-glow">
+<div class="relative aspect-[4/5] w-full overflow-hidden">
+<img alt="Serene meditation dome with aurora borealis light therapy visuals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1VHKgLgioRnw5WBuxQy7NUEK5ClSoIrULIuJ8Gbx21HIzxMhgkWtn2rmtB4kQEgK_zQDQoE3POie2pXzPzEwV15rgEmC6_kACma1UVBNym4_JIP5-wCWuTNU9JxYXZIEaGuwECGA9VpY_aTHTIHEO09wG_Gfs-e9TKuzJev3RuTUITehEcSs1muvS44x3NWcSrGxY32OaYv1G9Dd_rYQfDNm-JDfQxpyUMctWXER5iPYOg2bvo5botFvfDW">
+<div class="absolute inset-0 bg-gradient-to-t from-[#080d16] via-[#080d16]/30 to-transparent"></div>
+</div>
+<div class="p-5 relative -mt-10 flex flex-col justify-between flex-1">
+<div>
+<h3 class="text-sm font-semibold tracking-wider text-white uppercase mb-1.5">RELAXATION</h3>
+<p class="text-xs text-slate-400 font-light leading-relaxed">Calming visual journeys for wellness and leisure.</p>
+</div>
+<div class="mt-5">
+<span class="w-7 h-7 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:bg-[#9BAAFF]/10 flex items-center justify-center text-white group-hover:text-[#9BAAFF] transition-all">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: ContentLibrarySection -->
+<!-- BEGIN: BespokeCGISection -->
+<section class="py-20 lg:py-28 relative overflow-hidden bg-[#020407]" data-purpose="bespoke-cgi-showcase">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+<!-- Left Column: Copy & Value Proposition -->
+<div class="lg:col-span-5">
+<p class="text-xs font-semibold tracking-[0.28em] uppercase text-[#9BAAFF] mb-4">
+            BESPOKE CGI CONTENT
+          </p>
+<h2 class="headline-font text-4xl sm:text-5xl lg:text-[54px] font-normal leading-[1.1] text-white mb-6">
+            Your Brand.<br>Your Story.<br>Your World.
+          </h2>
+<p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-8">
+            We create custom CGI content tailored to your specific theme, season, event or brand. Whether it’s an immersive dining experience, a product launch or a full attraction, our creative team designs and produces content that perfectly fits your vision.
+          </p>
+<a class="inline-flex items-center gap-2 bg-[#9BAAFF] hover:bg-[#8797f5] text-[#030508] font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all duration-200 transform hover:scale-[1.02]" href="#contact">
+<span class="">Create Custom Content</span>
+<svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>
+<!-- Right Column: Control Room & Bioluminescent Jellyfish Projection -->
+<div class="lg:col-span-7">
+<div class="relative rounded-2xl overflow-hidden border border-white/10 bg-[#05080e] shadow-2xl group">
+<!-- Dual visual composition: Jellyfish fulldome backdrop + Control console silhouette overlay -->
+<div class="relative aspect-[16/10] w-full overflow-hidden"><img alt="Cinematic wide view of immersive dome production studio with creative specialist and bioluminescent CGI jellyfish projection" class="w-full h-full object-cover object-center filter brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Wnqt65ySaHKGKNXaf9Nwx8fr-Nha40k5gz4C6NTDsSf0r1A5KISKA-VzVMhEjYqb7ylGD1Us4t6R9wJ4th7n80PsuKb7rcb_ov-N4h54qwrY5HI1ltz1LBgDFuNEwlqLEcAEQgZEXaNJJUXsJi4IfENYuu8Y8P1FqcrfQYLl00Pjwl1jbpPKdGKNDGprl2DqwDEsngVXHX2w16YOSmH3v6G6r82XL2NmU3_VcQ1AwbRNrS9WefpWxR6FE"><div class="absolute inset-0 bg-gradient-to-tr from-[#020407] via-transparent to-[#9BAAFF]/10 pointer-events-none"></div></div>
+<!-- Sleek Control Badge -->
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between p-3 rounded-lg bg-black/60 backdrop-blur-md border border-white/10 text-xs">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="text-slate-300 font-mono">8K Fulldome Master • 60 FPS Real-time</span>
+</div>
+<span class="text-[#9BAAFF] font-medium hidden sm:inline-block">Arora Dorm Engine v3.4</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: BespokeCGISection -->
+<!-- BEGIN: IndustryExperiencesSection -->
+<section class="py-20 lg:py-28 border-t border-white/5 relative" data-purpose="industry-experiences">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<p class="text-xs font-semibold tracking-[0.28em] uppercase text-[#9BAAFF] mb-3">
+            DESIGNED FOR EVERY INDUSTRY
+          </p>
+<h2 class="headline-font text-3xl sm:text-4xl lg:text-5xl font-normal text-white">
+            Content for Every Experience.
+          </h2>
+</div>
+<p class="text-slate-400 text-sm max-w-md font-light leading-relaxed">
+          From high-energy festival visuals to calming wellness journeys, we tailor content to match your industry and audience.
+        </p>
+</div>
+<!-- 8-Card Grid Layout (matching reference: 4 on top, 4 on bottom + 9th flex/card) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" data-purpose="experiences-grid">
+<!-- 1. Entertainment -->
+<div class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#090d16] p-4 transition-all duration-300 card-glow">
+<div class="relative aspect-[16/10] w-full rounded-lg overflow-hidden mb-3">
+<img alt="Entertainment dome visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Uwo1heV7ZzCThBQCTdvIOla6w5HkEQ4y0fVVHvhVdHDNGovU3j_rhR9FUl5oAPiT1AGpbPsSn21NavHEFNns6MlDqUIActMNgYEgddNZ2PYzSjhS-dDc2g0pIhcbEDE7ENtAzu7nArnXex8fLTD5Ue75pxNq3uvB5IMAZ6z528FnrO7ILAuLE3ymt1yuMTu_T4Tk8Bi9fBL2-QBio-0c9NgVWFiUTehIIOB_kBjbSKwRY36mrjUW5wphmk">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-sm font-medium text-white">Entertainment</span>
+<span class="w-6 h-6 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:text-[#9BAAFF] flex items-center justify-center transition-all">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+<!-- 2. Events & Festivals -->
+<div class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#090d16] p-4 transition-all duration-300 card-glow">
+<div class="relative aspect-[16/10] w-full rounded-lg overflow-hidden mb-3">
+<img alt="Events and festival dome stage lights" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VV6K7xlN2AVL7lyEtnaGHSpymuKK4k3lT-R33COZ1E1NinhMX6-8KUjDMMoeWh5dMq8rYXlqjbTRTMBn4J1kHCGr2KX3Epviz6KcHHOjVyCO5LHhAS60_G1UKFeW9hZ-2VWA2UFQK8KFY-7KkmSWvZaik5SYYpYh4ByVT8SnTE2N2EaLsCDDDAjUDvYBJCpUAEsP2XmmnTioLJSFa_A1TGpovam3zPRot-9chtJFUtqulbGidoKhmt063j">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-sm font-medium text-white">Events &amp; Festivals</span>
+<span class="w-6 h-6 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:text-[#9BAAFF] flex items-center justify-center transition-all">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+<!-- 3. Hospitality & Dining -->
+<div class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#090d16] p-4 transition-all duration-300 card-glow">
+<div class="relative aspect-[16/10] w-full rounded-lg overflow-hidden mb-3">
+<img alt="Immersive dining dome experience with candlelight" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk5udFROpxl7oOXucTP-IEGwVlkb9hUyibalNshUh-rQBcZWVv1E1YNJF53nEbF0Zbe1bVgZeBVJJ8F7PMlpp8bRoZpeEtLNtUDcLSQcri-0X3MNSTXG8IxfHJKp5yNiwrHdUZ0cyUPoYs790ktA3Ix-9SB8RT_a0UHFMJNuPfxq4PSxpzFjEklFAYn1Wk6Hujsq1NVmcu_vTIRfAgXy-mhN0L6wZVviUB7Mj75iPaL4Tmy3zvnRDAFVdT">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-sm font-medium text-white">Hospitality &amp; Dining</span>
+<span class="w-6 h-6 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:text-[#9BAAFF] flex items-center justify-center transition-all">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+<!-- 4. Wellness -->
+<div class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#090d16] p-4 transition-all duration-300 card-glow">
+<div class="relative aspect-[16/10] w-full rounded-lg overflow-hidden mb-3">
+<img alt="Calm meditation wellness dome" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1VHKgLgioRnw5WBuxQy7NUEK5ClSoIrULIuJ8Gbx21HIzxMhgkWtn2rmtB4kQEgK_zQDQoE3POie2pXzPzEwV15rgEmC6_kACma1UVBNym4_JIP5-wCWuTNU9JxYXZIEaGuwECGA9VpY_aTHTIHEO09wG_Gfs-e9TKuzJev3RuTUITehEcSs1muvS44x3NWcSrGxY32OaYv1G9Dd_rYQfDNm-JDfQxpyUMctWXER5iPYOg2bvo5botFvfDW">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-sm font-medium text-white">Wellness</span>
+<span class="w-6 h-6 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:text-[#9BAAFF] flex items-center justify-center transition-all">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+<!-- 5. Music & Nightlife -->
+<div class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#090d16] p-4 transition-all duration-300 card-glow">
+<div class="relative aspect-[16/10] w-full rounded-lg overflow-hidden mb-3">
+<img alt="Nightlife party under laser mapped dome ceiling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xcf3g5EPN1bsC6ZmDSdv7KrDcA5aDMoF1WOGPP1lVIpv9t2hpm_0I6uclkXcGCYf9niasy-93HxbRAgJSTE12QM7pUD__c-GaccV1_SWSupOA6oSJ2_NmqnHuByieFsJgxxU_7RCGn68ox9JeA3KB68fzEYyJuaVseJV3dLcsox2fVzoxB1UnyFxO_ICdSiqZlcU_ClBHZ2m3LdlRQWhXucL9X6wGotj6Ll0bqpdCz3A3H6-VxM5bUX9Fe">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-sm font-medium text-white">Music &amp; Nightlife</span>
+<span class="w-6 h-6 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:text-[#9BAAFF] flex items-center justify-center transition-all">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+<!-- 6. Museums & Culture -->
+<div class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#090d16] p-4 transition-all duration-300 card-glow">
+<div class="relative aspect-[16/10] w-full rounded-lg overflow-hidden mb-3">
+<img alt="Planetarium and science museum ceiling projections" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XhdbPAUwQDA_XF_CY2gJ47rul8d8dM0C1hqXzCvsggvRQ6_yfNjM63ZZiHq--VV6B7vYsjSYWgFdX4e0hqFwgRbx7wq4-wE91k3lxqZiMgGdHRVwRUMfUyBC7jwHx2d325iG8bRit2eb4J6p2-FA547-DW4pCp1obaebUmSUKeumkiPvfSCNIhTLTMrrJgwIpbaefSnAwQWqNjFd78-TUsWl_6OHhyuuXi1sgTI-AzJ3Q-uChrAZ_pVg0">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-sm font-medium text-white">Museums &amp; Culture</span>
+<span class="w-6 h-6 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:text-[#9BAAFF] flex items-center justify-center transition-all">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+<!-- 7. Brand Experiences -->
+<div class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#090d16] p-4 transition-all duration-300 card-glow">
+<div class="relative aspect-[16/10] w-full rounded-lg overflow-hidden mb-3">
+<img alt="Brand launch vehicle display inside high-tech architectural dome" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Umi59n17dfbWtgiyW1jt44jrDv6hBr11QO3q12Sh_JGVARKiaBtfm-wYkdSDeSuAqy63057HCMDv254ljlfut4RvbjoJapfQnQedYrYswFO3WpuUkWGtTugMIg6-2PfIS2pnPZ9DFkSbVgpA1eiiPhGdckB4fKrt2WK1dgKLKQyCkgiY3Hzn9osM9Z5aWq6KBeX9-dh8bXNf2LSL2NDGjQSRxte54cJU7vQ51JmnJ8VK5ACrvZ2-FXCX4">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-sm font-medium text-white">Brand Experiences</span>
+<span class="w-6 h-6 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:text-[#9BAAFF] flex items-center justify-center transition-all">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+<!-- 8. Private Events -->
+<div class="group relative rounded-xl overflow-hidden border border-white/10 bg-[#090d16] p-4 transition-all duration-300 card-glow">
+<div class="relative aspect-[16/10] w-full rounded-lg overflow-hidden mb-3">
+<img alt="Luxury private gala reception inside illuminated glass dome" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Vk2HZUxBMx15-xGt62D3NWfkUTIto2VsNtKonebGlGRuzwRDM7akck4Idi1e_lpdz5nqI442_hOLb-0_RmWVi-66MO5kbgwMPL-EhZcdgAmpiYtBCJ267n10LBUB5KfE8-44dRcAunpcq5qH6_7dK3fDxsZDECY6VEhB_YDXuaipl87HJzJHW6IaCRD75VtvND-XI4DLCh6ydf6UwA1luI0kAW1bVOCqhdIHjeWInf0JkCIm-miM2-MC2_">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-sm font-medium text-white">Private Events</span>
+<span class="w-6 h-6 rounded-full border border-white/20 group-hover:border-[#9BAAFF] group-hover:text-[#9BAAFF] flex items-center justify-center transition-all">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: IndustryExperiencesSection -->
+<!-- BEGIN: CreationProcessSection -->
+<section class="py-20 lg:py-28 border-t border-white/5 bg-[#03060a] relative overflow-hidden" data-purpose="creation-process">
+<style>
+    /* Dynamic Spot Lighting & Phase Transitions */
+    .process-spotlight {
+      position: absolute;
+      width: 480px;
+      height: 380px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(155, 170, 255, 0.28) 0%, rgba(56, 189, 248, 0.18) 35%, rgba(99, 102, 241, 0.08) 60%, rgba(3, 6, 10, 0) 80%);
+      filter: blur(48px);
+      pointer-events: none;
+      transition: left 0.45s cubic-bezier(0.16, 1, 0.3, 1), top 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translate(-50%, -50%);
+      opacity: 0.85;
+      z-index: 1;
+    }
+    .process-step-node {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .process-step-node.is-active,
+    .process-step-node:hover {
+      transform: translateY(-6px);
+      opacity: 1 !important;
+    }
+    .process-step-node.is-dimmed {
+      opacity: 0.42;
+    }
+    .process-step-node.is-active .step-badge,
+    .process-step-node:hover .step-badge {
+      border-color: #9BAAFF;
+      box-shadow: 0 0 28px rgba(155, 170, 255, 0.5), inset 0 0 14px rgba(155, 170, 255, 0.2);
+      background-color: #0c121d;
+    }
+    .process-step-node.is-active .step-badge svg,
+    .process-step-node:hover .step-badge svg {
+      color: #BDC7FF;
+      transform: scale(1.12);
+      filter: drop-shadow(0 0 8px rgba(155, 170, 255, 0.7));
+    }
+    .process-step-node.is-active .step-tag,
+    .process-step-node:hover .step-tag {
+      background-color: #9BAAFF;
+      color: #030508;
+      box-shadow: 0 0 10px rgba(155, 170, 255, 0.4);
+    }
+    .process-step-node.is-active .step-title,
+    .process-step-node:hover .step-title {
+      color: #FFFFFF;
+      text-shadow: 0 0 12px rgba(155, 170, 255, 0.35);
+    }
+    .process-step-node.is-active .step-desc,
+    .process-step-node:hover .step-desc {
+      color: #CBD5E1;
+    }
+    .svg-interactive-node {
+      transition: all 0.35s ease;
+    }
+    .svg-interactive-node.is-active {
+      transform: scale(1.35);
+      transform-origin: center;
+      filter: drop-shadow(0 0 8px #9BAAFF);
+    }
+  </style>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" id="processInteractiveContainer">
+<!-- Ambient Dynamic Follow-Light Spot -->
+<div class="process-spotlight hidden md:block" id="processSpotlight" style="left: 50%; top: 38%; opacity: 0.9;"></div>
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 lg:mb-20 relative z-10">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<p class="text-xs font-semibold tracking-[0.28em] uppercase text-[#9BAAFF]">
+            FROM IDEA TO IMMERSION
+          </p>
+<span class="h-1 w-1 rounded-full bg-[#9BAAFF]/60"></span>
+<span class="text-[11px] font-mono tracking-wider text-slate-400 px-2 py-0.5 rounded-full border border-white/10 bg-white/5" id="processStatusPill">01 — 05 / INTERACTIVE JOURNEY</span>
+</div>
+<h2 class="headline-font text-3xl sm:text-4xl lg:text-5xl font-normal text-white tracking-tight">
+          Our Content Creation Process.
+        </h2>
+</div>
+<p class="text-slate-400 text-sm max-w-sm font-light leading-relaxed">
+        A streamlined, collaborative process to turn your ideas into stunning dome content. Hover over each phase to explore.
+      </p>
+</div>
+<!-- Dome Arc Visualization & 5 Interactive Elevated Stages -->
+<div class="relative min-h-[460px] flex flex-col justify-between pt-6 pb-4" data-purpose="process-dome-arc">
+<!-- Architectural Dome Geometry SVG with Interactive Stage Points -->
+<div class="absolute inset-0 pointer-events-none hidden md:block overflow-visible -z-0">
+<svg class="w-full h-full" fill="none" id="domeProcessSvg" preserveAspectRatio="none" viewBox="0 0 1100 420">
+<defs>
+<linearGradient id="domeArcGrad" x1="0%" x2="100%" y1="100%" y2="100%">
+<stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"></stop>
+<stop offset="25%" stop-color="#6366f1" stop-opacity="0.65"></stop>
+<stop offset="50%" stop-color="#9BAAFF" stop-opacity="0.95"></stop>
+<stop offset="75%" stop-color="#a855f7" stop-opacity="0.65"></stop>
+<stop offset="100%" stop-color="#38bdf8" stop-opacity="0.25"></stop>
+</linearGradient>
+<linearGradient id="domeRadialGlow" x1="50%" x2="50%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#9BAAFF" stop-opacity="0.14"></stop>
+<stop offset="100%" stop-color="#9BAAFF" stop-opacity="0"></stop>
+</linearGradient>
+<filter height="180%" id="glowFilter" width="180%" x="-40%" y="-40%">
+<feGaussianBlur in="SourceGraphic" stdDeviation="6"></feGaussianBlur>
+</filter>
+<filter height="220%" id="nodeGlow" width="220%" x="-60%" y="-60%">
+<feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
+</filter>
+</defs>
+<!-- Dome Interior Grid & Concentric Arcs -->
+<path d="M 70 320 Q 550 50 1030 320" fill="url(#domeRadialGlow)" stroke="none"></path>
+<path d="M 140 330 Q 550 110 960 330" stroke="rgba(255,255,255,0.04)" stroke-dasharray="4 8" stroke-width="1"></path>
+<path d="M 210 340 Q 550 170 890 340" stroke="rgba(255,255,255,0.03)" stroke-dasharray="2 6" stroke-width="1"></path>
+<!-- Vertical Meridian Ribs -->
+<path d="M 550 50 L 550 360" stroke="rgba(155, 170, 255, 0.12)" stroke-dasharray="3 5" stroke-width="1"></path>
+<path d="M 310 135 L 290 360" stroke="rgba(255, 255, 255, 0.05)" stroke-dasharray="3 7" stroke-width="1"></path>
+<path d="M 790 135 L 810 360" stroke="rgba(255, 255, 255, 0.05)" stroke-dasharray="3 7" stroke-width="1"></path>
+<!-- Glowing Outer Halo Arc -->
+<path d="M 70 320 Q 550 50 1030 320" filter="url(#glowFilter)" opacity="0.6" stroke="url(#domeArcGrad)" stroke-width="4"></path>
+<!-- Crisp Primary Trajectory Arc -->
+<path d="M 70 320 Q 550 50 1030 320" stroke="url(#domeArcGrad)" stroke-dasharray="6 4" stroke-width="1.75"></path>
+<!-- Trajectory Pulse Nodes for all 5 Phases -->
+<!-- Phase 01 Node -->
+<g class="svg-interactive-node transition-transform duration-300" id="svgNode1">
+<circle cx="110" cy="302" fill="none" opacity="0.4" r="8" stroke="#38bdf8" stroke-width="1"></circle>
+<circle cx="110" cy="302" fill="#38bdf8" r="3.5"></circle>
+</g>
+<!-- Phase 02 Node -->
+<g class="svg-interactive-node transition-transform duration-300" id="svgNode2">
+<circle cx="310" cy="155" fill="none" opacity="0.5" r="8" stroke="#6366f1" stroke-width="1"></circle>
+<circle cx="310" cy="155" fill="#6366f1" r="3.5"></circle>
+</g>
+<!-- Phase 03 Node (Zenith) -->
+<g class="svg-interactive-node transition-transform duration-300 is-active" id="svgNode3">
+<circle cx="550" cy="50" fill="none" filter="url(#nodeGlow)" opacity="0.85" r="9" stroke="#9BAAFF" stroke-width="1.5"></circle>
+<circle cx="550" cy="50" fill="#BDC7FF" r="4.5"></circle>
+</g>
+<!-- Phase 04 Node -->
+<g class="svg-interactive-node transition-transform duration-300" id="svgNode4">
+<circle cx="790" cy="155" fill="none" opacity="0.5" r="8" stroke="#a855f7" stroke-width="1"></circle>
+<circle cx="790" cy="155" fill="#a855f7" r="3.5"></circle>
+</g>
+<!-- Phase 05 Node -->
+<g class="svg-interactive-node transition-transform duration-300" id="svgNode5">
+<circle cx="990" cy="302" fill="none" opacity="0.4" r="8" stroke="#38bdf8" stroke-width="1"></circle>
+<circle cx="990" cy="302" fill="#38bdf8" r="3.5"></circle>
+</g>
+</svg>
+</div>
+<!-- Elevated 5 Stages (Curved Layout) with Dynamic Hover Handlers -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6 lg:gap-4 relative z-10 items-end" id="processGrid">
+<!-- Stage 01 (Base left) -->
+<div class="process-step-node group relative flex flex-col items-center md:items-start text-center md:text-left pt-0 md:pt-24 cursor-pointer" data-step="1" data-x="10%" data-y="72%">
+<div class="relative mb-5">
+<div class="step-badge w-14 h-14 rounded-full border border-white/20 bg-[#070b13]/90 backdrop-blur-md flex items-center justify-center shadow-lg transition-all duration-300">
+<svg class="w-5 h-5 text-[#9BAAFF] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<span class="step-tag absolute -bottom-1 -right-1 px-1.5 py-0.2 bg-[#020407] border border-white/10 rounded-full text-[9px] font-mono text-[#9BAAFF] transition-all duration-300">01</span>
+</div>
+<span class="step-phase text-[11px] font-mono text-[#9BAAFF] tracking-wider uppercase mb-1">Phase 01</span>
+<h3 class="step-title text-base font-medium text-white mb-1.5 transition-colors">Concept</h3>
+<p class="step-desc text-xs text-slate-400 leading-relaxed font-light max-w-[190px] transition-colors">Understand your goals, theme, architectural geometry and audience.</p>
+</div>
+<!-- Stage 02 (Ascending left) -->
+<div class="process-step-node group relative flex flex-col items-center md:items-start text-center md:text-left pt-0 md:pt-12 cursor-pointer" data-step="2" data-x="30%" data-y="56%">
+<div class="relative mb-5">
+<div class="step-badge w-14 h-14 rounded-full border border-white/20 bg-[#070b13]/90 backdrop-blur-md flex items-center justify-center shadow-lg transition-all duration-300">
+<svg class="w-5 h-5 text-[#9BAAFF] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<span class="step-tag absolute -bottom-1 -right-1 px-1.5 py-0.2 bg-[#020407] border border-white/10 rounded-full text-[9px] font-mono text-[#9BAAFF] transition-all duration-300">02</span>
+</div>
+<span class="step-phase text-[11px] font-mono text-[#9BAAFF] tracking-wider uppercase mb-1">Phase 02</span>
+<h3 class="step-title text-base font-medium text-white mb-1.5 transition-colors">Story Development</h3>
+<p class="step-desc text-xs text-slate-400 leading-relaxed font-light max-w-[190px] transition-colors">Create the spatial narrative, spherical storyboards and visual direction.</p>
+</div>
+<!-- Stage 03 (Zenith / Peak of Arc - Initial Active) -->
+<div class="process-step-node is-active group relative flex flex-col items-center md:items-start text-center md:text-left pt-0 md:pt-0 cursor-pointer" data-step="3" data-x="50%" data-y="38%">
+<div class="relative mb-5">
+<div class="step-badge relative w-16 h-16 rounded-full border-2 border-[#9BAAFF] bg-gradient-to-b from-[#0c121d] to-[#070b13] flex items-center justify-center shadow-[0_0_25px_rgba(155,170,255,0.35)] transition-all duration-300">
+<div class="absolute inset-1 rounded-full bg-[#9BAAFF]/10 animate-pulse pointer-events-none"></div>
+<svg class="w-6 h-6 text-[#9BAAFF] transition-all duration-300 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<span class="step-tag absolute -bottom-1.5 -right-1 px-2 py-0.5 bg-[#9BAAFF] text-[#030508] font-bold rounded-full text-[9px] font-mono shadow-sm transition-all duration-300">03</span>
+</div>
+<div class="inline-flex items-center gap-1.5 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+<span class="step-phase text-[11px] font-mono text-[#9BAAFF] tracking-wider uppercase font-semibold">Phase 03</span>
+</div>
+<h3 class="step-title text-base font-semibold text-white mb-1.5 transition-colors">CGI Production</h3>
+<p class="step-desc text-xs text-slate-300 leading-relaxed font-light max-w-[190px] transition-colors">Produce high-fidelity 8K, 360° visual assets and custom shader simulations.</p>
+</div>
+<!-- Stage 04 (Descending right) -->
+<div class="process-step-node group relative flex flex-col items-center md:items-start text-center md:text-left pt-0 md:pt-12 cursor-pointer" data-step="4" data-x="70%" data-y="56%">
+<div class="relative mb-5">
+<div class="step-badge w-14 h-14 rounded-full border border-white/20 bg-[#070b13]/90 backdrop-blur-md flex items-center justify-center shadow-lg transition-all duration-300">
+<svg class="w-5 h-5 text-[#9BAAFF] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<span class="step-tag absolute -bottom-1 -right-1 px-1.5 py-0.2 bg-[#020407] border border-white/10 rounded-full text-[9px] font-mono text-[#9BAAFF] transition-all duration-300">04</span>
+</div>
+<span class="step-phase text-[11px] font-mono text-[#9BAAFF] tracking-wider uppercase mb-1">Phase 04</span>
+<h3 class="step-title text-base font-medium text-white mb-1.5 transition-colors">Dome Mastering</h3>
+<p class="step-desc text-xs text-slate-400 leading-relaxed font-light max-w-[190px] transition-colors">Optimize slicing, warp-blend calibration and multi-projector fulldome servers.</p>
+</div>
+<!-- Stage 05 (Base right) -->
+<div class="process-step-node group relative flex flex-col items-center md:items-start text-center md:text-left pt-0 md:pt-24 cursor-pointer" data-step="5" data-x="90%" data-y="72%">
+<div class="relative mb-5">
+<div class="step-badge w-14 h-14 rounded-full border border-white/20 bg-[#070b13]/90 backdrop-blur-md flex items-center justify-center shadow-lg transition-all duration-300">
+<svg class="w-5 h-5 text-[#9BAAFF] transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<span class="step-tag absolute -bottom-1 -right-1 px-1.5 py-0.2 bg-[#020407] border border-white/10 rounded-full text-[9px] font-mono text-[#9BAAFF] transition-all duration-300">05</span>
+</div>
+<span class="step-phase text-[11px] font-mono text-[#9BAAFF] tracking-wider uppercase mb-1">Phase 05</span>
+<h3 class="step-title text-base font-medium text-white mb-1.5 transition-colors">Installation &amp; Support</h3>
+<p class="step-desc text-xs text-slate-400 leading-relaxed font-light max-w-[190px] transition-colors">On-site deployment, acoustics sync, and ongoing fine-tuning for your venue.</p>
+</div>
+</div>
+<!-- Bottom Micro-Label Indicator -->
+<div class="mt-16 pt-8 border-t border-white/5 flex items-center justify-center">
+<p class="text-[10px] tracking-[0.35em] text-slate-500 uppercase font-mono text-center" id="processBreadcrumb">
+<span class="crumb-1 transition-colors duration-300 text-slate-500">FROM IDEA</span>
+<span class="text-[#9BAAFF]/60 mx-1">→</span>
+<span class="crumb-2 transition-colors duration-300 text-slate-500">STORY</span>
+<span class="text-[#9BAAFF]/60 mx-1">→</span>
+<span class="crumb-3 text-[#9BAAFF] font-bold transition-colors duration-300">CGI</span>
+<span class="text-[#9BAAFF]/60 mx-1">→</span>
+<span class="crumb-4 transition-colors duration-300 text-slate-500">MASTER</span>
+<span class="text-[#9BAAFF]/60 mx-1">→</span>
+<span class="crumb-5 transition-colors duration-300 text-slate-500">EXPERIENCE</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Interactive Illumination Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('processInteractiveContainer');
+      const spotlight = document.getElementById('processSpotlight');
+      const steps = Array.from(document.querySelectorAll('.process-step-node'));
+      const statusPill = document.getElementById('processStatusPill');
+      const breadcrumbCrumbClasses = ['crumb-1', 'crumb-2', 'crumb-3', 'crumb-4', 'crumb-5'];
+
+      const stepNames = [
+        "01 / CONCEPT EXPLORATION",
+        "02 / NARRATIVE & SCRIPTING",
+        "03 / CGI PRODUCTION ZENITH",
+        "04 / SPATIAL DOME MASTERING",
+        "05 / ON-SITE CALIBRATION"
+      ];
+
+      function setActiveStep(targetIndex) {
+        steps.forEach((step, idx) => {
+          const stepNum = idx + 1;
+          const svgNode = document.getElementById(`svgNode${stepNum}`);
+          const crumb = document.querySelector(`.crumb-${stepNum}`);
+
+          if (idx === targetIndex) {
+            step.classList.add('is-active');
+            step.classList.remove('is-dimmed');
+            if (svgNode) svgNode.classList.add('is-active');
+            if (crumb) {
+              crumb.classList.add('text-[#9BAAFF]', 'font-bold');
+              crumb.classList.remove('text-slate-500');
+            }
+          } else {
+            step.classList.remove('is-active');
+            step.classList.add('is-dimmed');
+            if (svgNode) svgNode.classList.remove('is-active');
+            if (crumb) {
+              crumb.classList.remove('text-[#9BAAFF]', 'font-bold');
+              crumb.classList.add('text-slate-500');
+            }
+          }
+        });
+
+        if (spotlight) {
+          const activeStep = steps[targetIndex];
+          const x = activeStep.getAttribute('data-x');
+          const y = activeStep.getAttribute('data-y');
+          spotlight.style.left = x;
+          spotlight.style.top = y;
+          spotlight.style.opacity = '0.9';
+        }
+
+        if (statusPill && stepNames[targetIndex]) {
+          statusPill.textContent = stepNames[targetIndex];
+          statusPill.classList.add('border-[#9BAAFF]/40', 'text-white');
+        }
+      }
+
+      function resetToDefault() {
+        // Return gently to Phase 03 as default
+        setActiveStep(2);
+        // Clear heavy dimming across all steps when mouse leaves container
+        steps.forEach((step, idx) => {
+          if (idx !== 2) {
+            step.classList.remove('is-dimmed');
+          }
+        });
+        if (statusPill) {
+          statusPill.textContent = "01 — 05 / INTERACTIVE JOURNEY";
+          statusPill.classList.remove('border-[#9BAAFF]/40', 'text-white');
+        }
+      }
+
+      steps.forEach((step, index) => {
+        step.addEventListener('mouseenter', () => {
+          setActiveStep(index);
+        });
+        step.addEventListener('focus', () => {
+          setActiveStep(index);
+        });
+      });
+
+      if (container) {
+        container.addEventListener('mouseleave', () => {
+          resetToDefault();
+        });
+      }
+
+      // Initialize default state
+      resetToDefault();
+    });
+  </script>
+</section>
+<!-- END: CreationProcessSection -->
+<!-- BEGIN: ClosingCTASection -->
+<section class="relative py-24 lg:py-32 overflow-hidden bg-black" data-purpose="closing-call-to-action" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"><div class="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-white/10 shadow-2xl min-h-[500px] lg:min-h-[560px] flex items-center bg-[#030508]">
+<!-- Panoramic Background Image -->
+<img alt="Aurora borealis and glowing dome pavilion reflected on a calm mountain lake" class="absolute inset-0 w-full h-full object-cover object-center filter brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida/AEtjO1UeHpo0W7cDRSs5MNhF1nijZHvrsiqJ3xFrnwUCgZql339nUGEj_3-HenuQQL4WxNn2jothrV1LSA4FJpSWMZFlUXrnoU1QE7iuS1mNyUfavqkE6ru5KENuiKbhsrI44nqkM24ut43j3fEHjG7Xzto4_lwlnsaE1zfdfs4HOwWIYNhH9UrpwvSu-Wi9Z5P6kjYUqg3zIeDxCyixhVd0e0d_WqrpvBZKpEaMcspkrHDIC59uxb5MaO2CY84">
+<!-- Dark Gradient Overlays for High Legibility on Left & Natural Fade to Image on Right -->
+<div class="absolute inset-0 bg-gradient-to-r from-[#020407] via-[#03070d]/80 to-transparent lg:w-3/4 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#020407]/90 via-[#03070d]/40 to-transparent pointer-events-none md:hidden"></div>
+<!-- Copy & CTA Container positioned on the left -->
+<div class="relative z-10 p-8 sm:p-12 lg:p-16 max-w-xl">
+<p class="text-xs font-semibold tracking-[0.28em] uppercase text-[#9BAAFF] mb-4">
+      LET'S CREATE SOMETHING EXTRAORDINARY
+    </p>
+<h2 class="headline-font text-4xl sm:text-5xl lg:text-[56px] font-normal leading-[1.08] text-white mb-6">
+      Bring Your World to the Dome.
+    </h2>
+<p class="text-slate-200 text-sm sm:text-base leading-relaxed font-light mb-8 max-w-md">
+      Tell us about your idea, and our team will help create the perfect content experience for your audience.
+    </p>
+<a class="inline-flex items-center gap-2.5 bg-[#9BAAFF] hover:bg-[#8797f5] text-[#030508] font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 transform hover:scale-[1.02] shadow-lg" href="#">
+<span class="">Start Your Project</span>
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>
+</div></div>
+</section>
+<!-- END: ClosingCTASection -->
+<!-- BEGIN: MainFooter -->
+<footer class="border-t border-white/10 bg-[#020306] py-16 text-xs text-slate-400" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-white/5">
+<!-- Logo wordmark -->
+<div class="flex items-center gap-3"><div class="relative w-7 h-7 flex items-center justify-center"><span class="absolute inset-0 rounded-full border border-white/40"></span><span class="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-cyan-400 via-indigo-400 to-[#9BAAFF] opacity-80"></span></div><div class="flex flex-col"><span class="text-sm font-semibold tracking-[0.2em] text-white uppercase">ARORA DORM SOLUTIONS</span><span class="text-[10px] text-slate-400 font-light mt-0.5">A business vertical of Arora Dorm Entertainments Inc.</span></div></div>
+<!-- Footer Links -->
+<div class="flex flex-wrap items-center gap-6 sm:gap-8 text-slate-300">
+<a class="hover:text-white transition-colors" href="#">Experiences</a>
+<a class="hover:text-white transition-colors" href="#">Industries</a>
+<a class="hover:text-white transition-colors" href="#">Technology</a>
+<a class="hover:text-white text-[#9BAAFF] transition-colors" href="#">Content</a>
+<a class="hover:text-white transition-colors" href="#">About</a>
+</div>
+<!-- Social Icons -->
+<div class="flex items-center gap-4 text-slate-400">
+<a aria-label="LinkedIn" class="hover:text-white transition-colors" href="#">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="Instagram" class="hover:text-white transition-colors" href="#">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a aria-label="YouTube" class="hover:text-white transition-colors" href="#">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Copyright & Bottom Disclaimers -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+<p class="">© 2024 Arora Dorm Solutions. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-slate-300 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-slate-300 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-slate-300 transition-colors" href="#">Cookie Preferences</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+
+
+
+
+</body></html>
