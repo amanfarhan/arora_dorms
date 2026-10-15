@@ -1,19 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="bg-[#05070B] text-slate-100 min-h-screen">
-      <main className="w-full pt-20 bg-background"><div className="flex flex-col w-full text-on-surface">
+    <div className="bg-surface text-on-surface min-h-screen w-full overflow-x-hidden selection:bg-primary selection:text-on-primary">
+      <main className="w-full bg-background"><div className="flex flex-col w-full text-on-surface">
 {/*  TOP CONTEXTUAL BREADCRUMB / TELEMETRY STATUS  */}
 <section className="w-full bg-surface-container-lowest px-margin py-space-sm">
 <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-label-eyebrow text-label-eyebrow tracking-widest uppercase">
 <div className="flex items-center gap-space-xs">
-<a className="hover:text-primary transition-colors" href="#">HOME</a>
+<Link className="hover:text-primary transition-colors" href="/">HOME</Link>
 <span className="text-outline-variant">/</span>
-<a className="hover:text-primary transition-colors" href="#">INDUSTRIES</a>
+<Link className="hover:text-primary transition-colors" href="/industries">INDUSTRIES</Link>
 <span className="text-outline-variant">/</span>
 <span className="text-primary">MUSIC, NIGHTLIFE & CONCERTS</span>
 </div>
@@ -45,16 +45,16 @@ export default function Page() {
         </p>
 {/*  CTA Buttons  */}
 <div className="flex flex-wrap items-center gap-space-md pt-space-xs">
-<a className="inline-flex items-center gap-space-sm px-space-lg py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_28px_rgba(123,140,222,0.35)] transition-all" href="#">
+<Link className="inline-flex items-center gap-space-sm px-space-lg py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_28px_rgba(123,140,222,0.35)] transition-all" href="/industries">
 <span>BUILD THE IMMERSIVE SHOW</span>
 <span className="w-6 h-6 rounded-full bg-on-primary-container/20 flex items-center justify-center">
 <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all" href="/start-a-project">
 <span>EXPLORE INDUSTRIES</span>
 <span className="material-symbols-outlined text-[16px] text-primary">north_east</span>
-</a>
+</Link>
 </div>
 {/*  Telemetry Spec Badges  */}
 <div className="grid grid-cols-3 gap-gutter pt-space-md w-full max-w-lg">
@@ -438,9 +438,9 @@ export default function Page() {
 </div>
 </a>
 {/*  Center Hub  */}
-<a className="px-space-md py-2 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-bright transition-all" href="#">
+<Link className="px-space-md py-2 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-bright transition-all" href="/start-a-project">
         EXPLORE ALL 9 INDUSTRIES
-      </a>
+      </Link>
 {/*  Next Subpage Link  */}
 <a className="group flex items-center gap-space-sm text-right text-on-surface-variant hover:text-on-surface transition-colors" href="#">
 <div className="flex flex-col">

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="bg-[#05070B] text-slate-100 min-h-screen">
+    <div className="bg-[#05070B] text-slate-100 min-h-screen w-full overflow-x-hidden">
       <main className="w-full pt-20 bg-surface"><div className="flex flex-col w-full text-on-surface">
 {/*  =========================================================================  */}
 {/*  HERO: Translucent Header Bleed & Grand Architectural Vista                */}

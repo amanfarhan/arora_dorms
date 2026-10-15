@@ -1,19 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="bg-[#05070B] text-slate-100 min-h-screen">
-      <main className="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div className="flex flex-col w-full text-on-surface">
+    <div className="bg-surface text-on-surface min-h-screen w-full overflow-x-hidden selection:bg-primary selection:text-on-primary">
+      <main className="w-full bg-surface min-h-[calc(100vh-20rem)]"><div className="flex flex-col w-full text-on-surface">
 {/*  TOP BREADCRUMB & TELEMETRY SPEC HEADER  */}
 <section className="w-full bg-surface-container-lowest/90 px-margin-mobile md:px-margin py-space-sm">
 <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-xs text-outline">
 <div className="flex items-center gap-2 font-label-eyebrow text-label-eyebrow tracking-[0.2em] uppercase">
-<a className="hover:text-primary transition-colors" data-path="home" href="#">HOME</a>
+<Link className="hover:text-primary transition-colors" data-path="home" href="/">HOME</Link>
 <span className="text-surface-container-highest">/</span>
-<a className="hover:text-primary transition-colors" data-path="industries" href="#">INDUSTRIES</a>
+<Link className="hover:text-primary transition-colors" data-path="industries" href="/industries">INDUSTRIES</Link>
 <span className="text-surface-container-highest">/</span>
 <span className="text-secondary font-semibold">09 PRIVATE EVENTS & WEDDINGS</span>
 </div>
@@ -44,15 +44,15 @@ export default function Page() {
             Create completely personalized, awe-inspiring immersive environments for luxury weddings, milestones, and private galas. Wrap guests in starlit skies, bespoke visual narratives, and enchanting architectural beauty.
           </p>
 <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
-<a className="inline-flex items-center gap-space-sm px-space-md py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all duration-300 hover:shadow-[0_0_28px_rgba(123,140,222,0.45)] group" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-sm px-space-md py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all duration-300 hover:shadow-[0_0_28px_rgba(123,140,222,0.45)] group" data-path="start-a-project" href="/start-a-project">
 <span className="">CREATE YOUR PRIVATE EXPERIENCE</span>
 <span className="w-6 h-6 rounded-full bg-surface-container-lowest/20 flex items-center justify-center text-on-primary group-hover:translate-x-1 transition-transform">
 <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container/60 hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-all" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container/60 hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-all" data-path="industries" href="/industries">
 <span className="">EXPLORE INDUSTRIES</span>
-</a>
+</Link>
 </div>
 {/*  Live Telemetry Readouts  */}
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-sm w-full pt-space-sm">
@@ -384,25 +384,25 @@ export default function Page() {
 <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
 <div className="flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left">
 {/*  Previous Industry Link  */}
-<a className="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors group" data-path="industries" href="#">
+<Link className="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors group" data-path="industries" href="/industries">
 <span className="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
 <div className="text-left">
 <span className="block font-label-eyebrow text-label-eyebrow text-outline uppercase tracking-wider">PREVIOUS INDUSTRY</span>
 <span className="font-title-md text-body-md font-semibold text-on-surface">08 Education & Planetariums</span>
 </div>
-</a>
+</Link>
 {/*  Directory Link  */}
-<a className="px-space-md py-2 rounded-full bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md tracking-wider transition-colors" data-path="industries" href="#">
+<Link className="px-space-md py-2 rounded-full bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md tracking-wider transition-colors" data-path="industries" href="/industries">
           EXPLORE ALL 9 INDUSTRIES
-        </a>
+        </Link>
 {/*  Next Industry Link  */}
-<a className="flex items-center gap-space-xs text-on-surface-variant hover:text-secondary transition-colors group" data-path="industries" href="#">
+<Link className="flex items-center gap-space-xs text-on-surface-variant hover:text-secondary transition-colors group" data-path="industries" href="/industries">
 <div className="text-right">
 <span className="block font-label-eyebrow text-label-eyebrow text-outline uppercase tracking-wider">NEXT INDUSTRY</span>
 <span className="font-title-md text-body-md font-semibold text-on-surface">01 Entertainment & Tourism</span>
 </div>
 <span className="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
+</Link>
 </div>
 </div>
 </section>
@@ -420,15 +420,15 @@ export default function Page() {
           Tell us about your celebration, wedding, or private gathering, and our creative directors will craft a tailored spatial concept within 48 hours.
         </p>
 <div className="flex flex-wrap items-center justify-center gap-space-sm">
-<a className="inline-flex items-center gap-space-sm px-space-md py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(123,140,222,0.4)] group" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-sm px-space-md py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(123,140,222,0.4)] group" data-path="start-a-project" href="/start-a-project">
 <span className="">CREATE YOUR PRIVATE EXPERIENCE</span>
 <span className="w-6 h-6 rounded-full bg-surface-container-lowest/20 flex items-center justify-center text-on-primary group-hover:translate-x-1 transition-transform">
 <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center px-space-md py-3 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md font-medium transition-all" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center px-space-md py-3 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md font-medium transition-all" data-path="industries" href="/industries">
 <span className="">EXPLORE OTHER INDUSTRIES</span>
-</a>
+</Link>
 </div>
 <div className="mt-space-lg flex items-center gap-space-md text-outline font-label-sm text-label-sm">
 <span className="flex items-center gap-1">

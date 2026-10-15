@@ -41,9 +41,15 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakarta.variable} ${cormorant.variable} ${playfair.variable} scroll-smooth`}
     >
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+      </head>
       <body className="bg-[#05070B] text-slate-100 antialiased selection:bg-purple-600 selection:text-white">
         <Header />
-        <main className="min-h-screen pt-20">{children}</main>
+        <div className="min-h-screen pt-20">{children}</div>
         <Footer />
       </body>
     </html>

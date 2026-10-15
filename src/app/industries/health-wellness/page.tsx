@@ -1,19 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="bg-[#05070B] text-slate-100 min-h-screen">
-      <main className="w-full pt-20 bg-background"><div className="flex flex-col w-full text-on-surface">
+    <div className="bg-surface text-on-surface min-h-screen w-full overflow-x-hidden selection:bg-primary selection:text-on-primary">
+      <main className="w-full bg-background"><div className="flex flex-col w-full text-on-surface">
 {/*  TOP CONTEXT SPEC-ID BAR  */}
 <section className="w-full px-margin-mobile lg:px-margin pt-6 pb-4">
 <div className="flex flex-wrap items-center justify-between gap-4 py-3 px-5 rounded-full bg-surface-container-lowest/80 backdrop-blur-xl">
 <div className="flex items-center gap-2">
-<a className="font-label-eyebrow text-label-eyebrow text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="#">Home</a>
+<Link className="font-label-eyebrow text-label-eyebrow text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="/industries">Home</Link>
 <span className="text-on-surface-variant/40 text-xs">/</span>
-<a className="font-label-eyebrow text-label-eyebrow text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="#">Industries</a>
+<Link className="font-label-eyebrow text-label-eyebrow text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="/start-a-project">Industries</Link>
 <span className="text-on-surface-variant/40 text-xs">/</span>
 <span className="font-label-eyebrow text-label-eyebrow text-primary tracking-widest uppercase">Health & Wellness</span>
 </div>

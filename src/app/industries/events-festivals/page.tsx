@@ -1,19 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="bg-[#05070B] text-slate-100 min-h-screen">
-      <main className="w-full pt-20 bg-background"><div className="flex flex-col w-full text-on-surface">
+    <div className="bg-surface text-on-surface min-h-screen w-full overflow-x-hidden selection:bg-primary selection:text-on-primary">
+      <main className="w-full bg-background"><div className="flex flex-col w-full text-on-surface">
 {/*  1. BREADCRUMB STRIP & METRICS TICKER  */}
 <section className="w-full px-margin-mobile md:px-margin py-space-sm bg-surface-container-lowest/80 backdrop-blur-md">
 <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-space-sm">
 <div className="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
-<a className="hover:text-primary transition-colors" data-path="home" href="#">HOME</a>
+<Link className="hover:text-primary transition-colors" data-path="home" href="/">HOME</Link>
 <span className="text-outline-variant">/</span>
-<a className="hover:text-primary transition-colors" data-path="industries" href="#">INDUSTRIES</a>
+<Link className="hover:text-primary transition-colors" data-path="industries" href="/industries">INDUSTRIES</Link>
 <span className="text-outline-variant">/</span>
 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-container/15 text-primary font-semibold shadow-[0_0_12px_rgba(123,140,222,0.25)]">
 <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
@@ -54,16 +54,16 @@ export default function Page() {
             Create portable, high-impact immersive experiences for festivals, world-class product launches, public arts biennials, and touring headline productions. Fast-deploy geodesic engineering synchronized with 360° reactive laser mapping.
           </p>
 <div className="flex flex-wrap items-center gap-space-sm pt-2">
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_28px_rgba(123,140,222,0.38)] transition-all" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_28px_rgba(123,140,222,0.38)] transition-all" data-path="start-a-project" href="/start-a-project">
 <span className="">CREATE YOUR EVENT EXPERIENCE</span>
 <span className="w-6 h-6 rounded-full bg-on-primary-container/15 flex items-center justify-center">
 <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-high/70 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-high/70 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all" data-path="industries" href="/industries">
 <span className="">EXPLORE INDUSTRIES</span>
 <span className="material-symbols-outlined text-[16px] text-on-surface-variant">north_east</span>
-</a>
+</Link>
 </div>
 </div>
 </div>
@@ -511,7 +511,7 @@ export default function Page() {
 <section className="w-full px-margin-mobile md:px-margin py-space-md bg-surface-container-lowest">
 <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-md">
 {/*  Prev Sector  */}
-<a className="group flex items-center gap-space-sm p-3 rounded-xl hover:bg-surface-container-high transition-all" data-path="entertainment-and-tourism" href="#">
+<Link className="group flex items-center gap-space-sm p-3 rounded-xl hover:bg-surface-container-high transition-all" data-path="entertainment-and-tourism" href="/start-a-project">
 <span className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:text-primary group-hover:bg-primary/10 transition-colors">
 <span className="material-symbols-outlined text-[18px]">arrow_back</span>
 </span>
@@ -519,12 +519,12 @@ export default function Page() {
 <span className="font-label-eyebrow text-label-eyebrow uppercase text-on-surface-variant">PREVIOUS SECTOR</span>
 <span className="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">01 Entertainment & Tourism</span>
 </div>
-</a>
+</Link>
 {/*  Center Hub Link  */}
-<a className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-all shadow-sm" data-path="industries" href="#">
+<Link className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-all shadow-sm" data-path="industries" href="/industries">
 <span className="material-symbols-outlined text-[16px] text-secondary">view_module</span>
 <span className="">Explore All 9 Industries</span>
-</a>
+</Link>
 {/*  Next Sector  */}
 <a className="group flex items-center gap-space-sm p-3 rounded-xl hover:bg-surface-container-high transition-all" data-path="hospitality" href="#">
 <div className="flex flex-col text-right">
@@ -550,14 +550,14 @@ export default function Page() {
       </h2>
 <p className="font-body-lg text-body-lg text-on-surface-variant font-light max-w-2xl leading-relaxed">Temporary festival architecture shouldn’t compromise on jaw-dropping awe. Arora Dorm mobile domes deploy with surgical precision, withstand punishing outdoor environments from desert sandstorms to coastal gusts, and provide a seamless 360-degree sonic and visual envelope that instantly commands any festival landscape.</p>
 <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-sm">
-<a className="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_32px_rgba(123,140,222,0.45)] transition-all" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_32px_rgba(123,140,222,0.45)] transition-all" data-path="start-a-project" href="/start-a-project">
 <span className="">CREATE YOUR EVENT EXPERIENCE</span>
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all" data-path="industries" href="/industries">
 <span className="">Explore Other Industries</span>
 <span className="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_outward</span>
-</a>
+</Link>
 </div>
 {/*  Quick Trust Indicators  */}
 <div className="pt-space-md flex flex-wrap items-center justify-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">

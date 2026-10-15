@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="bg-[#05070B] text-slate-100 min-h-screen">
-      <main className="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div className="flex flex-col w-full text-on-surface">
+    <div className="bg-surface text-on-surface min-h-screen w-full overflow-x-hidden selection:bg-primary selection:text-on-primary">
+      <main className="w-full bg-surface min-h-[calc(100vh-20rem)]"><div className="flex flex-col w-full text-on-surface">
 {/*  TOP BREADCRUMB & TELEMETRY SPEC HEADER  */}
 <section className="w-full bg-surface-container-lowest py-space-sm">
 <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-eyebrow text-label-eyebrow tracking-[0.18em] uppercase">
@@ -49,16 +49,16 @@ export default function Page() {
             Create immersive product launches, trade-show environments, brand activations, retail installations, and experiential marketing environments. Envelop clients, media, and consumers inside photorealistic, multi-sensory brand worlds.
           </p>
 <div className="flex flex-wrap items-center gap-space-md pt-space-xs">
-<a className="inline-flex items-center gap-space-sm pl-space-lg pr-space-xs py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all duration-300 hover:shadow-[0_0_32px_rgba(123,140,222,0.45)] group" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-sm pl-space-lg pr-space-xs py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all duration-300 hover:shadow-[0_0_32px_rgba(123,140,222,0.45)] group" data-path="start-a-project" href="/start-a-project">
 <span>CREATE YOUR BRAND EXPERIENCE</span>
 <span className="w-8 h-8 rounded-full bg-surface-container-lowest/25 flex items-center justify-center text-on-primary group-hover:translate-x-1 transition-transform duration-300">
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-lg py-2 rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface hover:text-primary transition-all duration-300 font-label-md text-label-md" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-lg py-2 rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface hover:text-primary transition-all duration-300 font-label-md text-label-md" data-path="industries" href="/industries">
 <span>EXPLORE INDUSTRIES</span>
 <span className="material-symbols-outlined text-[16px]">expand_more</span>
-</a>
+</Link>
 </div>
 </div>
 {/*  Hero Telemetry Matrix  */}
@@ -383,10 +383,10 @@ export default function Page() {
 </div>
 </div>
 <div className="pt-space-xs">
-<a className="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary hover:text-primary transition-colors" data-path="technology" href="#">
+<Link className="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary hover:text-primary transition-colors" data-path="technology" href="/start-a-project">
 <span>View Full Optical & Acoustic Engineering Whitepaper</span>
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
+</Link>
 </div>
 </div>
 </div>
@@ -476,9 +476,9 @@ export default function Page() {
 <span className="font-body-md text-body-md font-semibold text-on-surface">06 Museums & Cultural Institutions</span>
 </div>
 </a>
-<a className="px-space-md py-1.5 rounded-full bg-surface-container-highest/80 hover:bg-surface-bright text-on-surface font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] transition-all" data-path="industries" href="#">
+<Link className="px-space-md py-1.5 rounded-full bg-surface-container-highest/80 hover:bg-surface-bright text-on-surface font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] transition-all" data-path="industries" href="/industries">
           EXPLORE ALL 9 INDUSTRIES
-        </a>
+        </Link>
 <a className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="industries/education-planetariums" href="#">
 <div className="flex flex-col text-right">
 <span className="font-label-eyebrow text-label-eyebrow text-outline uppercase tracking-[0.16em]">NEXT INDUSTRY</span>
@@ -505,15 +505,15 @@ export default function Page() {
           Tell us about your brand launch, retail activation, or exhibition vision, and our engineering team will build the spatial layout within 5 business days.
         </p>
 <div className="flex flex-wrap items-center justify-center gap-space-md pt-space-sm">
-<a className="inline-flex items-center gap-space-sm pl-space-lg pr-space-xs py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all duration-300 hover:shadow-[0_0_32px_rgba(123,140,222,0.45)] group" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-sm pl-space-lg pr-space-xs py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all duration-300 hover:shadow-[0_0_32px_rgba(123,140,222,0.45)] group" data-path="start-a-project" href="/start-a-project">
 <span>CREATE YOUR BRAND EXPERIENCE</span>
 <span className="w-8 h-8 rounded-full bg-surface-container-lowest/25 flex items-center justify-center text-on-primary group-hover:translate-x-1 transition-transform duration-300">
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-lg py-2 rounded-full bg-surface-container-high/80 hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all duration-300" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-lg py-2 rounded-full bg-surface-container-high/80 hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all duration-300" data-path="industries" href="/industries">
 <span>EXPLORE OTHER INDUSTRIES</span>
-</a>
+</Link>
 </div>
 <div className="pt-space-md flex flex-wrap items-center justify-center gap-space-lg text-outline font-body-sm text-body-sm">
 <div className="flex items-center gap-2">

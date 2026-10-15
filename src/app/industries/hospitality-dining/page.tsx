@@ -1,21 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="bg-[#05070B] text-slate-100 min-h-screen">
-      <main className="w-full pt-20 bg-background"><div className="flex flex-col w-full">
+    <div className="bg-surface text-on-surface min-h-screen w-full overflow-x-hidden selection:bg-primary selection:text-on-primary">
+      <main className="w-full bg-background"><div className="flex flex-col w-full">
 {/*  Dynamic Atmospheric Underlay Scrim  */}
 <div className="relative w-full overflow-hidden">
 <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1100px] h-[650px] bg-gradient-to-b from-primary-container/20 via-secondary-container/10 to-transparent blur-[140px] pointer-events-none -z-10"></div>
 {/*  1. Breadcrumb Bar  */}
 <div className="w-full px-margin pt-space-md pb-space-sm flex items-center justify-between">
 <div className="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
-<a className="hover:text-primary transition-colors" data-path="home" href="#">Home</a>
+<Link className="hover:text-primary transition-colors" data-path="home" href="/">Home</Link>
 <span className="text-outline-variant font-light">/</span>
-<a className="hover:text-primary transition-colors" data-path="industries" href="#">Industries</a>
+<Link className="hover:text-primary transition-colors" data-path="industries" href="/industries">Industries</Link>
 <span className="text-outline-variant font-light">/</span>
 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container/15 text-primary border-none shadow-sm">
 <span className="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>
@@ -42,14 +42,14 @@ export default function Page() {
           Transform hotels, resorts and restaurants through 360° immersive environments and themed dining experiences. Merge Michelin-caliber culinary artistry with synchronised ambient visual worlds that adapt to every course.
         </p>
 <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold transition-all hover:brightness-110 shadow-lg group" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold transition-all hover:brightness-110 shadow-lg group" data-path="start-a-project" href="/start-a-project">
 <span className="">Create Your Immersive Dining Experience</span>
 <span className="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all shadow-sm" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all shadow-sm" data-path="industries" href="/industries">
 <span className="">Explore Industries</span>
 <span className="material-symbols-outlined text-[16px] text-on-surface-variant">north_east</span>
-</a>
+</Link>
 </div>
 {/*  Metric Badges Row  */}
 <div className="grid grid-cols-3 gap-space-sm pt-space-md max-w-lg">
@@ -357,18 +357,18 @@ export default function Page() {
 {/*  8. Subpage Industry Navigation (Cross-Page Links)  */}
 <section className="w-full px-margin py-space-lg bg-surface">
 <div className="p-space-md rounded-2xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface">
-<a className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="industries" href="#">
+<Link className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="industries" href="/industries">
 <span className="material-symbols-outlined text-[18px]">arrow_back</span>
 <span className="">02 Events & Festivals</span>
-</a>
-<a className="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-all font-label-sm text-label-sm uppercase tracking-wider" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-all font-label-sm text-label-sm uppercase tracking-wider" data-path="industries" href="/industries">
 <span className="material-symbols-outlined text-[16px]">grid_view</span>
 <span className="">Explore All 9 Industries</span>
-</a>
-<a className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="industries" href="/industries">
 <span className="">04 Health & Wellness</span>
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
+</Link>
 </div>
 </section>
 {/*  9. Final Call-to-Action  */}
@@ -385,14 +385,14 @@ export default function Page() {
         Tell us about your restaurant, hotel or resort space, and the dining journey you want to create.
       </p>
 <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold transition-all hover:brightness-110 shadow-lg group" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold transition-all hover:brightness-110 shadow-lg group" data-path="start-a-project" href="/start-a-project">
 <span className="">Create Your Immersive Dining Experience</span>
 <span className="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all" data-path="industries" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all" data-path="industries" href="/industries">
 <span className="">Explore Other Industries</span>
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
+</Link>
 </div>
 </div>
 </section>

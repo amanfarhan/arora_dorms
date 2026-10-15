@@ -23,12 +23,11 @@ export default function StartAProjectPage() {
       alert("Please provide your name and email.");
       return;
     }
-    // Simulate real submission
     setSubmitted(true);
   };
 
   return (
-    <div className="bg-[#080a0f] text-slate-100 min-h-screen">
+    <div className="bg-[#080a0f] text-slate-100 min-h-screen w-full overflow-x-hidden">
       
 {/*  END: MainHeader  */}
 {/*  BEGIN: HeroSection  */}

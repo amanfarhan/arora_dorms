@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="bg-[#05070B] text-slate-100 min-h-screen">
+    <div className="bg-[#05070B] text-slate-100 min-h-screen w-full overflow-x-hidden">
       
 {/*  END: MainHeader  */}
 {/*  BEGIN: HeroSection  */}

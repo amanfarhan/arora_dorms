@@ -164,6 +164,33 @@ function processHtml(rawHtml, slug) {
     });
   }
 
+  // For industry subpages
+  if (slug.startsWith('industries-')) {
+    // 1. Remove pt-20 from <main class="w-full pt-20 ..."> because RootLayout div already has pt-20
+    inner = inner.replace(/<main\s+class="w-full\s+pt-20\s+/g, '<main class="w-full ');
+    inner = inner.replace(/<main\s+class="pt-20\s+/g, '<main class="');
+
+    // 2. Fix breadcrumbs
+    inner = inner.replace(/data-path="home"\s+href="#"/g, 'data-path="home" href="/"');
+    inner = inner.replace(/data-path="industries"\s+href="#"/g, 'data-path="industries" href="/industries"');
+    inner = inner.replace(/data-path="start-a-project"\s+href="#"/g, 'data-path="start-a-project" href="/start-a-project"');
+    inner = inner.replace(/href="#"([^>]*>HOME<\/a>)/g, 'href="/"$1');
+    inner = inner.replace(/href="#"([^>]*>INDUSTRIES<\/a>)/g, 'href="/industries"$1');
+
+    // 3. Fix explore industries buttons
+    inner = inner.replace(/href="#"([^>]*>[\s\S]*?EXPLORE INDUSTRIES[\s\S]*?<\/a>)/gi, 'href="/industries"$1');
+
+    // 4. Fix CTA buttons (Start a project, Commission a dome, Talk to engineering, etc.)
+    inner = inner.replace(/href="#"([^>]*>[\s\S]*?(BUILD AN IMMERSIVE|COMMISSION|READY TO CREATE|TALK TO|BOOK A|REQUEST SPEC|SCHEDULE|START A PROJECT)[\s\S]*?<\/a>)/gi, 'href="/start-a-project"$1');
+  }
+
+  // Specifically for industries-education-planetariums: rewire application cards
+  if (slug === 'industries-education-planetariums') {
+    inner = inner.replace(/<span\s+class="">Learn More<\/span>\s*<span\s+class="material-symbols-outlined[^"]*">arrow_forward<\/span>/g, (m, offset) => {
+      return `<a href="/start-a-project?industry=education" class="inline-flex items-center gap-1.5 text-secondary hover:text-white transition-colors"><span>Learn More</span><span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>`;
+    });
+  }
+
   // Strip any embedded script or style tags (styles are already in globals.css)
   inner = inner.replace(/<script[\s\S]*?<\/script>/gi, '');
   inner = inner.replace(/<style[\s\S]*?<\/style>/gi, '');
@@ -188,6 +215,7 @@ pageConfigs.forEach(cfg => {
   }
 
   const isFormPage = cfg.route === 'start-a-project';
+  const isIndustrySubpage = cfg.route.startsWith('industries/');
 
   let componentCode = '';
   if (isFormPage) {
@@ -216,12 +244,25 @@ export default function StartAProjectPage() {
       alert("Please provide your name and email.");
       return;
     }
-    // Simulate real submission
     setSubmitted(true);
   };
 
   return (
-    <div className="bg-[#080a0f] text-slate-100 min-h-screen">
+    <div className="bg-[#080a0f] text-slate-100 min-h-screen w-full overflow-x-hidden">
+      ${jsx}
+    </div>
+  );
+}
+`;
+  } else if (isIndustrySubpage) {
+    componentCode = `"use client";
+
+import React from "react";
+import Link from "next/link";
+
+export default function Page() {
+  return (
+    <div className="bg-surface text-on-surface min-h-screen w-full overflow-x-hidden selection:bg-primary selection:text-on-primary">
       ${jsx}
     </div>
   );
@@ -235,7 +276,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="bg-[#05070B] text-slate-100 min-h-screen">
+    <div className="bg-[#05070B] text-slate-100 min-h-screen w-full overflow-x-hidden">
       ${jsx}
     </div>
   );
