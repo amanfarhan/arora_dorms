@@ -50,9 +50,10 @@ export default function Page() {
             </h1>
 
             {/*  Two-Line Supporting Subline  */}
-            <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-lg mb-5 sm:mb-6 leading-relaxed">
-              A single partner for extraordinary dome experiences — unifying turnkey
-              <br className="hidden sm:inline" /> geodesic engineering, 360° fulldome projection, and bespoke content.
+            <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-xl mb-5 sm:mb-6 leading-relaxed">
+              A single partner for extraordinary dome experiences.
+              <br />
+              Turnkey geodesic engineering, 360° projection, and bespoke content.
             </p>
 
             {/*  Two Action Buttons  */}
