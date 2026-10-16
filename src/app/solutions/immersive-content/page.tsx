@@ -4,55 +4,87 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 export default function Page() {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
     <div className="bg-[#05070B] text-slate-100 min-h-screen w-full overflow-x-hidden">
       
 {/*  END: MainHeader  */}
 {/*  BEGIN: HeroSection  */}
-<section className="relative overflow-hidden bg-aurora-radial py-24" data-purpose="hero-section">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[580px] lg:min-h-[660px]">
-{/*  Left Column: Copy & CTAs  */}
-<div className="lg:col-span-5">
-<p className="text-xs font-semibold tracking-[0.25em] text-[#93c5fd] uppercase mb-4">
-      IMMERSIVE CONTENT
-    </p>
-<h1 className="headline-font text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-tight text-white mb-6">
-      A 360° Canvas Deserves a World-Class Story.
-    </h1>
-<p className="text-base sm:text-lg text-slate-300 leading-relaxed font-light mb-8 max-w-xl">
-      From breathtaking fulldome films to bespoke CGI content, we create immersive worlds that bring your vision to life inside the dome.
-    </p>
-<div className="flex flex-wrap items-center gap-4">
-<a className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-medium text-sm transition-all duration-300 shadow-[0_0_25px_rgba(147,197,253,0.3)]" href="#library">
-<span className="">Explore Our Content</span>
-<svg className="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" strokeLinecap="round" strokeLinejoin="round"></path>
-</svg>
-</a>
-<button className="group inline-flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium py-3.5 px-4" type="button">
-<span className="w-10 h-10 rounded-full border border-white/20 group-hover:border-[#93c5fd] flex items-center justify-center transition-all bg-white/5 backdrop-blur-sm">
-<svg className="w-4 h-4 ml-0.5 fill-current text-white group-hover:text-[#93c5fd]" viewBox="0 0 24 24">
-<path d="M8 5v14l11-7z"></path>
-</svg>
-</span>
-<span className="">Watch Showreel</span>
-</button>
-</div>
-</div>
-{/*  Right Column: Visual Container  */}
-<div className="lg:col-span-7">
-<div className="rounded-2xl lg:rounded-3xl overflow-hidden relative shadow-2xl border border-white/10 group bg-black">
-<div className="relative w-full h-[400px] sm:h-[480px] lg:h-[560px] overflow-hidden">
-<img  alt="Audience seated inside a majestic fulldome theater looking at a prehistoric marine giant underwater projection" className="w-full h-full object-cover object-center filter brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/content_cosmic_whale.jpg" />
-{/*  Left soft blend gradient into dark background  */}
-<div className="absolute inset-0 bg-gradient-to-r from-[#03070d] via-transparent to-transparent pointer-events-none w-1/3 lg:w-2/5"></div>
-<div className="absolute inset-0 bg-gradient-to-t from-[#030508]/80 via-transparent to-transparent pointer-events-none"></div>
-</div>
-{/*  Ambient Glow Behind Arc  */}
-<div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-blue-500/20 blur-2xl rounded-full pointer-events-none"></div>
-</div>
-</div>
-</div></div>
+<section className="relative overflow-hidden min-h-[85vh] lg:min-h-[92vh] flex items-center bg-[#03070d] pt-28 pb-20 lg:pt-36 lg:pb-28" data-purpose="hero-section">
+  {/* Full-bleed Background Image with Dome Projection on Right & Dark Space on Left */}
+  <div className="absolute inset-0 z-0">
+    <img 
+      alt="Audience seated inside a majestic 360-degree immersive fulldome theater watching a humpback whale glide through deep turquoise and celestial oceanic depths" 
+      className="w-full h-full object-cover object-right md:object-center select-none" 
+      src="/images/content_hero_whale_right.jpg" 
+    />
+    {/* Dark Gradient Scrim on Left for Clean Typography Readability */}
+    <div className="absolute inset-0 bg-gradient-to-r from-[#03070d] via-[#03070d]/90 md:via-[#03070d]/75 to-transparent w-full md:w-3/5 lg:w-[55%] pointer-events-none"></div>
+    {/* Top Header Fade */}
+    <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#03070d]/90 via-[#03070d]/40 to-transparent pointer-events-none"></div>
+    {/* Bottom Section Transition Fade */}
+    <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#05070B] via-[#05070B]/60 to-transparent pointer-events-none"></div>
+    {/* Ambient Glow Pool */}
+    <div className="absolute -top-24 left-1/4 w-[600px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+  </div>
+
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    {/* Left Column: Copy & CTAs */}
+    <div className="max-w-xl lg:max-w-2xl flex flex-col items-start">
+      <div className="inline-flex items-center gap-2 mb-5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#93c5fd] shadow-[0_0_8px_#93c5fd]"></span>
+        <span className="text-[11px] font-semibold tracking-[0.25em] text-[#93c5fd] uppercase">
+          IMMERSIVE CONTENT
+        </span>
+      </div>
+      <h1 className="headline-font text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-tight text-white mb-6 drop-shadow-md">
+        A 360° Canvas Deserves a <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-indigo-200 to-purple-200">World-Class Story.</span>
+      </h1>
+      <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-light mb-8 max-w-lg drop-shadow">
+        From breathtaking fulldome films to bespoke CGI content, we create immersive worlds that bring your vision to life inside the dome.
+      </p>
+      <div className="flex flex-wrap items-center gap-4">
+        <a 
+          className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-sm transition-all duration-300 shadow-[0_0_28px_rgba(147,197,253,0.35)] aurora-btn-primary group" 
+          href="#library"
+        >
+          <span>Explore Our Content</span>
+          <svg className="w-4 h-4 stroke-[2.5] group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" strokeLinecap="round" strokeLinejoin="round"></path>
+          </svg>
+        </a>
+        <button 
+          onClick={() => setIsVideoModalOpen(true)}
+          className="group inline-flex items-center gap-3 text-slate-200 hover:text-white transition-colors duration-200 text-sm font-medium py-3 px-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md" 
+          type="button"
+        >
+          <span className="w-9 h-9 rounded-full bg-white/10 group-hover:bg-[#93c5fd] flex items-center justify-center transition-all text-white group-hover:text-black">
+            <svg className="w-4 h-4 ml-0.5 fill-current" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </span>
+          <span>Watch Showreel</span>
+        </button>
+      </div>
+
+      {/* Metrics / Spec Badges */}
+      <div className="mt-12 pt-6 border-t border-white/10 grid grid-cols-3 gap-6 max-w-lg w-full">
+        <div>
+          <div className="text-sm font-semibold text-white tracking-wide">8K+ Resolution</div>
+          <div className="text-[11px] text-slate-400 font-light mt-0.5">Custom Mastered</div>
+        </div>
+        <div>
+          <div className="text-sm font-semibold text-white tracking-wide">140+ Films</div>
+          <div className="text-[11px] text-slate-400 font-light mt-0.5">Curated Catalog</div>
+        </div>
+        <div>
+          <div className="text-sm font-semibold text-white tracking-wide">Spatial Audio</div>
+          <div className="text-[11px] text-slate-400 font-light mt-0.5">Surround 7.1.4</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 {/*  END: HeroSection  */}
 {/*  BEGIN: ContentLibrarySection  */}
@@ -587,6 +619,49 @@ export default function Page() {
 </section>
 {/*  END: ClosingCTASection  */}
 {/*  BEGIN: MainFooter  */}
+
+      {/* Video Modal Lightbox */}
+      {isVideoModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn"
+          onClick={() => setIsVideoModalOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-4xl bg-[#090D15] rounded-2xl overflow-hidden border border-white/20 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between p-4 border-b border-white/10 bg-[#06080F]">
+              <span className="text-xs font-semibold tracking-wider text-slate-300 uppercase">
+                Aurora Dome Showreel • 360° Fulldome Experience
+              </span>
+              <button
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+                onClick={() => setIsVideoModalOpen(false)}
+                aria-label="Close modal"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="aspect-video w-full bg-black flex items-center justify-center relative">
+              <img
+                src="/images/content_hero_whale_right.jpg"
+                alt="Aurora Dome Showreel Preview"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-3">
+                <div className="w-16 h-16 rounded-full bg-[#93c5fd] text-black flex items-center justify-center shadow-xl animate-pulse cursor-pointer">
+                  <svg className="w-8 h-8 fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </div>
+                <span className="text-sm font-medium text-white drop-shadow">
+                  Curated Fulldome Showreel 8K
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
