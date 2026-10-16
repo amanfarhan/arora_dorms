@@ -539,10 +539,9 @@ export default function HomePage() {
           <div className="relative w-full min-h-[460px] md:min-h-[520px] lg:min-h-[580px] flex items-center overflow-hidden">
             <div className="absolute inset-0 z-0">
               <img
-                alt="Arora Dorm illuminated geodesic pavilion by lake under night sky"
-                className="w-full h-full object-cover object-left md:object-center"
-                src="/images/img_1059dc147612.jpg"
-                style={{ transform: "scaleX(-1)" }}
+                alt="Aurora Dome illuminated geodesic pavilion by lake under night sky"
+                className="w-full h-full object-cover object-left md:object-center select-none"
+                src="/images/alpine_lake_dome_highres.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#05070B]/50 to-[#05070B] pointer-events-none hidden md:block"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-[#05070B] via-transparent to-[#05070B]/40 pointer-events-none"></div>
