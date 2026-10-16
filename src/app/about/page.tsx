@@ -17,16 +17,17 @@ export default function Page() {
         <div className="aurora-glow-hero top-20 left-1/3 w-[550px] h-[450px] ambient-light-drift opacity-70"></div>
         <div className="aurora-glow-cyan top-36 right-1/4 w-[500px] h-[400px] ambient-light-drift opacity-60"></div>
 
-        {/*  Cinematic Full Cover Background Image (High-Res Lounge Observation Visual)  */}
+        {/*  Cinematic Full Cover Background Image (Monumental Glowing Dome Destination under Aurora)  */}
         <div className="absolute inset-0 z-0">
           <img
-            alt="Interior of an Aurora Dome luxury lounge showing silhouette of an observer looking out toward planet Earth and cosmic aurora lights"
-            className="w-full h-full object-cover object-center scale-105"
-            src="/images/about_hero_lounge.jpg"
+            alt="Monumental glowing geodesic immersion dome destination under dramatic emerald and violet aurora borealis night sky"
+            className="w-full h-full object-cover object-right md:object-center select-none"
+            src="/images/about_hero_monumental_dome.jpg"
           />
-          {/*  Gradient Overlays for Typographic Contrast  */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#03070d] via-[#03070d]/80 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#03070d] via-transparent to-[#03070d]/60"></div>
+          {/*  Gradient Overlays for Typographic Contrast & Seamless Integration  */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#03070d] via-[#03070d]/85 md:via-[#03070d]/60 to-transparent w-full md:w-3/5 lg:w-[52%] pointer-events-none"></div>
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#03070d]/90 via-[#03070d]/30 to-transparent pointer-events-none"></div>
+          <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#05070B] via-[#05070B]/60 to-transparent pointer-events-none"></div>
         </div>
 
         {/*  Hero Content Container  */}
@@ -418,9 +419,9 @@ export default function Page() {
             </div>
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black flex items-center justify-center">
               <img
-                src="/images/about_hero_lounge.jpg"
+                src="/images/about_hero_monumental_dome.jpg"
                 alt="Brand Story Thumbnail"
-                className="w-full h-full object-cover opacity-80"
+                className="w-full h-full object-cover opacity-85"
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="w-16 h-16 rounded-full bg-indigo-600/90 text-white flex items-center justify-center shadow-[0_0_30px_rgba(99,102,241,0.6)]">
