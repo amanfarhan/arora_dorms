@@ -10,7 +10,7 @@ export default function Page() {
     <div className="bg-[#05070B] text-slate-100 min-h-screen w-full overflow-x-hidden relative">
       {/*  BEGIN: HeroSection  */}
       <section
-        className="relative min-h-[92vh] lg:min-h-screen flex items-center justify-between pt-24 pb-16 overflow-hidden"
+        className="relative min-h-[90vh] lg:h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden"
         data-purpose="hero-banner"
       >
         {/*  Atmospheric Radial Glow Pools  */}
@@ -31,41 +31,38 @@ export default function Page() {
         </div>
 
         {/*  Hero Content Container  */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex flex-col justify-between h-full pt-10 md:pt-14 pb-4">
-          <div className="max-w-xl lg:max-w-2xl">
-            {/*  Eyebrow Badge  */}
-            <div className="inline-flex items-center gap-2.5 mb-6 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-[#93c5fd] shadow-[0_0_10px_#93c5fd] animate-pulse"></span>
-              <span className="text-[11px] font-semibold tracking-[0.25em] text-[#93c5fd] uppercase">
-                ABOUT AURORA DOME SOLUTIONS
-              </span>
-            </div>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex flex-col justify-between h-full pt-4 sm:pt-6 pb-2">
+          <div className="max-w-xl">
+            {/*  Eyebrow  */}
+            <span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-3.5">
+              About Arora Dorm Solutions
+            </span>
 
             {/*  Primary Editorial Serif Headline  */}
-            <h1 className="text-5xl sm:text-6xl lg:text-[4.75rem] xl:text-[5.25rem] font-light font-editorial text-white leading-[1.03] tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light font-editorial text-white leading-[1.05] tracking-tight mb-4">
               We Build
               <br />
               Immersive
               <br />
-              <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_35px_rgba(165,180,252,0.4)]">
+              <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
                 Destinations.
               </span>
             </h1>
 
-            {/*  Rich Supporting Narrative  */}
-            <p className="text-base sm:text-lg text-slate-300 font-light tracking-wide leading-relaxed max-w-xl mb-8">
-              A single visionary partner for extraordinary dome experiences. We unify turnkey geodesic architecture, 360° fulldome projection, bespoke CGI environments, and end-to-end technical delivery — transforming spaces into iconic global destinations.
+            {/*  Concise Supporting Subline  */}
+            <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-md mb-6 leading-relaxed">
+              A single partner for extraordinary dome experiences.
             </p>
 
-            {/*  Action Button Group  */}
-            <div className="flex flex-wrap items-center gap-4 mb-10">
+            {/*  Two Action Buttons  */}
+            <div className="flex flex-wrap items-center gap-3.5">
               <Link
                 href="/start-a-project"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-[0_0_28px_rgba(147,197,253,0.35)] group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_24px_rgba(147,197,253,0.3)] group"
               >
                 <span>Start a Project</span>
                 <svg
-                  className="w-4 h-4 stroke-[2.5] group-hover:translate-x-0.5 transition-transform"
+                  className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 transition-transform"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -81,37 +78,21 @@ export default function Page() {
               <button
                 onClick={() => setVideoModalOpen(true)}
                 aria-label="Watch our brand story"
-                className="group inline-flex items-center gap-3 text-slate-200 hover:text-white transition-colors duration-200 text-xs sm:text-sm font-medium py-3 px-5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md"
+                className="group inline-flex items-center gap-2.5 text-slate-200 hover:text-white transition-colors duration-200 text-xs font-medium py-2.5 px-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md"
                 type="button"
               >
-                <span className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-[#93c5fd] flex items-center justify-center transition-all text-white group-hover:text-black">
-                  <svg className="w-3.5 h-3.5 ml-0.5 fill-current" viewBox="0 0 24 24">
+                <span className="w-7 h-7 rounded-full bg-white/10 group-hover:bg-[#93c5fd] flex items-center justify-center transition-all text-white group-hover:text-black">
+                  <svg className="w-3 h-3 ml-0.5 fill-current" viewBox="0 0 24 24">
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                   </svg>
                 </span>
                 <span className="tracking-wide">Watch Our Story</span>
               </button>
             </div>
-
-            {/*  Key Metric Highlights Strip  */}
-            <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 sm:gap-6 max-w-xl w-full">
-              <div>
-                <div className="text-base sm:text-lg font-semibold text-white tracking-wide">3m – 25m+</div>
-                <div className="text-[11px] text-slate-400 font-light mt-0.5">Turnkey Architecture</div>
-              </div>
-              <div>
-                <div className="text-base sm:text-lg font-semibold text-white tracking-wide">360° Fulldome</div>
-                <div className="text-[11px] text-slate-400 font-light mt-0.5">8K Projection & Audio</div>
-              </div>
-              <div>
-                <div className="text-base sm:text-lg font-semibold text-white tracking-wide">100% Turnkey</div>
-                <div className="text-[11px] text-slate-400 font-light mt-0.5">Single Accountable Partner</div>
-              </div>
-            </div>
           </div>
 
           {/*  Bottom Hero Metadata / Affiliation Note  */}
-          <div className="self-end mt-12 lg:mt-16 border-l border-white/25 pl-4 py-0.5">
+          <div className="self-end mt-4 border-l border-white/25 pl-4 py-0.5">
             <p className="text-[9px] tracking-[0.24em] font-medium text-white/50 uppercase leading-relaxed">
               A business vertical of
               <br />
