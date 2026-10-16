@@ -10,7 +10,7 @@ export default function Page() {
     <div className="bg-[#05070B] text-slate-100 min-h-screen w-full overflow-x-hidden relative">
       {/*  BEGIN: HeroSection  */}
       <section
-        className="relative min-h-[90vh] lg:h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden"
+        className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-between pt-20 sm:pt-24 pb-6 sm:pb-8 overflow-hidden"
         data-purpose="hero-banner"
       >
         {/*  Atmospheric Radial Glow Pools  */}
@@ -31,15 +31,15 @@ export default function Page() {
         </div>
 
         {/*  Hero Content Container  */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex flex-col justify-between h-full pt-4 sm:pt-6 pb-2">
-          <div className="max-w-xl">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex flex-col justify-between h-full">
+          <div className="max-w-xl lg:max-w-2xl pt-2 sm:pt-4">
             {/*  Eyebrow  */}
-            <span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-3.5">
+            <span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-2.5 sm:mb-3">
               About Arora Dorm Solutions
             </span>
 
             {/*  Primary Editorial Serif Headline  */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light font-editorial text-white leading-[1.05] tracking-tight mb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
               We Build
               <br />
               Immersive
@@ -49,16 +49,17 @@ export default function Page() {
               </span>
             </h1>
 
-            {/*  Concise Supporting Subline  */}
-            <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-md mb-6 leading-relaxed">
-              A single partner for extraordinary dome experiences.
+            {/*  Two-Line Supporting Subline  */}
+            <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-lg mb-5 sm:mb-6 leading-relaxed">
+              A single partner for extraordinary dome experiences — unifying turnkey
+              <br className="hidden sm:inline" /> geodesic engineering, 360° fulldome projection, and bespoke content.
             </p>
 
             {/*  Two Action Buttons  */}
-            <div className="flex flex-wrap items-center gap-3.5">
+            <div className="flex flex-wrap items-center gap-3.5 mb-6 sm:mb-7">
               <Link
                 href="/start-a-project"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_24px_rgba(147,197,253,0.3)] group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_24px_rgba(147,197,253,0.3)] group"
               >
                 <span>Start a Project</span>
                 <svg
@@ -78,7 +79,7 @@ export default function Page() {
               <button
                 onClick={() => setVideoModalOpen(true)}
                 aria-label="Watch our brand story"
-                className="group inline-flex items-center gap-2.5 text-slate-200 hover:text-white transition-colors duration-200 text-xs font-medium py-2.5 px-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md"
+                className="group inline-flex items-center gap-2.5 text-slate-200 hover:text-white transition-colors duration-200 text-xs font-medium py-2 sm:py-2.5 px-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md"
                 type="button"
               >
                 <span className="w-7 h-7 rounded-full bg-white/10 group-hover:bg-[#93c5fd] flex items-center justify-center transition-all text-white group-hover:text-black">
@@ -89,10 +90,26 @@ export default function Page() {
                 <span className="tracking-wide">Watch Our Story</span>
               </button>
             </div>
+
+            {/*  Key Metric Highlights Strip  */}
+            <div className="pt-5 sm:pt-6 border-t border-white/10 grid grid-cols-3 gap-4 sm:gap-6 max-w-xl w-full">
+              <div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-white tracking-wide">3m – 25m+</div>
+                <div className="text-[11px] text-slate-400 font-light mt-0.5">Turnkey Architecture</div>
+              </div>
+              <div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-white tracking-wide">360° Fulldome</div>
+                <div className="text-[11px] text-slate-400 font-light mt-0.5">8K Projection & Audio</div>
+              </div>
+              <div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-white tracking-wide">100% Turnkey</div>
+                <div className="text-[11px] text-slate-400 font-light mt-0.5">Single Accountable Partner</div>
+              </div>
+            </div>
           </div>
 
           {/*  Bottom Hero Metadata / Affiliation Note  */}
-          <div className="self-end mt-4 border-l border-white/25 pl-4 py-0.5">
+          <div className="self-end mt-4 sm:mt-6 border-l border-white/25 pl-4 py-0.5">
             <p className="text-[9px] tracking-[0.24em] font-medium text-white/50 uppercase leading-relaxed">
               A business vertical of
               <br />
