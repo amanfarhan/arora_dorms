@@ -511,7 +511,7 @@ export default function Page() {
 <section className="w-full px-margin-mobile md:px-margin py-space-md bg-surface-container-lowest">
 <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-md">
 {/*  Prev Sector  */}
-<Link className="group flex items-center gap-space-sm p-3 rounded-xl hover:bg-surface-container-high transition-all" data-path="entertainment-and-tourism" href="/start-a-project">
+<Link className="group flex items-center gap-space-sm p-3 rounded-xl hover:bg-surface-container-high transition-all" href="/industries/entertainment-tourism">
 <span className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:text-primary group-hover:bg-primary/10 transition-colors">
 <span className="material-symbols-outlined text-[18px]">arrow_back</span>
 </span>
@@ -526,7 +526,7 @@ export default function Page() {
 <span className="">Explore All 9 Industries</span>
 </Link>
 {/*  Next Sector  */}
-<a className="group flex items-center gap-space-sm p-3 rounded-xl hover:bg-surface-container-high transition-all" data-path="hospitality" href="#">
+<Link className="group flex items-center gap-space-sm p-3 rounded-xl hover:bg-surface-container-high transition-all" href="/industries/hospitality-dining">
 <div className="flex flex-col text-right">
 <span className="font-label-eyebrow text-label-eyebrow uppercase text-on-surface-variant">NEXT SECTOR</span>
 <span className="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors">03 Hospitality & Immersive Dining</span>
@@ -534,7 +534,7 @@ export default function Page() {
 <span className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:text-secondary group-hover:bg-secondary/10 transition-colors">
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </span>
-</a>
+</Link>
 </div>
 </section>
 {/*  9. FINAL CALL-TO-ACTION SECTION  */}

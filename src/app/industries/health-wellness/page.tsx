@@ -11,9 +11,9 @@ export default function Page() {
 <section className="w-full px-margin-mobile lg:px-margin pt-6 pb-4">
 <div className="flex flex-wrap items-center justify-between gap-4 py-3 px-5 rounded-full bg-surface-container-lowest/80 backdrop-blur-xl">
 <div className="flex items-center gap-2">
-<Link className="font-label-eyebrow text-label-eyebrow text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="/industries">Home</Link>
+<Link className="font-label-eyebrow text-label-eyebrow text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="/">Home</Link>
 <span className="text-on-surface-variant/40 text-xs">/</span>
-<Link className="font-label-eyebrow text-label-eyebrow text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="/start-a-project">Industries</Link>
+<Link className="font-label-eyebrow text-label-eyebrow text-on-surface-variant hover:text-primary transition-colors tracking-widest uppercase" href="/industries">Industries</Link>
 <span className="text-on-surface-variant/40 text-xs">/</span>
 <span className="font-label-eyebrow text-label-eyebrow text-primary tracking-widest uppercase">Health & Wellness</span>
 </div>
@@ -40,16 +40,16 @@ export default function Page() {
         </p>
 {/*  CTA Cluster  */}
 <div className="flex flex-wrap items-center gap-4 pt-2">
-<a className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_30px_rgba(123,140,222,0.35)] transition-all" href="#">
+<Link className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_30px_rgba(123,140,222,0.35)] transition-all aurora-btn-primary" href="/start-a-project">
 <span className="">CREATE YOUR WELLNESS SPACE</span>
 <span className="flex items-center justify-center w-6 h-6 rounded-full bg-on-primary-container/15">
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface-container-high/70 text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all backdrop-blur-md" href="#">
+</Link>
+<Link className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface-container-high/70 text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all backdrop-blur-md" href="/industries">
 <span className="">EXPLORE INDUSTRIES</span>
 <span className="material-symbols-outlined text-[16px] text-primary">north_east</span>
-</a>
+</Link>
 </div>
 {/*  Telemetry Metrics Bar  */}
 <div className="grid grid-cols-3 gap-3 pt-6 mt-4">
@@ -423,7 +423,7 @@ export default function Page() {
 <section className="w-full px-margin-mobile lg:px-margin py-8">
 <div className="p-4 lg:p-6 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-xl flex flex-col sm:flex-row items-center justify-between gap-6">
 {/*  Previous Industry  */}
-<a className="group flex items-center gap-3 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<Link className="group flex items-center gap-3 text-on-surface-variant hover:text-on-surface transition-colors" href="/industries/hospitality-dining">
 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
 <span className="material-symbols-outlined text-[16px]">arrow_back</span>
 </span>
@@ -431,13 +431,11 @@ export default function Page() {
 <span className="font-label-eyebrow text-[10px] uppercase tracking-wider text-on-surface-variant/70">Previous Industry</span>
 <span className="font-label-md text-label-md text-on-surface font-medium">03 Hospitality & Immersive Dining</span>
 </div>
-</a>
+</Link>
 {/*  Center Hub  */}
-<a className="px-5 py-2 rounded-full bg-surface-container-high/80 text-primary hover:bg-surface-container-highest transition-all font-label-eyebrow text-[11px] tracking-[0.2em] uppercase" href="#">
-        Explore All 9 Industries
-      </a>
+<Link className="px-5 py-2 rounded-full bg-surface-container-high/80 text-primary hover:bg-surface-container-highest transition-all font-label-eyebrow text-[11px] tracking-[0.2em] uppercase" href="/industries">Explore All 9 Industries</Link>
 {/*  Next Industry  */}
-<a className="group flex items-center gap-3 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<Link className="group flex items-center gap-3 text-on-surface-variant hover:text-on-surface transition-colors" href="/industries/music-nightlife">
 <div className="flex flex-col text-right">
 <span className="font-label-eyebrow text-[10px] uppercase tracking-wider text-on-surface-variant/70">Next Industry</span>
 <span className="font-label-md text-label-md text-on-surface font-medium">05 Music, Nightlife & Concerts</span>
@@ -445,7 +443,7 @@ export default function Page() {
 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
 </span>
-</a>
+</Link>
 </div>
 </section>
 {/*  FINAL CTA SECTION  */}
@@ -462,16 +460,16 @@ export default function Page() {
         Tell us about your spa, retreat, or wellness destination, and the restorative world you want to build.
       </p>
 <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-<a className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_36px_rgba(123,140,222,0.4)] transition-all" href="#">
+<Link className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_36px_rgba(123,140,222,0.4)] transition-all aurora-btn-primary" href="/start-a-project">
 <span className="">CREATE YOUR WELLNESS SPACE</span>
 <span className="flex items-center justify-center w-6 h-6 rounded-full bg-on-primary-container/20">
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-surface-container-high/70 text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all backdrop-blur-md" href="#">
+</Link>
+<Link className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-surface-container-high/70 text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all backdrop-blur-md" href="/industries">
 <span className="">EXPLORE OTHER INDUSTRIES</span>
 <span className="material-symbols-outlined text-[16px] text-primary">north_east</span>
-</a>
+</Link>
 </div>
 </div>
 {/*  Chromatic Ambient Halo  */}

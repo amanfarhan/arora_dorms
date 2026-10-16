@@ -43,7 +43,7 @@ export default function Page() {
 <div className="lg:col-span-7">
 <div className="rounded-2xl lg:rounded-3xl overflow-hidden relative shadow-2xl border border-white/10 group bg-black">
 <div className="relative w-full h-[400px] sm:h-[480px] lg:h-[560px] overflow-hidden">
-<img  alt="Audience seated inside a majestic fulldome theater looking at a prehistoric marine giant underwater projection" className="w-full h-full object-cover object-center filter brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/img_a060f6a43570.jpg" />
+<img  alt="Audience seated inside a majestic fulldome theater looking at a prehistoric marine giant underwater projection" className="w-full h-full object-cover object-center filter brightness-95 contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/content_cosmic_whale.jpg" />
 {/*  Left soft blend gradient into dark background  */}
 <div className="absolute inset-0 bg-gradient-to-r from-[#03070d] via-transparent to-transparent pointer-events-none w-1/3 lg:w-2/5"></div>
 <div className="absolute inset-0 bg-gradient-to-t from-[#030508]/80 via-transparent to-transparent pointer-events-none"></div>
@@ -72,12 +72,12 @@ export default function Page() {
           </p>
 </div>
 <div className="shrink-0">
-<a className="inline-flex items-center gap-2 bg-[#9BAAFF] hover:bg-[#8797f5] text-[#030508] font-medium text-xs sm:text-sm px-5 py-2.5 rounded-full transition-all" href="#">
+<Link className="inline-flex items-center gap-2 bg-[#9BAAFF] hover:bg-[#8797f5] text-[#030508] font-medium text-xs sm:text-sm px-5 py-2.5 rounded-full transition-all aurora-btn-primary" href="/start-a-project">
 <span className="">Browse Full Library</span>
 <svg className="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" strokeLinecap="round" strokeLinejoin="round"></path>
 </svg>
-</a>
+</Link>
 </div>
 </div>
 {/*  5-Column Content Cards Grid  */}
@@ -561,7 +561,7 @@ export default function Page() {
 <section className="relative py-24 lg:py-32 overflow-hidden bg-black" data-purpose="closing-call-to-action" id="contact">
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"><div className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-white/10 shadow-2xl min-h-[500px] lg:min-h-[560px] flex items-center bg-[#030508]">
 {/*  Panoramic Background Image  */}
-<img  alt="Aurora borealis and glowing dome pavilion reflected on a calm mountain lake" className="absolute inset-0 w-full h-full object-cover object-center filter brightness-95 contrast-105" src="/images/img_1059dc147612.jpg" />
+<img  alt="Aurora borealis and glowing dome pavilion reflected on a calm mountain lake" className="absolute inset-0 w-full h-full object-cover object-center filter brightness-95 contrast-105" src="/images/alpine_lake_dome_cta.jpg" />
 {/*  Dark Gradient Overlays for High Legibility on Left & Natural Fade to Image on Right  */}
 <div className="absolute inset-0 bg-gradient-to-r from-[#020407] via-[#03070d]/80 to-transparent lg:w-3/4 pointer-events-none"></div>
 <div className="absolute inset-0 bg-gradient-to-t from-[#020407]/90 via-[#03070d]/40 to-transparent pointer-events-none md:hidden"></div>
@@ -576,12 +576,12 @@ export default function Page() {
 <p className="text-slate-200 text-sm sm:text-base leading-relaxed font-light mb-8 max-w-md">
       Tell us about your idea, and our team will help create the perfect content experience for your audience.
     </p>
-<a className="inline-flex items-center gap-2.5 bg-[#9BAAFF] hover:bg-[#8797f5] text-[#030508] font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 transform hover:scale-[1.02] shadow-lg" href="#">
+<Link className="inline-flex items-center gap-2.5 bg-[#9BAAFF] hover:bg-[#8797f5] text-[#030508] font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 transform hover:scale-[1.02] shadow-lg aurora-btn-primary" href="/start-a-project">
 <span className="">Start Your Project</span>
 <svg className="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" strokeLinecap="round" strokeLinejoin="round"></path>
 </svg>
-</a>
+</Link>
 </div>
 </div></div>
 </section>

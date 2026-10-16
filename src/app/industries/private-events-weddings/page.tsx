@@ -384,7 +384,7 @@ export default function Page() {
 <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
 <div className="flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left">
 {/*  Previous Industry Link  */}
-<Link className="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors group" data-path="industries" href="/industries">
+<Link className="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors group" href="/industries/education-planetariums">
 <span className="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
 <div className="text-left">
 <span className="block font-label-eyebrow text-label-eyebrow text-outline uppercase tracking-wider">PREVIOUS INDUSTRY</span>
@@ -396,7 +396,7 @@ export default function Page() {
           EXPLORE ALL 9 INDUSTRIES
         </Link>
 {/*  Next Industry Link  */}
-<Link className="flex items-center gap-space-xs text-on-surface-variant hover:text-secondary transition-colors group" data-path="industries" href="/industries">
+<Link className="flex items-center gap-space-xs text-on-surface-variant hover:text-secondary transition-colors group" href="/industries/entertainment-tourism">
 <div className="text-right">
 <span className="block font-label-eyebrow text-label-eyebrow text-outline uppercase tracking-wider">NEXT INDUSTRY</span>
 <span className="font-title-md text-body-md font-semibold text-on-surface">01 Entertainment & Tourism</span>

@@ -11,9 +11,9 @@ export default function Page() {
 <section className="w-full bg-surface-container-lowest py-space-sm">
 <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-eyebrow text-label-eyebrow tracking-[0.18em] uppercase">
 <div className="flex items-center gap-space-xs">
-<span className="text-outline">HOME</span>
+<Link className="text-outline hover:text-primary transition-colors" href="/">HOME</Link>
 <span className="text-outline">/</span>
-<span className="text-outline">INDUSTRIES</span>
+<Link className="text-outline hover:text-primary transition-colors" href="/industries">INDUSTRIES</Link>
 <span className="text-outline">/</span>
 <span className="text-secondary font-semibold">07 CORPORATE, RETAIL & BRAND EXPERIENCES</span>
 </div>
@@ -467,7 +467,7 @@ export default function Page() {
 <section className="w-full bg-surface-container-lowest py-space-lg">
 <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
 <div className="p-space-md rounded-2xl bg-surface-container/50 backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-space-md">
-<a className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="industries/museums-cultural" href="#">
+<Link className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/industries/museums-cultural">
 <span className="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:-translate-x-1 transition-transform">
 <span className="material-symbols-outlined text-[18px]">arrow_back</span>
 </span>
@@ -475,11 +475,11 @@ export default function Page() {
 <span className="font-label-eyebrow text-label-eyebrow text-outline uppercase tracking-[0.16em]">PREVIOUS INDUSTRY</span>
 <span className="font-body-md text-body-md font-semibold text-on-surface">06 Museums & Cultural Institutions</span>
 </div>
-</a>
+</Link>
 <Link className="px-space-md py-1.5 rounded-full bg-surface-container-highest/80 hover:bg-surface-bright text-on-surface font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] transition-all" data-path="industries" href="/industries">
           EXPLORE ALL 9 INDUSTRIES
         </Link>
-<a className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="industries/education-planetariums" href="#">
+<Link className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/industries/education-planetariums">
 <div className="flex flex-col text-right">
 <span className="font-label-eyebrow text-label-eyebrow text-outline uppercase tracking-[0.16em]">NEXT INDUSTRY</span>
 <span className="font-body-md text-body-md font-semibold text-on-surface">08 Education & Planetariums</span>
@@ -487,7 +487,7 @@ export default function Page() {
 <span className="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:translate-x-1 transition-transform">
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </span>
-</a>
+</Link>
 </div>
 </div>
 </section>

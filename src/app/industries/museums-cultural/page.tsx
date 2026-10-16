@@ -43,7 +43,7 @@ export default function Page() {
         </p>
 {/*  Actions  */}
 <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
-<Link className="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold transition-all hover:brightness-110 shadow-[0_0_28px_rgba(123,140,222,0.35)]" href="/industries">
+<Link className="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold transition-all hover:brightness-110 shadow-[0_0_28px_rgba(123,140,222,0.35)] aurora-btn-primary" href="/start-a-project">
 <span className="">CREATE THE NEXT IMMERSIVE EXHIBITION</span>
 <span className="w-6 h-6 rounded-full bg-on-primary-container/15 flex items-center justify-center">
 <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
@@ -443,7 +443,7 @@ export default function Page() {
 <section className="w-full bg-surface-container-high px-margin py-space-md">
 <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-md">
 {/*  Previous Industry  */}
-<a className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<Link className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/industries/music-nightlife">
 <span className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
 <span className="material-symbols-outlined text-[18px]">arrow_back</span>
 </span>
@@ -451,14 +451,14 @@ export default function Page() {
 <span className="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-outline">PREVIOUS INDUSTRY</span>
 <span className="font-label-md text-label-md font-semibold text-on-surface">05 Music, Nightlife & Concerts</span>
 </div>
-</a>
+</Link>
 {/*  Middle Overview Link  */}
-<a className="inline-flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container hover:bg-surface-container-highest text-primary font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] transition-all" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container hover:bg-surface-container-highest text-primary font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] transition-all" href="/industries">
 <span className="material-symbols-outlined text-[16px]">grid_view</span>
 <span className="">EXPLORE ALL 9 INDUSTRIES</span>
-</a>
+</Link>
 {/*  Next Industry  */}
-<a className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors text-right" href="#">
+<Link className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors text-right" href="/industries/corporate-brand">
 <div className="flex flex-col">
 <span className="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-outline">NEXT INDUSTRY</span>
 <span className="font-label-md text-label-md font-semibold text-on-surface">07 Corporate, Retail & Brand</span>
@@ -466,7 +466,7 @@ export default function Page() {
 <span className="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </span>
-</a>
+</Link>
 </div>
 </section>
 {/*  FINAL CALL TO ACTION  */}
@@ -484,16 +484,16 @@ export default function Page() {
         Tell us about your exhibition, museum gallery, or institution space, and let's craft an awe-inspiring educational journey that leaves visitors spellbound.
       </p>
 <div className="flex flex-wrap items-center justify-center gap-space-sm pt-space-xs">
-<a className="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold transition-all hover:brightness-110 shadow-[0_0_30px_rgba(123,140,222,0.4)]" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold transition-all hover:brightness-110 shadow-[0_0_30px_rgba(123,140,222,0.4)] aurora-btn-primary" href="/start-a-project">
 <span className="">CREATE THE NEXT IMMERSIVE EXHIBITION</span>
 <span className="w-6 h-6 rounded-full bg-on-primary-container/15 flex items-center justify-center">
 <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all" href="/industries">
 <span className="">EXPLORE OTHER INDUSTRIES</span>
 <span className="material-symbols-outlined text-[16px] text-primary">north_east</span>
-</a>
+</Link>
 </div>
 </div>
 </section>

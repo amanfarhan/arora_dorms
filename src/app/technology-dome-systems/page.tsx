@@ -26,7 +26,7 @@ export default function Page() {
 <p className="text-base text-slate-300 leading-relaxed font-light mb-8 max-w-lg">
             From structural design to projection mapping, our dome systems are engineered to deliver unmatched visual clarity, scalability and reliability — in any space.
           </p>
-<a className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-xs font-semibold bg-brand-lavender text-black hover:bg-brand-lavenderHover transition-all duration-200" href="#size-options">
+<a className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-xs font-semibold bg-brand-lavender text-black hover:bg-brand-lavenderHover transition-all duration-200 aurora-btn-primary" href="#size-options">
             Explore Our Technology
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
@@ -35,9 +35,9 @@ export default function Page() {
 </div>
 {/*  Center Large Visual: Dome Cutaway  */}
 <div className="lg:col-span-4 relative flex justify-center">
-<div className="relative w-full max-w-[420px] aspect-[4/5] rounded-[220px_220px_24px_24px] overflow-hidden border border-white/20 shadow-2xl bg-brand-deep">
+<div className="relative w-full max-w-[420px] aspect-[4/5] rounded-[220px_220px_24px_24px] overflow-hidden border border-white/20 shadow-2xl bg-brand-deep aurora-glow-hero group">
 {/*  Full Dome Projection Visual  */}
-<img  alt="Ultra-realistic geodesic immersive projection dome theater with Earth and cosmic projection" className="w-full h-full object-cover object-center scale-105" src="/images/img_4610b4ecc1b3.jpg" />
+<img alt="Ultra-realistic geodesic immersive projection dome theater cutaway with cosmic projection" className="w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-transform duration-700" src="/images/tech_dome_cutaway.jpg" />
 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
 </div>
 </div>
@@ -447,7 +447,7 @@ export default function Page() {
 {/*  3 Pillar Process Cards  */}
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 {/*  Card 1: Installation & Setup  */}
-<div className="rounded-2xl overflow-hidden bg-brand-surface border border-white/10 group hover:border-brand-lavender/40 transition-colors flex flex-col">
+<div className="rounded-2xl overflow-hidden bg-brand-surface border border-white/10 group hover:border-brand-lavender/40 transition-all duration-300 aurora-card-interactive flex flex-col">
 <div className="aspect-[4/3] overflow-hidden relative">
 <img  alt="Installation & Setup" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/images/img_bfe338b3bf8a.jpg" />
 <div className="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent"></div>
@@ -467,7 +467,7 @@ export default function Page() {
 </div>
 </div>
 {/*  Card 2: Ongoing Support  */}
-<div className="rounded-2xl overflow-hidden bg-brand-surface border border-white/10 group hover:border-brand-lavender/40 transition-colors flex flex-col">
+<div className="rounded-2xl overflow-hidden bg-brand-surface border border-white/10 group hover:border-brand-lavender/40 transition-all duration-300 aurora-card-interactive flex flex-col">
 <div className="aspect-[4/3] overflow-hidden relative">
 <img  alt="Ongoing Support Control Room" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/images/img_74e401401c4c.jpg" />
 <div className="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent"></div>
@@ -487,7 +487,7 @@ export default function Page() {
 </div>
 </div>
 {/*  Card 3: Training & Handover  */}
-<div className="rounded-2xl overflow-hidden bg-brand-surface border border-white/10 group hover:border-brand-lavender/40 transition-colors flex flex-col">
+<div className="rounded-2xl overflow-hidden bg-brand-surface border border-white/10 group hover:border-brand-lavender/40 transition-all duration-300 aurora-card-interactive flex flex-col">
 <div className="aspect-[4/3] overflow-hidden relative">
 <img  alt="Training & Handover Specialist" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/images/img_30c1e1fa482f.jpg" />
 <div className="absolute inset-0 bg-gradient-to-t from-brand-surface via-transparent to-transparent"></div>

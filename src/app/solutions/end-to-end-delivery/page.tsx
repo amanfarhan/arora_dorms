@@ -13,7 +13,7 @@ export default function Page() {
 <section className="relative w-full overflow-hidden -mt-20 pt-28 pb-20 md:pb-32 min-h-[90vh] flex items-center bg-surface-container-lowest">
 {/*  Ambient Backdrop Layer with Gradient Scrim  */}
 <div className="absolute inset-0 z-0">
-<img alt="Observation dome looking out at cosmic Earth and celestial aurora" className="w-full h-full object-cover object-center scale-105 transform duration-1000 ease-out" src="/images/img_ea17ab6879b8.jpg"/>
+<img alt="Observation dome looking out at cosmic Earth and celestial aurora" className="w-full h-full object-cover object-center scale-105 transform duration-1000 ease-out" src="/images/hero_dome_celestial.jpg"/>
 <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface-container-lowest/80 to-surface-container-lowest/60"></div>
 <div className="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
 </div>
@@ -44,10 +44,10 @@ export default function Page() {
 <span className="material-symbols-outlined text-[16px]">arrow_downward</span>
 </span>
 </a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3.5 rounded-full bg-surface-container/60 hover:bg-surface-container text-on-surface backdrop-blur-lg font-label-md text-label-md transition-all duration-300" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3.5 rounded-full bg-surface-container/60 hover:bg-surface-container text-on-surface backdrop-blur-lg font-label-md text-label-md transition-all duration-300" href="/start-a-project">
 <span>START A PROJECT</span>
 <span className="material-symbols-outlined text-[16px] text-secondary">arrow_forward</span>
-</a>
+</Link>
 </div>
 {/*  Metrics Strip  */}
 <div className="grid grid-cols-3 gap-gutter-mobile md:gap-gutter mt-space-xl pt-space-lg w-full max-w-xl">
@@ -389,10 +389,10 @@ export default function Page() {
 </div>
 </div>
 </div>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md shadow-md transition-all duration-300" data-path="contact" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md shadow-md transition-all duration-300" href="/start-a-project">
 <span>DISCUSS YOUR PROJECT</span>
 <span className="material-symbols-outlined text-[16px] text-secondary">arrow_forward</span>
-</a>
+</Link>
 </div>
 </div>
 </div>
@@ -420,16 +420,16 @@ export default function Page() {
       </p>
 {/*  Primary Action CTA  */}
 <div className="flex flex-col sm:flex-row items-center gap-space-md">
-<a className="inline-flex items-center gap-space-xs px-space-lg py-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-2xl hover:bg-primary hover:text-on-primary hover:scale-105 transition-all duration-300" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-lg py-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-2xl hover:bg-primary hover:text-on-primary hover:scale-105 transition-all duration-300 aurora-btn-primary" href="/start-a-project">
 <span className="font-semibold tracking-wide">START A PROJECT</span>
 <span className="w-6 h-6 rounded-full bg-on-primary-container/20 flex items-center justify-center">
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
 </span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-4 rounded-full bg-surface-container/60 hover:bg-surface-container text-on-surface backdrop-blur-md font-label-md text-label-md transition-colors" data-path="solutions" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-md py-4 rounded-full bg-surface-container/60 hover:bg-surface-container text-on-surface backdrop-blur-md font-label-md text-label-md transition-colors" href="/solutions">
 <span>View All Solutions</span>
 <span className="material-symbols-outlined text-[16px]">north_east</span>
-</a>
+</Link>
 </div>
 {/*  Trust Line  */}
 <div className="mt-space-xl flex flex-wrap items-center justify-center gap-space-md font-label-sm text-label-sm text-outline">

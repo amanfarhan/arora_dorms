@@ -33,10 +33,10 @@ export default function Page() {
 <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
 </a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all duration-300 shadow-md" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all duration-300 shadow-md" href="/start-a-project">
 <span className="">START A PROJECT</span>
 <span className="material-symbols-outlined text-outline text-[16px]">north_east</span>
-</a>
+</Link>
 </div>
 {/*  Telemetry / Architectural Badges  */}
 <div className="grid grid-cols-3 gap-gutter pt-space-lg">
@@ -278,9 +278,9 @@ export default function Page() {
 <button className="flex-1 lg:flex-none px-space-md py-2.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors" id="viewSpecsBtn">
             Interactive Dimensioner
           </button>
-<a className="flex-1 lg:flex-none px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all text-center" data-path="contact" href="#">
+<Link className="flex-1 lg:flex-none px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all text-center aurora-btn-primary" href="/start-a-project">
             Request Spec Sheets
-          </a>
+          </Link>
 </div>
 </div>
 </div>
@@ -291,7 +291,7 @@ export default function Page() {
 {/*  Split Image Left  */}
 <div className="lg:col-span-7 relative">
 <div className="relative rounded-xl overflow-hidden shadow-2xl bg-surface-container-lowest group">
-<img  alt="Illuminated geodesic dome pavilion beside alpine lake with dramatic aurora borealis sky" className="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/img_1e035427f106.jpg" />
+<img  alt="Illuminated geodesic dome pavilion beside alpine lake with dramatic aurora borealis sky" className="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/alpine_lake_dome_cta.jpg" />
 <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
 {/*  Architectural Detail Badge  */}
 <div className="absolute top-4 left-4 p-space-xs px-space-sm rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-2">
@@ -347,10 +347,10 @@ export default function Page() {
 </div>
 {/*  CTA  */}
 <div className="pt-space-sm">
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all shadow-[0_0_24px_rgba(123,140,222,0.3)]" data-path="contact" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all shadow-[0_0_24px_rgba(123,140,222,0.3)] aurora-btn-primary" href="/start-a-project">
 <span className="">DISCUSS YOUR DOME</span>
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
+</Link>
 </div>
 </div>
 </div>
@@ -368,12 +368,12 @@ export default function Page() {
         Tell us about your venue, available space and the experience you want to create. Our senior architectural engineering team is ready to assist from initial spatial design through turnkey commissioning.
       </p>
 <div className="flex flex-wrap items-center justify-center gap-space-md pt-space-sm">
-<a className="inline-flex items-center gap-space-xs px-space-xl py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_36px_rgba(123,140,222,0.45)] hover:bg-primary hover:text-on-primary transition-all duration-300 transform hover:scale-[1.02]" data-path="start-a-project" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-xl py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_36px_rgba(123,140,222,0.45)] hover:bg-primary hover:text-on-primary transition-all duration-300 transform hover:scale-[1.02] aurora-btn-primary" href="/start-a-project">
 <span className="">START A PROJECT</span>
 <span className="w-6 h-6 rounded-full bg-on-primary-container/20 flex items-center justify-center">
 <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
-</a>
+</Link>
 <a className="inline-flex items-center gap-space-xs px-space-md py-3.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors" href="mailto:inquire@auroradomes.com">
 <span className="material-symbols-outlined text-outline text-[16px]">mail</span>
 <span className="">inquire@auroradomes.com</span>
@@ -417,9 +417,9 @@ export default function Page() {
 <span className="text-on-surface font-semibold" id="projectorVal">4x 4K Laser Arrays</span>
 </div>
 </div>
-<a className="w-full py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md text-center hover:bg-primary hover:text-on-primary transition-colors" data-path="start-a-project" href="#">
+<Link className="w-full py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md text-center hover:bg-primary hover:text-on-primary transition-colors block" href="/start-a-project">
         Submit Footprint Inquiry
-      </a>
+      </Link>
 </div>
 </div>
 

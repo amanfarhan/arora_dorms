@@ -45,13 +45,13 @@ export default function Page() {
         </p>
 {/*  CTA Buttons  */}
 <div className="flex flex-wrap items-center gap-space-md pt-space-xs">
-<Link className="inline-flex items-center gap-space-sm px-space-lg py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_28px_rgba(123,140,222,0.35)] transition-all" href="/industries">
+<Link className="inline-flex items-center gap-space-sm px-space-lg py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_28px_rgba(123,140,222,0.35)] transition-all aurora-btn-primary" href="/start-a-project">
 <span>BUILD THE IMMERSIVE SHOW</span>
 <span className="w-6 h-6 rounded-full bg-on-primary-container/20 flex items-center justify-center">
 <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
 </span>
 </Link>
-<Link className="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all" href="/start-a-project">
+<Link className="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all" href="/industries">
 <span>EXPLORE INDUSTRIES</span>
 <span className="material-symbols-outlined text-[16px] text-primary">north_east</span>
 </Link>
@@ -428,7 +428,7 @@ export default function Page() {
 <section className="w-full bg-surface-container px-margin py-space-lg">
 <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md">
 {/*  Previous Subpage Link  */}
-<a className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<Link className="group flex items-center gap-space-sm text-on-surface-variant hover:text-on-surface transition-colors" href="/industries/health-wellness">
 <div className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
 <span className="material-symbols-outlined text-[18px]">arrow_back</span>
 </div>
@@ -436,13 +436,13 @@ export default function Page() {
 <span className="font-label-eyebrow text-label-eyebrow uppercase text-outline">PREVIOUS INDUSTRY</span>
 <span className="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">04 Health & Wellness</span>
 </div>
-</a>
+</Link>
 {/*  Center Hub  */}
-<Link className="px-space-md py-2 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-bright transition-all" href="/start-a-project">
+<Link className="px-space-md py-2 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-widest hover:bg-surface-bright transition-all" href="/industries">
         EXPLORE ALL 9 INDUSTRIES
       </Link>
 {/*  Next Subpage Link  */}
-<a className="group flex items-center gap-space-sm text-right text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<Link className="group flex items-center gap-space-sm text-right text-on-surface-variant hover:text-on-surface transition-colors" href="/industries/museums-cultural">
 <div className="flex flex-col">
 <span className="font-label-eyebrow text-label-eyebrow uppercase text-outline">NEXT INDUSTRY</span>
 <span className="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">06 Museums & Cultural Institutions</span>
@@ -450,7 +450,7 @@ export default function Page() {
 <div className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary-container transition-all">
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </div>
-</a>
+</Link>
 </div>
 </section>
 {/*  FINAL CTA SECTION  */}
@@ -465,14 +465,14 @@ export default function Page() {
         </p>
 </div>
 <div className="flex flex-wrap items-center gap-space-sm shrink-0">
-<a className="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_24px_rgba(123,140,222,0.35)] transition-all" href="#">
+<Link className="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:brightness-110 shadow-[0_0_24px_rgba(123,140,222,0.35)] transition-all aurora-btn-primary" href="/start-a-project">
 <span>BUILD THE IMMERSIVE SHOW</span>
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-<a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all" href="#">
+</Link>
+<Link className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all" href="/industries">
 <span>EXPLORE OTHER INDUSTRIES</span>
 <span className="material-symbols-outlined text-[16px] text-primary">north_east</span>
-</a>
+</Link>
 </div>
 </div>
 </section>

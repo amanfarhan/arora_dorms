@@ -415,12 +415,12 @@ export default function Page() {
           </p>
 {/*  Interactive Action Buttons  */}
 <div className="flex flex-wrap items-center gap-space-md">
-<a className="inline-flex items-center gap-space-xs px-8 py-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold shadow-[0_0_24px_rgba(123,140,222,0.4)] hover:bg-primary hover:text-on-primary transition-all duration-300" href="mailto:support@auroradomes.com">
+<Link className="inline-flex items-center gap-space-xs px-8 py-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold shadow-[0_0_24px_rgba(123,140,222,0.4)] hover:bg-primary hover:text-on-primary transition-all duration-300 aurora-btn-primary" href="/start-a-project">
 <span>Discuss Support</span>
 <span className="w-6 h-6 rounded-full bg-on-primary-container/20 flex items-center justify-center">
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
 </span>
-</a>
+</Link>
 <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-surface-container-high/60 backdrop-blur-md">
 <span className="w-2.5 h-2.5 rounded-full bg-secondary"></span>
 <span className="font-label-sm text-label-sm text-on-surface-variant font-mono">24/7 Priority Desk Active</span>

@@ -78,7 +78,7 @@ export default function Page() {
 {/*  Hero Visual Showcase  */}
 <div className="lg:col-span-6 relative mt-space-lg lg:mt-0">
 <div className="relative w-full aspect-[4/5] sm:aspect-square lg:aspect-[10/11] rounded-3xl overflow-hidden bg-surface-container-lowest shadow-[0_24px_64px_-12px_rgba(6,8,13,0.9)]">
-<img  alt="Crowd looking up at massive 360-degree underwater whale projection on curved dome ceiling" className="w-full h-full object-cover object-center scale-[1.02] hover:scale-105 transition-transform duration-1000 ease-out" src="/images/img_a060f6a43570.jpg" />
+<img  alt="Crowd looking up at massive 360-degree underwater whale projection on curved dome ceiling" className="w-full h-full object-cover object-center scale-[1.02] hover:scale-105 transition-transform duration-1000 ease-out" src="/images/entertainment_marine_dome.jpg" />
 {/*  Deep Radial Vignette Overlay  */}
 <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 pointer-events-none"></div>
 <div className="absolute inset-0 bg-radial-gradient pointer-events-none"></div>
@@ -391,13 +391,13 @@ export default function Page() {
 <div className="w-full px-margin-mobile md:px-margin py-8">
 <div className="p-4 rounded-2xl bg-surface-container-lowest flex flex-col md:flex-row items-center justify-between gap-4">
 {/*  Previous Industry Link  */}
-<Link className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all group" data-path="museums-and-culture" href="/start-a-project">
+<Link className="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-all group" href="/industries/private-events-weddings">
 <div className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary-container/20 group-hover:text-primary transition-colors">
 <span className="material-symbols-outlined text-[18px]">arrow_back</span>
 </div>
 <div className="flex flex-col text-left">
 <span className="font-label-eyebrow text-label-eyebrow text-outline uppercase tracking-wider">Previous Industry</span>
-<span className="font-label-md text-label-md text-on-surface group-hover:text-primary font-semibold">05 Museums & Culture</span>
+<span className="font-label-md text-label-md text-on-surface group-hover:text-primary font-semibold">09 Private Events & Weddings</span>
 </div>
 </Link>
 {/*  Center Index Link  */}
@@ -406,15 +406,15 @@ export default function Page() {
 <span className="">Explore All Industries</span>
 </Link>
 {/*  Next Industry Link  */}
-<a className="flex items-center gap-3 text-on-surface-variant hover:text-secondary transition-all group" data-path="hospitality" href="#">
+<Link className="flex items-center gap-3 text-on-surface-variant hover:text-secondary transition-all group" href="/industries/events-festivals">
 <div className="flex flex-col text-right">
 <span className="font-label-eyebrow text-label-eyebrow text-outline uppercase tracking-wider">Next Industry</span>
-<span className="font-label-md text-label-md text-on-surface group-hover:text-secondary font-semibold">02 Hospitality & Resorts</span>
+<span className="font-label-md text-label-md text-on-surface group-hover:text-secondary font-semibold">02 Events & Festivals</span>
 </div>
 <div className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-secondary-container/20 group-hover:text-secondary transition-colors">
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </div>
-</a>
+</Link>
 </div>
 </div>
 {/*  9. Final Call-to-Action Section  */}

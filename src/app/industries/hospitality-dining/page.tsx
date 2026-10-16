@@ -70,7 +70,7 @@ export default function Page() {
 {/*  Hero Visual Card with High-Impact Imagery  */}
 <div className="lg:col-span-6 relative">
 <div className="relative w-full aspect-[4/5] max-h-[640px] rounded-3xl overflow-hidden shadow-2xl bg-surface-container-lowest">
-<img  className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-1000 ease-out" data-alt="Ultra-luxury private dining dome with opulent round banquet table set with fine crystal wine glasses and warm glowing candlelight. Overhead, a soaring geodesic projection ceiling displays an ethereal, luminescent 360-degree deep ocean coral realm with bioluminescent floating jellyfish and cosmic swirls in cyan, violet, and deep indigo tones, creating a magical fine dining atmosphere." src="/images/img_76bea82dba30.jpg" />
+<img  className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-1000 ease-out" data-alt="Ultra-luxury private dining dome with opulent round banquet table set with fine crystal wine glasses and warm glowing candlelight. Overhead, a soaring geodesic projection ceiling displays an ethereal, luminescent 360-degree deep ocean coral realm with bioluminescent floating jellyfish and cosmic swirls in cyan, violet, and deep indigo tones, creating a magical fine dining atmosphere." src="/images/dining_immersive_dome.jpg" />
 <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
 {/*  Translucent Floating Status Card  */}
 <div className="absolute bottom-6 left-6 right-6 p-space-md rounded-2xl bg-surface-container/85 backdrop-blur-xl shadow-xl flex items-center justify-between">
@@ -357,7 +357,7 @@ export default function Page() {
 {/*  8. Subpage Industry Navigation (Cross-Page Links)  */}
 <section className="w-full px-margin py-space-lg bg-surface">
 <div className="p-space-md rounded-2xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface">
-<Link className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="industries" href="/industries">
+<Link className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="/industries/events-festivals">
 <span className="material-symbols-outlined text-[18px]">arrow_back</span>
 <span className="">02 Events & Festivals</span>
 </Link>
@@ -365,7 +365,7 @@ export default function Page() {
 <span className="material-symbols-outlined text-[16px]">grid_view</span>
 <span className="">Explore All 9 Industries</span>
 </Link>
-<Link className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" data-path="industries" href="/industries">
+<Link className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="/industries/health-wellness">
 <span className="">04 Health & Wellness</span>
 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
 </Link>

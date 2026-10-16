@@ -87,7 +87,7 @@ export default function Page() {
 {/*  Visual Hero Stage  */}
 <div className="lg:col-span-6 relative">
 <div className="relative w-full aspect-[4/5] sm:aspect-[1/1] rounded-2xl overflow-hidden bg-surface-container-lowest shadow-2xl group">
-<img  alt="Students and educators inside Arora Dorm Solutions educational planetarium gazing upward at luminous Saturn projection, planetary orbits, and vibrant star clusters" className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/img_b4e94f75f8f0.jpg" />
+<img  alt="Students and educators inside Arora Dorm Solutions educational planetarium gazing upward at luminous Saturn projection, planetary orbits, and vibrant star clusters" className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/education_planetarium_saturn.jpg" />
 <div className="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-black/30 pointer-events-none"></div>
 {/*  Floating Overlay Card  */}
 <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-surface-container-lowest/85 backdrop-blur-xl border border-white/10 flex items-center justify-between gap-4">
@@ -336,7 +336,7 @@ export default function Page() {
 {/*  Section 07: Subpage Traversal Navigation  */}
 <section className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin py-8">
 <div className="p-6 rounded-2xl bg-surface-container-low/50 flex flex-col md:flex-row items-center justify-between gap-4">
-<Link className="flex items-center gap-3 text-on-surface hover:text-primary transition-colors group" data-path="industries/brand-experiences" href="/start-a-project">
+<Link className="flex items-center gap-3 text-on-surface hover:text-primary transition-colors group" href="/industries/corporate-brand">
 <span className="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">west</span>
 <div className="flex flex-col text-left">
 <span className="text-[10px] font-mono uppercase tracking-wider text-outline">Previous Industry</span>
@@ -346,13 +346,13 @@ export default function Page() {
 <Link className="px-5 py-2 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" data-path="industries" href="/industries">
           EXPLORE ALL 9 INDUSTRIES
         </Link>
-<a className="flex items-center gap-3 text-on-surface hover:text-primary transition-colors group text-right" data-path="industries/private-events" href="#">
+<Link className="flex items-center gap-3 text-on-surface hover:text-primary transition-colors group text-right" href="/industries/private-events-weddings">
 <div className="flex flex-col">
 <span className="text-[10px] font-mono uppercase tracking-wider text-outline">Next Industry</span>
 <span className="text-body-sm font-medium">09 Private Events & Weddings</span>
 </div>
 <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">east</span>
-</a>
+</Link>
 </div>
 </section>
 {/*  Section 08: Final Call to Action  */}
