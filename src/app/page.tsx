@@ -19,14 +19,14 @@ export default function HomePage() {
       <main>
         {/*  BEGIN: HeroSection  */}
         <section
-          className="relative min-h-[90vh] lg:h-screen flex flex-col justify-between pt-20 sm:pt-24 pb-4 sm:pb-6 overflow-hidden"
+          className="relative h-screen max-h-screen flex flex-col justify-between pt-16 sm:pt-20 pb-3 sm:pb-4 overflow-hidden"
           data-purpose="hero-section"
         >
           {/*  Atmospheric Radial Glow Pools  */}
-          <div className="aurora-glow-hero top-16 left-1/4 w-[600px] h-[500px] ambient-light-drift opacity-75"></div>
-          <div className="aurora-glow-cyan top-40 right-1/4 w-[550px] h-[450px] ambient-light-drift opacity-60"></div>
+          <div className="aurora-glow-hero top-12 left-1/4 w-[500px] h-[400px] ambient-light-drift opacity-75"></div>
+          <div className="aurora-glow-cyan top-32 right-1/4 w-[450px] h-[350px] ambient-light-drift opacity-60"></div>
 
-          {/*  Background Scenic Dome Environment (Cooler Monumental Geodesic Pavilion under Aurora)  */}
+          {/*  Background Scenic Dome Environment (Monumental Geodesic Pavilion under Aurora)  */}
           <div className="absolute inset-0 z-0">
             <img
               alt="Monumental glowing geodesic immersion dome destination on coastal terrace under emerald aurora borealis night sky"
@@ -35,22 +35,22 @@ export default function HomePage() {
             />
             {/*  Layered Atmospheric Gradients for Text Legibility & Depth  */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#05070B] via-[#05070B]/75 md:via-[#05070B]/50 to-transparent z-10 w-full md:w-3/5 lg:w-[52%] pointer-events-none"></div>
-            <div className="absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-[#05070B]/90 via-[#05070B]/40 to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#05070B] via-[#05070B]/60 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#05070B]/90 via-[#05070B]/40 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-[#05070B] via-[#05070B]/60 to-transparent z-10 pointer-events-none"></div>
           </div>
 
           {/*  Top & Center Hero Content  */}
-          <div className="relative z-20 max-w-7xl mx-auto px-6 w-full pt-2 sm:pt-4">
+          <div className="relative z-20 max-w-7xl mx-auto px-6 w-full pt-1 sm:pt-2">
             {/*  Eyebrow Tagline  */}
-            <div className="flex items-center gap-2.5 mb-3 sm:mb-4">
+            <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#93c5fd] shadow-[0_0_8px_#93c5fd] animate-pulse"></span>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#93c5fd]">
+              <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-[#93c5fd]">
                 A SINGLE PARTNER
               </span>
             </div>
 
             {/*  Headline  */}
-            <h1 className="font-editorial text-4xl sm:text-5xl lg:text-[4.25rem] xl:text-[4.75rem] font-normal tracking-tight text-white leading-[1.02] max-w-2xl mb-4 sm:mb-5">
+            <h1 className="font-editorial text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[3.5rem] font-normal tracking-tight text-white leading-[1.04] max-w-2xl mb-3 sm:mb-3.5">
               We Build
               <br />
               Immersive
@@ -61,16 +61,16 @@ export default function HomePage() {
             </h1>
 
             {/*  Subtitle  */}
-            <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-md mb-6 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 font-light tracking-wide max-w-md mb-4 sm:mb-5 leading-relaxed">
               Dome environments. World-class content.
               <br />
               End-to-end support.
             </p>
 
             {/*  CTA Action Buttons  */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3">
               <Link
-                className="aurora-btn-primary px-6 py-2.5 sm:py-3 text-xs uppercase tracking-wider font-semibold"
+                className="aurora-btn-primary px-5 py-2 sm:py-2.5 text-xs uppercase tracking-wider font-semibold"
                 href="/about"
               >
                 <span>Our Story</span>
@@ -93,12 +93,12 @@ export default function HomePage() {
               </Link>
               <button
                 onClick={() => setVideoModalOpen(true)}
-                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full text-xs font-medium text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md transition-colors duration-200 group"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-medium text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md transition-colors duration-200 group"
                 type="button"
               >
-                <span className="w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-[#93c5fd] group-hover:text-black transition-all duration-200">
+                <span className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-[#93c5fd] group-hover:text-black transition-all duration-200">
                   <svg
-                    className="w-3 h-3 ml-0.5 fill-current"
+                    className="w-2.5 h-2.5 ml-0.5 fill-current"
                     viewBox="0 0 16 16"
                   >
                     <path d="M4 3.5v9l8-4.5-8-4.5z"></path>
@@ -110,39 +110,39 @@ export default function HomePage() {
           </div>
 
           {/*  Bottom Hero Metrics Bar & Scroll Indicator  */}
-          <div className="relative z-20 max-w-7xl mx-auto px-6 w-full mt-auto pt-4 sm:pt-6 pb-2 border-t border-white/10 flex flex-wrap items-end justify-between gap-6">
+          <div className="relative z-20 max-w-7xl mx-auto px-6 w-full mt-auto pt-3 sm:pt-4 pb-1 border-t border-white/10 flex flex-wrap items-end justify-between gap-4">
             {/*  Metrics  */}
-            <div className="flex flex-wrap items-baseline gap-8 sm:gap-16">
+            <div className="flex flex-wrap items-baseline gap-6 sm:gap-14">
               <div>
-                <div className="text-xl sm:text-2xl font-light text-white tracking-tight">
+                <div className="text-lg sm:text-xl font-light text-white tracking-tight">
                   3M – 25M+
                 </div>
-                <div className="text-[10px] text-slate-400 uppercase tracking-widest mt-0.5">
+                <div className="text-[9px] text-slate-400 uppercase tracking-widest mt-0.5">
                   Dome Sizes
                 </div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-light text-white tracking-tight">
+                <div className="text-lg sm:text-xl font-light text-white tracking-tight">
                   9+
                 </div>
-                <div className="text-[10px] text-slate-400 uppercase tracking-widest mt-0.5">
+                <div className="text-[9px] text-slate-400 uppercase tracking-widest mt-0.5">
                   Industries
                 </div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-light text-white tracking-tight">
+                <div className="text-lg sm:text-xl font-light text-white tracking-tight">
                   1
                 </div>
-                <div className="text-[10px] text-slate-400 uppercase tracking-widest mt-0.5">
+                <div className="text-[9px] text-slate-400 uppercase tracking-widest mt-0.5">
                   Single Partner
                 </div>
               </div>
             </div>
 
             {/*  Scroll Indicator  */}
-            <div className="hidden md:flex flex-col items-center gap-2 pb-1 text-[9px] tracking-[0.25em] text-slate-400 uppercase">
+            <div className="hidden md:flex flex-col items-center gap-1.5 pb-0.5 text-[8px] tracking-[0.25em] text-slate-400 uppercase">
               <span>SCROLL</span>
-              <div className="w-[1px] h-7 bg-gradient-to-b from-white/60 to-transparent"></div>
+              <div className="w-[1px] h-5 bg-gradient-to-b from-white/60 to-transparent"></div>
             </div>
           </div>
         </section>
