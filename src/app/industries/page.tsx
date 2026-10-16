@@ -8,80 +8,87 @@ export default function Page() {
     <div className="bg-[#05070B] text-slate-100 min-h-screen w-full overflow-x-hidden relative">
       {/*  BEGIN: HeroSection  */}
       <section
-        className="relative min-h-[720px] lg:min-h-[820px] pt-32 lg:pt-36 flex items-center overflow-hidden"
+        className="relative overflow-hidden min-h-[85vh] lg:min-h-[92vh] flex items-center bg-[#05070B] pt-28 pb-20 lg:pt-36 lg:pb-28"
         data-purpose="hero-section"
       >
-        {/*  Atmospheric Radial Glow Pools  */}
-        <div className="aurora-glow-hero top-16 left-1/4 w-[550px] h-[450px] ambient-light-drift opacity-75"></div>
-        <div className="aurora-glow-cyan top-32 right-1/4 w-[500px] h-[400px] ambient-light-drift opacity-60"></div>
-
-        {/*  Background Curved Immersive Projection Canvas Visual (High-Res Cosmic Whale Canvas)  */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-0 right-0 w-full lg:w-[68%] h-full">
-            <div className="relative w-full h-full">
-              <img
-                alt="Audience inside an immersive fulldome planetarium theater gazing at projected celestial sphere"
-                className="w-full h-full object-cover object-center scale-105"
-                src="/images/content_cosmic_whale.jpg"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#05070B] via-[#05070B]/80 to-transparent"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#05070B] via-transparent to-[#05070B]/40"></div>
-              <div className="absolute inset-0 bg-gradient-to-b from-[#05070B]/70 via-transparent to-transparent"></div>
-            </div>
-          </div>
+        {/* Full-bleed Background Image with Dome Projection on Right & Dark Space on Left */}
+        <div className="absolute inset-0 z-0">
+          <img
+            alt="Audience seated inside a majestic 360-degree immersive fulldome theater watching an Earth and orbital aurora projection"
+            className="w-full h-full object-cover object-right md:object-center select-none"
+            src="/images/industries_hero_dome.jpg"
+          />
+          {/* Dark Gradient Scrim on Left for Clean Typography Readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#05070B] via-[#05070B]/90 md:via-[#05070B]/75 to-transparent w-full md:w-3/5 lg:w-[55%] pointer-events-none"></div>
+          {/* Top Header Fade */}
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#05070B]/90 via-[#05070B]/40 to-transparent pointer-events-none"></div>
+          {/* Bottom Section Transition Fade into Industries Grid */}
+          <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#05070B] via-[#05070B]/60 to-transparent pointer-events-none"></div>
+          {/* Ambient Glow Pool */}
+          <div className="absolute -top-24 left-1/4 w-[600px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full pointer-events-none"></div>
         </div>
 
-        {/*  Hero Content Container  */}
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-12 lg:py-20">
-          <div className="max-w-xl xl:max-w-2xl">
-            {/*  Eyebrow Tag  */}
-            <span
-              className="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-[#A5B4FC] mb-4 font-sans"
-              data-purpose="hero-eyebrow"
-            >
-              INDUSTRIES WE SERVE
-            </span>
-            {/*  Main Headline  */}
-            <h1
-              className="text-4xl sm:text-5xl lg:text-[62px] leading-[1.08] font-normal tracking-tight text-white mb-6 font-sans"
-              data-purpose="hero-heading"
-            >
-              Immersive
-              <br />
-              Experiences for
-              <br />
-              <span className="aurora-gradient-text drop-shadow-[0_0_30px_rgba(165,180,252,0.3)]">
+        {/* Hero Content Container */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          {/* Left Column: Copy & CTAs */}
+          <div className="max-w-xl lg:max-w-2xl flex flex-col items-start">
+            {/* Eyebrow Pill */}
+            <div className="inline-flex items-center gap-2 mb-5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#A5B4FC] shadow-[0_0_8px_#A5B4FC]"></span>
+              <span className="text-[11px] font-semibold tracking-[0.25em] text-[#A5B4FC] uppercase">
+                INDUSTRIES WE SERVE
+              </span>
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="headline-font text-4xl sm:text-5xl lg:text-[62px] leading-[1.08] font-normal tracking-tight text-white mb-6 drop-shadow-md">
+              Immersive Experiences for{" "}
+              <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-indigo-200 to-purple-200">
                 Every Industry.
               </span>
             </h1>
-            {/*  Subtitle Description  */}
-            <p
-              className="text-sm sm:text-base text-slate-300 font-light leading-relaxed max-w-lg mb-9"
-              data-purpose="hero-description"
-            >
+
+            {/* Subtitle Description */}
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-light mb-8 max-w-lg drop-shadow">
               From theme parks to fine dining, wellness to global events — our dome solutions are customized for the unique needs of each industry, creating unforgettable experiences that inspire, engage and bring people back.
             </p>
-            {/*  CTA Button  */}
-            <div>
+
+            {/* CTA Button Cluster */}
+            <div className="flex flex-wrap items-center gap-4">
               <a
-                className="aurora-btn-primary px-7 py-3.5 text-xs font-semibold"
-                data-purpose="hero-cta-button"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-sm transition-all duration-300 shadow-[0_0_28px_rgba(147,197,253,0.35)] aurora-btn-primary group"
                 href="#industries"
               >
                 <span>Explore Our Solutions</span>
-                <svg
-                  className="w-3.5 h-3.5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 16 16"
-                >
-                  <line x1="3" x2="13" y1="8" y2="8"></line>
-                  <polyline points="9 4 13 8 9 12"></polyline>
+                <svg className="w-4 h-4 stroke-[2.5] group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" strokeLinecap="round" strokeLinejoin="round"></path>
                 </svg>
               </a>
+              <Link
+                className="group inline-flex items-center gap-2.5 text-slate-200 hover:text-white transition-colors duration-200 text-sm font-medium py-3 px-5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md"
+                href="/start-a-project"
+              >
+                <span>Start a Project</span>
+                <svg className="w-4 h-4 stroke-[2] group-hover:translate-x-0.5 transition-transform text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </Link>
+            </div>
+
+            {/* Metrics / Spec Badges */}
+            <div className="mt-12 pt-6 border-t border-white/10 grid grid-cols-3 gap-6 max-w-lg w-full">
+              <div>
+                <div className="text-sm font-semibold text-white tracking-wide">9 Key Sectors</div>
+                <div className="text-[11px] text-slate-400 font-light mt-0.5">Turnkey Architecture</div>
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-white tracking-wide">3M – 25M+</div>
+                <div className="text-[11px] text-slate-400 font-light mt-0.5">Custom Footprint</div>
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-white tracking-wide">100% Bespoke</div>
+                <div className="text-[11px] text-slate-400 font-light mt-0.5">End-to-End Delivery</div>
+              </div>
             </div>
           </div>
         </div>
