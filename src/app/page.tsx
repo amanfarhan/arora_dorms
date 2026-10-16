@@ -19,12 +19,12 @@ export default function HomePage() {
       <main>
         {/*  BEGIN: HeroSection  */}
         <section
-          className="relative h-screen max-h-screen flex flex-col justify-between pt-16 sm:pt-20 pb-3 sm:pb-4 overflow-hidden"
+          className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-between pt-20 sm:pt-24 pb-6 sm:pb-8 overflow-hidden"
           data-purpose="hero-section"
         >
           {/*  Atmospheric Radial Glow Pools  */}
-          <div className="aurora-glow-hero top-12 left-1/4 w-[500px] h-[400px] ambient-light-drift opacity-75"></div>
-          <div className="aurora-glow-cyan top-32 right-1/4 w-[450px] h-[350px] ambient-light-drift opacity-60"></div>
+          <div className="aurora-glow-hero top-20 left-1/3 w-[550px] h-[450px] ambient-light-drift opacity-70"></div>
+          <div className="aurora-glow-cyan top-36 right-1/4 w-[500px] h-[400px] ambient-light-drift opacity-60"></div>
 
           {/*  Background Scenic Dome Environment (Monumental Geodesic Pavilion under Aurora)  */}
           <div className="absolute inset-0 z-0">
@@ -34,115 +34,96 @@ export default function HomePage() {
               src="/images/hero_landing_monumental_aurora.jpg"
             />
             {/*  Layered Atmospheric Gradients for Text Legibility & Depth  */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#05070B] via-[#05070B]/75 md:via-[#05070B]/50 to-transparent z-10 w-full md:w-3/5 lg:w-[52%] pointer-events-none"></div>
-            <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#05070B]/90 via-[#05070B]/40 to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-[#05070B] via-[#05070B]/60 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#03070d] via-[#03070d]/85 md:via-[#03070d]/60 to-transparent z-10 w-full md:w-3/5 lg:w-[54%] pointer-events-none"></div>
+            <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#03070d]/90 via-[#03070d]/30 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#05070B] via-[#05070B]/60 to-transparent z-10 pointer-events-none"></div>
           </div>
 
-          {/*  Top & Center Hero Content  */}
-          <div className="relative z-20 max-w-7xl mx-auto px-6 w-full pt-1 sm:pt-2">
-            {/*  Eyebrow Tagline  */}
-            <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#93c5fd] shadow-[0_0_8px_#93c5fd] animate-pulse"></span>
-              <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-[#93c5fd]">
-                A SINGLE PARTNER
+          {/*  Hero Content Container  */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex flex-col justify-between h-full">
+            <div className="max-w-xl lg:max-w-2xl pt-2 sm:pt-4">
+              {/*  Eyebrow  */}
+              <span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-2.5 sm:mb-3">
+                About Arora Dorm Solutions
               </span>
-            </div>
 
-            {/*  Headline  */}
-            <h1 className="font-editorial text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[3.5rem] font-normal tracking-tight text-white leading-[1.04] max-w-2xl mb-3 sm:mb-3.5">
-              We Build
-              <br />
-              Immersive
-              <br />
-              <span className="aurora-gradient-text drop-shadow-[0_0_35px_rgba(165,180,252,0.35)]">
-                Destinations.
-              </span>
-            </h1>
-
-            {/*  Subtitle  */}
-            <p className="text-xs sm:text-sm text-slate-300 font-light tracking-wide max-w-md mb-4 sm:mb-5 leading-relaxed">
-              Dome environments. World-class content.
-              <br />
-              End-to-end support.
-            </p>
-
-            {/*  CTA Action Buttons  */}
-            <div className="flex flex-wrap items-center gap-3">
-              <Link
-                className="aurora-btn-primary px-5 py-2 sm:py-2.5 text-xs uppercase tracking-wider font-semibold"
-                href="/about"
-              >
-                <span>Our Story</span>
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                  <path
-                    d="M3.33334 8H12.6667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                  />
-                  <path
-                    d="M8 3.33334L12.6667 8L8 12.6667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                  />
-                </svg>
-              </Link>
-              <button
-                onClick={() => setVideoModalOpen(true)}
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-medium text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md transition-colors duration-200 group"
-                type="button"
-              >
-                <span className="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-[#93c5fd] group-hover:text-black transition-all duration-200">
-                  <svg
-                    className="w-2.5 h-2.5 ml-0.5 fill-current"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M4 3.5v9l8-4.5-8-4.5z"></path>
-                  </svg>
+              {/*  Primary Editorial Serif Headline  */}
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+                We Build
+                <br />
+                Immersive
+                <br />
+                <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+                  Destinations.
                 </span>
-                <span>Watch Video</span>
-              </button>
-            </div>
-          </div>
+              </h1>
 
-          {/*  Bottom Hero Metrics Bar & Scroll Indicator  */}
-          <div className="relative z-20 max-w-7xl mx-auto px-6 w-full mt-auto pt-3 sm:pt-4 pb-1 border-t border-white/10 flex flex-wrap items-end justify-between gap-4">
-            {/*  Metrics  */}
-            <div className="flex flex-wrap items-baseline gap-6 sm:gap-14">
-              <div>
-                <div className="text-lg sm:text-xl font-light text-white tracking-tight">
-                  3M – 25M+
-                </div>
-                <div className="text-[9px] text-slate-400 uppercase tracking-widest mt-0.5">
-                  Dome Sizes
-                </div>
+              {/*  Two-Line Supporting Subline  */}
+              <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-lg mb-5 sm:mb-6 leading-relaxed">
+                A single partner for extraordinary dome experiences — unifying turnkey
+                <br className="hidden sm:inline" /> geodesic engineering, 360° fulldome projection, and bespoke content.
+              </p>
+
+              {/*  Two Action Buttons  */}
+              <div className="flex flex-wrap items-center gap-3.5 mb-6 sm:mb-7">
+                <Link
+                  href="/start-a-project"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_24px_rgba(147,197,253,0.3)] group"
+                >
+                  <span>Start a Project</span>
+                  <svg
+                    className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                </Link>
+
+                <button
+                  onClick={() => setVideoModalOpen(true)}
+                  aria-label="Watch our brand story"
+                  className="group inline-flex items-center gap-2.5 text-slate-200 hover:text-white transition-colors duration-200 text-xs font-medium py-2 sm:py-2.5 px-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md"
+                  type="button"
+                >
+                  <span className="w-7 h-7 rounded-full bg-white/10 group-hover:bg-[#93c5fd] flex items-center justify-center transition-all text-white group-hover:text-black">
+                    <svg className="w-3 h-3 ml-0.5 fill-current" viewBox="0 0 24 24">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </span>
+                  <span className="tracking-wide">Watch Our Story</span>
+                </button>
               </div>
-              <div>
-                <div className="text-lg sm:text-xl font-light text-white tracking-tight">
-                  9+
+
+              {/*  Key Metric Highlights Strip  */}
+              <div className="pt-5 sm:pt-6 border-t border-white/10 grid grid-cols-3 gap-4 sm:gap-6 max-w-xl w-full">
+                <div>
+                  <div className="text-sm sm:text-base lg:text-lg font-semibold text-white tracking-wide">3m – 25m+</div>
+                  <div className="text-[11px] text-slate-400 font-light mt-0.5">Turnkey Architecture</div>
                 </div>
-                <div className="text-[9px] text-slate-400 uppercase tracking-widest mt-0.5">
-                  Industries
+                <div>
+                  <div className="text-sm sm:text-base lg:text-lg font-semibold text-white tracking-wide">360° Fulldome</div>
+                  <div className="text-[11px] text-slate-400 font-light mt-0.5">8K Projection & Audio</div>
                 </div>
-              </div>
-              <div>
-                <div className="text-lg sm:text-xl font-light text-white tracking-tight">
-                  1
-                </div>
-                <div className="text-[9px] text-slate-400 uppercase tracking-widest mt-0.5">
-                  Single Partner
+                <div>
+                  <div className="text-sm sm:text-base lg:text-lg font-semibold text-white tracking-wide">100% Turnkey</div>
+                  <div className="text-[11px] text-slate-400 font-light mt-0.5">Single Accountable Partner</div>
                 </div>
               </div>
             </div>
 
-            {/*  Scroll Indicator  */}
-            <div className="hidden md:flex flex-col items-center gap-1.5 pb-0.5 text-[8px] tracking-[0.25em] text-slate-400 uppercase">
-              <span>SCROLL</span>
-              <div className="w-[1px] h-5 bg-gradient-to-b from-white/60 to-transparent"></div>
+            {/*  Bottom Hero Metadata / Affiliation Note  */}
+            <div className="self-end mt-4 sm:mt-6 border-l border-white/25 pl-4 py-0.5">
+              <p className="text-[9px] tracking-[0.24em] font-medium text-white/50 uppercase leading-relaxed">
+                A business vertical of
+                <br />
+                <span className="text-white/80">Arora Dorm Entertainments Inc.</span>
+              </p>
             </div>
           </div>
         </section>
@@ -1158,7 +1139,7 @@ export default function HomePage() {
             </div>
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black flex items-center justify-center">
               <img
-                src="/images/hero_dome_celestial.jpg"
+                src="/images/hero_landing_monumental_aurora.jpg"
                 alt="Brand Reel Thumbnail"
                 className="w-full h-full object-cover opacity-80"
               />
