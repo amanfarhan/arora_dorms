@@ -45,9 +45,9 @@ export default function StartAProjectPage() {
         {/*  Cinematic Full Cover Background Image  */}
         <div className="absolute inset-0 z-0">
           <img
-            alt="Monumental futuristic geodesic immersion dome destination pavilion under vibrant aurora borealis night sky"
+            alt="Futuristic luxury geodesic glass immersion dome innovation pavilion on an elevated minimalist obsidian stone terrace at dusk under starry twilight sky"
             className="w-full h-full object-cover object-right md:object-center select-none"
-            src="/images/contact_hero_monumental_dome.jpg"
+            src="/images/contact_hero_mountain_pavilion.jpg"
           />
           {/*  Layered Atmospheric Gradients for Text Legibility & Depth  */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#080a0f] via-[#080a0f]/85 md:via-[#080a0f]/60 to-transparent w-full md:w-3/5 lg:w-[54%] pointer-events-none"></div>
