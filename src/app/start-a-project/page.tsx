@@ -39,23 +39,30 @@ export default function StartAProjectPage() {
 
       {/*  BEGIN: HeroSection  */}
       <section
-        className="relative pt-12 pb-16 overflow-hidden radial-top-glow"
+        className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between pt-24 sm:pt-28 pb-8 overflow-hidden"
         data-purpose="hero-section"
       >
-        {/*  Background Dome Graphic Layer  */}
-        <div className="absolute right-[-4%] top-[-2%] w-[68%] h-[120%] pointer-events-none opacity-90 hidden lg:block z-0 mix-blend-screen">
+        {/*  Cinematic Full Cover Background Image  */}
+        <div className="absolute inset-0 z-0">
           <img
-            alt="Futuristic Fulldome Projection Arch"
-            className="w-full h-full object-contain object-right-top"
-            src="/images/tech_dome_cutaway.jpg"
+            alt="Monumental futuristic geodesic immersion dome destination pavilion under vibrant aurora borealis night sky"
+            className="w-full h-full object-cover object-right md:object-center select-none"
+            src="/images/contact_hero_monumental_dome.jpg"
           />
+          {/*  Layered Atmospheric Gradients for Text Legibility & Depth  */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#080a0f] via-[#080a0f]/85 md:via-[#080a0f]/60 to-transparent w-full md:w-3/5 lg:w-[54%] pointer-events-none"></div>
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#080a0f]/90 via-[#080a0f]/30 to-transparent pointer-events-none"></div>
+          <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#080a0f] via-[#080a0f]/80 to-transparent pointer-events-none"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="max-w-xl xl:max-w-2xl pt-6 lg:pt-14 pb-8">
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex flex-col justify-between flex-1">
+          <div className="max-w-xl xl:max-w-2xl pt-6 lg:pt-10 pb-8">
             {/*  Category Pill/Kicker  */}
-            <span className="text-xs font-semibold tracking-[0.25em] text-[#A5B4FC] uppercase inline-block mb-4">
-              START A PROJECT
-            </span>
+            <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#93c5fd] shadow-[0_0_8px_#93c5fd] animate-pulse"></span>
+              <span className="text-[11px] uppercase tracking-[0.22em] text-slate-300 font-medium">Start a Project</span>
+            </div>
+
             {/*  Main Headline  */}
             <h1 className="text-4xl sm:text-5xl lg:text-[3.65rem] font-bold tracking-tight text-white leading-[1.12] mb-6">
               Let’s Build <br />
@@ -64,15 +71,27 @@ export default function StartAProjectPage() {
                 Experience.
               </span>
             </h1>
+
             {/*  Subtitle Paragraph  */}
             <p className="text-base sm:text-lg text-slate-300/85 leading-relaxed font-light max-w-lg mb-8">
               Tell us about your space, your audience, and the experience you're imagining. Our team will help you design the right dome, content and support package for your project.
             </p>
+
+            {/*  Scroll to Quote Button  */}
+            <a
+              href="#quote-form"
+              className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full text-xs font-semibold bg-[#8ba4fc] hover:bg-[#a5bbfd] text-[#050b14] transition-all duration-300 shadow-[0_0_24px_rgba(139,164,252,0.35)] group"
+            >
+              <span>Begin Consultation</span>
+              <svg className="w-4 h-4 stroke-[2.5] group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round"></path>
+              </svg>
+            </a>
           </div>
 
           {/*  Feature Value Props Row  */}
           <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/5 mt-4"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 pb-4 border-t border-white/10 mt-8"
             data-purpose="value-propositions"
           >
             {/*  Prop 1  */}
