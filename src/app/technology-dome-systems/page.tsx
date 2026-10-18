@@ -9,86 +9,103 @@ export default function Page() {
       
 {/*  END: MainHeader  */}
 {/*  BEGIN: HeroSection  */}
-<section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden" data-purpose="hero-section">
+<section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden" data-purpose="hero-section">
 {/*  Ambient Background Light  */}
-<div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-brand-lavender/10 blur-[130px] rounded-full pointer-events-none"></div>
+<div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[550px] bg-indigo-500/10 blur-[140px] rounded-full pointer-events-none"></div>
 <div className="max-w-7xl mx-auto px-6">
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 items-center">
 {/*  Left Hero Content  */}
-<div className="lg:col-span-5 flex flex-col items-start z-10">
-<div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-white/5 border border-white/10">
-<span className="w-1.5 h-1.5 rounded-full bg-brand-lavender"></span>
+<div className="lg:col-span-4 xl:col-span-4 flex flex-col items-start z-10">
+<div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+<span className="w-1.5 h-1.5 rounded-full bg-[#93c5fd] shadow-[0_0_8px_#93c5fd] animate-pulse"></span>
 <span className="text-[11px] uppercase tracking-[0.2em] text-slate-300 font-medium">Technology & Dome Systems</span>
 </div>
-<h1 className="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight leading-[1.1] text-white mb-6">
-            Precision Engineering for <span className="italic text-brand-lavender font-light">Immersive Worlds.</span>
+<h1 className="text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] font-serif tracking-tight leading-[1.08] text-white mb-6">
+            Precision
+            <br />
+            Engineering for
+            <br />
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-indigo-200 to-purple-200 font-light drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+              Immersive Worlds.
+            </span>
 </h1>
-<p className="text-base text-slate-300 leading-relaxed font-light mb-8 max-w-lg">
+<p className="text-sm sm:text-base text-slate-300 leading-relaxed font-light mb-8 max-w-lg">
             From structural design to projection mapping, our dome systems are engineered to deliver unmatched visual clarity, scalability and reliability — in any space.
           </p>
-<a className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-xs font-semibold bg-brand-lavender text-black hover:bg-brand-lavenderHover transition-all duration-200 aurora-btn-primary" href="#size-options">
-            Explore Our Technology
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
+<a className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-xs font-semibold bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] transition-all duration-300 shadow-[0_0_24px_rgba(147,197,253,0.3)] aurora-btn-primary group" href="#size-options">
+            <span>Explore Our Technology</span>
+            <svg className="w-4 h-4 stroke-[2] group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round"></path>
 </svg>
 </a>
 </div>
-{/*  Center Large Visual: Dome Cutaway  */}
-<div className="lg:col-span-4 relative flex justify-center">
-<div className="relative w-full max-w-[420px] aspect-[4/5] rounded-[220px_220px_24px_24px] overflow-hidden border border-white/20 shadow-2xl bg-brand-deep aurora-glow-hero group">
-{/*  Full Dome Projection Visual  */}
-<img alt="Ultra-realistic geodesic immersive projection dome theater cutaway with cosmic projection" className="w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-transform duration-700" src="/images/tech_dome_cutaway.jpg" />
-<div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+
+{/*  Center Large Visual: Geodesic Dome Cutaway matching prototype  */}
+<div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-center py-4 lg:py-0">
+  <div className="relative w-full max-w-[540px] lg:max-w-none flex items-center justify-center">
+    <img
+      alt="Geodesic immersive projection dome theater cutaway showing visitors inside enjoying panoramic celestial projection"
+      className="w-full h-auto object-contain select-none drop-shadow-[0_25px_60px_rgba(0,0,0,0.9)] filter brightness-105"
+      src="/images/tech_dome_cutaway_cinematic.jpg"
+    />
+  </div>
 </div>
-</div>
-{/*  Right Side Features Column  */}
-<div className="lg:col-span-3 flex flex-col gap-6" data-purpose="hero-side-features">
-{/*  Feature Item 1  */}
-<div className="flex items-start gap-4 group">
-<div className="w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-brand-lavender shrink-0 group-hover:border-brand-lavender transition-colors">
+
+{/*  Right Side Features Column with indicator connectors matching prototype  */}
+<div className="lg:col-span-3 xl:col-span-3 flex flex-col gap-6 md:gap-7 z-10 pl-0 lg:pl-2" data-purpose="hero-side-features">
+{/*  Feature Item 1: Content  */}
+<div className="relative flex items-center gap-3.5 group">
+<div className="hidden lg:block absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-[1px] bg-white/20 group-hover:w-6 group-hover:bg-[#93c5fd] transition-all duration-300"></div>
+<div className="w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-[#93c5fd] shrink-0 group-hover:border-[#93c5fd] group-hover:bg-[#93c5fd]/10 transition-all duration-300 shadow-[0_0_15px_rgba(147,197,253,0.1)]">
 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M12 4v16m8-8H4" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
 </svg>
 </div>
 <div>
-<h3 className="text-xs uppercase font-semibold tracking-wider text-white">Content</h3>
-<p className="text-xs text-slate-400 font-light mt-0.5">Fulldome films & bespoke CGI</p>
+<h3 className="text-xs uppercase font-semibold tracking-wider text-white group-hover:text-[#93c5fd] transition-colors">Content</h3>
+<p className="text-[11px] text-slate-400 font-light mt-0.5 leading-snug">Fulldome films & bespoke CGI</p>
 </div>
 </div>
-{/*  Feature Item 2  */}
-<div className="flex items-start gap-4 group">
-<div className="w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-brand-lavender shrink-0 group-hover:border-brand-lavender transition-colors">
+
+{/*  Feature Item 2: Projection  */}
+<div className="relative flex items-center gap-3.5 group">
+<div className="hidden lg:block absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-[1px] bg-white/20 group-hover:w-6 group-hover:bg-[#93c5fd] transition-all duration-300"></div>
+<div className="w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-[#93c5fd] shrink-0 group-hover:border-[#93c5fd] group-hover:bg-[#93c5fd]/10 transition-all duration-300 shadow-[0_0_15px_rgba(147,197,253,0.1)]">
 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
 </svg>
 </div>
 <div>
-<h3 className="text-xs uppercase font-semibold tracking-wider text-white">Projection</h3>
-<p className="text-xs text-slate-400 font-light mt-0.5">Cinema-grade projection systems</p>
+<h3 className="text-xs uppercase font-semibold tracking-wider text-white group-hover:text-[#93c5fd] transition-colors">Projection</h3>
+<p className="text-[11px] text-slate-400 font-light mt-0.5 leading-snug">Cinema-grade projection systems</p>
 </div>
 </div>
-{/*  Feature Item 3  */}
-<div className="flex items-start gap-4 group">
-<div className="w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-brand-lavender shrink-0 group-hover:border-brand-lavender transition-colors">
+
+{/*  Feature Item 3: Dome Structure  */}
+<div className="relative flex items-center gap-3.5 group">
+<div className="hidden lg:block absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-[1px] bg-white/20 group-hover:w-6 group-hover:bg-[#93c5fd] transition-all duration-300"></div>
+<div className="w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-[#93c5fd] shrink-0 group-hover:border-[#93c5fd] group-hover:bg-[#93c5fd]/10 transition-all duration-300 shadow-[0_0_15px_rgba(147,197,253,0.1)]">
+<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 4v16m8-8H4" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
+</svg>
+</div>
+<div>
+<h3 className="text-xs uppercase font-semibold tracking-wider text-white group-hover:text-[#93c5fd] transition-colors">Dome Structure</h3>
+<p className="text-[11px] text-slate-400 font-light mt-0.5 leading-snug">Engineered for any space</p>
+</div>
+</div>
+
+{/*  Feature Item 4: Support Systems  */}
+<div className="relative flex items-center gap-3.5 group">
+<div className="hidden lg:block absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-[1px] bg-white/20 group-hover:w-6 group-hover:bg-[#93c5fd] transition-all duration-300"></div>
+<div className="w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-[#93c5fd] shrink-0 group-hover:border-[#93c5fd] group-hover:bg-[#93c5fd]/10 transition-all duration-300 shadow-[0_0_15px_rgba(147,197,253,0.1)]">
 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
 </svg>
 </div>
 <div>
-<h3 className="text-xs uppercase font-semibold tracking-wider text-white">Dome Structure</h3>
-<p className="text-xs text-slate-400 font-light mt-0.5">Engineered for any space</p>
-</div>
-</div>
-{/*  Feature Item 4  */}
-<div className="flex items-start gap-4 group">
-<div className="w-9 h-9 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-brand-lavender shrink-0 group-hover:border-brand-lavender transition-colors">
-<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
-</svg>
-</div>
-<div>
-<h3 className="text-xs uppercase font-semibold tracking-wider text-white">Support Systems</h3>
-<p className="text-xs text-slate-400 font-light mt-0.5">Installation, monitoring and ongoing support</p>
+<h3 className="text-xs uppercase font-semibold tracking-wider text-white group-hover:text-[#93c5fd] transition-colors">Support Systems</h3>
+<p className="text-[11px] text-slate-400 font-light mt-0.5 leading-snug">Installation, monitoring and ongoing support</p>
 </div>
 </div>
 </div>
