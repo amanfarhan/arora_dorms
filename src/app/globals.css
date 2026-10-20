@@ -692,26 +692,30 @@ footer,
 }
 
 /* ==========================================================================
-   ENERGY COMET CURSOR SYSTEM (Pointer & Control Handling)
+   ENERGY COMET CURSOR SYSTEM (Hardware-Accelerated Zero-Lag Particle Canvas)
    ========================================================================== */
-@media (pointer: fine) {
-  html.energy-comet-active,
-  html.energy-comet-active body,
-  html.energy-comet-active a,
-  html.energy-comet-active button,
-  html.energy-comet-active [role="button"] {
-    cursor: none !important;
-  }
+#energy-comet-canvas {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  z-index: 999999 !important;
+}
 
-  /* Always preserve native text selection and input controls */
-  html.energy-comet-active input,
-  html.energy-comet-active textarea,
-  html.energy-comet-active select,
-  html.energy-comet-active [contenteditable="true"] {
-    cursor: text !important;
-  }
+/* Ensure native pointer responsiveness (0ms hardware latency) across all elements */
+html.energy-comet-active a,
+html.energy-comet-active button,
+html.energy-comet-active [role="button"],
+html.energy-comet-active .cursor-pointer {
+  cursor: pointer !important;
+}
 
-  html.energy-comet-active [data-native-cursor] {
-    cursor: auto !important;
-  }
+html.energy-comet-active input,
+html.energy-comet-active textarea,
+html.energy-comet-active select,
+html.energy-comet-active [contenteditable="true"] {
+  cursor: text !important;
 }

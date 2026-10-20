@@ -181,8 +181,10 @@ export default function Header() {
           {/* Mobile hamburger button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none"
+            className="lg:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-slate-300 hover:text-white focus:outline-none"
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation-drawer"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -191,30 +193,35 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#05070B]/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 flex flex-col gap-4 max-h-[85vh] overflow-y-auto">
+        <div
+          id="mobile-navigation-drawer"
+          role="region"
+          aria-label="Mobile Navigation Drawer"
+          className="lg:hidden bg-[#05070B]/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 flex flex-col gap-2 max-h-[85vh] overflow-y-auto"
+        >
           <Link
             href="/"
-            className="text-sm text-slate-200 hover:text-white py-1.5"
+            className="text-sm text-slate-200 hover:text-white min-h-[44px] flex items-center px-1"
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="text-sm text-slate-200 hover:text-white py-1.5"
+            className="text-sm text-slate-200 hover:text-white min-h-[44px] flex items-center px-1"
           >
             About
           </Link>
 
-          <div className="flex flex-col gap-2 pt-2 border-t border-white/5">
-            <span className="text-[11px] font-semibold tracking-widest text-[#A5B4FC] uppercase">
+          <div className="flex flex-col gap-1 pt-2 border-t border-white/5">
+            <span className="text-[11px] font-semibold tracking-widest text-[#A5B4FC] uppercase py-1">
               Solutions
             </span>
-            <div className="pl-3 flex flex-col gap-2">
+            <div className="pl-3 flex flex-col">
               {solutionLinks.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-xs text-slate-300 hover:text-white py-1"
+                  className="text-xs text-slate-300 hover:text-white min-h-[44px] flex items-center"
                 >
                   {item.title}
                 </Link>
@@ -222,16 +229,16 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 pt-2 border-t border-white/5">
-            <span className="text-[11px] font-semibold tracking-widest text-[#A5B4FC] uppercase">
+          <div className="flex flex-col gap-1 pt-2 border-t border-white/5">
+            <span className="text-[11px] font-semibold tracking-widest text-[#A5B4FC] uppercase py-1">
               Industries
             </span>
-            <div className="pl-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="pl-3 grid grid-cols-1 sm:grid-cols-2 gap-1">
               {industryLinks.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-xs text-slate-300 hover:text-white py-1"
+                  className="text-xs text-slate-300 hover:text-white min-h-[44px] flex items-center"
                 >
                   {item.title}
                 </Link>
@@ -241,14 +248,14 @@ export default function Header() {
 
           <Link
             href="/technology-dome-systems"
-            className="text-sm text-slate-200 hover:text-white py-1.5 pt-2 border-t border-white/5"
+            className="text-sm text-slate-200 hover:text-white min-h-[44px] flex items-center px-1 pt-2 border-t border-white/5"
           >
             Technology & Dome Systems
           </Link>
 
           <Link
             href="/start-a-project"
-            className="mt-2 w-full py-3 rounded-full text-center text-xs font-semibold text-slate-900 bg-[#A5B4FC] hover:bg-[#b8c4fc] transition-colors"
+            className="mt-3 w-full min-h-[48px] flex items-center justify-center rounded-full text-center text-xs font-semibold text-slate-900 bg-[#A5B4FC] hover:bg-[#b8c4fc] transition-colors"
           >
             Start a Project
           </Link>

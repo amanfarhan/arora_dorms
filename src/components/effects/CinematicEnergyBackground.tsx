@@ -96,6 +96,41 @@ export default function CinematicEnergyBackground() {
       createGlowSprite(165, 180, 252), // 4: Cosmic Periwinkle
     ];
 
+    // Pre-render volumetric atmospheric nebula blooms once at startup (0 per-frame gradient overhead)
+    const createNebulaSprite = (colorStops: { stop: number; color: string }[]) => {
+      const sprite = document.createElement("canvas");
+      sprite.width = 128;
+      sprite.height = 128;
+      const sCtx = sprite.getContext("2d");
+      if (!sCtx) return sprite;
+      const grad = sCtx.createRadialGradient(64, 64, 0, 64, 64, 64);
+      colorStops.forEach((cs) => grad.addColorStop(cs.stop, cs.color));
+      sCtx.fillStyle = grad;
+      sCtx.beginPath();
+      sCtx.arc(64, 64, 64, 0, Math.PI * 2);
+      sCtx.fill();
+      return sprite;
+    };
+
+    const nebulaCyan = createNebulaSprite([
+      { stop: 0, color: "rgba(34, 211, 238, 0.22)" },
+      { stop: 0.4, color: "rgba(59, 130, 246, 0.12)" },
+      { stop: 1, color: "rgba(2, 4, 8, 0)" },
+    ]);
+
+    const nebulaViolet = createNebulaSprite([
+      { stop: 0, color: "rgba(192, 132, 252, 0.2)" },
+      { stop: 0.35, color: "rgba(232, 121, 249, 0.1)" },
+      { stop: 0.7, color: "rgba(99, 102, 241, 0.05)" },
+      { stop: 1, color: "rgba(2, 4, 8, 0)" },
+    ]);
+
+    const flareSprite = createNebulaSprite([
+      { stop: 0, color: "rgba(56, 189, 248, 0.18)" },
+      { stop: 0.45, color: "rgba(147, 51, 234, 0.08)" },
+      { stop: 1, color: "rgba(2, 4, 8, 0)" },
+    ]);
+
     let width = 0;
     let height = 0;
 
@@ -311,40 +346,18 @@ export default function CinematicEnergyBackground() {
       const b1X = width * 0.25 + Math.sin(time * 0.25) * 80;
       const b1Y = height * 0.28 + Math.cos(time * 0.22) * 60;
       const b1R = Math.min(width, height) * 0.55;
-      const g1 = ctx.createRadialGradient(b1X, b1Y, 0, b1X, b1Y, b1R);
-      g1.addColorStop(0, "rgba(34, 211, 238, 0.22)");
-      g1.addColorStop(0.4, "rgba(59, 130, 246, 0.12)");
-      g1.addColorStop(1, "rgba(2, 4, 8, 0)");
-      ctx.fillStyle = g1;
-      ctx.beginPath();
-      ctx.arc(b1X, b1Y, b1R, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.drawImage(nebulaCyan, b1X - b1R, b1Y - b1R, b1R * 2, b1R * 2);
 
       // Bloom 2: Aurora Violet & Magenta Nebula (Center-Right / Lower-Right)
       const b2X = width * 0.76 + Math.cos(time * 0.24) * 90;
       const b2Y = height * 0.52 + Math.sin(time * 0.28) * 70;
       const b2R = Math.min(width, height) * 0.52;
-      const g2 = ctx.createRadialGradient(b2X, b2Y, 0, b2X, b2Y, b2R);
-      g2.addColorStop(0, "rgba(192, 132, 252, 0.2)");
-      g2.addColorStop(0.35, "rgba(232, 121, 249, 0.1)");
-      g2.addColorStop(0.7, "rgba(99, 102, 241, 0.05)");
-      g2.addColorStop(1, "rgba(2, 4, 8, 0)");
-      ctx.fillStyle = g2;
-      ctx.beginPath();
-      ctx.arc(b2X, b2Y, b2R, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.drawImage(nebulaViolet, b2X - b2R, b2Y - b2R, b2R * 2, b2R * 2);
 
       // Bloom 3: Pointer Interactive Ambient Flare
       if (mouseX > 0 && mouseY > 0) {
         const pointerR = 260 + Math.min(mouseVelocity * 2.0, 90);
-        const gP = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, pointerR);
-        gP.addColorStop(0, "rgba(56, 189, 248, 0.18)");
-        gP.addColorStop(0.4, "rgba(147, 51, 234, 0.08)");
-        gP.addColorStop(1, "rgba(2, 4, 8, 0)");
-        ctx.fillStyle = gP;
-        ctx.beginPath();
-        ctx.arc(mouseX, mouseY, pointerR, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.drawImage(flareSprite, mouseX - pointerR, mouseY - pointerR, pointerR * 2, pointerR * 2);
       }
 
       // =========================================================================
