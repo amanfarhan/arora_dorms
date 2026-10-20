@@ -126,44 +126,291 @@
   background: radial-gradient(circle at 50% 30%, rgba(138, 155, 232, 0.15) 0%, rgba(7, 9, 14, 0) 70%);
 }
 
-/* Cards & Interactions */
-.industry-card {
-  background: linear-gradient(180deg, rgba(16, 22, 34, 0.7) 0%, rgba(9, 13, 21, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+/* ==========================================================================
+   ADVANCED PLASMA EDGE & HOLOGRAPHIC CARD SYSTEM
+   ========================================================================== */
+
+/* Conic gradient angle property for ultra-smooth hardware-accelerated spin */
+@property --plasma-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes plasma-spin {
+  0% {
+    --plasma-angle: 0deg;
+  }
+  100% {
+    --plasma-angle: 360deg;
+  }
+}
+
+@keyframes light-sweep {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-energy-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(165, 180, 252, 0.3), inset 0 0 8px rgba(68, 225, 222, 0.2);
+    border-color: rgba(165, 180, 252, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(165, 180, 252, 0.6), inset 0 0 16px rgba(68, 225, 222, 0.4);
+    border-color: rgba(68, 225, 222, 0.6);
+  }
+}
+
+@keyframes image-shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+/* Base Cards & Plasma Edge System */
+.industry-card,
+.solution-card,
+.aurora-card-interactive,
+.plasma-card,
+[data-purpose="experience-card"],
+[data-holographic] {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(180deg, rgba(16, 22, 34, 0.75) 0%, rgba(8, 12, 19, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Luminous animated plasma border trace on hover */
+.industry-card::before,
+.solution-card::before,
+.aurora-card-interactive::before,
+.plasma-card::before,
+[data-purpose="experience-card"]::before,
+[data-holographic]::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--plasma-angle, 0deg) at 50% 50%,
+    transparent 0deg,
+    rgba(165, 180, 252, 0.1) 40deg,
+    rgba(68, 225, 222, 0.85) 90deg,
+    rgba(192, 132, 252, 0.85) 140deg,
+    rgba(165, 180, 252, 0.95) 180deg,
+    rgba(68, 225, 222, 0.3) 230deg,
+    transparent 280deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: 2;
+  animation: plasma-spin 7s linear infinite;
+}
+
+.industry-card:hover::before,
+.solution-card:hover::before,
+.aurora-card-interactive:hover::before,
+.plasma-card:hover::before,
+[data-purpose="experience-card"]:hover::before,
+[data-holographic]:hover::before {
+  opacity: 1;
+}
+
+/* Holographic dynamic glare / cursor reflection overlay */
+.industry-card::after,
+.solution-card::after,
+.aurora-card-interactive::after,
+.plasma-card::after,
+[data-purpose="experience-card"]::after,
+[data-holographic]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    700px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(165, 180, 252, 0.12),
+    rgba(68, 225, 222, 0.05) 35%,
+    transparent 65%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.industry-card:hover::after,
+.solution-card:hover::after,
+.aurora-card-interactive:hover::after,
+.plasma-card:hover::after,
+[data-purpose="experience-card"]:hover::after,
+[data-holographic]:hover::after {
+  opacity: 1;
+}
+
+.industry-card:hover,
+.solution-card:hover,
+.aurora-card-interactive:hover,
+.plasma-card:hover,
+[data-purpose="experience-card"]:hover,
+[data-holographic]:hover {
+  border-color: rgba(165, 180, 252, 0.4);
+  box-shadow:
+    0 24px 50px -15px rgba(0, 0, 0, 0.85),
+    0 0 35px -5px rgba(99, 102, 241, 0.28),
+    0 0 15px 0 rgba(68, 225, 222, 0.15);
+}
+
+/* Featured intensity level */
+.plasma-card-featured {
+  border-color: rgba(165, 180, 252, 0.25);
+  box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.7), 0 0 20px 0 rgba(165, 180, 252, 0.1);
+}
+
+.plasma-card-featured:hover {
+  border-color: rgba(165, 180, 252, 0.55);
+  box-shadow:
+    0 28px 60px -15px rgba(0, 0, 0, 0.9),
+    0 0 45px 0 rgba(165, 180, 252, 0.35),
+    0 0 25px 0 rgba(68, 225, 222, 0.25);
+}
+
+/* Card images with smooth cinematic depth zoom */
+.industry-card img,
+.solution-card img,
+.aurora-card-interactive img,
+.plasma-card img,
+[data-purpose="experience-card"] img,
+[data-holographic] img {
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.5s ease;
+  will-change: transform;
+}
+
+.industry-card:hover img,
+.solution-card:hover img,
+.aurora-card-interactive:hover img,
+.plasma-card:hover img,
+[data-purpose="experience-card"]:hover img,
+[data-holographic]:hover img {
+  transform: scale(1.035);
+  filter: brightness(1.04) contrast(1.02);
+}
+
+/* Controlled luminous holographic shimmer sweep across card images on hover */
+.industry-card > div:first-child,
+.solution-card > div:first-child,
+.aurora-card-interactive > div:first-child,
+.plasma-card > div:first-child,
+[data-purpose="experience-card"] > div:first-child {
+  position: relative;
+  overflow: hidden;
+}
+
+.industry-card > div:first-child::after,
+.solution-card > div:first-child::after,
+.aurora-card-interactive > div:first-child::after,
+.plasma-card > div:first-child::after,
+[data-purpose="experience-card"] > div:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    rgba(165, 180, 252, 0.22),
+    rgba(68, 225, 222, 0.12),
+    transparent
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 10;
+  transition: none;
+}
+
+.industry-card:hover > div:first-child::after,
+.solution-card:hover > div:first-child::after,
+.aurora-card-interactive:hover > div:first-child::after,
+.plasma-card:hover > div:first-child::after,
+[data-purpose="experience-card"]:hover > div:first-child::after {
+  left: 200%;
+  transition: left 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Directional Energy Connector Trail for Process Steps */
+.energy-connector-line {
+  position: relative;
+  background: linear-gradient(90deg, rgba(68, 225, 222, 0.2), rgba(165, 180, 252, 0.5), rgba(192, 132, 252, 0.2));
+  overflow: hidden;
+}
+
+.energy-connector-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 0 0 10px #67e8f9, 0 0 20px #a5b4fc;
+  border-radius: 9999px;
+  animation: light-sweep 4s ease-in-out infinite;
+}
+
+/* Card Arrow Action Button polish */
+.card-arrow-btn {
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.industry-card:hover {
-  border-color: rgba(130, 149, 232, 0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 20px 0 rgba(130, 149, 232, 0.1);
-}
-
-.card-arrow-btn {
-  transition: all 0.3s ease;
-}
-
 .industry-card:hover .card-arrow-btn {
-  background-color: #8295E8;
+  background-color: #A5B4FC;
   color: #05070B;
-  border-color: #8295E8;
-  transform: scale(1.05);
+  border-color: #A5B4FC;
+  box-shadow: 0 0 20px rgba(165, 180, 252, 0.4);
+  transform: scale(1.06);
 }
 
-.solution-card {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
-}
-
-.solution-card:hover {
-  border-color: rgba(142, 165, 248, 0.35);
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px -15px rgba(26, 43, 85, 0.35);
+.industry-card:hover .card-arrow-btn svg,
+.solution-card:hover svg.group-hover\:translate-x-0\.5,
+.solution-card:hover svg.transition-transform {
+  transform: translateX(4px);
 }
 
 .card-glow:hover {
-  box-shadow: 0 10px 30px -10px rgba(110, 140, 255, 0.15);
-  border-color: rgba(155, 170, 255, 0.35);
+  box-shadow: 0 15px 35px -10px rgba(110, 140, 255, 0.22);
+  border-color: rgba(155, 170, 255, 0.4);
 }
 
 /* Custom architectural masks */
@@ -213,25 +460,67 @@
   z-index: 1;
 }
 
-/* Refined interactive cards */
-.aurora-card-interactive {
+/* Light-Sweep Section Dividers */
+.energy-divider {
   position: relative;
-  background: linear-gradient(180deg, rgba(17, 24, 39, 0.6) 0%, rgba(9, 13, 21, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 1.25rem;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08) 20%, rgba(255, 255, 255, 0.08) 80%, transparent);
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.aurora-card-interactive:hover {
-  border-color: rgba(165, 180, 252, 0.35);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 28px 0 rgba(165, 180, 252, 0.12);
-  transform: translateY(-3px);
+.energy-divider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(68, 225, 222, 0.8), rgba(165, 180, 252, 0.9), transparent);
+  box-shadow: 0 0 12px rgba(165, 180, 252, 0.6);
+  animation: light-sweep 6s ease-in-out infinite;
 }
 
-.aurora-card-interactive:hover img {
-  transform: scale(1.04);
-  filter: brightness(1.06);
+/* Expanding light energy rings */
+.energy-ring {
+  position: relative;
+}
+
+.energy-ring::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 1px solid rgba(165, 180, 252, 0.4);
+  animation: pulse-energy-glow 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Navigation Links with animated plasma underline */
+.nav-link-aurora {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.nav-link-aurora::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(90deg, #67e8f9, #a5b4fc, #c084fc);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 8px rgba(165, 180, 252, 0.6);
+}
+
+.nav-link-aurora:hover::after,
+.nav-link-aurora.is-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* Primary illuminated CTA button */
@@ -243,19 +532,63 @@
   color: #05070B;
   font-weight: 600;
   border-radius: 9999px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 14px rgba(165, 180, 252, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.aurora-btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: none;
+}
+
+.aurora-btn-primary:hover::after {
+  left: 150%;
+  transition: left 0.75s ease-in-out;
 }
 
 .aurora-btn-primary:hover {
   background-color: #B9C3FF;
   box-shadow: 0 0 25px rgba(165, 180, 252, 0.5), 0 0 50px rgba(68, 225, 222, 0.2);
-  transform: translateY(-1px);
+  transform: translateY(-1.5px) scale(1.015);
 }
 
 .aurora-btn-primary:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px rgba(165, 180, 252, 0.5), 0 0 30px rgba(165, 180, 252, 0.6);
+}
+
+/* Section Reveal Entrance Animations */
+.reveal-on-scroll,
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed,
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fallback: if JavaScript is disabled or fails, show content immediately */
+@media (scripting: none) {
+  .reveal-on-scroll,
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Ambient subtle slow lighting movement */
@@ -274,11 +607,22 @@
   animation: ambient-drift 18s ease-in-out infinite;
 }
 
+/* Strict prefers-reduced-motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   .ambient-light-drift,
   .aurora-card-interactive,
-  .aurora-btn-primary {
+  .industry-card,
+  .solution-card,
+  .plasma-card,
+  .aurora-btn-primary,
+  .energy-divider::after,
+  .energy-ring::before,
+  .nav-link-aurora::after,
+  .reveal-on-scroll,
+  [data-reveal] {
     animation: none !important;
     transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
 }

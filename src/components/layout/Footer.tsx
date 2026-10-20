@@ -5,9 +5,11 @@ import { ArrowRight } from "lucide-react";
 export default function Footer() {
   return (
     <footer
-      className="bg-[#05070B] border-t border-white/10 relative overflow-hidden text-slate-100"
+      className="bg-[#05070B] relative overflow-hidden text-slate-100"
       data-purpose="site-footer"
     >
+      {/* Light-Sweep Energy Divider */}
+      <div className="energy-divider" />
       {/* Background Radial Glow */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(99,102,241,0.08),rgba(5,7,11,0))] z-0" />
 

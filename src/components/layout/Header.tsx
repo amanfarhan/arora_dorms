@@ -113,8 +113,8 @@ export default function Header() {
         >
           <Link
             href="/about"
-            className={`hover:text-white transition-colors duration-200 ${
-              pathname === "/about" ? "text-white font-medium" : ""
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+              pathname === "/about" ? "text-white font-medium is-active" : ""
             }`}
           >
             About
@@ -122,9 +122,9 @@ export default function Header() {
 
           <Link
             href="/solutions"
-            className={`hover:text-white transition-colors duration-200 ${
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
               pathname === "/solutions" || (pathname.startsWith("/solutions") && pathname !== "/solutions/immersive-content")
-                ? "text-white font-medium"
+                ? "text-white font-medium is-active"
                 : ""
             }`}
           >
@@ -133,8 +133,8 @@ export default function Header() {
 
           <Link
             href="/solutions/immersive-content"
-            className={`hover:text-white transition-colors duration-200 ${
-              pathname.startsWith("/solutions/immersive-content") ? "text-white font-medium" : ""
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+              pathname.startsWith("/solutions/immersive-content") ? "text-white font-medium is-active" : ""
             }`}
           >
             Content
@@ -142,8 +142,8 @@ export default function Header() {
 
           <Link
             href="/industries"
-            className={`hover:text-white transition-colors duration-200 ${
-              pathname.startsWith("/industries") ? "text-white font-medium" : ""
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+              pathname.startsWith("/industries") ? "text-white font-medium is-active" : ""
             }`}
           >
             Industries
@@ -151,8 +151,8 @@ export default function Header() {
 
           <Link
             href="/technology-dome-systems"
-            className={`hover:text-white transition-colors duration-200 ${
-              pathname === "/technology-dome-systems" ? "text-white font-medium" : ""
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+              pathname === "/technology-dome-systems" ? "text-white font-medium is-active" : ""
             }`}
           >
             Technology
@@ -160,8 +160,8 @@ export default function Header() {
 
           <Link
             href="/start-a-project"
-            className={`hover:text-white transition-colors duration-200 ${
-              pathname === "/start-a-project" ? "text-white font-medium" : ""
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+              pathname === "/start-a-project" ? "text-white font-medium is-active" : ""
             }`}
           >
             Contact
