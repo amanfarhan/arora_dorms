@@ -18,14 +18,14 @@ interface TrailParticle {
 /**
  * EnergyCometCursor
  * 
- * Ultra-high-performance Energy Comet Trail Cursor.
+ * Premium luminous comet cursor tailored for Aurora Dome Solutions.
  * Features:
- * - 0ms hardware pointer latency (never overrides native cursor response)
- * - Hardware-accelerated GPU sprite blitting (zero per-frame gradient allocation)
- * - Celestial cyan-blue nucleus & soft blue-violet particle wake
- * - True 60fps/120fps/144fps smoothness with minimal CPU/GPU overhead
- * - Automatic idle sleep when stationary (0% CPU when not moving)
- * - Safe touch & reduced-motion handling
+ * - Bright cyan-blue luminous nucleus & soft blue-violet halo acting as the custom cursor pointer
+ * - Flowing particle wake during cursor movement with organic drift and gentle upward lift
+ * - Hover intensification on clickable elements, buttons, links, and cards
+ * - Auto-hides over text inputs/textareas to preserve native I-beam readability
+ * - Pre-rendered GPU sprites for 120fps performance and zero garbage collection stalls
+ * - Safe touch & reduced-motion safeguards
  */
 export default function EnergyCometCursor() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -43,9 +43,10 @@ export default function EnergyCometCursor() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
+    // Enable custom cursor CSS styles (cursor: none on fine pointers)
     document.documentElement.classList.add("energy-comet-active");
 
-    // Pre-render offscreen glow sprites once at startup for 60x faster GPU blitting
+    // Pre-render offscreen glow sprites once at startup for instant GPU blitting
     const createGlowSprite = (r: number, g: number, b: number) => {
       const sprite = document.createElement("canvas");
       sprite.width = 48;
@@ -75,20 +76,20 @@ export default function EnergyCometCursor() {
       createGlowSprite(255, 255, 255), // 5: Spark White
     ];
 
-    // Pre-render cursor head glow sprite
+    // Pre-render cursor head glow halo sprite
     const headGlowSprite = document.createElement("canvas");
-    headGlowSprite.width = 64;
-    headGlowSprite.height = 64;
+    headGlowSprite.width = 80;
+    headGlowSprite.height = 80;
     const hCtx = headGlowSprite.getContext("2d");
     if (hCtx) {
-      const g = hCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
-      g.addColorStop(0, "rgba(34, 211, 238, 0.85)");
-      g.addColorStop(0.3, "rgba(96, 165, 250, 0.45)");
-      g.addColorStop(0.65, "rgba(192, 132, 252, 0.18)");
+      const g = hCtx.createRadialGradient(40, 40, 0, 40, 40, 40);
+      g.addColorStop(0, "rgba(34, 211, 238, 0.9)");
+      g.addColorStop(0.25, "rgba(96, 165, 250, 0.5)");
+      g.addColorStop(0.6, "rgba(192, 132, 252, 0.2)");
       g.addColorStop(1, "rgba(3, 5, 10, 0)");
       hCtx.fillStyle = g;
       hCtx.beginPath();
-      hCtx.arc(32, 32, 32, 0, Math.PI * 2);
+      hCtx.arc(40, 40, 40, 0, Math.PI * 2);
       hCtx.fill();
     }
 
@@ -97,7 +98,6 @@ export default function EnergyCometCursor() {
     let dpr = 1;
 
     const resize = () => {
-      // Cap DPR to 1.25 for crisp graphics with minimal fill-rate memory cost
       dpr = Math.min(window.devicePixelRatio || 1, 1.25);
       width = window.innerWidth;
       height = window.innerHeight;
@@ -118,11 +118,11 @@ export default function EnergyCometCursor() {
     let prevMouseY = -100;
     let isHoveringInteractive = false;
     let isOverTextInput = false;
-    let isMoving = false;
-    let idleTimeout: ReturnType<typeof setTimeout> | null = null;
+    let haloScale = 1.0;
+    let targetHaloScale = 1.0;
     let animId: number | null = null;
 
-    const maxParticles = prefersReducedMotion ? 12 : 50;
+    const maxParticles = prefersReducedMotion ? 12 : 55;
     const particles: TrailParticle[] = [];
 
     const spawnParticle = (
@@ -138,16 +138,16 @@ export default function EnergyCometCursor() {
       const isSpark = Math.random() < 0.12;
       const spriteIndex = isSpark ? 5 : Math.floor(Math.random() * (sprites.length - 1));
 
-      const spread = (Math.random() - 0.5) * 0.7;
+      const spread = (Math.random() - 0.5) * 0.75;
       const moveAngle = backwardAngle + spread;
-      const speed = (Math.random() * 0.65 + 0.3) * (isInteractive ? 1.2 : 0.9);
+      const speed = (Math.random() * 0.7 + 0.3) * (isInteractive ? 1.25 : 0.95);
 
       const vx = Math.cos(moveAngle) * speed;
       const vy = Math.sin(moveAngle) * speed - 0.08;
 
       const baseSize = isSpark
-        ? Math.random() * 2.0 + 1.8
-        : Math.random() * 3.2 + (isInteractive ? 3.0 : 2.2);
+        ? Math.random() * 2.2 + 1.8
+        : Math.random() * 3.4 + (isInteractive ? 3.0 : 2.2);
 
       const maxLife = Math.floor(Math.random() * 8 + (isInteractive ? 20 : 16));
 
@@ -157,7 +157,7 @@ export default function EnergyCometCursor() {
         vx,
         vy,
         baseSize,
-        alpha: Math.random() * 0.25 + (isInteractive ? 0.75 : 0.6),
+        alpha: Math.random() * 0.25 + (isInteractive ? 0.8 : 0.65),
         maxLife,
         age: 0,
         spriteIndex,
@@ -178,23 +178,17 @@ export default function EnergyCometCursor() {
 
       mouseX = currentX;
       mouseY = currentY;
-      isMoving = true;
-
-      if (idleTimeout) clearTimeout(idleTimeout);
-      idleTimeout = setTimeout(() => {
-        isMoving = false;
-      }, 50);
 
       const dx = mouseX - prevMouseX;
       const dy = mouseY - prevMouseY;
       const dist = Math.hypot(dx, dy);
 
       // Emit particles on physical movement
-      if (dist > 1.5 && !isOverTextInput) {
+      if (dist > 1.2 && !isOverTextInput) {
         const moveAngle = Math.atan2(dy, dx);
         const backwardAngle = moveAngle + Math.PI;
 
-        const stepSize = isHoveringInteractive ? 8 : 11;
+        const stepSize = isHoveringInteractive ? 7 : 9;
         const steps = Math.min(Math.floor(dist / stepSize), 4);
 
         for (let i = 0; i <= steps; i++) {
@@ -221,14 +215,17 @@ export default function EnergyCometCursor() {
         'input, textarea, select, [contenteditable="true"]'
       );
 
-      isHoveringInteractive = !!target.closest(
+      const interactive = !!target.closest(
         'a, button, [role="button"], .solution-card, .industry-card, .plasma-card, .glass-card, [data-purpose="experience-card"], [data-interactive]'
       );
+      isHoveringInteractive = interactive;
+      targetHaloScale = isHoveringInteractive ? 1.4 : 1.0;
     };
 
     const handlePointerOut = () => {
       isHoveringInteractive = false;
       isOverTextInput = false;
+      targetHaloScale = 1.0;
     };
 
     const handleMouseLeave = () => {
@@ -236,28 +233,49 @@ export default function EnergyCometCursor() {
       mouseY = -100;
       prevMouseX = -100;
       prevMouseY = -100;
-      isMoving = false;
     };
 
-    // Ultra-fast render loop (all GPU sprite blits, 0 dynamic gradients)
+    // Render loop
     const render = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // 1. Soft Comet Head Glow around pointer (only when moving or hovering interactive)
-      if (mouseX > 0 && mouseY > 0 && !isOverTextInput && isMoving) {
+      // Smooth interpolation for interactive halo expansion
+      haloScale += (targetHaloScale - haloScale) * 0.18;
+
+      // =========================================================================
+      // 1. Continuous Luminous Comet Nucleus & Head at Cursor Position
+      // =========================================================================
+      if (mouseX > 0 && mouseY > 0 && !isOverTextInput) {
         ctx.globalCompositeOperation = "screen";
-        const headRadius = isHoveringInteractive ? 28 : 20;
-        ctx.globalAlpha = isHoveringInteractive ? 0.7 : 0.45;
+
+        // Soft outer halo blitted from pre-rendered sprite
+        const haloRadius = 24 * haloScale;
+        ctx.globalAlpha = isHoveringInteractive ? 0.85 : 0.6;
         ctx.drawImage(
           headGlowSprite,
-          mouseX - headRadius,
-          mouseY - headRadius,
-          headRadius * 2,
-          headRadius * 2
+          mouseX - haloRadius,
+          mouseY - haloRadius,
+          haloRadius * 2,
+          haloRadius * 2
         );
+
+        // Electric-blue core glow
+        ctx.globalAlpha = 1.0;
+        ctx.fillStyle = "rgba(34, 211, 238, 0.85)";
+        ctx.beginPath();
+        ctx.arc(mouseX, mouseY, 3.2 * haloScale, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Small, intense bright white nucleus dot
+        ctx.fillStyle = "rgba(255, 255, 255, 0.98)";
+        ctx.beginPath();
+        ctx.arc(mouseX, mouseY, 1.8, 0, Math.PI * 2);
+        ctx.fill();
       }
 
+      // =========================================================================
       // 2. Trailing Comet Dust Particles (Blitted instantly from pre-rendered sprites)
+      // =========================================================================
       if (particles.length > 0) {
         ctx.globalCompositeOperation = "lighter";
 
@@ -294,8 +312,8 @@ export default function EnergyCometCursor() {
       ctx.globalAlpha = 1.0;
       ctx.globalCompositeOperation = "source-over";
 
-      // Keep loop active ONLY while particles exist or mouse is in motion
-      if (particles.length > 0 || (mouseX > 0 && mouseY > 0 && isMoving)) {
+      // Keep loop running as long as mouse is in window or particles are active
+      if (particles.length > 0 || (mouseX > 0 && mouseY > 0)) {
         animId = requestAnimationFrame(render);
       } else {
         animId = null;
@@ -316,7 +334,6 @@ export default function EnergyCometCursor() {
       window.removeEventListener("pointerover", handlePointerOver);
       window.removeEventListener("pointerout", handlePointerOut);
       document.removeEventListener("mouseleave", handleMouseLeave);
-      if (idleTimeout) clearTimeout(idleTimeout);
       if (animId) cancelAnimationFrame(animId);
     };
   }, []);
