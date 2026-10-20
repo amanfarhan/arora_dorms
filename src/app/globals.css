@@ -303,9 +303,17 @@
 .bg-\[\#03060c\],
 .bg-\[\#05080e\],
 .bg-\[\#080C14\] {
-  background-color: rgba(5, 7, 11, 0.74) !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: transparent !important;
+}
+
+/* Ensure content cards have solid, highly legible obsidian backgrounds */
+.industry-card,
+.solution-card,
+.aurora-card-interactive,
+.plasma-card,
+.glass-card,
+[data-purpose="experience-card"] {
+  background: linear-gradient(180deg, rgba(11, 16, 26, 0.94) 0%, rgba(7, 10, 18, 0.98) 100%) !important;
 }
 
 /* Featured intensity level */
