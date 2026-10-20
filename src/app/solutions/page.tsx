@@ -21,7 +21,6 @@ export default function Page() {
       idealFor: "VIP dining, private brand pop-ups, luxury suites, and VR art installations.",
       image: "/images/dining_immersive_dome.jpg",
       badge: "Portable & Rapid Deploy",
-      highlight: false,
     },
     {
       id: "modular",
@@ -36,8 +35,7 @@ export default function Page() {
       audio: "16.2 Ambisonic Spatial Audio",
       idealFor: "Music festivals, science centers, corporate summits, and touring exhibits.",
       image: "/images/entertainment_marine_dome.jpg",
-      badge: "Most Popular Scale",
-      highlight: true,
+      badge: "Modular & Scalable",
     },
     {
       id: "monumental",
@@ -53,7 +51,6 @@ export default function Page() {
       idealFor: "Theme park flagship attractions, planetariums, and year-round civic landmarks.",
       image: "/images/about_hero_monumental_dome.jpg",
       badge: "Landmark Architecture",
-      highlight: false,
     },
   ];
 
@@ -680,11 +677,7 @@ export default function Page() {
             {domeScales.map((scale) => (
               <div
                 key={scale.id}
-                className={`glass-card rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 relative ${
-                  scale.highlight
-                    ? "border-indigo-400/50 shadow-[0_15px_35px_-10px_rgba(99,102,241,0.25)] ring-1 ring-indigo-400/30"
-                    : "border-white/10 hover:border-white/20"
-                }`}
+                className="glass-card rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 relative border border-white/10 hover:border-indigo-400/50 hover:shadow-[0_15px_35px_-10px_rgba(99,102,241,0.25)] group"
               >
                 <div>
                   {/* Aspect-Ratio Matched 16:10 Photo Header */}
@@ -692,17 +685,11 @@ export default function Page() {
                     <img
                       src={scale.image}
                       alt={scale.name}
-                      className="w-full h-full object-cover object-center transform transition-transform duration-500 hover:scale-105"
+                      className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#090d16] via-[#090d16]/30 to-transparent"></div>
                     <div className="absolute top-3 left-3">
-                      <span
-                        className={`inline-block text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full backdrop-blur-md text-white border ${
-                          scale.highlight
-                            ? "bg-indigo-600/90 border-indigo-300/40 shadow-[0_0_12px_rgba(99,102,241,0.4)]"
-                            : "bg-black/60 border-white/20"
-                        }`}
-                      >
+                      <span className="inline-block text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-white border border-white/20">
                         {scale.badge}
                       </span>
                     </div>
@@ -761,11 +748,7 @@ export default function Page() {
                 <div className="p-5 sm:p-6 pt-0">
                   <Link
                     href={`/start-a-project?scale=${scale.id}`}
-                    className={`w-full py-2.5 px-4 rounded-full text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300 ${
-                      scale.highlight
-                        ? "bg-indigo-600 hover:bg-indigo-500 text-white shadow-[0_0_20px_rgba(99,102,241,0.35)]"
-                        : "bg-white/10 hover:bg-white/20 text-white border border-white/10"
-                    }`}
+                    className="aurora-btn-primary w-full py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-300"
                   >
                     <span>Configure {scale.diameter}</span>
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 16 16">
