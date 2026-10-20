@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -132,12 +132,11 @@ export default function Header() {
           >
             <Link
               href="/solutions"
-              className={`flex items-center gap-1 hover:text-white transition-colors duration-200 py-2 ${
+              className={`hover:text-white transition-colors duration-200 py-2 ${
                 pathname.startsWith("/solutions") ? "text-white font-medium" : ""
               }`}
             >
-              <span>Solutions</span>
-              <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+              Solutions
             </Link>
 
             {solutionsOpen && (
@@ -158,7 +157,7 @@ export default function Header() {
           <Link
             href="/solutions/immersive-content"
             className={`hover:text-white transition-colors duration-200 ${
-              pathname === "/solutions/immersive-content" ? "text-white font-medium" : ""
+              pathname.startsWith("/solutions/immersive-content") ? "text-white font-medium" : ""
             }`}
           >
             Content
@@ -172,12 +171,11 @@ export default function Header() {
           >
             <Link
               href="/industries"
-              className={`flex items-center gap-1 hover:text-white transition-colors duration-200 py-2 ${
+              className={`hover:text-white transition-colors duration-200 py-2 ${
                 pathname.startsWith("/industries") ? "text-white font-medium" : ""
               }`}
             >
-              <span>Industries</span>
-              <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+              Industries
             </Link>
 
             {industriesOpen && (
