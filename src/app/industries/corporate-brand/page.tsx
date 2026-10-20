@@ -39,11 +39,12 @@ export default function Page() {
 {/*  Hero Grid Layout  */}
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end mb-space-xl">
 <div className="lg:col-span-8 flex flex-col gap-space-md">
-<h1 className="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface leading-[1.05] tracking-tight">
-            DON'T JUST SHOW YOUR BRAND. <br />
-<span className="font-headline-sm italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">
-              SURROUND THEM WITH IT.
-            </span>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Don't Just Show Your Brand.
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    Surround Them With It.
+  </span>
 </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-light">
             Create immersive product launches, trade-show environments, brand activations, retail installations, and experiential marketing environments. Envelop clients, media, and consumers inside photorealistic, multi-sensory brand worlds.

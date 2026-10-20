@@ -35,8 +35,12 @@ export default function Page() {
             Industries / Hospitality & Immersive Dining
           </span>
 </div>
-<h1 className="font-headline-lg text-headline-lg text-on-surface leading-[1.08] tracking-tight">
-          TURN DINNER INTO A <span className="italic text-primary font-headline-md font-light">DESTINATION.</span>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Turn Dinner Into a
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    Destination.
+  </span>
 </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl font-light">
           Transform hotels, resorts and restaurants through 360° immersive environments and themed dining experiences. Merge Michelin-caliber culinary artistry with synchronised ambient visual worlds that adapt to every course.

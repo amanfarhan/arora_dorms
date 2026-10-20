@@ -44,7 +44,7 @@ export default function HomePage() {
             <div className="max-w-xl lg:max-w-2xl pt-2 sm:pt-4">
               {/*  Eyebrow  */}
               <span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-2.5 sm:mb-3">
-                About Arora Dorm Solutions
+                Aurora Dome Immersive Solutions
               </span>
 
               {/*  Primary Editorial Serif Headline  */}

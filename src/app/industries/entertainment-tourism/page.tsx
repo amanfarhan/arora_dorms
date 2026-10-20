@@ -41,9 +41,13 @@ export default function Page() {
 <span className="material-symbols-outlined text-secondary text-[16px]">travel_explore</span>
 <span className="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em]">Industries / Entertainment & Tourism</span>
 </div>
-<h1 className="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-on-surface tracking-tight mb-space-md max-w-xl">
-            Create attractions people come back for.
-          </h1>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Create Attractions
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    People Come Back For.
+  </span>
+</h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant mb-space-lg max-w-xl leading-relaxed">
             Create signature immersive attractions for theme parks, amusement parks, water parks, and leisure destinations. Aurora delivers complete turnkey dome architectures, 360° projection, and bespoke narrative content engineered for maximum visitor throughput and unforgettable awe.
           </p>

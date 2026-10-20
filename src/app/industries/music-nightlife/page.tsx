@@ -37,8 +37,12 @@ export default function Page() {
 <span className="material-symbols-outlined text-[14px] text-secondary">graphic_eq</span>
           INDUSTRIES / MUSIC, NIGHTLIFE & CONCERTS
         </div>
-<h1 className="font-headline-lg text-headline-lg lg:font-display-lg lg:text-display-lg text-on-surface leading-[1.05]">
-          Don't put the show behind them. <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">Put it around them.</span>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Don't Put the Show Behind Them.
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    Put It Around Them.
+  </span>
 </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
           Combine music, synchronized visuals, CGI and immersive environments to surround audiences rather than simply placing visuals behind them. Transform headline DJ performances, arena tours, and club residencies with 360° reactive visual architectures.

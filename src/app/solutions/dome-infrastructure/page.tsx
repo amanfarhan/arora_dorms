@@ -15,16 +15,21 @@ export default function Page() {
 <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
 {/*  Left Editorial Column  */}
 <div className="lg:col-span-6 flex flex-col gap-space-md">
-<div className="flex items-center gap-space-xs">
-<span className="inline-block w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_currentColor] animate-pulse"></span>
-<span className="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em]">DOME INFRASTRUCTURE</span>
-</div>
-<h1 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
-          Built Around Your Vision. <span className="italic font-normal text-primary">Engineered for Immersion.</span>
+<span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-2.5 sm:mb-3">
+  Dome Infrastructure
+</span>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Built Around Your Vision.
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    Engineered for Immersion.
+  </span>
 </h1>
-<p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-          From compact immersive installations to flagship dome attractions, we provide dome infrastructure engineered around your venue, audience and experience.
-        </p>
+<p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-xl mb-5 sm:mb-6 leading-relaxed">
+  From compact immersive installations to flagship dome attractions.
+  <br />
+  We provide dome infrastructure engineered around your venue, audience and experience.
+</p>
 {/*  CTA Cluster  */}
 <div className="flex flex-wrap items-center gap-space-md pt-space-sm">
 <a className="inline-flex items-center gap-space-xs px-space-md py-3 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_30px_rgba(123,140,222,0.35)] hover:bg-primary hover:text-on-primary transition-all duration-300" href="#scale-matrix">

@@ -32,8 +32,12 @@ export default function Page() {
 <span className="material-symbols-outlined text-secondary text-[14px]">spa</span>
 <span className="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.22em] text-secondary">Industries / Health & Wellness</span>
 </div>
-<h1 className="font-headline-lg lg:font-display-lg text-headline-lg lg:text-display-lg tracking-tight text-on-surface">
-          Create space to <span className="italic font-light text-primary">slow down.</span>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Create Space to
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    Slow Down.
+  </span>
 </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl font-light">
           Create calming immersive environments for meditation, sound healing, yoga, wellness retreats and sensory experiences. Surround guests with restorative natural phenomena, gentle cosmic drifts, and biophilic acoustics engineered for deep nervous system decompression.

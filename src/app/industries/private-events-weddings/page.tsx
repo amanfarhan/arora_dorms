@@ -36,9 +36,12 @@ export default function Page() {
 <span className="material-symbols-outlined text-[14px]">auto_awesome</span>
 <span className="">INDUSTRIES / PRIVATE EVENTS & WEDDINGS</span>
 </div>
-<h1 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-[1.08] tracking-tight">
-            YOUR STORY.<br />
-<span className="italic font-normal text-primary-fixed-dim">YOUR WORLD.</span>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Your Story.
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    Your World.
+  </span>
 </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
             Create completely personalized, awe-inspiring immersive environments for luxury weddings, milestones, and private galas. Wrap guests in starlit skies, bespoke visual narratives, and enchanting architectural beauty.

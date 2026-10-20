@@ -32,46 +32,43 @@ export default function Page() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* Left Column: Copy & CTAs */}
           <div className="max-w-xl lg:max-w-2xl flex flex-col items-start">
-            {/* Eyebrow Pill */}
-            <div className="inline-flex items-center gap-2 mb-5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#A5B4FC] shadow-[0_0_8px_#A5B4FC]"></span>
-              <span className="text-[11px] font-semibold tracking-[0.25em] text-[#A5B4FC] uppercase">
-                INDUSTRIES WE SERVE
-              </span>
-            </div>
+            {/* Eyebrow */}
+            <span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-2.5 sm:mb-3">
+              Industries We Serve
+            </span>
 
-            {/* Main Headline */}
-            <h1 className="headline-font text-4xl sm:text-5xl lg:text-[62px] leading-[1.08] font-normal tracking-tight text-white mb-6 drop-shadow-md">
-              Immersive Experiences for{" "}
-              <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-indigo-200 to-purple-200">
+            {/* Main Editorial Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+              Immersive Experiences for
+              <br />
+              <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
                 Every Industry.
               </span>
             </h1>
 
-            {/* Subtitle Description */}
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-light mb-8 max-w-lg drop-shadow">
-              From theme parks to fine dining, wellness to global events — our dome solutions are customized for the unique needs of each industry, creating unforgettable experiences that inspire, engage and bring people back.
+            {/* Two-Line Supporting Subline */}
+            <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-xl mb-5 sm:mb-6 leading-relaxed">
+              Turnkey dome architectures customized for unique audience environments.
+              <br />
+              From theme parks and culture to dining, wellness, and global festivals.
             </p>
 
             {/* CTA Button Cluster */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3.5 mb-6 sm:mb-7">
               <a
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-sm transition-all duration-300 shadow-[0_0_28px_rgba(147,197,253,0.35)] aurora-btn-primary group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_24px_rgba(147,197,253,0.3)] group"
                 href="#industries"
               >
-                <span>Explore Our Solutions</span>
-                <svg className="w-4 h-4 stroke-[2.5] group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span>Explore Industries</span>
+                <svg className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" strokeLinecap="round" strokeLinejoin="round"></path>
                 </svg>
               </a>
               <Link
-                className="group inline-flex items-center gap-2.5 text-slate-200 hover:text-white transition-colors duration-200 text-sm font-medium py-3 px-5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md"
+                className="group inline-flex items-center gap-2.5 text-slate-200 hover:text-white transition-colors duration-200 text-xs font-medium py-2 sm:py-2.5 px-5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 backdrop-blur-md"
                 href="/start-a-project"
               >
-                <span>Start a Project</span>
-                <svg className="w-4 h-4 stroke-[2] group-hover:translate-x-0.5 transition-transform text-slate-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" strokeLinecap="round" strokeLinejoin="round"></path>
-                </svg>
+                <span className="tracking-wide">Start a Project</span>
               </Link>
             </div>
 

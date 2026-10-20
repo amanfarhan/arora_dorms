@@ -32,17 +32,20 @@ export default function Page() {
   <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
     {/* Left Column: Copy & CTAs */}
     <div className="max-w-xl lg:max-w-2xl flex flex-col items-start">
-      <div className="inline-flex items-center gap-2 mb-5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#93c5fd] shadow-[0_0_8px_#93c5fd]"></span>
-        <span className="text-[11px] font-semibold tracking-[0.25em] text-[#93c5fd] uppercase">
-          IMMERSIVE CONTENT
+      <span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-2.5 sm:mb-3">
+        Immersive Content
+      </span>
+      <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+        A 360° Canvas Deserves a
+        <br />
+        <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+          World-Class Story.
         </span>
-      </div>
-      <h1 className="headline-font text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-tight text-white mb-6 drop-shadow-md">
-        A 360° Canvas Deserves a <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-sky-200 via-indigo-200 to-purple-200">World-Class Story.</span>
       </h1>
-      <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-light mb-8 max-w-lg drop-shadow">
-        From breathtaking fulldome films to bespoke CGI content, we create immersive worlds that bring your vision to life inside the dome.
+      <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-xl mb-5 sm:mb-6 leading-relaxed">
+        From breathtaking fulldome films to bespoke CGI content.
+        <br />
+        We create immersive worlds that bring your vision to life inside the dome.
       </p>
       <div className="flex flex-wrap items-center gap-4">
         <a 

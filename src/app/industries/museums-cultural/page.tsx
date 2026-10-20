@@ -35,8 +35,13 @@ export default function Page() {
 <span className="material-symbols-outlined text-[14px]">account_balance</span>
 <span className="">INDUSTRIES / MUSEUMS & CULTURAL INSTITUTIONS</span>
 </div>
-<h1 className="font-headline-lg text-headline-lg lg:text-display-lg font-display-lg text-on-surface tracking-tight leading-[1.08]">
-          TURN LEARNING <br />INTO AN <span className="italic font-display-lg text-primary">EXPERIENCE.</span>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Turn Learning
+  <br />
+  Into an{" "}
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    Experience.
+  </span>
 </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
           Create immersive environments for museums, science centres, galleries, planetariums and cultural attractions. Transform historic epochs, deep oceanic frontiers, and celestial space into tangible, walk-in worlds that inspire lifelong curiosity.

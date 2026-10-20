@@ -22,20 +22,24 @@ export default function Page() {
 <div className="absolute top-1/2 right-12 w-[420px] h-[420px] rounded-full bg-tertiary-container/15 blur-[160px] pointer-events-none"></div>
 <div className="relative z-10 w-full px-margin-mobile md:px-margin max-w-7xl mx-auto">
 <div className="max-w-3xl flex flex-col items-start">
-{/*  Eyebrow Badge  */}
-<div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-highest/60 backdrop-blur-md mb-space-md shadow-sm">
-<span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-<span className="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">End-to-End Delivery</span>
-</div>
-{/*  Main Title  */}
-<h1 className="font-headline-lg text-headline-lg md:text-display-lg text-on-surface mb-space-md leading-none tracking-tight">
-          One Partner. <br />
-<span className="italic font-normal text-primary">From Concept to Opening Night.</span>
+{/*  Eyebrow  */}
+<span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-2.5 sm:mb-3">
+  End-to-End Delivery
+</span>
+{/*  Main Editorial Title  */}
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  One Partner.
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    From Concept to Opening Night.
+  </span>
 </h1>
-{/*  Supporting Paragraph  */}
-<p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-lg leading-relaxed">
-          From initial site assessment and dome specification to content curation, installation and ongoing support, we coordinate the elements that bring your immersive project together.
-        </p>
+{/*  Two-Line Supporting Subline  */}
+<p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-xl mb-5 sm:mb-6 leading-relaxed">
+  From initial site assessment and dome specification to content curation.
+  <br />
+  We coordinate every architectural and technical detail from start to finish.
+</p>
 {/*  CTAs  */}
 <div className="flex flex-wrap items-center gap-space-md">
 <a className="inline-flex items-center gap-space-xs px-space-md py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-xl hover:bg-primary hover:text-on-primary transition-all duration-300" href="#process">

@@ -44,10 +44,13 @@ export default function Page() {
               SECTOR 02 // ARCHITECTURAL NIGHTLIFE & LIVE PRODUCTION
             </span>
 </div>
-<h1 className="font-display-lg text-display-lg-mobile lg:text-display-lg text-on-surface tracking-tight leading-[0.95] uppercase">
-            Make the event <br />
-<span className="italic font-light text-primary">impossible</span> to ignore.
-          </h1>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Make the Event
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    Impossible to Ignore.
+  </span>
+</h1>
 </div>
 <div className="lg:col-span-4 flex flex-col gap-space-md pb-2">
 <p className="font-body-lg text-body-lg text-on-surface-variant font-light">

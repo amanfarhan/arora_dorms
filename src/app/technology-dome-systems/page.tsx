@@ -32,29 +32,28 @@ export default function Page() {
     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 pt-4 pb-8 lg:pt-8 lg:pb-12 min-h-[480px]">
       {/*  Left Hero Content  */}
       <div className="max-w-xl lg:max-w-md xl:max-w-lg flex flex-col items-start z-10">
-        <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#93c5fd] shadow-[0_0_8px_#93c5fd] animate-pulse"></span>
-          <span className="text-[11px] uppercase tracking-[0.22em] text-slate-300 font-medium">Technology & Dome Systems</span>
-        </div>
-        <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] font-sans font-semibold tracking-tight leading-[1.08] text-white mb-6">
+        <span className="inline-block text-[11px] font-medium uppercase tracking-[0.28em] text-white/60 mb-2.5 sm:mb-3">
+          Technology & Dome Systems
+        </span>
+        <h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
           Precision
           <br />
           Engineering for
           <br />
-          <span className="text-white drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+          <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
             Immersive Worlds.
           </span>
         </h1>
-        <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-light mb-8 max-w-lg">
+        <p className="text-sm sm:text-base text-slate-300 font-light tracking-wide max-w-xl mb-5 sm:mb-6 leading-relaxed">
           From structural design to projection mapping, our dome systems are engineered to deliver unmatched visual clarity, scalability and reliability — in any space.
         </p>
         <a
-          className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full text-xs font-semibold bg-[#8ba4fc] hover:bg-[#a5bbfd] text-[#050b14] transition-all duration-300 shadow-[0_0_24px_rgba(139,164,252,0.35)] group"
+          className="inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-[#93c5fd] hover:bg-[#bfdbfe] text-[#050b14] font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_24px_rgba(147,197,253,0.3)] group"
           href="#size-options"
         >
           <span>Explore Our Technology</span>
-          <svg className="w-4 h-4 stroke-[2.5] group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round"></path>
+          <svg className="w-3.5 h-3.5 stroke-[2.5] group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" strokeLinecap="round" strokeLinejoin="round"></path>
           </svg>
         </a>
       </div>

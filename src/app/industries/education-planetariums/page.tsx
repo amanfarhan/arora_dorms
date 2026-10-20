@@ -38,8 +38,12 @@ export default function Page() {
 <span className="material-symbols-outlined text-[14px]">public</span>
             INDUSTRIES / EDUCATION & PLANETARIUMS
           </div>
-<h1 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-[1.08] tracking-tight">
-            MAKE COMPLEX WORLDS <span className="italic text-primary font-serif font-normal">FEEL TANGIBLE.</span>
+<h1 className="text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-light font-editorial text-white leading-[1.05] tracking-tight mb-3 sm:mb-4">
+  Make Complex Worlds
+  <br />
+  <span className="text-gradient-periwinkle font-normal drop-shadow-[0_0_25px_rgba(165,180,252,0.35)]">
+    Feel Tangible.
+  </span>
 </h1>
 <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
             Transform learning through immersive science, astronomy, STEM education, and scientific visualization experiences. Turn abstract formulas and celestial depths into walkable, sensory reality.
