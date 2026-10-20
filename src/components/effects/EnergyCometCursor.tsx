@@ -45,6 +45,7 @@ export default function EnergyCometCursor() {
 
     // Enable custom cursor CSS styles (cursor: none on fine pointers)
     document.documentElement.classList.add("energy-comet-active");
+    document.body.classList.add("energy-comet-active");
 
     // Pre-render offscreen glow sprites once at startup for instant GPU blitting
     const createGlowSprite = (r: number, g: number, b: number) => {
@@ -328,6 +329,7 @@ export default function EnergyCometCursor() {
 
     return () => {
       document.documentElement.classList.remove("energy-comet-active");
+      document.body.classList.remove("energy-comet-active");
       window.removeEventListener("resize", resize);
       window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("mousemove", handlePointerMove);
