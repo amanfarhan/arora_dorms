@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import MotionCoordinator from "@/components/effects/MotionCoordinator";
 import EnergyParticleCursor from "@/components/effects/EnergyParticleCursor";
 import CinematicEnergyBackground from "@/components/effects/CinematicEnergyBackground";
+import CinematicDarkOverlay from "@/components/effects/CinematicDarkOverlay";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -52,6 +53,7 @@ export default function RootLayout({
       </head>
       <body className="bg-[#030509] text-slate-100 antialiased selection:bg-purple-600 selection:text-white relative">
         <CinematicEnergyBackground />
+        <CinematicDarkOverlay />
         <MotionCoordinator />
         <EnergyParticleCursor />
         <Header />

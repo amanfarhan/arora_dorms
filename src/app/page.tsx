@@ -132,400 +132,405 @@ export default function HomePage() {
 
         {/*  BEGIN: ExperiencesSection  */}
         <section
-          className="py-24 relative bg-[#05070B] overflow-hidden"
+          className="py-16 sm:py-24 relative overflow-hidden"
           data-purpose="experiences-carousel"
           id="experiences"
         >
-          <div className="max-w-7xl mx-auto px-6">
-            {/*  Header Row  */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
-              <div>
-                <span className="text-xs uppercase font-medium tracking-[0.25em] text-slate-400 block mb-3">
-                  EXPERIENCES FOR EVERY WORLD
-                </span>
-                <h2 className="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight">
-                  One Dome.
-                  <br />
-                  <span className="italic font-light">Endless Possibilities.</span>
-                </h2>
-              </div>
-              <div className="flex items-center gap-6 md:max-w-sm">
-                <p className="text-sm text-slate-400 leading-relaxed">
-                  From entertainment to wellness, we create immersive environments for
-                  visionary brands and spaces.
-                </p>
-                <div className="flex items-center gap-2 shrink-0">
-                  <button
-                    onClick={() => scrollCarousel("left")}
-                    aria-label="Previous card"
-                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-slate-300 hover:text-white hover:border-indigo-400/50 hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-                  >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            {/*  Futuristic Glass Console Container (Matches Uploaded Design)  */}
+            <div className="relative rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] border border-cyan-400/35 bg-[#030714]/50 backdrop-blur-xl p-6 sm:p-10 lg:p-12 shadow-[0_0_60px_rgba(34,211,238,0.18),inset_0_1px_2px_rgba(255,255,255,0.15)] overflow-hidden">
+              {/*  Ambient Console Inner Glow Flares  */}
+              <div className="absolute -top-32 -left-32 w-96 h-96 bg-cyan-500/15 rounded-full blur-[100px] pointer-events-none" />
+              <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-purple-500/15 rounded-full blur-[100px] pointer-events-none" />
+
+              {/*  Corner Tech Accent Lines  */}
+              <div className="absolute top-0 left-12 right-12 h-[1px] bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-12 right-12 h-[1px] bg-gradient-to-r from-transparent via-purple-400/40 to-transparent pointer-events-none" />
+
+              {/*  Header Row  */}
+              <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6 relative z-10">
+                <div>
+                  <h2 className="font-editorial text-4xl sm:text-5xl lg:text-6xl font-normal text-white tracking-tight leading-[1.08]">
+                    One Dome.
+                    <br />
+                    <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-cyan-100 via-sky-200 to-indigo-200 drop-shadow-[0_0_25px_rgba(34,211,238,0.35)]">
+                      Endless Possibilities.
+                    </span>
+                  </h2>
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:max-w-md">
+                  <div className="space-y-2">
+                    <div className="w-8 h-[1.5px] bg-cyan-400/70" />
+                    <p className="text-sm text-slate-300/90 leading-relaxed font-light">
+                      From entertainment to wellness, we create immersive environments for
+                      visionary brands and spaces.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 shrink-0 self-end sm:self-center">
+                    <button
+                      onClick={() => scrollCarousel("left")}
+                      aria-label="Previous card"
+                      className="w-11 h-11 rounded-full border border-cyan-400/50 bg-[#060c1d]/75 text-cyan-200 hover:bg-cyan-500 hover:text-black hover:border-cyan-300 transition-all shadow-[0_0_15px_rgba(34,211,238,0.25)] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                     >
-                      <path
-                        d="M15 19l-7-7 7-7"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                      ></path>
-                    </svg>
-                  </button>
-                  <button
-                    onClick={() => scrollCarousel("right")}
-                    aria-label="Next card"
-                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-slate-300 hover:text-white hover:border-indigo-400/50 hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-                  >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15 19l-7-7 7-7"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.8"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button
+                      onClick={() => scrollCarousel("right")}
+                      aria-label="Next card"
+                      className="w-11 h-11 rounded-full border border-cyan-400/50 bg-[#060c1d]/75 text-cyan-200 hover:bg-cyan-500 hover:text-black hover:border-cyan-300 transition-all shadow-[0_0_15px_rgba(34,211,238,0.25)] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
                     >
-                      <path
-                        d="M9 5l7 7-7 7"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                      ></path>
-                    </svg>
-                  </button>
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M9 5l7 7-7 7"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.8"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/*  Horizontal 9 Experience Cards (Connected to Subpages)  */}
-            <div
-              ref={carouselRef}
-              className="flex gap-5 overflow-x-auto pb-4 scroll-smooth select-none no-scrollbar"
-              id="industries-carousel"
-            >
-              {/*  Card 01: Entertainment & Tourism  */}
-              <Link
-                href="/industries/entertainment-tourism"
-                className="shrink-0 w-[280px] sm:w-[310px] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.35)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between"
-                data-purpose="experience-card"
+              {/*  Horizontal 9 Experience Cards (Connected to Subpages)  */}
+              <div
+                ref={carouselRef}
+                className="flex gap-5 overflow-x-auto pb-2 scroll-smooth select-none no-scrollbar relative z-10"
+                id="industries-carousel"
               >
-                <div className="h-80 w-full overflow-hidden relative">
-                  <img
-                    alt="Entertainment & Tourism dome marine prehistoric projection"
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
-                    src="/images/entertainment_marine_dome.jpg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">
-                    01
-                  </span>
-                  <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
-                    <h3 className="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">
-                      Entertainment & Tourism
-                    </h3>
-                    <span className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                        <path
-                          d="M4 12L12 4M12 4H6M12 4V10"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.3"
-                        ></path>
-                      </svg>
+                {/*  Card 01: Entertainment & Tourism  */}
+                <Link
+                  href="/industries/entertainment-tourism"
+                  className="shrink-0 w-[280px] sm:w-[310px] rounded-[22px] overflow-hidden relative group cursor-pointer border border-cyan-400/45 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.22)] hover:shadow-[0_0_38px_rgba(34,211,238,0.5)] transition-all duration-500 hover:-translate-y-2 bg-[#02050e]/85 flex flex-col justify-between"
+                  data-purpose="experience-card"
+                >
+                  <div className="h-80 w-full overflow-hidden relative">
+                    <img
+                      alt="Entertainment & Tourism dome marine prehistoric projection"
+                      className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
+                      src="/images/entertainment_marine_dome.jpg"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/50 to-transparent z-10"></div>
+                    <span className="absolute top-4 left-4 z-20 w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-cyan-400/40 text-[11px] font-mono tracking-wider text-cyan-300 font-bold flex items-center justify-center group-hover:border-cyan-300 group-hover:text-white transition-colors duration-300">
+                      01
                     </span>
+                    <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+                      <h3 className="text-base sm:text-[17px] font-medium text-white tracking-wide group-hover:text-cyan-200 transition-colors duration-300 pr-2">
+                        Entertainment & Tourism
+                      </h3>
+                      <span className="w-9 h-9 rounded-full bg-[#061022]/85 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 group-hover:bg-cyan-400 group-hover:border-white group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_12px_rgba(34,211,238,0.25)] shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                          <path
+                            d="M4 12L12 4M12 4H6M12 4V10"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
 
-              {/*  Card 02: Events & Festivals  */}
-              <Link
-                href="/industries/events-festivals"
-                className="shrink-0 w-[280px] sm:w-[310px] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.35)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between"
-                data-purpose="experience-card"
-              >
-                <div className="h-80 w-full overflow-hidden relative">
-                  <img
-                    alt="Events & Festivals immersive geodesic dome light show"
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
-                    src="/images/img_d960facf5100.jpg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">
-                    02
-                  </span>
-                  <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
-                    <h3 className="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">
-                      Events & Festivals
-                    </h3>
-                    <span className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                        <path
-                          d="M4 12L12 4M12 4H6M12 4V10"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.3"
-                        ></path>
-                      </svg>
+                {/*  Card 02: Events & Festivals  */}
+                <Link
+                  href="/industries/events-festivals"
+                  className="shrink-0 w-[280px] sm:w-[310px] rounded-[22px] overflow-hidden relative group cursor-pointer border border-cyan-400/45 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.22)] hover:shadow-[0_0_38px_rgba(34,211,238,0.5)] transition-all duration-500 hover:-translate-y-2 bg-[#02050e]/85 flex flex-col justify-between"
+                  data-purpose="experience-card"
+                >
+                  <div className="h-80 w-full overflow-hidden relative">
+                    <img
+                      alt="Events & Festivals immersive geodesic dome light show"
+                      className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
+                      src="/images/img_d960facf5100.jpg"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/50 to-transparent z-10"></div>
+                    <span className="absolute top-4 left-4 z-20 w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-cyan-400/40 text-[11px] font-mono tracking-wider text-cyan-300 font-bold flex items-center justify-center group-hover:border-cyan-300 group-hover:text-white transition-colors duration-300">
+                      02
                     </span>
+                    <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+                      <h3 className="text-base sm:text-[17px] font-medium text-white tracking-wide group-hover:text-cyan-200 transition-colors duration-300 pr-2">
+                        Events & Festivals
+                      </h3>
+                      <span className="w-9 h-9 rounded-full bg-[#061022]/85 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 group-hover:bg-cyan-400 group-hover:border-white group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_12px_rgba(34,211,238,0.25)] shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                          <path
+                            d="M4 12L12 4M12 4H6M12 4V10"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
 
-              {/*  Card 03: Hospitality & Immersive Dining  */}
-              <Link
-                href="/industries/hospitality-dining"
-                className="shrink-0 w-[280px] sm:w-[310px] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.35)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between"
-                data-purpose="experience-card"
-              >
-                <div className="h-80 w-full overflow-hidden relative">
-                  <img
-                    alt="Hospitality & Immersive Dining luxury banquet underwater dome"
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
-                    src="/images/dining_immersive_dome.jpg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">
-                    03
-                  </span>
-                  <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
-                    <h3 className="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">
-                      Hospitality & Immersive Dining
-                    </h3>
-                    <span className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                        <path
-                          d="M4 12L12 4M12 4H6M12 4V10"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.3"
-                        ></path>
-                      </svg>
+                {/*  Card 03: Hospitality & Immersive Dining  */}
+                <Link
+                  href="/industries/hospitality-dining"
+                  className="shrink-0 w-[280px] sm:w-[310px] rounded-[22px] overflow-hidden relative group cursor-pointer border border-cyan-400/45 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.22)] hover:shadow-[0_0_38px_rgba(34,211,238,0.5)] transition-all duration-500 hover:-translate-y-2 bg-[#02050e]/85 flex flex-col justify-between"
+                  data-purpose="experience-card"
+                >
+                  <div className="h-80 w-full overflow-hidden relative">
+                    <img
+                      alt="Hospitality & Immersive Dining luxury banquet underwater dome"
+                      className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
+                      src="/images/dining_immersive_dome.jpg"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/50 to-transparent z-10"></div>
+                    <span className="absolute top-4 left-4 z-20 w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-cyan-400/40 text-[11px] font-mono tracking-wider text-cyan-300 font-bold flex items-center justify-center group-hover:border-cyan-300 group-hover:text-white transition-colors duration-300">
+                      03
                     </span>
+                    <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+                      <h3 className="text-base sm:text-[17px] font-medium text-white tracking-wide group-hover:text-cyan-200 transition-colors duration-300 pr-2">
+                        Hospitality & Immersive Dining
+                      </h3>
+                      <span className="w-9 h-9 rounded-full bg-[#061022]/85 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 group-hover:bg-cyan-400 group-hover:border-white group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_12px_rgba(34,211,238,0.25)] shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                          <path
+                            d="M4 12L12 4M12 4H6M12 4V10"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
 
-              {/*  Card 04: Health & Wellness  */}
-              <Link
-                href="/industries/health-wellness"
-                className="shrink-0 w-[280px] sm:w-[310px] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.35)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between"
-                data-purpose="experience-card"
-              >
-                <div className="h-80 w-full overflow-hidden relative">
-                  <img
-                    alt="Health & Wellness dome meditation under pastel aurora"
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
-                    src="/images/img_587e11b92207.jpg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">
-                    04
-                  </span>
-                  <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
-                    <h3 className="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">
-                      Health & Wellness
-                    </h3>
-                    <span className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                        <path
-                          d="M4 12L12 4M12 4H6M12 4V10"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.3"
-                        ></path>
-                      </svg>
+                {/*  Card 04: Health & Wellness  */}
+                <Link
+                  href="/industries/health-wellness"
+                  className="shrink-0 w-[280px] sm:w-[310px] rounded-[22px] overflow-hidden relative group cursor-pointer border border-cyan-400/45 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.22)] hover:shadow-[0_0_38px_rgba(34,211,238,0.5)] transition-all duration-500 hover:-translate-y-2 bg-[#02050e]/85 flex flex-col justify-between"
+                  data-purpose="experience-card"
+                >
+                  <div className="h-80 w-full overflow-hidden relative">
+                    <img
+                      alt="Health & Wellness dome meditation under pastel aurora"
+                      className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
+                      src="/images/img_587e11b92207.jpg"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/50 to-transparent z-10"></div>
+                    <span className="absolute top-4 left-4 z-20 w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-cyan-400/40 text-[11px] font-mono tracking-wider text-cyan-300 font-bold flex items-center justify-center group-hover:border-cyan-300 group-hover:text-white transition-colors duration-300">
+                      04
                     </span>
+                    <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+                      <h3 className="text-base sm:text-[17px] font-medium text-white tracking-wide group-hover:text-cyan-200 transition-colors duration-300 pr-2">
+                        Health & Wellness
+                      </h3>
+                      <span className="w-9 h-9 rounded-full bg-[#061022]/85 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 group-hover:bg-cyan-400 group-hover:border-white group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_12px_rgba(34,211,238,0.25)] shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                          <path
+                            d="M4 12L12 4M12 4H6M12 4V10"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
 
-              {/*  Card 05: Music, Nightlife & Concerts  */}
-              <Link
-                href="/industries/music-nightlife"
-                className="shrink-0 w-[280px] sm:w-[310px] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.35)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between"
-                data-purpose="experience-card"
-              >
-                <div className="h-80 w-full overflow-hidden relative">
-                  <img
-                    alt="Music, Nightlife & Concerts crowd under laser geodesic dome"
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
-                    src="/images/img_68755b9ccc06.jpg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">
-                    05
-                  </span>
-                  <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
-                    <h3 className="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">
-                      Music, Nightlife & Concerts
-                    </h3>
-                    <span className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                        <path
-                          d="M4 12L12 4M12 4H6M12 4V10"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.3"
-                        ></path>
-                      </svg>
+                {/*  Card 05: Music, Nightlife & Concerts  */}
+                <Link
+                  href="/industries/music-nightlife"
+                  className="shrink-0 w-[280px] sm:w-[310px] rounded-[22px] overflow-hidden relative group cursor-pointer border border-cyan-400/45 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.22)] hover:shadow-[0_0_38px_rgba(34,211,238,0.5)] transition-all duration-500 hover:-translate-y-2 bg-[#02050e]/85 flex flex-col justify-between"
+                  data-purpose="experience-card"
+                >
+                  <div className="h-80 w-full overflow-hidden relative">
+                    <img
+                      alt="Music, Nightlife & Concerts crowd under laser geodesic dome"
+                      className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
+                      src="/images/img_68755b9ccc06.jpg"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/50 to-transparent z-10"></div>
+                    <span className="absolute top-4 left-4 z-20 w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-cyan-400/40 text-[11px] font-mono tracking-wider text-cyan-300 font-bold flex items-center justify-center group-hover:border-cyan-300 group-hover:text-white transition-colors duration-300">
+                      05
                     </span>
+                    <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+                      <h3 className="text-base sm:text-[17px] font-medium text-white tracking-wide group-hover:text-cyan-200 transition-colors duration-300 pr-2">
+                        Music, Nightlife & Concerts
+                      </h3>
+                      <span className="w-9 h-9 rounded-full bg-[#061022]/85 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 group-hover:bg-cyan-400 group-hover:border-white group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_12px_rgba(34,211,238,0.25)] shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                          <path
+                            d="M4 12L12 4M12 4H6M12 4V10"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
 
-              {/*  Card 06: Museums & Cultural Institutions  */}
-              <Link
-                href="/industries/museums-cultural"
-                className="shrink-0 w-[280px] sm:w-[310px] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.35)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between"
-                data-purpose="experience-card"
-              >
-                <div className="h-80 w-full overflow-hidden relative">
-                  <img
-                    alt="Museums & Cultural Institutions visitor gazing at Earth projection"
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
-                    src="/images/img_a014896c7567.jpg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">
-                    06
-                  </span>
-                  <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
-                    <h3 className="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">
-                      Museums & Cultural
-                    </h3>
-                    <span className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                        <path
-                          d="M4 12L12 4M12 4H6M12 4V10"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.3"
-                        ></path>
-                      </svg>
+                {/*  Card 06: Museums & Cultural Institutions  */}
+                <Link
+                  href="/industries/museums-cultural"
+                  className="shrink-0 w-[280px] sm:w-[310px] rounded-[22px] overflow-hidden relative group cursor-pointer border border-cyan-400/45 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.22)] hover:shadow-[0_0_38px_rgba(34,211,238,0.5)] transition-all duration-500 hover:-translate-y-2 bg-[#02050e]/85 flex flex-col justify-between"
+                  data-purpose="experience-card"
+                >
+                  <div className="h-80 w-full overflow-hidden relative">
+                    <img
+                      alt="Museums & Cultural Institutions visitor gazing at Earth projection"
+                      className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
+                      src="/images/img_a014896c7567.jpg"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/50 to-transparent z-10"></div>
+                    <span className="absolute top-4 left-4 z-20 w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-cyan-400/40 text-[11px] font-mono tracking-wider text-cyan-300 font-bold flex items-center justify-center group-hover:border-cyan-300 group-hover:text-white transition-colors duration-300">
+                      06
                     </span>
+                    <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+                      <h3 className="text-base sm:text-[17px] font-medium text-white tracking-wide group-hover:text-cyan-200 transition-colors duration-300 pr-2">
+                        Museums & Cultural
+                      </h3>
+                      <span className="w-9 h-9 rounded-full bg-[#061022]/85 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 group-hover:bg-cyan-400 group-hover:border-white group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_12px_rgba(34,211,238,0.25)] shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                          <path
+                            d="M4 12L12 4M12 4H6M12 4V10"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
 
-              {/*  Card 07: Corporate, Retail & Brand  */}
-              <Link
-                href="/industries/corporate-brand"
-                className="shrink-0 w-[280px] sm:w-[310px] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.35)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between"
-                data-purpose="experience-card"
-              >
-                <div className="h-80 w-full overflow-hidden relative">
-                  <img
-                    alt="Corporate, Retail & Brand launch luxury vehicle presentation"
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
-                    src="/images/img_4363e2c4a2dd.jpg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">
-                    07
-                  </span>
-                  <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
-                    <h3 className="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">
-                      Corporate & Brand
-                    </h3>
-                    <span className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                        <path
-                          d="M4 12L12 4M12 4H6M12 4V10"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.3"
-                        ></path>
-                      </svg>
+                {/*  Card 07: Corporate, Retail & Brand  */}
+                <Link
+                  href="/industries/corporate-brand"
+                  className="shrink-0 w-[280px] sm:w-[310px] rounded-[22px] overflow-hidden relative group cursor-pointer border border-cyan-400/45 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.22)] hover:shadow-[0_0_38px_rgba(34,211,238,0.5)] transition-all duration-500 hover:-translate-y-2 bg-[#02050e]/85 flex flex-col justify-between"
+                  data-purpose="experience-card"
+                >
+                  <div className="h-80 w-full overflow-hidden relative">
+                    <img
+                      alt="Corporate, Retail & Brand launch luxury vehicle presentation"
+                      className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
+                      src="/images/img_4363e2c4a2dd.jpg"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/50 to-transparent z-10"></div>
+                    <span className="absolute top-4 left-4 z-20 w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-cyan-400/40 text-[11px] font-mono tracking-wider text-cyan-300 font-bold flex items-center justify-center group-hover:border-cyan-300 group-hover:text-white transition-colors duration-300">
+                      07
                     </span>
+                    <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+                      <h3 className="text-base sm:text-[17px] font-medium text-white tracking-wide group-hover:text-cyan-200 transition-colors duration-300 pr-2">
+                        Corporate & Brand
+                      </h3>
+                      <span className="w-9 h-9 rounded-full bg-[#061022]/85 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 group-hover:bg-cyan-400 group-hover:border-white group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_12px_rgba(34,211,238,0.25)] shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                          <path
+                            d="M4 12L12 4M12 4H6M12 4V10"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
 
-              {/*  Card 08: Education & Planetariums  */}
-              <Link
-                href="/industries/education-planetariums"
-                className="shrink-0 w-[280px] sm:w-[310px] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.35)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between"
-                data-purpose="experience-card"
-              >
-                <div className="h-80 w-full overflow-hidden relative">
-                  <img
-                    alt="Education & Planetariums planetary orbit cosmic nebulae projection"
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
-                    src="/images/education_planetarium_saturn.jpg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">
-                    08
-                  </span>
-                  <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
-                    <h3 className="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">
-                      Education & Planetariums
-                    </h3>
-                    <span className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                        <path
-                          d="M4 12L12 4M12 4H6M12 4V10"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.3"
-                        ></path>
-                      </svg>
+                {/*  Card 08: Education & Planetariums  */}
+                <Link
+                  href="/industries/education-planetariums"
+                  className="shrink-0 w-[280px] sm:w-[310px] rounded-[22px] overflow-hidden relative group cursor-pointer border border-cyan-400/45 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.22)] hover:shadow-[0_0_38px_rgba(34,211,238,0.5)] transition-all duration-500 hover:-translate-y-2 bg-[#02050e]/85 flex flex-col justify-between"
+                  data-purpose="experience-card"
+                >
+                  <div className="h-80 w-full overflow-hidden relative">
+                    <img
+                      alt="Education & Planetariums planetary orbit cosmic nebulae projection"
+                      className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
+                      src="/images/education_planetarium_saturn.jpg"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/50 to-transparent z-10"></div>
+                    <span className="absolute top-4 left-4 z-20 w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-cyan-400/40 text-[11px] font-mono tracking-wider text-cyan-300 font-bold flex items-center justify-center group-hover:border-cyan-300 group-hover:text-white transition-colors duration-300">
+                      08
                     </span>
+                    <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+                      <h3 className="text-base sm:text-[17px] font-medium text-white tracking-wide group-hover:text-cyan-200 transition-colors duration-300 pr-2">
+                        Education & Planetariums
+                      </h3>
+                      <span className="w-9 h-9 rounded-full bg-[#061022]/85 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 group-hover:bg-cyan-400 group-hover:border-white group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_12px_rgba(34,211,238,0.25)] shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                          <path
+                            d="M4 12L12 4M12 4H6M12 4V10"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
 
-              {/*  Card 09: Private Events & Weddings  */}
-              <Link
-                href="/industries/private-events-weddings"
-                className="shrink-0 w-[280px] sm:w-[310px] rounded-2xl overflow-hidden relative group cursor-pointer border border-white/10 hover:border-indigo-400/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_-12px_rgba(99,102,241,0.35)] bg-gradient-to-b from-white/[0.04] to-black/60 backdrop-blur-sm flex flex-col justify-between"
-                data-purpose="experience-card"
-              >
-                <div className="h-80 w-full overflow-hidden relative">
-                  <img
-                    alt="Private Events & Weddings reception under starry geodesic dome"
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
-                    src="/images/img_c3f91d27aa2c.jpg"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070B] via-[#05070B]/40 to-transparent z-10"></div>
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-500/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                  <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-indigo-300 font-semibold group-hover:border-indigo-400/60 group-hover:text-white transition-colors duration-300">
-                    09
-                  </span>
-                  <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
-                    <h3 className="text-base font-medium text-white tracking-wide group-hover:text-indigo-200 transition-colors duration-300 pr-2">
-                      Private Events & Weddings
-                    </h3>
-                    <span className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/80 group-hover:bg-indigo-600 group-hover:border-indigo-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-sm shrink-0">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16">
-                        <path
-                          d="M4 12L12 4M12 4H6M12 4V10"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.3"
-                        ></path>
-                      </svg>
+                {/*  Card 09: Private Events & Weddings  */}
+                <Link
+                  href="/industries/private-events-weddings"
+                  className="shrink-0 w-[280px] sm:w-[310px] rounded-[22px] overflow-hidden relative group cursor-pointer border border-cyan-400/45 hover:border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.22)] hover:shadow-[0_0_38px_rgba(34,211,238,0.5)] transition-all duration-500 hover:-translate-y-2 bg-[#02050e]/85 flex flex-col justify-between"
+                  data-purpose="experience-card"
+                >
+                  <div className="h-80 w-full overflow-hidden relative">
+                    <img
+                      alt="Private Events & Weddings reception under starry geodesic dome"
+                      className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-transform duration-700 ease-out"
+                      src="/images/img_c3f91d27aa2c.jpg"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/50 to-transparent z-10"></div>
+                    <span className="absolute top-4 left-4 z-20 w-8 h-8 rounded-full bg-black/75 backdrop-blur-md border border-cyan-400/40 text-[11px] font-mono tracking-wider text-cyan-300 font-bold flex items-center justify-center group-hover:border-cyan-300 group-hover:text-white transition-colors duration-300">
+                      09
                     </span>
+                    <div className="absolute bottom-0 inset-x-0 p-5 z-20 flex items-end justify-between">
+                      <h3 className="text-base sm:text-[17px] font-medium text-white tracking-wide group-hover:text-cyan-200 transition-colors duration-300 pr-2">
+                        Private Events & Weddings
+                      </h3>
+                      <span className="w-9 h-9 rounded-full bg-[#061022]/85 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-300 group-hover:bg-cyan-400 group-hover:border-white group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_12px_rgba(34,211,238,0.25)] shrink-0">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+                          <path
+                            d="M4 12L12 4M12 4H6M12 4V10"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
