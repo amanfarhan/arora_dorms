@@ -8,8 +8,6 @@ import { Menu, X, ArrowRight } from "lucide-react";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
-  const [industriesOpen, setIndustriesOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -23,8 +21,6 @@ export default function Header() {
   // Close menus on path change
   useEffect(() => {
     setMobileMenuOpen(false);
-    setSolutionsOpen(false);
-    setIndustriesOpen(false);
   }, [pathname]);
 
   const solutionLinks = [
@@ -124,35 +120,16 @@ export default function Header() {
             About
           </Link>
 
-          {/* Solutions Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setSolutionsOpen(true)}
-            onMouseLeave={() => setSolutionsOpen(false)}
+          <Link
+            href="/solutions"
+            className={`hover:text-white transition-colors duration-200 ${
+              pathname === "/solutions" || (pathname.startsWith("/solutions") && pathname !== "/solutions/immersive-content")
+                ? "text-white font-medium"
+                : ""
+            }`}
           >
-            <Link
-              href="/solutions"
-              className={`hover:text-white transition-colors duration-200 py-2 ${
-                pathname.startsWith("/solutions") ? "text-white font-medium" : ""
-              }`}
-            >
-              Solutions
-            </Link>
-
-            {solutionsOpen && (
-              <div className="absolute top-full left-0 w-64 bg-[#090D14]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-2.5 flex flex-col gap-1 z-50">
-                {solutionLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="px-3 py-2 text-xs text-slate-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-150"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+            Solutions
+          </Link>
 
           <Link
             href="/solutions/immersive-content"
@@ -163,35 +140,14 @@ export default function Header() {
             Content
           </Link>
 
-          {/* Industries Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIndustriesOpen(true)}
-            onMouseLeave={() => setIndustriesOpen(false)}
+          <Link
+            href="/industries"
+            className={`hover:text-white transition-colors duration-200 ${
+              pathname.startsWith("/industries") ? "text-white font-medium" : ""
+            }`}
           >
-            <Link
-              href="/industries"
-              className={`hover:text-white transition-colors duration-200 py-2 ${
-                pathname.startsWith("/industries") ? "text-white font-medium" : ""
-              }`}
-            >
-              Industries
-            </Link>
-
-            {industriesOpen && (
-              <div className="absolute top-full -left-12 w-72 bg-[#090D14]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-2.5 flex flex-col gap-1 z-50">
-                {industryLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="px-3 py-1.5 text-xs text-slate-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors duration-150"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+            Industries
+          </Link>
 
           <Link
             href="/technology-dome-systems"
