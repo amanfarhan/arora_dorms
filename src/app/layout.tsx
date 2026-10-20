@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans, Cormorant_Garamond, Playfair_Display } from "next/fo
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MotionCoordinator from "@/components/effects/MotionCoordinator";
-import EnergyParticleCursor from "@/components/effects/EnergyParticleCursor";
+import EnergyCometCursor from "@/components/effects/EnergyCometCursor";
 import CinematicEnergyBackground from "@/components/effects/CinematicEnergyBackground";
 import CinematicDarkOverlay from "@/components/effects/CinematicDarkOverlay";
 import "./globals.css";
@@ -55,7 +55,7 @@ export default function RootLayout({
         <CinematicEnergyBackground />
         <CinematicDarkOverlay />
         <MotionCoordinator />
-        <EnergyParticleCursor />
+        <EnergyCometCursor />
         <Header />
         <div className="min-h-screen pt-20 relative z-10">{children}</div>
         <Footer />
