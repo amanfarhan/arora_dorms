@@ -306,6 +306,29 @@
   box-shadow: 0 0 38px rgba(34, 211, 238, 0.5), 0 20px 45px -12px rgba(0, 0, 0, 0.9) !important;
 }
 
+/* Footer & Grounding — Keep 100% Solid & Crisp */
+footer,
+[data-purpose="site-footer"] {
+  background: linear-gradient(180deg, #070B14 0%, #030509 100%) !important;
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+[data-purpose="call-to-action"],
+[data-purpose="cta-section"] {
+  background: linear-gradient(180deg, rgba(8, 12, 22, 0.92) 0%, rgba(4, 7, 14, 0.98) 100%) !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Nav links outline reset */
+.nav-link-aurora:focus,
+.nav-link-aurora:active,
+.nav-link-aurora:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* ==========================================================================
    LIVING ENERGY BACKGROUND PERMEABILITY & ATMOSPHERIC DEPTH
    ========================================================================== */
@@ -317,7 +340,7 @@
 .bg-\[\#090c12\],
 .bg-\[\#07090e\],
 .bg-\[\#080a0f\] {
-  background-color: transparent !important;
+  background-color: rgba(5, 7, 11, 0.55) !important;
 }
 
 /* Ensure content cards and form surfaces have solid, highly legible obsidian backgrounds */

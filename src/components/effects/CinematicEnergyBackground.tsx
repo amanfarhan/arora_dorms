@@ -12,25 +12,12 @@ interface CosmicStar {
   twinklePhase: number;
   vx: number;
   vy: number;
-  color: string;
-}
-
-interface CosmicRock {
-  x: number;
-  y: number;
-  size: number;
-  rotation: number;
-  rotSpeed: number;
-  vx: number;
-  vy: number;
-  points: { x: number; y: number }[];
-  alpha: number;
 }
 
 interface DepthParticle {
   x: number;
   y: number;
-  z: number; // 0 = distant background, 1 = midground, 2 = foreground
+  z: number;
   vx: number;
   vy: number;
   baseSize: number;
@@ -45,7 +32,6 @@ interface ElectricArc {
   segments: { x: number; y: number }[];
   life: number;
   maxLife: number;
-  isMagenta: boolean;
 }
 
 interface EnergyRipple {
@@ -91,9 +77,9 @@ export default function CinematicEnergyBackground() {
       const sCtx = sprite.getContext("2d");
       if (!sCtx) return sprite;
       const grad = sCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
-      grad.addColorStop(0, `rgba(${r}, ${g}, ${b}, 1)`);
-      grad.addColorStop(0.3, `rgba(${r}, ${g}, ${b}, 0.65)`);
-      grad.addColorStop(0.7, `rgba(${r}, ${g}, ${b}, 0.16)`);
+      grad.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.95)`);
+      grad.addColorStop(0.3, `rgba(${r}, ${g}, ${b}, 0.5)`);
+      grad.addColorStop(0.7, `rgba(${r}, ${g}, ${b}, 0.12)`);
       grad.addColorStop(1, "rgba(0, 0, 0, 0)");
       sCtx.fillStyle = grad;
       sCtx.beginPath();
@@ -141,64 +127,24 @@ export default function CinematicEnergyBackground() {
     let isTabVisible = true;
 
     // 1. Cosmic Dust & Micro-Stars (Layer 0)
-    const starCount = 55;
+    const starCount = 48;
     const stars: CosmicStar[] = [];
-    const starColorChoices = [
-      "rgba(255, 255, 255, ",
-      "rgba(186, 230, 253, ", // Cyan tint
-      "rgba(233, 213, 255, ", // Violet tint
-    ];
 
     for (let i = 0; i < starCount; i++) {
       stars.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        size: Math.random() * 1.5 + 0.6,
-        baseAlpha: Math.random() * 0.5 + 0.25,
-        twinkleSpeed: Math.random() * 0.03 + 0.015,
+        size: Math.random() * 1.3 + 0.5,
+        baseAlpha: Math.random() * 0.4 + 0.2,
+        twinkleSpeed: Math.random() * 0.025 + 0.015,
         twinklePhase: Math.random() * Math.PI * 2,
-        vx: (Math.random() - 0.5) * 0.08,
-        vy: -Math.random() * 0.1 - 0.02,
-        color: starColorChoices[Math.floor(Math.random() * starColorChoices.length)],
+        vx: (Math.random() - 0.5) * 0.06,
+        vy: -Math.random() * 0.08 - 0.02,
       });
     }
 
-    // 2. Floating Cosmic Rock / Asteroid Fragments (Edges)
-    const rockCount = 14;
-    const rocks: CosmicRock[] = [];
-    for (let i = 0; i < rockCount; i++) {
-      const isLeft = Math.random() < 0.5;
-      const rockX = isLeft
-        ? Math.random() * (width * 0.22)
-        : width - Math.random() * (width * 0.22);
-      const size = Math.random() * 22 + 10;
-      const numPoints = Math.floor(Math.random() * 3 + 5);
-      const points: { x: number; y: number }[] = [];
-
-      for (let p = 0; p < numPoints; p++) {
-        const angle = (p / numPoints) * Math.PI * 2;
-        const radiusDistort = size * (0.7 + Math.random() * 0.5);
-        points.push({
-          x: Math.cos(angle) * radiusDistort,
-          y: Math.sin(angle) * radiusDistort,
-        });
-      }
-
-      rocks.push({
-        x: rockX,
-        y: Math.random() * height,
-        size,
-        rotation: Math.random() * Math.PI * 2,
-        rotSpeed: (Math.random() - 0.5) * 0.008,
-        vx: (Math.random() - 0.5) * 0.12,
-        vy: -Math.random() * 0.18 - 0.04,
-        points,
-        alpha: Math.random() * 0.35 + 0.25,
-      });
-    }
-
-    // 3. Multi-Depth Floating Particles (Layer 3)
-    const particleCount = Math.min(Math.floor((width * height) / 26000), 50);
+    // 2. Multi-Depth Floating Particles (Layer 2)
+    const particleCount = Math.min(Math.floor((width * height) / 32000), 38);
     const particles: DepthParticle[] = [];
 
     const colorPalette = [
@@ -210,15 +156,15 @@ export default function CinematicEnergyBackground() {
     ];
 
     for (let i = 0; i < particleCount; i++) {
-      const z = Math.random() < 0.35 ? 0 : Math.random() < 0.7 ? 1 : 2;
+      const z = Math.random() < 0.4 ? 0 : Math.random() < 0.75 ? 1 : 2;
       const baseSize =
         z === 0
-          ? Math.random() * 1.6 + 1.1
+          ? Math.random() * 1.4 + 0.9
           : z === 1
-          ? Math.random() * 2.4 + 1.9
-          : Math.random() * 3.4 + 2.6;
+          ? Math.random() * 2.0 + 1.5
+          : Math.random() * 2.8 + 2.2;
 
-      const speed = z === 0 ? 0.2 : z === 1 ? 0.42 : 0.68;
+      const speed = z === 0 ? 0.18 : z === 1 ? 0.35 : 0.55;
       const spriteIndex = Math.floor(Math.random() * sprites.length);
       const color = colorPalette[spriteIndex];
 
@@ -226,21 +172,21 @@ export default function CinematicEnergyBackground() {
         x: Math.random() * width,
         y: Math.random() * height,
         z,
-        vx: (Math.random() - 0.5) * speed * 0.8,
-        vy: -Math.random() * speed - 0.15,
+        vx: (Math.random() - 0.5) * speed * 0.6,
+        vy: -Math.random() * speed - 0.12,
         baseSize,
-        alpha: z === 0 ? 0.6 : z === 1 ? 0.82 : 0.96,
-        pulseSpeed: Math.random() * 0.03 + 0.02,
+        alpha: z === 0 ? 0.45 : z === 1 ? 0.65 : 0.85,
+        pulseSpeed: Math.random() * 0.025 + 0.015,
         pulsePhase: Math.random() * Math.PI * 2,
         spriteIndex,
         color,
       });
     }
 
-    // 4. Interactive ripples & electric micro-arcs
+    // 3. Interactive ripples & electric micro-arcs
     const ripples: EnergyRipple[] = [];
     const arcs: ElectricArc[] = [];
-    let nextArcCountdown = Math.floor(Math.random() * 70 + 40);
+    let nextArcCountdown = Math.floor(Math.random() * 90 + 60);
 
     const createElectricArc = () => {
       if (particles.length < 2) return;
@@ -252,7 +198,7 @@ export default function CinematicEnergyBackground() {
         const c2 = particles[Math.floor(Math.random() * particles.length)];
         if (c1 !== c2) {
           const dist = Math.hypot(c1.x - c2.x, c1.y - c2.y);
-          if (dist > 50 && dist < 260) {
+          if (dist > 60 && dist < 220) {
             p1 = c1;
             p2 = c2;
             break;
@@ -263,14 +209,14 @@ export default function CinematicEnergyBackground() {
       if (!p1 || !p2) return;
 
       const segments: { x: number; y: number }[] = [];
-      const numSegments = 6;
+      const numSegments = 5;
       const dx = (p2.x - p1.x) / numSegments;
       const dy = (p2.y - p1.y) / numSegments;
 
       segments.push({ x: p1.x, y: p1.y });
       for (let s = 1; s < numSegments; s++) {
-        const perpX = -dy * (Math.random() - 0.5) * 0.85;
-        const perpY = dx * (Math.random() - 0.5) * 0.85;
+        const perpX = -dy * (Math.random() - 0.5) * 0.7;
+        const perpY = dx * (Math.random() - 0.5) * 0.7;
         segments.push({
           x: p1.x + dx * s + perpX,
           y: p1.y + dy * s + perpY,
@@ -281,8 +227,7 @@ export default function CinematicEnergyBackground() {
       arcs.push({
         segments,
         life: 0,
-        maxLife: Math.floor(Math.random() * 5 + 4),
-        isMagenta: Math.random() < 0.38,
+        maxLife: Math.floor(Math.random() * 4 + 3),
       });
     };
 
@@ -295,12 +240,11 @@ export default function CinematicEnergyBackground() {
       ripples.push({
         x: e.clientX,
         y: e.clientY,
-        radius: 8,
-        maxRadius: Math.min(width, height) * 0.38,
-        alpha: 0.95,
-        speed: 5.5,
+        radius: 6,
+        maxRadius: Math.min(width, height) * 0.32,
+        alpha: 0.8,
+        speed: 4.8,
       });
-      createElectricArc();
     };
 
     const handleVisibilityChange = () => {
@@ -316,11 +260,6 @@ export default function CinematicEnergyBackground() {
 
     let time = 0;
 
-    // Detect page context for adaptive cosmic tuning
-    const isSolutions = pathname?.includes("solutions") || pathname?.includes("technology");
-    const isImmersive = pathname?.includes("immersive-content");
-    const isIndustries = pathname?.includes("industries");
-
     const render = () => {
       if (!isTabVisible) {
         animId = null;
@@ -330,8 +269,8 @@ export default function CinematicEnergyBackground() {
       time += 0.016;
 
       // Pointer physics interpolation
-      mouseX += (targetMouseX - mouseX) * 0.1;
-      mouseY += (targetMouseY - mouseY) * 0.1;
+      mouseX += (targetMouseX - mouseX) * 0.08;
+      mouseY += (targetMouseY - mouseY) * 0.08;
 
       mouseVelocity = Math.hypot(targetMouseX - prevMouseX, targetMouseY - prevMouseY);
       prevMouseX = targetMouseX;
@@ -356,7 +295,7 @@ export default function CinematicEnergyBackground() {
         if (star.x < -5) star.x = width + 5;
         if (star.x > width + 5) star.x = -5;
 
-        ctx.fillStyle = `${star.color}${starAlpha})`;
+        ctx.fillStyle = `rgba(224, 231, 255, ${starAlpha})`;
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
         ctx.fill();
@@ -364,152 +303,43 @@ export default function CinematicEnergyBackground() {
       ctx.restore();
 
       // =========================================================================
-      // 0.5 LAYER 0.5: Floating Cosmic Rock Fragments (At Left & Right Margins)
-      // =========================================================================
-      ctx.save();
-      for (let r = 0; r < rocks.length; r++) {
-        const rock = rocks[r];
-        rock.rotation += rock.rotSpeed;
-        rock.x += rock.vx;
-        rock.y += rock.vy;
-
-        if (rock.y < -40) rock.y = height + 40;
-        if (rock.x < -40) rock.x = width + 40;
-        if (rock.x > width + 40) rock.x = -40;
-
-        ctx.save();
-        ctx.translate(rock.x, rock.y);
-        ctx.rotate(rock.rotation);
-
-        ctx.beginPath();
-        ctx.moveTo(rock.points[0].x, rock.points[0].y);
-        for (let p = 1; p < rock.points.length; p++) {
-          ctx.lineTo(rock.points[p].x, rock.points[p].y);
-        }
-        ctx.closePath();
-
-        // Dark silhouette with faint rim highlight
-        ctx.fillStyle = `rgba(15, 23, 42, ${rock.alpha})`;
-        ctx.fill();
-
-        ctx.strokeStyle = `rgba(147, 197, 253, ${rock.alpha * 0.45})`;
-        ctx.lineWidth = 1.2;
-        ctx.stroke();
-
-        ctx.restore();
-      }
-      ctx.restore();
-
-      // =========================================================================
-      // 1. LAYER 1: Celestial Cosmic Sphere / Luminous Planet Dome Horizon
-      // =========================================================================
-      const planetX = width * 0.5;
-      const planetY = height * 0.32;
-      const planetR = Math.max(width * 0.44, 380);
-
-      ctx.save();
-      // Outer Atmospheric Rim Glow
-      ctx.globalCompositeOperation = "screen";
-      const gAtmosphere = ctx.createRadialGradient(
-        planetX,
-        planetY,
-        planetR * 0.92,
-        planetX,
-        planetY,
-        planetR * 1.15
-      );
-      gAtmosphere.addColorStop(0, "rgba(34, 211, 238, 0.42)");
-      gAtmosphere.addColorStop(0.35, "rgba(96, 165, 250, 0.28)");
-      gAtmosphere.addColorStop(0.7, "rgba(192, 132, 252, 0.12)");
-      gAtmosphere.addColorStop(1, "rgba(2, 4, 10, 0)");
-
-      ctx.fillStyle = gAtmosphere;
-      ctx.beginPath();
-      ctx.arc(planetX, planetY, planetR * 1.15, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Planet Horizon Surface Gradient
-      ctx.globalCompositeOperation = "source-over";
-      const gSphere = ctx.createRadialGradient(
-        planetX,
-        planetY - planetR * 0.5,
-        planetR * 0.05,
-        planetX,
-        planetY,
-        planetR
-      );
-      gSphere.addColorStop(0, "rgba(8, 16, 36, 0.92)");
-      gSphere.addColorStop(0.55, "rgba(4, 9, 22, 0.96)");
-      gSphere.addColorStop(0.88, "rgba(2, 5, 12, 0.98)");
-      gSphere.addColorStop(1, "rgba(2, 4, 10, 1)");
-
-      ctx.fillStyle = gSphere;
-      ctx.beginPath();
-      ctx.arc(planetX, planetY, planetR, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Planet Horizon Sharp Edge Rim Light
-      ctx.globalCompositeOperation = "screen";
-      ctx.strokeStyle = "rgba(34, 211, 238, 0.65)";
-      ctx.lineWidth = 2.4;
-      ctx.beginPath();
-      ctx.arc(planetX, planetY, planetR, Math.PI * 0.85, Math.PI * 2.15);
-      ctx.stroke();
-
-      // Secondary Violet Glow Arc on Horizon
-      ctx.strokeStyle = "rgba(192, 132, 252, 0.35)";
-      ctx.lineWidth = 6.0;
-      ctx.beginPath();
-      ctx.arc(planetX, planetY, planetR, Math.PI * 0.9, Math.PI * 2.1);
-      ctx.stroke();
-
-      ctx.restore();
-
-      // =========================================================================
-      // 1.5 LAYER 1.5: Volumetric Atmospheric Nebula Blooms
+      // 1. LAYER 1: Volumetric Atmospheric Nebula Blooms (Soft Screen Blends)
       // =========================================================================
       ctx.globalCompositeOperation = "screen";
 
-      // Bloom 1: Neon Cyan & Electric Blue (Upper Left Drift)
-      const b1X = width * 0.22 + Math.sin(time * 0.32) * 110;
-      const b1Y = height * 0.28 + Math.cos(time * 0.28) * 85;
-      const b1R = Math.min(width, height) * (isSolutions ? 0.58 : 0.52);
+      // Bloom 1: Cyan-Blue Nebula (Upper Left / Center-Left)
+      const b1X = width * 0.25 + Math.sin(time * 0.25) * 80;
+      const b1Y = height * 0.28 + Math.cos(time * 0.22) * 60;
+      const b1R = Math.min(width, height) * 0.55;
       const g1 = ctx.createRadialGradient(b1X, b1Y, 0, b1X, b1Y, b1R);
-      g1.addColorStop(0, isSolutions ? "rgba(34, 211, 238, 0.42)" : "rgba(34, 211, 238, 0.35)");
-      g1.addColorStop(0.45, "rgba(59, 130, 246, 0.2)");
+      g1.addColorStop(0, "rgba(34, 211, 238, 0.22)");
+      g1.addColorStop(0.4, "rgba(59, 130, 246, 0.12)");
       g1.addColorStop(1, "rgba(2, 4, 8, 0)");
       ctx.fillStyle = g1;
       ctx.beginPath();
       ctx.arc(b1X, b1Y, b1R, 0, Math.PI * 2);
       ctx.fill();
 
-      // Bloom 2: Aurora Violet & Restrained Magenta (Right Drift)
-      const b2X = width * 0.78 + Math.cos(time * 0.3) * 130;
-      const b2Y = height * 0.52 + Math.sin(time * 0.35) * 95;
-      const b2R = Math.min(width, height) * (isImmersive ? 0.6 : 0.5);
+      // Bloom 2: Aurora Violet & Magenta Nebula (Center-Right / Lower-Right)
+      const b2X = width * 0.76 + Math.cos(time * 0.24) * 90;
+      const b2Y = height * 0.52 + Math.sin(time * 0.28) * 70;
+      const b2R = Math.min(width, height) * 0.52;
       const g2 = ctx.createRadialGradient(b2X, b2Y, 0, b2X, b2Y, b2R);
-      g2.addColorStop(
-        0,
-        isImmersive
-          ? "rgba(232, 121, 249, 0.38)"
-          : isIndustries
-          ? "rgba(168, 85, 247, 0.35)"
-          : "rgba(192, 132, 252, 0.32)"
-      );
-      g2.addColorStop(0.48, "rgba(147, 51, 234, 0.18)");
-      g2.addColorStop(0.78, "rgba(99, 102, 241, 0.09)");
+      g2.addColorStop(0, "rgba(192, 132, 252, 0.2)");
+      g2.addColorStop(0.35, "rgba(232, 121, 249, 0.1)");
+      g2.addColorStop(0.7, "rgba(99, 102, 241, 0.05)");
       g2.addColorStop(1, "rgba(2, 4, 8, 0)");
       ctx.fillStyle = g2;
       ctx.beginPath();
       ctx.arc(b2X, b2Y, b2R, 0, Math.PI * 2);
       ctx.fill();
 
-      // Bloom 3: Pointer Interactive Follower Field
+      // Bloom 3: Pointer Interactive Ambient Flare
       if (mouseX > 0 && mouseY > 0) {
-        const pointerR = 290 + Math.min(mouseVelocity * 2.8, 130);
+        const pointerR = 260 + Math.min(mouseVelocity * 2.0, 90);
         const gP = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, pointerR);
-        gP.addColorStop(0, "rgba(56, 189, 248, 0.3)");
-        gP.addColorStop(0.38, "rgba(147, 51, 234, 0.15)");
+        gP.addColorStop(0, "rgba(56, 189, 248, 0.18)");
+        gP.addColorStop(0.4, "rgba(147, 51, 234, 0.08)");
         gP.addColorStop(1, "rgba(2, 4, 8, 0)");
         ctx.fillStyle = gP;
         ctx.beginPath();
@@ -518,81 +348,68 @@ export default function CinematicEnergyBackground() {
       }
 
       // =========================================================================
-      // 2. LAYER 2: Flowing Luminous Ribbons & Multi-Color Plasma Trails
+      // 2. LAYER 2: Ethereal Aurora Energy Ribbons (Soft, Translucent & Organic)
       // =========================================================================
-      ctx.globalCompositeOperation = "lighter";
-
-      // Wave Ribbon 1: Radiant Electric Blue Current
+      // Ribbon 1: Electric Blue Flow (Mid-Upper)
       ctx.beginPath();
-      const w1Y = height * 0.36;
-      const w1Amp = 58 + Math.sin(time * 0.7) * 22;
+      const w1Y = height * 0.35;
+      const w1Amp = 38 + Math.sin(time * 0.6) * 14;
       ctx.moveTo(0, w1Y);
 
-      for (let x = 0; x <= width; x += 30) {
+      for (let x = 0; x <= width; x += 40) {
         const pDist = Math.abs(x - mouseX);
-        const pull = pDist < 320 ? Math.cos((pDist / 320) * (Math.PI / 2)) * (mouseY - w1Y) * 0.26 : 0;
-        const y = w1Y + Math.sin(x * 0.0026 + time * 0.85) * w1Amp + Math.cos(x * 0.0052 - time * 0.45) * 25 + pull;
+        const pull = pDist < 260 ? Math.cos((pDist / 260) * (Math.PI / 2)) * (mouseY - w1Y) * 0.18 : 0;
+        const y = w1Y + Math.sin(x * 0.0022 + time * 0.7) * w1Amp + Math.cos(x * 0.0044 - time * 0.35) * 18 + pull;
         ctx.lineTo(x, y);
       }
 
-      ctx.strokeStyle = "rgba(96, 165, 250, 0.62)";
-      ctx.lineWidth = 4.8;
+      // Soft wide ambient glow (never harsh)
+      ctx.strokeStyle = "rgba(96, 165, 250, 0.12)";
+      ctx.lineWidth = 24;
       ctx.stroke();
 
-      ctx.strokeStyle = "rgba(165, 180, 252, 0.28)";
+      ctx.strokeStyle = "rgba(96, 165, 250, 0.32)";
+      ctx.lineWidth = 2.2;
+      ctx.stroke();
+
+      // Ribbon 2: Vivid Cyan Flow (Mid-Lower)
+      ctx.beginPath();
+      const w2Y = height * 0.62;
+      const w2Amp = 42 + Math.cos(time * 0.5) * 16;
+      ctx.moveTo(0, w2Y);
+
+      for (let x = 0; x <= width; x += 40) {
+        const pDist = Math.abs(x - mouseX);
+        const pull = pDist < 260 ? Math.cos((pDist / 260) * (Math.PI / 2)) * (mouseY - w2Y) * 0.15 : 0;
+        const y = w2Y + Math.sin(x * 0.0026 - time * 0.65) * w2Amp + Math.sin(x * 0.0014 + time * 0.3) * 20 + pull;
+        ctx.lineTo(x, y);
+      }
+
+      ctx.strokeStyle = "rgba(34, 211, 238, 0.1)";
+      ctx.lineWidth = 22;
+      ctx.stroke();
+
+      ctx.strokeStyle = "rgba(34, 211, 238, 0.28)";
+      ctx.lineWidth = 2.0;
+      ctx.stroke();
+
+      // Ribbon 3: Aurora Violet & Magenta Flow (Lower)
+      ctx.beginPath();
+      const w3Y = height * 0.82;
+      const w3Amp = 36 + Math.sin(time * 0.75) * 14;
+      ctx.moveTo(0, w3Y);
+
+      for (let x = 0; x <= width; x += 40) {
+        const y = w3Y + Math.cos(x * 0.003 + time * 0.75) * w3Amp + Math.sin(x * 0.0016 - time * 0.4) * 18;
+        ctx.lineTo(x, y);
+      }
+
+      ctx.strokeStyle = "rgba(232, 121, 249, 0.08)";
       ctx.lineWidth = 20;
       ctx.stroke();
 
-      // Wave Ribbon 2: Vivid Neon Cyan Energy Stream (Weaving dynamically)
-      ctx.beginPath();
-      const w2Y = height * 0.64;
-      const w2Amp = 68 + Math.cos(time * 0.55) * 24;
-      ctx.moveTo(0, w2Y);
-
-      for (let x = 0; x <= width; x += 30) {
-        const pDist = Math.abs(x - mouseX);
-        const pull = pDist < 320 ? Math.cos((pDist / 320) * (Math.PI / 2)) * (mouseY - w2Y) * 0.22 : 0;
-        const y = w2Y + Math.sin(x * 0.003 - time * 0.8) * w2Amp + Math.sin(x * 0.0016 + time * 0.35) * 32 + pull;
-        ctx.lineTo(x, y);
-      }
-
-      ctx.strokeStyle = "rgba(34, 211, 238, 0.58)";
-      ctx.lineWidth = 4.4;
-      ctx.stroke();
-
-      ctx.strokeStyle = "rgba(34, 211, 238, 0.24)";
-      ctx.lineWidth = 19;
-      ctx.stroke();
-
-      // Wave Ribbon 3: Aurora Violet & Restrained Magenta Crest
-      ctx.beginPath();
-      const w3Y = height * 0.8;
-      const w3Amp = 54 + Math.sin(time * 0.95) * 19;
-      ctx.moveTo(0, w3Y);
-
-      for (let x = 0; x <= width; x += 30) {
-        const y = w3Y + Math.cos(x * 0.0036 + time * 0.9) * w3Amp + Math.sin(x * 0.0018 - time * 0.5) * 30;
-        ctx.lineTo(x, y);
-      }
-
-      ctx.strokeStyle = isImmersive ? "rgba(232, 121, 249, 0.62)" : "rgba(192, 132, 252, 0.52)";
-      ctx.lineWidth = 4.0;
-      ctx.stroke();
-
-      ctx.strokeStyle = "rgba(232, 121, 249, 0.22)";
-      ctx.lineWidth = 18;
-      ctx.stroke();
-
-      // Ribbon 4: High-Velocity Cyan/Violet Intertwine Arc
-      ctx.beginPath();
-      const w4Y = height * 0.48;
-      ctx.moveTo(0, w4Y);
-      for (let x = 0; x <= width; x += 35) {
-        const y = w4Y + Math.sin(x * 0.0042 + time * 1.1) * 42 + Math.cos(x * 0.0022 - time * 0.65) * 35;
-        ctx.lineTo(x, y);
-      }
-      ctx.strokeStyle = "rgba(56, 189, 248, 0.35)";
-      ctx.lineWidth = 2.5;
+      ctx.strokeStyle = "rgba(192, 132, 252, 0.25)";
+      ctx.lineWidth = 1.8;
       ctx.stroke();
 
       // =========================================================================
@@ -602,15 +419,15 @@ export default function CinematicEnergyBackground() {
         const p = particles[i];
 
         p.pulsePhase += p.pulseSpeed;
-        const pulse = 0.85 + Math.sin(p.pulsePhase) * 0.3;
+        const pulse = 0.85 + Math.sin(p.pulsePhase) * 0.25;
 
-        // Pointer repulsion physics
+        // Pointer gentle repulsion
         const dx = p.x - mouseX;
         const dy = p.y - mouseY;
         const dist = Math.hypot(dx, dy);
 
-        if (dist < 170 && dist > 0) {
-          const force = (1 - dist / 170) * 2.2;
+        if (dist < 140 && dist > 0) {
+          const force = (1 - dist / 140) * 1.5;
           p.x += (dx / dist) * force * (p.z + 1);
           p.y += (dy / dist) * force * (p.z + 1);
         }
@@ -629,17 +446,17 @@ export default function CinematicEnergyBackground() {
         const currentSize = p.baseSize * pulse;
 
         // Hardware blit from pre-rendered sprite
-        const halo = currentSize * (p.z === 2 ? 4.8 : 3.2);
+        const halo = currentSize * (p.z === 2 ? 4.2 : 2.8);
         const sprite = sprites[p.spriteIndex];
-        ctx.globalAlpha = Math.min(currentAlpha * 0.9, 1);
+        ctx.globalAlpha = Math.min(currentAlpha * 0.75, 1);
         ctx.drawImage(sprite, p.x - halo, p.y - halo, halo * 2, halo * 2);
 
-        // Core luminous point
-        ctx.globalAlpha = Math.min(currentAlpha * 1.3, 1);
+        // Core dot
+        ctx.globalAlpha = Math.min(currentAlpha * 1.0, 1);
         const { r, g, b } = p.color;
         ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, currentSize * 0.85, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, currentSize * 0.75, 0, Math.PI * 2);
         ctx.fill();
       }
 
@@ -651,7 +468,7 @@ export default function CinematicEnergyBackground() {
       nextArcCountdown--;
       if (nextArcCountdown <= 0) {
         createElectricArc();
-        nextArcCountdown = Math.floor(Math.random() * 75 + 40);
+        nextArcCountdown = Math.floor(Math.random() * 90 + 60);
       }
 
       for (let a = arcs.length - 1; a >= 0; a--) {
@@ -671,16 +488,14 @@ export default function CinematicEnergyBackground() {
           ctx.lineTo(arc.segments[s].x, arc.segments[s].y);
         }
 
-        // White-hot core
-        ctx.strokeStyle = `rgba(255, 255, 255, ${arcAlpha * 0.95})`;
-        ctx.lineWidth = 1.8;
+        // Soft core
+        ctx.strokeStyle = `rgba(255, 255, 255, ${arcAlpha * 0.7})`;
+        ctx.lineWidth = 1.2;
         ctx.stroke();
 
-        // Corona: Neon Cyan or Restrained Magenta
-        ctx.strokeStyle = arc.isMagenta
-          ? `rgba(232, 121, 249, ${arcAlpha * 0.85})`
-          : `rgba(34, 211, 238, ${arcAlpha * 0.85})`;
-        ctx.lineWidth = 6.4;
+        // Corona
+        ctx.strokeStyle = `rgba(34, 211, 238, ${arcAlpha * 0.45})`;
+        ctx.lineWidth = 4.0;
         ctx.stroke();
       }
 
@@ -699,12 +514,8 @@ export default function CinematicEnergyBackground() {
 
         ctx.beginPath();
         ctx.arc(rip.x, rip.y, rip.radius, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(34, 211, 238, ${rip.alpha * 0.85})`;
-        ctx.lineWidth = 3.2;
-        ctx.stroke();
-
-        ctx.strokeStyle = `rgba(165, 180, 252, ${rip.alpha * 0.4})`;
-        ctx.lineWidth = 12;
+        ctx.strokeStyle = `rgba(34, 211, 238, ${rip.alpha * 0.6})`;
+        ctx.lineWidth = 2.0;
         ctx.stroke();
       }
 

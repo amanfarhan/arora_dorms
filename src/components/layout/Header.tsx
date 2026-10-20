@@ -113,7 +113,7 @@ export default function Header() {
         >
           <Link
             href="/about"
-            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 outline-none focus:outline-none ${
               pathname === "/about" ? "text-white font-medium is-active" : ""
             }`}
           >
@@ -122,7 +122,7 @@ export default function Header() {
 
           <Link
             href="/solutions"
-            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 outline-none focus:outline-none ${
               pathname === "/solutions" || (pathname.startsWith("/solutions") && pathname !== "/solutions/immersive-content")
                 ? "text-white font-medium is-active"
                 : ""
@@ -133,7 +133,7 @@ export default function Header() {
 
           <Link
             href="/solutions/immersive-content"
-            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 outline-none focus:outline-none ${
               pathname.startsWith("/solutions/immersive-content") ? "text-white font-medium is-active" : ""
             }`}
           >
@@ -142,7 +142,7 @@ export default function Header() {
 
           <Link
             href="/industries"
-            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 outline-none focus:outline-none ${
               pathname.startsWith("/industries") ? "text-white font-medium is-active" : ""
             }`}
           >
@@ -151,7 +151,7 @@ export default function Header() {
 
           <Link
             href="/technology-dome-systems"
-            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 outline-none focus:outline-none ${
               pathname === "/technology-dome-systems" ? "text-white font-medium is-active" : ""
             }`}
           >
@@ -160,7 +160,7 @@ export default function Header() {
 
           <Link
             href="/start-a-project"
-            className={`nav-link-aurora hover:text-white transition-colors duration-200 ${
+            className={`nav-link-aurora hover:text-white transition-colors duration-200 outline-none focus:outline-none ${
               pathname === "/start-a-project" ? "text-white font-medium is-active" : ""
             }`}
           >
