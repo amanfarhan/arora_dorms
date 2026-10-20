@@ -8,50 +8,131 @@ export default function Page() {
     <div className="bg-[#05070B] text-slate-100 min-h-screen w-full overflow-x-hidden relative">
       {/*  BEGIN: HeroSection  */}
       <section
-        className="relative w-full max-w-7xl mx-auto px-6 sm:px-8 pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden"
-        data-purpose="hero-overview"
+        className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between pt-24 sm:pt-28 pb-8 overflow-hidden"
+        data-purpose="hero-section"
       >
-        {/*  Atmospheric Radial Glow Pools  */}
-        <div className="aurora-glow-hero top-12 left-1/4 w-[500px] h-[400px] ambient-light-drift opacity-70"></div>
-        <div className="aurora-glow-cyan top-20 right-1/4 w-[450px] h-[350px] ambient-light-drift opacity-60"></div>
-
-        {/*  Background High-Resolution Nebula & Dome Projection  */}
-        <div className="absolute inset-y-0 right-0 w-full lg:w-3/4 pointer-events-none select-none z-0 opacity-80 lg:opacity-95 overflow-hidden">
+        {/*  Cinematic Full Cover Background Image: Monumental Geodesic Immersion Pavilion  */}
+        <div className="absolute inset-0 z-0">
           <img
-            alt="Vast glowing cosmic Earth projection inside fulldome theater"
-            className="w-full h-full object-cover object-center lg:object-right-top"
-            src="/images/content_cosmic_whale.jpg"
+            alt="Monumental geodesic immersion dome ecosystem pavilion on illuminated plaza featuring 360-degree bioluminescent fulldome projection"
+            className="w-full h-full object-cover object-right md:object-center select-none"
+            src="/images/solutions_hero_ecosystem_dome.jpg"
           />
-          {/*  Soft gradient fading smoothly into deep midnight background on left and bottom  */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#030508] via-[#030508]/75 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#030508] via-transparent to-[#030508]/40"></div>
+          {/*  Layered Atmospheric Gradients for Text Legibility & Seamless Integration  */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#05070B] via-[#05070B]/85 md:via-[#05070B]/60 to-transparent w-full md:w-3/5 lg:w-[54%] pointer-events-none"></div>
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#05070B]/90 via-[#05070B]/30 to-transparent pointer-events-none"></div>
+          <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#05070B] via-[#05070B]/80 to-transparent pointer-events-none"></div>
         </div>
 
-        {/*  Content / Typography Container  */}
-        <div className="relative z-10 max-w-xl lg:max-w-2xl pt-6 lg:pt-12">
-          {/*  Eyebrow Subtitle  */}
-          <p className="text-[11px] sm:text-xs font-semibold tracking-[0.25em] text-[#A5B4FC] uppercase mb-3.5">
-            OUR SOLUTIONS
-          </p>
-          {/*  Main Headline  */}
-          <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-medium tracking-tight text-white leading-[1.08] mb-5">
-            Complete Immersive
-            <br />
-            <span className="aurora-gradient-text drop-shadow-[0_0_30px_rgba(165,180,252,0.3)]">
-              Dome Ecosystems.
-            </span>
-          </h1>
-          {/*  Supporting Editorial Copy  */}
-          <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-xl">
-            Everything you need for a complete immersive dome experience — under one accountable partner.
-          </p>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex flex-col justify-between flex-1">
+          <div className="max-w-xl xl:max-w-2xl pt-6 lg:pt-10 pb-8">
+            {/*  Category Pill/Kicker  */}
+            <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#93c5fd] shadow-[0_0_8px_#93c5fd] animate-pulse"></span>
+              <span className="text-[11px] uppercase tracking-[0.22em] text-slate-300 font-medium">Our Solutions</span>
+            </div>
+
+            {/*  Main Headline  */}
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.65rem] font-bold tracking-tight text-white leading-[1.12] mb-6">
+              Complete Immersive <br />
+              <span className="aurora-gradient-text drop-shadow-[0_0_30px_rgba(165,180,252,0.3)]">
+                Dome Ecosystems.
+              </span>
+            </h1>
+
+            {/*  Subtitle Paragraph  */}
+            <p className="text-base sm:text-lg text-slate-300/85 leading-relaxed font-light max-w-lg mb-8">
+              Everything you need for a complete immersive dome experience — from precision geodesic engineering and projection mapping to bespoke 360° content and ongoing operations.
+            </p>
+
+            {/*  Action Buttons  */}
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="#solutions-grid"
+                className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full text-xs font-semibold bg-[#8ba4fc] hover:bg-[#a5bbfd] text-[#050b14] transition-all duration-300 shadow-[0_0_24px_rgba(139,164,252,0.35)] group"
+              >
+                <span>Explore All Solutions</span>
+                <svg className="w-4 h-4 stroke-[2.5] group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M14 5l7 7m0 0l-7 7m7-7H3" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+              </a>
+              <Link
+                href="/start-a-project"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/15 transition-all duration-300 backdrop-blur-md"
+              >
+                <span>Request Consultation</span>
+              </Link>
+            </div>
+          </div>
+
+          {/*  Feature Value Props Row  */}
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 pb-4 border-t border-white/10 mt-12"
+            data-purpose="value-propositions"
+          >
+            {/*  Pillar 1  */}
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-full border border-indigo-400/30 bg-indigo-500/10 flex items-center justify-center shrink-0 text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-white">Turnkey Delivery</h4>
+                <p className="text-xs text-slate-400 mt-0.5 font-light">Concept to opening night</p>
+              </div>
+            </div>
+
+            {/*  Pillar 2  */}
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-full border border-indigo-400/30 bg-indigo-500/10 flex items-center justify-center shrink-0 text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-white">Modular Domes</h4>
+                <p className="text-xs text-slate-400 mt-0.5 font-light">3M to 25M+ scalable</p>
+              </div>
+            </div>
+
+            {/*  Pillar 3  */}
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-full border border-indigo-400/30 bg-indigo-500/10 flex items-center justify-center shrink-0 text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-white">Cinema 360° CGI</h4>
+                <p className="text-xs text-slate-400 mt-0.5 font-light">Bespoke immersive stories</p>
+              </div>
+            </div>
+
+            {/*  Pillar 4  */}
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-full border border-indigo-400/30 bg-indigo-500/10 flex items-center justify-center shrink-0 text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-white">End-to-End Care</h4>
+                <p className="text-xs text-slate-400 mt-0.5 font-light">24/7 technical monitoring</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       {/*  END: HeroSection  */}
 
       {/*  BEGIN: SolutionsGrid  */}
       <main
-        className="max-w-7xl mx-auto px-6 sm:px-8 pb-28 relative z-20"
+        id="solutions-grid"
+        className="max-w-7xl mx-auto px-6 sm:px-8 pt-12 pb-28 relative z-20"
         data-purpose="solutions-grid-container"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
