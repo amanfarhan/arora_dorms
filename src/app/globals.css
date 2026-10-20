@@ -188,6 +188,7 @@
 .solution-card,
 .aurora-card-interactive,
 .plasma-card,
+.glass-card,
 [data-purpose="experience-card"],
 [data-holographic] {
   position: relative;
@@ -207,6 +208,7 @@
 .solution-card::before,
 .aurora-card-interactive::before,
 .plasma-card::before,
+.glass-card::before,
 [data-purpose="experience-card"]::before,
 [data-holographic]::before {
   content: "";
@@ -239,6 +241,7 @@
 .solution-card:hover::before,
 .aurora-card-interactive:hover::before,
 .plasma-card:hover::before,
+.glass-card:hover::before,
 [data-purpose="experience-card"]:hover::before,
 [data-holographic]:hover::before {
   opacity: 1;
@@ -249,6 +252,7 @@
 .solution-card::after,
 .aurora-card-interactive::after,
 .plasma-card::after,
+.glass-card::after,
 [data-purpose="experience-card"]::after,
 [data-holographic]::after {
   content: "";
@@ -271,6 +275,7 @@
 .solution-card:hover::after,
 .aurora-card-interactive:hover::after,
 .plasma-card:hover::after,
+.glass-card:hover::after,
 [data-purpose="experience-card"]:hover::after,
 [data-holographic]:hover::after {
   opacity: 1;
@@ -280,13 +285,27 @@
 .solution-card:hover,
 .aurora-card-interactive:hover,
 .plasma-card:hover,
+.glass-card:hover,
 [data-purpose="experience-card"]:hover,
 [data-holographic]:hover {
-  border-color: rgba(165, 180, 252, 0.4);
+  border-color: rgba(165, 180, 252, 0.45);
   box-shadow:
     0 24px 50px -15px rgba(0, 0, 0, 0.85),
-    0 0 35px -5px rgba(99, 102, 241, 0.28),
-    0 0 15px 0 rgba(68, 225, 222, 0.15);
+    0 0 35px -5px rgba(99, 102, 241, 0.32),
+    0 0 15px 0 rgba(68, 225, 222, 0.18);
+}
+
+/* ==========================================================================
+   LIVING ENERGY BACKGROUND PERMEABILITY & ATMOSPHERIC DEPTH
+   ========================================================================== */
+.bg-\[\#05070B\],
+.bg-\[\#03070d\],
+.bg-\[\#03060c\],
+.bg-\[\#05080e\],
+.bg-\[\#080C14\] {
+  background-color: rgba(5, 7, 11, 0.74) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Featured intensity level */

@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MotionCoordinator from "@/components/effects/MotionCoordinator";
 import EnergyParticleCursor from "@/components/effects/EnergyParticleCursor";
+import CinematicEnergyBackground from "@/components/effects/CinematicEnergyBackground";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -49,11 +50,12 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
       </head>
-      <body className="bg-[#05070B] text-slate-100 antialiased selection:bg-purple-600 selection:text-white">
+      <body className="bg-[#030509] text-slate-100 antialiased selection:bg-purple-600 selection:text-white relative">
+        <CinematicEnergyBackground />
         <MotionCoordinator />
         <EnergyParticleCursor />
         <Header />
-        <div className="min-h-screen pt-20">{children}</div>
+        <div className="min-h-screen pt-20 relative z-10">{children}</div>
         <Footer />
       </body>
     </html>
