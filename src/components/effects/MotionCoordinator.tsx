@@ -20,16 +20,17 @@ export default function MotionCoordinator() {
       "[data-reveal], .reveal-on-scroll, .industry-card, .solution-card"
     );
 
+    let observer: IntersectionObserver | null = null;
+
     if (prefersReducedMotion) {
       // If user prefers reduced motion, reveal all immediately
       revealTargets.forEach((el) => el.classList.add("is-revealed"));
     } else {
-      const observer = new IntersectionObserver(
+      observer = new IntersectionObserver(
         (entries, obs) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const el = entry.target as HTMLElement;
-              // Check if parent has multiple items to calculate stagger
               const siblings = el.parentElement
                 ? Array.from(el.parentElement.children)
                 : [];
@@ -54,17 +55,20 @@ export default function MotionCoordinator() {
       );
 
       revealTargets.forEach((target) => {
-        // Exclude hero sections from reveal observers
         if (target.closest('[data-purpose="hero-section"]')) {
           target.classList.add("is-revealed");
           return;
         }
-        observer.observe(target);
+        observer?.observe(target);
       });
     }
 
     // 3. Pointer-driven Holographic Tilt & Glare (disabled on touch / reduced-motion)
-    if (prefersReducedMotion || isTouch) return;
+    if (prefersReducedMotion || isTouch) {
+      return () => {
+        if (observer) observer.disconnect();
+      };
+    }
 
     let activeCard: HTMLElement | null = null;
     let cardRect: DOMRect | null = null;
@@ -90,19 +94,17 @@ export default function MotionCoordinator() {
       const x = e.clientX - cardRect.left;
       const y = e.clientY - cardRect.top;
 
-      // Calculate percentage positions for glare gradient
       const mouseXPercent = Math.max(0, Math.min(100, (x / cardRect.width) * 100));
       const mouseYPercent = Math.max(0, Math.min(100, (y / cardRect.height) * 100));
 
       activeCard.style.setProperty("--mouse-x", `${mouseXPercent.toFixed(1)}%`);
       activeCard.style.setProperty("--mouse-y", `${mouseYPercent.toFixed(1)}%`);
 
-      // Calculate subtle physical tilt (max 4.5 degrees)
       const xNorm = (x / cardRect.width) - 0.5;
       const yNorm = (y / cardRect.height) - 0.5;
 
-      targetTiltX = -yNorm * 5; // tilt up/down
-      targetTiltY = xNorm * 5;  // tilt left/right
+      targetTiltX = -yNorm * 5;
+      targetTiltY = xNorm * 5;
 
       if (!animationFrameId) {
         updateTilt();
@@ -115,7 +117,6 @@ export default function MotionCoordinator() {
         return;
       }
 
-      // Smooth lerp damping
       currentTiltX += (targetTiltX - currentTiltX) * 0.15;
       currentTiltY += (targetTiltY - currentTiltY) * 0.15;
 
@@ -128,7 +129,6 @@ export default function MotionCoordinator() {
         2
       )}deg) rotateY(${clampedY.toFixed(2)}deg) translateY(-5px)`;
 
-      // Continue animating until settled
       if (
         Math.abs(targetTiltX - currentTiltX) > 0.02 ||
         Math.abs(targetTiltY - currentTiltY) > 0.02
@@ -166,6 +166,7 @@ export default function MotionCoordinator() {
     document.addEventListener("pointerout", handlePointerOut, { passive: true });
 
     return () => {
+      if (observer) observer.disconnect();
       document.removeEventListener("pointerover", handlePointerOver);
       document.removeEventListener("pointermove", handlePointerMove);
       document.removeEventListener("pointerout", handlePointerOut);

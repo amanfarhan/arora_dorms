@@ -6,7 +6,6 @@ import MotionCoordinator from "@/components/effects/MotionCoordinator";
 import EnergyCometCursor from "@/components/effects/EnergyCometCursor";
 import CinematicEnergyBackground from "@/components/effects/CinematicEnergyBackground";
 import CinematicDarkOverlay from "@/components/effects/CinematicDarkOverlay";
-import SmoothScroll from "@/components/effects/SmoothScroll";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -119,7 +118,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakarta.variable} ${cormorant.variable} ${playfair.variable} scroll-smooth`}
+      className={`${plusJakarta.variable} ${cormorant.variable} ${playfair.variable}`}
     >
       <head>
         <link
@@ -141,7 +140,6 @@ export default function RootLayout({
         <CinematicEnergyBackground />
         <CinematicDarkOverlay />
         <MotionCoordinator />
-        <SmoothScroll />
         <EnergyCometCursor />
         <Header />
         <main id="main-content" tabIndex={-1} className="min-h-screen pt-20 relative z-10 outline-none">

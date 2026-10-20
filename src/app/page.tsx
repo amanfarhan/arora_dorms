@@ -15,8 +15,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="bg-[#05070B] text-slate-100 overflow-hidden relative">
-      <main>
+    <div className="bg-[#05070B] text-slate-100 w-full overflow-x-clip relative">
         {/*  BEGIN: HeroSection  */}
         <section
           className="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-between pt-20 sm:pt-24 pb-6 sm:pb-8 overflow-hidden"
@@ -1119,7 +1118,6 @@ export default function HomePage() {
           </div>
         </section>
         {/*  END: FinalCTASection  */}
-      </main>
 
       {/*  Video Modal Lightbox  */}
       {videoModalOpen && (
