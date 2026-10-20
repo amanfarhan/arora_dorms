@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Cormorant_Garamond, Playfair_Display } from "next/fo
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MotionCoordinator from "@/components/effects/MotionCoordinator";
+import EnergyParticleCursor from "@/components/effects/EnergyParticleCursor";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -50,6 +51,7 @@ export default function RootLayout({
       </head>
       <body className="bg-[#05070B] text-slate-100 antialiased selection:bg-purple-600 selection:text-white">
         <MotionCoordinator />
+        <EnergyParticleCursor />
         <Header />
         <div className="min-h-screen pt-20">{children}</div>
         <Footer />
